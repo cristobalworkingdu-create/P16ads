@@ -1,0 +1,17 @@
+{
+  "title": "无氧系列每日销售",
+  "description": "Shopify 订单汇总（miaoda）：P15–P18 按日期 × SKU 的订单、销量、净销售与产品成本，2026-10-20 至 2026-11-10，已排除测试 SKU。",
+  "source": {
+    "kind": "file",
+    "url": "/_blob/56226f7d8f079e369fca8ad72e9f9087",
+    "name": "sales_daily.csv",
+    "format": "csv",
+    "local_copy": "data/sales_daily.csv"
+  },
+  "updated": {
+    "at": "2026-11-11T12:10:00Z",
+    "by": "Claude（BigQuery 查询快照）"
+  },
+  "fixed": true,
+  "schedule": "按需更新：Cristobal 让 Claude 运行一次查询时，重新导出并替换本文件。查询语句保存在 MKT - Function/Marketing Dashboard/queries。"
+}

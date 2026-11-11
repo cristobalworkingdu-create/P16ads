@@ -1,0 +1,17 @@
+{
+  "title": "付费广告归因（Campaign）",
+  "description": "Convbox 原始归因表（U 型、Campaign 层级）：每个付费 Campaign 带给 P15–P18 的进站、加购、结账、归因件数与营收，附广告类型和来源产品，2026-10-20 至 2026-11-10。",
+  "source": {
+    "kind": "file",
+    "url": "/_blob/622a02e526ae5dc2a1cdd6a482aec6fb",
+    "name": "attr_campaigns.csv",
+    "format": "csv",
+    "local_copy": "data/attr_campaigns.csv"
+  },
+  "updated": {
+    "at": "2026-11-11T12:10:00Z",
+    "by": "Claude（BigQuery 查询快照）"
+  },
+  "fixed": true,
+  "schedule": "按需更新：Cristobal 让 Claude 运行一次查询时，重新导出并替换本文件。查询语句保存在 MKT - Function/Marketing Dashboard/queries。"
+}

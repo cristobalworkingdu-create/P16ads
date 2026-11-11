@@ -1,0 +1,17 @@
+{
+  "title": "Meta P16 专投广告明细（含人群）",
+  "description": "Campaign 名称带 P16 的 Meta 广告，按 Campaign × Ad Set × 广告：花费、展示、点击来自 facebook_ad_insights；进站、加购、结账与 P16 归因来自 Convbox 广告层级（U 型）；另附带动的其他无氧件数与营收、人群类型与兴趣标签，2026-10-20 至 2026-11-10。",
+  "source": {
+    "kind": "file",
+    "url": "/_blob/1c604f9101ced1d8f46c97cd54552e8e",
+    "name": "meta_ads.csv",
+    "format": "csv",
+    "local_copy": "data/meta_ads.csv"
+  },
+  "updated": {
+    "at": "2026-11-11T12:10:00Z",
+    "by": "Claude（BigQuery 查询快照）"
+  },
+  "fixed": true,
+  "schedule": "按需更新：Cristobal 让 Claude 运行一次查询时，重新导出并替换本文件。查询语句保存在 MKT - Function/Marketing Dashboard/queries。"
+}

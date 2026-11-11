@@ -1,0 +1,17 @@
+{
+  "title": "全部流量来源归因",
+  "description": "Convbox 渠道报表（U 型）：P15–P18 按渠道组 × 渠道的商品浏览、进站、加购、结账、归因件数与营收，含非付费来源，2026-10-20 至 2026-11-10。",
+  "source": {
+    "kind": "file",
+    "url": "/_blob/e7600fbbd0a185bba50a0f746f13b7e9",
+    "name": "attr_sources.csv",
+    "format": "csv",
+    "local_copy": "data/attr_sources.csv"
+  },
+  "updated": {
+    "at": "2026-11-11T12:10:00Z",
+    "by": "Claude（BigQuery 查询快照）"
+  },
+  "fixed": true,
+  "schedule": "按需更新：Cristobal 让 Claude 运行一次查询时，重新导出并替换本文件。查询语句保存在 MKT - Function/Marketing Dashboard/queries。"
+}

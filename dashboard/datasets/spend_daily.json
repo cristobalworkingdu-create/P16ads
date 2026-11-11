@@ -1,0 +1,17 @@
+{
+  "title": "无氧专投每日花费",
+  "description": "名称含 P15–P18 的 Meta、Google Campaign 每日花费、展示、点击（Meta 来自 facebook_ad_insights，Google 来自 google_campaign），2026-10-20 至 2026-11-10。",
+  "source": {
+    "kind": "file",
+    "url": "/_blob/8495ea747250a7b8786f924ec43872e2",
+    "name": "spend_daily.csv",
+    "format": "csv",
+    "local_copy": "data/spend_daily.csv"
+  },
+  "updated": {
+    "at": "2026-11-11T12:10:00Z",
+    "by": "Claude（BigQuery 查询快照）"
+  },
+  "fixed": true,
+  "schedule": "按需更新：Cristobal 让 Claude 运行一次查询时，重新导出并替换本文件。查询语句保存在 MKT - Function/Marketing Dashboard/queries。"
+}
