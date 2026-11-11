@@ -1,0 +1,2262 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>无氧系列广告看板</title>
+<meta name="description" content="MERACH 美国站无氧系列（P15–P18）广告闭环看板：付费广告归因拆分、P16 专投素材、人群与投放表现。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Serif+SC:wght@400;600&display=swap">
+<style>
+:root {
+  color-scheme: light;
+  --color-bg: #f6f7f9;
+  --color-panel: #ffffff;
+  --color-fg: #16191f;
+  --color-fg-muted: #5d6573;
+  --color-border-line: #e1e4ea;
+  --color-ok: #1f8a5b;
+  --color-warn: #b7791f;
+  --color-bad: #c0392b;
+  --c1: #2f5bea; --c2: #e0802b; --c3: #1f9e89; --c4: #9b59b6; --c5: #8a94a6;
+  --font-anthropic-sans: "Inter", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", system-ui, sans-serif;
+  --font-anthropic-serif: "Noto Serif SC", "Songti SC", Georgia, serif;
+  --cds-font-size-caption: 12px; --cds-font-size-body: 14px; --cds-font-size-heading: 18px; --cds-font-size-title: 28px;
+  --cds-font-weight-medium: 600;
+  --cds-gap-xs: 4px; --cds-gap-sm: 8px; --cds-gap-md: 12px; --cds-gap-lg: 20px; --cds-gap-xl: 36px;
+  --cds-pad-xs: 4px; --cds-pad-sm: 8px; --cds-pad-md: 12px; --cds-pad-lg: 18px; --cds-pad-xl: 28px;
+  --cds-radius: 10px;
+  --cds-chart-grid: #eceef2; --cds-chart-axis: #c7ccd5; --cds-chart-muted: #b8bfcb; --cds-chart-reference: #8a94a6;
+  --cds-text-secondary: #5d6573;
+  --cds-surface-popover: #ffffff; --cds-border: #dfe3ea; --cds-shadow-popover: 0 8px 24px rgba(20, 25, 35, .14);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --color-bg: #111318; --color-panel: #1a1d24; --color-fg: #eceff4; --color-fg-muted: #a3abb9; --color-border-line: #2c313b;
+    --color-ok: #4cc38a; --color-warn: #e0a84a; --color-bad: #ef6b5b;
+    --c1: #6e8ffb; --c2: #f0a057; --c3: #45c4ad; --c4: #bb86d6; --c5: #8f99ab;
+    --cds-chart-grid: #262a33; --cds-chart-axis: #3a404c; --cds-chart-muted: #5a6272; --cds-chart-reference: #8f99ab;
+    --cds-text-secondary: #a3abb9; --cds-surface-popover: #222630; --cds-border: #353b47; --cds-shadow-popover: 0 8px 24px rgba(0, 0, 0, .45);
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --color-bg: #111318; --color-panel: #1a1d24; --color-fg: #eceff4; --color-fg-muted: #a3abb9; --color-border-line: #2c313b;
+  --color-ok: #4cc38a; --color-warn: #e0a84a; --color-bad: #ef6b5b;
+  --c1: #6e8ffb; --c2: #f0a057; --c3: #45c4ad; --c4: #bb86d6; --c5: #8f99ab;
+  --cds-chart-grid: #262a33; --cds-chart-axis: #3a404c; --cds-chart-muted: #5a6272; --cds-chart-reference: #8f99ab;
+  --cds-text-secondary: #a3abb9; --cds-surface-popover: #222630; --cds-border: #353b47; --cds-shadow-popover: 0 8px 24px rgba(0, 0, 0, .45);
+}
+html, body { margin: 0; background: var(--color-bg); color: var(--color-fg); }
+body { font: 14px/1.5 var(--font-anthropic-sans); -webkit-font-smoothing: antialiased; }
+#dash-root { max-width: 1240px; margin: 0 auto; padding-block: 32px 48px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.dash-select { font: inherit; font-size: 12px; color: var(--color-fg); background-color: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: 8px; padding: 5px 26px 5px 10px; appearance: none;
+  background-image: linear-gradient(45deg, transparent 50%, var(--color-fg-muted) 50%), linear-gradient(135deg, var(--color-fg-muted) 50%, transparent 50%);
+  background-position: calc(100% - 14px) 52%, calc(100% - 9px) 52%; background-size: 5px 5px; background-repeat: no-repeat; }
+.dash-select:focus-visible { outline: 2px solid var(--c1); outline-offset: 1px; }
+.dash-skeleton { color: transparent !important; position: relative; }
+.dash-skeleton::after { content: ""; position: absolute; inset: 20% 0; border-radius: 4px; background: var(--cds-chart-grid); }
+@media (prefers-reduced-motion: no-preference) { .wy-seg, .p16-bar, .p16-step-bar { transition: width .4s ease-out; } }
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+<script>
+/* 独立网页运行层：提供看板页面所需的 dash 接口，数据来自页面内嵌的快照 */
+window.dash = (function () {
+  const sources = {};
+  const calcs = {};
+  const draws = new Map();
+  let booted = false;
+  const colors = ['var(--c1)', 'var(--c2)', 'var(--c3)', 'var(--c4)', 'var(--c5)'];
+  function data(id) {
+    if (Object.prototype.hasOwnProperty.call(sources, id)) return { status: 'ok', data: sources[id], columns: sources[id].columns || [], refreshing: false, meta: [] };
+    if (Object.prototype.hasOwnProperty.call(calcs, id)) {
+      const c = calcs[id];
+      if (!('value' in c)) { try { c.value = c.fn(...c.inputs.map((i) => data(i).data)); } catch (e) { console.error('calc ' + id, e); c.value = []; } }
+      return { status: 'ok', data: c.value, refreshing: false, meta: [] };
+    }
+    return { status: 'missing', data: [], refreshing: false, meta: [] };
+  }
+  function runDraw(name) {
+    const fn = draws.get(name);
+    if (!fn) return;
+    document.querySelectorAll('[data-draw="' + CSS.escape(name) + '"]').forEach((el) => {
+      try { fn(el); } catch (e) { console.error('draw ' + name, e); }
+    });
+  }
+  function draw(name, fn) {
+    if (fn) {
+      draws.set(name, typeof fn === 'function' ? fn : (el) => (fn.update || fn.mount)(el));
+      if (booted) runDraw(name);
+    } else runDraw(name);
+  }
+  function load(id, text) {
+    const rows = d3.csvParse(text.trim(), (r) => { for (const k in r) if (r[k] === '') r[k] = null; return r; });
+    sources[id] = rows;
+  }
+  function boot() {
+    booted = true;
+    for (const name of draws.keys()) runDraw(name);
+    let t = null, w = window.innerWidth;
+    window.addEventListener('resize', () => {
+      if (Math.abs(window.innerWidth - w) < 2) return;
+      w = window.innerWidth;
+      clearTimeout(t);
+      t = setTimeout(() => { for (const name of draws.keys()) runDraw(name); }, 150);
+    });
+  }
+  return {
+    data, draw, colors, load, boot,
+    calc: (id, o) => { calcs[id] = o; },
+    loader: () => {}, onData: (fn) => fn(), refresh: () => {},
+    params: () => ({}), setParams: () => {}, resetParams: () => {}, setLink: () => {},
+  };
+})();
+</script>
+</head>
+<body>
+<div id="dash-root">
+<script type="text/csv" id="csv-sales_daily">
+date,spu,sku,variant,orders,units,net_sales,cogs
+2026-11-01,P16,MR-P16B3-US-DLZ01,Elite,1,1,2610.0,1345.0
+2026-11-02,P16,MR-P16B3-US-DLZ01,Elite,1,1,2813.0,1345.0
+2026-11-02,P18,MR-P18B1-US-DLZ01,,1,1,313.5,155.0
+2026-11-03,P16,MR-P16B3-US-DLZ01,Elite,1,1,2699.99,1345.0
+2026-11-04,P18,MR-P18B1-US-DLZ01,,1,1,329.99,155.0
+2026-11-06,P16,MR-P16B3-US-DLZ01,Elite,1,1,2899.99,1345.0
+2026-11-06,P18,MR-P18B1-US-DLZ01,,1,1,329.99,155.0
+2026-11-08,P15,MR-P15L5-US-DLZ01,,1,1,248.39,96.0
+2026-11-08,P16,MR-P16B2-US-DLZ01,Pro,1,1,2116.0,974.0
+2026-11-09,P15,MR-P15C-260-US-DLZ01,,1,1,671.59,299.0
+2026-11-09,P16,MR-P16B2-US-DLZ01,Pro,1,1,2116.0,974.0
+2026-11-09,P16,MR-P16B3-US-DLZ01,Elite,3,3,8035.98,4035.0
+2026-11-09,P18,MR-P18B1-US-DLZ01,,2,2,633.58,310.0
+</script>
+<script type="text/csv" id="csv-spend_daily">
+channel,date,campaign_name,spu,spend,impressions,clicks
+Google Ads,2026-10-20,DemandGen_P16_Image_TOF_US_20261102_Jiayi,P16,0.0,0,0.0
+Google Ads,2026-10-20,DemandGen_P16_TVC_TOF_US_20261102_Jiayi,P16,0.0,0,0.0
+Google Ads,2026-10-20,PMax_P16_MOF_US_20261102_Jiayi,P16,0.0,0,0.0
+Google Ads,2026-10-20,Search_P16_BOF_Brand_US_20261102_Jiayi,P16,0.0,0,0.0
+Google Ads,2026-10-20,Search_P16_MOF_General_US_20261102_Jiayi,P16,0.0,0,0.0
+Meta Ads,2026-10-20,Remi_US_20261020_P16_TOF_Family_Traffic_early-access,P16,42.29,8014,202.0
+Meta Ads,2026-10-20,Remi_US_20261020_P16_TOF_Traffic_Product,P16,44.01,11623,223.0
+Google Ads,2026-10-21,DemandGen_P16_Image_TOF_US_20261102_Jiayi,P16,0.0,0,0.0
+Google Ads,2026-10-21,DemandGen_P16_TVC_TOF_US_20261102_Jiayi,P16,0.0,0,0.0
+Google Ads,2026-10-21,PMax_P16_MOF_US_20261102_Jiayi,P16,0.0,0,0.0
+Google Ads,2026-10-21,Search_P16_BOF_Brand_US_20261102_Jiayi,P16,0.0,0,0.0
+Google Ads,2026-10-21,Search_P16_MOF_General_US_20261102_Jiayi,P16,0.0,0,0.0
+Meta Ads,2026-10-21,Remi_US_20261020_P16_TOF_Family_Traffic_early-access,P16,46.21,6799,243.0
+Meta Ads,2026-10-21,Remi_US_20261020_P16_TOF_Traffic_Product,P16,26.81,5114,135.0
+Meta Ads,2026-10-21,Remi_US_20261021_P16_TOF_Lead,P16,58.61,2258,140.0
+Google Ads,2026-10-22,DemandGen_P16_Image_TOF_US_20261102_Jiayi,P16,0.0,0,0.0
+Google Ads,2026-10-22,DemandGen_P16_TVC_TOF_US_20261102_Jiayi,P16,0.0,0,0.0
+Google Ads,2026-10-22,PMax_P16_MOF_US_20261102_Jiayi,P16,0.0,0,0.0
+Google Ads,2026-10-22,Search_P16_BOF_Brand_US_20261102_Jiayi,P16,0.0,0,0.0
+Google Ads,2026-10-22,Search_P16_MOF_General_US_20261102_Jiayi,P16,0.0,0,0.0
+Meta Ads,2026-10-22,Remi_US_20261020_P16_TOF_Family_Traffic_early-access,P16,14.05,2805,89.0
+Meta Ads,2026-10-22,Remi_US_20261020_P16_TOF_Traffic_Product,P16,9.74,2377,60.0
+Meta Ads,2026-10-22,Remi_US_20261021_P16_TOF_Lead,P16,75.33,3072,172.0
+Google Ads,2026-10-23,DemandGen_P16_Image_TOF_US_20261102_Jiayi,P16,0.0,0,0.0
+Google Ads,2026-10-23,DemandGen_P16_TVC_TOF_US_20261102_Jiayi,P16,0.0,0,0.0
+Google Ads,2026-10-23,PMax_P16_MOF_US_20261102_Jiayi,P16,0.0,0,0.0
+Google Ads,2026-10-23,Search_P16_BOF_Brand_US_20261102_Jiayi,P16,0.0,0,0.0
+Google Ads,2026-10-23,Search_P16_MOF_General_US_20261102_Jiayi,P16,0.0,0,0.0
+Meta Ads,2026-10-23,Remi_US_20261020_P16_TOF_Family_Traffic_early-access,P16,8.14,1132,57.0
+Meta Ads,2026-10-23,Remi_US_20261020_P16_TOF_Traffic_Product,P16,11.41,3002,77.0
+Meta Ads,2026-10-23,Remi_US_20261021_P16_TOF_Lead,P16,70.96,2833,166.0
+Meta Ads,2026-10-23,Remi_US_20261023_P16_TOF_Lead_LargeEngagers_90D,P16,15.85,436,12.0
+Meta Ads,2026-10-23,Remi_US_20261023_P16_TOF_Lead_SiteEngagers_90D,P16,40.81,1047,19.0
+Google Ads,2026-10-24,DemandGen_P16_Image_TOF_US_20261102_Jiayi,P16,0.0,0,0.0
+Google Ads,2026-10-24,DemandGen_P16_TVC_TOF_US_20261102_Jiayi,P16,0.0,0,0.0
+Google Ads,2026-10-24,PMax_P16_MOF_US_20261102_Jiayi,P16,0.0,0,0.0
+Google Ads,2026-10-24,Search_P16_BOF_Brand_US_20261102_Jiayi,P16,0.0,0,0.0
+Google Ads,2026-10-24,Search_P16_MOF_General_US_20261102_Jiayi,P16,0.0,0,0.0
+Meta Ads,2026-10-24,Remi_US_20261020_P16_TOF_Family_Traffic_early-access,P16,7.25,1187,61.0
+Meta Ads,2026-10-24,Remi_US_20261020_P16_TOF_Traffic_Product,P16,7.12,2618,45.0
+Meta Ads,2026-10-24,Remi_US_20261021_P16_TOF_Lead,P16,96.31,3942,172.0
+Meta Ads,2026-10-24,Remi_US_20261023_P16_TOF_Lead_LargeEngagers_90D,P16,29.88,968,40.0
+Meta Ads,2026-10-24,Remi_US_20261023_P16_TOF_Lead_SiteEngagers_90D,P16,5.72,178,1.0
+Google Ads,2026-10-25,DemandGen_P16_Image_TOF_US_20261102_Jiayi,P16,0.0,0,0.0
+Google Ads,2026-10-25,DemandGen_P16_TVC_TOF_US_20261102_Jiayi,P16,0.0,0,0.0
+Google Ads,2026-10-25,PMax_P16_MOF_US_20261102_Jiayi,P16,0.0,0,0.0
+Google Ads,2026-10-25,Search_P16_BOF_Brand_US_20261102_Jiayi,P16,0.0,0,0.0
+Google Ads,2026-10-25,Search_P16_MOF_General_US_20261102_Jiayi,P16,0.0,0,0.0
+Meta Ads,2026-10-25,Remi_US_20261020_P16_TOF_Family_Traffic_early-access,P16,1.53,295,14.0
+Meta Ads,2026-10-25,Remi_US_20261020_P16_TOF_Traffic_Product,P16,1.74,501,8.0
+Meta Ads,2026-10-25,Remi_US_20261021_P16_TOF_Lead,P16,94.3,3892,166.0
+Meta Ads,2026-10-25,Remi_US_20261023_P16_TOF_Lead_LargeEngagers_90D,P16,35.72,1322,60.0
+Meta Ads,2026-10-25,Remi_US_20261023_P16_TOF_Lead_SiteEngagers_90D,P16,27.32,695,25.0
+Google Ads,2026-10-26,DemandGen_P16_Image_TOF_US_20261102_Jiayi,P16,0.0,0,0.0
+Google Ads,2026-10-26,DemandGen_P16_TVC_TOF_US_20261102_Jiayi,P16,0.0,0,0.0
+Google Ads,2026-10-26,PMax_P16_MOF_US_20261102_Jiayi,P16,0.0,0,0.0
+Google Ads,2026-10-26,Search_P16_BOF_Brand_US_20261102_Jiayi,P16,0.0,0,0.0
+Google Ads,2026-10-26,Search_P16_MOF_General_US_20261102_Jiayi,P16,0.0,0,0.0
+Meta Ads,2026-10-26,Remi_US_20261021_P16_TOF_Lead,P16,103.82,3792,163.0
+Meta Ads,2026-10-26,Remi_US_20261023_P16_TOF_Lead_LargeEngagers_90D,P16,58.69,2565,55.0
+Meta Ads,2026-10-26,Remi_US_20261023_P16_TOF_Lead_SiteEngagers_90D,P16,37.35,908,40.0
+Meta Ads,2026-10-26,Remi_US_20261026_P16_TOF_Lead_PageEngaged_180D,P16,28.62,1311,38.0
+Google Ads,2026-10-27,DemandGen_P16_Image_TOF_US_20261102_Jiayi,P16,0.0,0,0.0
+Google Ads,2026-10-27,DemandGen_P16_TVC_TOF_US_20261102_Jiayi,P16,0.0,0,0.0
+Google Ads,2026-10-27,PMax_P16_MOF_US_20261102_Jiayi,P16,0.0,0,0.0
+Google Ads,2026-10-27,Search_P16_BOF_Brand_US_20261102_Jiayi,P16,0.0,0,0.0
+Google Ads,2026-10-27,Search_P16_MOF_General_US_20261102_Jiayi,P16,0.0,0,0.0
+Meta Ads,2026-10-27,Remi_US_20261021_P16_TOF_Lead,P16,138.27,6121,266.0
+Meta Ads,2026-10-27,Remi_US_20261023_P16_TOF_Lead_LargeEngagers_90D,P16,60.17,2728,71.0
+Meta Ads,2026-10-27,Remi_US_20261023_P16_TOF_Lead_SiteEngagers_90D,P16,31.0,833,32.0
+Meta Ads,2026-10-27,Remi_US_20261026_P16_TOF_Lead_PageEngaged_180D,P16,27.69,1597,35.0
+Google Ads,2026-10-28,DemandGen_P16_Image_TOF_US_20261102_Jiayi,P16,0.0,0,0.0
+Google Ads,2026-10-28,DemandGen_P16_TVC_TOF_US_20261102_Jiayi,P16,0.0,0,0.0
+Google Ads,2026-10-28,PMax_P16_MOF_US_20261102_Jiayi,P16,0.0,0,0.0
+Google Ads,2026-10-28,Search_P16_BOF_Brand_US_20261102_Jiayi,P16,0.0,0,0.0
+Google Ads,2026-10-28,Search_P16_MOF_General_US_20261102_Jiayi,P16,0.0,0,0.0
+Meta Ads,2026-10-28,Remi_US_20261021_P16_TOF_Lead,P16,114.25,5243,228.0
+Meta Ads,2026-10-28,Remi_US_20261023_P16_TOF_Lead_LargeEngagers_90D,P16,40.36,1814,43.0
+Meta Ads,2026-10-28,Remi_US_20261023_P16_TOF_Lead_SiteEngagers_90D,P16,31.99,803,27.0
+Meta Ads,2026-10-28,Remi_US_20261026_P16_TOF_Lead_PageEngaged_180D,P16,19.02,1080,18.0
+Google Ads,2026-10-29,DemandGen_P16_Image_TOF_US_20261102_Jiayi,P16,0.0,0,0.0
+Google Ads,2026-10-29,DemandGen_P16_TVC_TOF_US_20261102_Jiayi,P16,0.0,0,0.0
+Google Ads,2026-10-29,PMax_P16_MOF_US_20261102_Jiayi,P16,0.0,0,0.0
+Google Ads,2026-10-29,Search_P16_BOF_Brand_US_20261102_Jiayi,P16,0.0,0,0.0
+Google Ads,2026-10-29,Search_P16_MOF_General_US_20261102_Jiayi,P16,0.0,0,0.0
+Meta Ads,2026-10-29,Remi_US_20261021_P16_TOF_Lead,P16,90.9,4455,213.0
+Meta Ads,2026-10-29,Remi_US_20261023_P16_TOF_Lead_LargeEngagers_90D,P16,51.47,2121,37.0
+Meta Ads,2026-10-29,Remi_US_20261023_P16_TOF_Lead_SiteEngagers_90D,P16,26.33,687,23.0
+Meta Ads,2026-10-29,Remi_US_20261026_P16_TOF_Lead_PageEngaged_180D,P16,23.03,1326,23.0
+Google Ads,2026-10-30,DemandGen_P16_Image_TOF_US_20261102_Jiayi,P16,0.0,0,0.0
+Google Ads,2026-10-30,DemandGen_P16_TVC_TOF_US_20261102_Jiayi,P16,0.0,0,0.0
+Google Ads,2026-10-30,PMax_P16_MOF_US_20261102_Jiayi,P16,0.0,0,0.0
+Google Ads,2026-10-30,Search_P16_BOF_Brand_US_20261102_Jiayi,P16,0.0,0,0.0
+Google Ads,2026-10-30,Search_P16_MOF_General_US_20261102_Jiayi,P16,0.0,0,0.0
+Meta Ads,2026-10-30,Remi_US_20261021_P16_TOF_Lead,P16,102.42,4803,221.0
+Meta Ads,2026-10-30,Remi_US_20261023_P16_TOF_Lead_LargeEngagers_90D,P16,50.83,2125,31.0
+Meta Ads,2026-10-30,Remi_US_20261023_P16_TOF_Lead_SiteEngagers_90D,P16,26.14,647,25.0
+Meta Ads,2026-10-30,Remi_US_20261026_P16_TOF_Lead_PageEngaged_180D,P16,21.12,1125,18.0
+Google Ads,2026-10-31,DemandGen_P16_Image_TOF_US_20261102_Jiayi,P16,0.0,0,0.0
+Google Ads,2026-10-31,DemandGen_P16_TVC_TOF_US_20261102_Jiayi,P16,0.0,0,0.0
+Google Ads,2026-10-31,PMax_P16_MOF_US_20261102_Jiayi,P16,0.0,0,0.0
+Google Ads,2026-10-31,Search_P16_BOF_Brand_US_20261102_Jiayi,P16,0.0,0,0.0
+Google Ads,2026-10-31,Search_P16_MOF_General_US_20261102_Jiayi,P16,0.0,0,0.0
+Meta Ads,2026-10-31,Remi_US_20261021_P16_TOF_Lead,P16,107.43,4869,256.0
+Meta Ads,2026-10-31,Remi_US_20261023_P16_TOF_Lead_LargeEngagers_90D,P16,67.71,2436,52.0
+Meta Ads,2026-10-31,Remi_US_20261023_P16_TOF_Lead_SiteEngagers_90D,P16,25.13,637,19.0
+Meta Ads,2026-10-31,Remi_US_20261026_P16_TOF_Lead_PageEngaged_180D,P16,27.26,1232,39.0
+Google Ads,2026-11-01,DemandGen_P16_Image_TOF_US_20261102_Jiayi,P16,0.0,0,0.0
+Google Ads,2026-11-01,DemandGen_P16_TVC_TOF_US_20261102_Jiayi,P16,0.0,0,0.0
+Google Ads,2026-11-01,PMax_P16_MOF_US_20261102_Jiayi,P16,0.0,0,0.0
+Google Ads,2026-11-01,Search_P16_BOF_Brand_US_20261102_Jiayi,P16,0.0,0,0.0
+Google Ads,2026-11-01,Search_P16_MOF_General_US_20261102_Jiayi,P16,0.0,0,0.0
+Meta Ads,2026-11-01,Remi_US_20261021_P16_TOF_Lead,P16,10.87,359,18.0
+Meta Ads,2026-11-01,Remi_US_20261023_P16_TOF_Lead_LargeEngagers_90D,P16,23.2,702,15.0
+Meta Ads,2026-11-01,Remi_US_20261023_P16_TOF_Lead_SiteEngagers_90D,P16,8.6,218,15.0
+Meta Ads,2026-11-01,Remi_US_20261026_P16_TOF_Lead_PageEngaged_180D,P16,4.7,221,11.0
+Meta Ads,2026-11-01,Remi_US_20261101_P16_MOF_Purchase_A_Stills,P16,77.93,3110,141.0
+Meta Ads,2026-11-01,Remi_US_20261101_P16_MOF_Purchase_B_Formats,P16,75.35,2629,126.0
+Google Ads,2026-11-02,DemandGen_P16_Image_TOF_US_20261102_Jiayi,P16,38.86,4073,76.0
+Google Ads,2026-11-02,DemandGen_P16_TVC_TOF_US_20261102_Jiayi,P16,126.63,8334,55.0
+Google Ads,2026-11-02,PMax_P16_MOF_US_20261102_Jiayi,P16,17.26,946,8.0
+Google Ads,2026-11-02,Search_P16_BOF_Brand_US_20261102_Jiayi,P16,0.46,2,1.0
+Google Ads,2026-11-02,Search_P16_MOF_General_US_20261102_Jiayi,P16,0.0,17,0.0
+Meta Ads,2026-11-02,Remi_US_20261021_P16_TOF_Lead,P16,0.0,0,
+Meta Ads,2026-11-02,Remi_US_20261023_P16_TOF_Lead_LargeEngagers_90D,P16,0.0,0,
+Meta Ads,2026-11-02,Remi_US_20261101_P16_MOF_Purchase_A_Stills,P16,81.99,3463,92.0
+Meta Ads,2026-11-02,Remi_US_20261101_P16_MOF_Purchase_B_Formats,P16,76.31,3191,69.0
+Meta Ads,2026-11-02,Remi_US_20261102_P16_BOF_Retargeting_Pur,P16,64.47,2104,59.0
+Meta Ads,2026-11-02,Remi_US_20261102_P16_MOF_Purchase_C_VideoProof,P16,93.87,3139,72.0
+Meta Ads,2026-11-02,Remi_US_20261102_P16_MOF_Purchase_D_VideoLife,P16,81.17,2735,48.0
+Google Ads,2026-11-03,DemandGen_P16_Image_TOF_US_20261102_Jiayi,P16,129.78,12282,243.0
+Google Ads,2026-11-03,DemandGen_P16_TVC_TOF_US_20261102_Jiayi,P16,162.95,11283,54.0
+Google Ads,2026-11-03,PMax_P16_MOF_US_20261102_Jiayi,P16,140.88,6186,70.0
+Google Ads,2026-11-03,Search_P16_BOF_Brand_US_20261102_Jiayi,P16,10.47,19,6.0
+Google Ads,2026-11-03,Search_P16_MOF_General_US_20261102_Jiayi,P16,239.98,1845,66.0
+Meta Ads,2026-11-03,Remi_US_20261021_P16_TOF_Lead,P16,0.0,0,
+Meta Ads,2026-11-03,Remi_US_20261023_P16_TOF_Lead_LargeEngagers_90D,P16,0.0,0,
+Meta Ads,2026-11-03,Remi_US_20261101_P16_MOF_Purchase_A_Stills,P16,107.82,5212,105.0
+Meta Ads,2026-11-03,Remi_US_20261101_P16_MOF_Purchase_B_Formats,P16,98.15,4603,105.0
+Meta Ads,2026-11-03,Remi_US_20261102_P16_BOF_Retargeting_Pur,P16,59.7,1986,78.0
+Meta Ads,2026-11-03,Remi_US_20261102_P16_MOF_Purchase_C_VideoProof,P16,95.35,3805,82.0
+Meta Ads,2026-11-03,Remi_US_20261102_P16_MOF_Purchase_D_VideoLife,P16,75.94,2271,31.0
+Google Ads,2026-11-04,DemandGen_P16_Image_TOF_US_20261102_Jiayi,P16,85.56,5402,194.0
+Google Ads,2026-11-04,DemandGen_P16_TVC_TOF_US_20261102_Jiayi,P16,144.99,7405,36.0
+Google Ads,2026-11-04,PMax_P16_MOF_US_20261102_Jiayi,P16,156.22,2393,60.0
+Google Ads,2026-11-04,Search_P16_BOF_Brand_US_20261102_Jiayi,P16,4.88,15,5.0
+Google Ads,2026-11-04,Search_P16_MOF_General_US_20261102_Jiayi,P16,144.53,808,40.0
+Meta Ads,2026-11-04,Remi_US_20261021_P16_TOF_Lead,P16,0.0,0,
+Meta Ads,2026-11-04,Remi_US_20261023_P16_TOF_Lead_LargeEngagers_90D,P16,0.0,0,
+Meta Ads,2026-11-04,Remi_US_20261101_P16_MOF_Purchase_A_Stills,P16,92.78,4559,86.0
+Meta Ads,2026-11-04,Remi_US_20261101_P16_MOF_Purchase_B_Formats,P16,97.54,4355,79.0
+Meta Ads,2026-11-04,Remi_US_20261102_P16_BOF_Retargeting_Pur,P16,54.24,1798,89.0
+Meta Ads,2026-11-04,Remi_US_20261102_P16_MOF_Purchase_C_VideoProof,P16,74.0,2746,58.0
+Meta Ads,2026-11-04,Remi_US_20261102_P16_MOF_Purchase_D_VideoLife,P16,0.0,0,
+Meta Ads,2026-11-04,Remi_US_20261102_P16_MOF_Purchase_E_SpaceTime,P16,118.63,4181,57.0
+Google Ads,2026-11-05,DemandGen_P16_Image_TOF_US_20261102_Jiayi,P16,83.61,8437,235.0
+Google Ads,2026-11-05,DemandGen_P16_TVC_TOF_US_20261102_Jiayi,P16,144.89,6255,34.0
+Google Ads,2026-11-05,PMax_P16_MOF_US_20261102_Jiayi,P16,30.33,170,9.0
+Google Ads,2026-11-05,Search_P16_BOF_Brand_US_20261102_Jiayi,P16,16.92,32,10.0
+Google Ads,2026-11-05,Search_P16_MOF_General_US_20261102_Jiayi,P16,124.5,409,28.0
+Meta Ads,2026-11-05,Remi_US_20261021_P16_TOF_Lead,P16,0.0,0,
+Meta Ads,2026-11-05,Remi_US_20261101_P16_MOF_Purchase_A_Stills,P16,104.72,4355,87.0
+Meta Ads,2026-11-05,Remi_US_20261101_P16_MOF_Purchase_B_Formats,P16,3.2,140,5.0
+Meta Ads,2026-11-05,Remi_US_20261102_P16_BOF_Retargeting_Pur,P16,57.22,1664,90.0
+Meta Ads,2026-11-05,Remi_US_20261102_P16_MOF_Purchase_C_VideoProof,P16,98.76,3249,53.0
+Meta Ads,2026-11-05,Remi_US_20261102_P16_MOF_Purchase_D_VideoLife,P16,0.0,0,
+Meta Ads,2026-11-05,Remi_US_20261102_P16_MOF_Purchase_E_SpaceTime,P16,136.77,4185,70.0
+Google Ads,2026-11-06,DemandGen_P16_Image_TOF_US_20261102_Jiayi,P16,79.73,8017,238.0
+Google Ads,2026-11-06,DemandGen_P16_TVC_TOF_US_20261102_Jiayi,P16,122.28,5782,33.0
+Google Ads,2026-11-06,PMax_P16_MOF_US_20261102_Jiayi,P16,182.14,4447,123.0
+Google Ads,2026-11-06,Search_P16_BOF_Brand_US_20261102_Jiayi,P16,47.71,55,20.0
+Google Ads,2026-11-06,Search_P16_MOF_General_US_20261102_Jiayi,P16,99.0,978,31.0
+Meta Ads,2026-11-06,Remi_US_20261101_P16_MOF_Purchase_A_Stills,P16,116.02,4319,100.0
+Meta Ads,2026-11-06,Remi_US_20261101_P16_MOF_Purchase_B_Formats,P16,0.0,0,
+Meta Ads,2026-11-06,Remi_US_20261102_P16_BOF_Retargeting_Pur,P16,71.44,1956,102.0
+Meta Ads,2026-11-06,Remi_US_20261102_P16_MOF_Purchase_C_VideoProof,P16,88.39,2550,44.0
+Meta Ads,2026-11-06,Remi_US_20261102_P16_MOF_Purchase_E_SpaceTime,P16,140.21,3916,63.0
+Meta Ads,2026-11-06,Remi_US_20261106_P16_ABO_自制_AudienceTest,P16,83.25,3534,144.0
+Meta Ads,2026-11-06,Remi_US_20261106_P16_MOF_Purchase_F_AllVideo_Broad,P16,43.1,1322,24.0
+Google Ads,2026-11-07,DemandGen_P16_Image_TOF_US_20261102_Jiayi,P16,90.56,6016,239.0
+Google Ads,2026-11-07,DemandGen_P16_TVC_TOF_US_20261102_Jiayi,P16,169.49,7750,57.0
+Google Ads,2026-11-07,PMax_P16_MOF_US_20261102_Jiayi,P16,109.39,3387,88.0
+Google Ads,2026-11-07,Search_P16_BOF_Brand_US_20261102_Jiayi,P16,28.31,35,12.0
+Google Ads,2026-11-07,Search_P16_MOF_General_US_20261102_Jiayi,P16,21.81,93,6.0
+Meta Ads,2026-11-07,Remi_US_20261101_P16_MOF_Purchase_A_Stills,P16,105.79,4323,112.0
+Meta Ads,2026-11-07,Remi_US_20261101_P16_MOF_Purchase_B_Formats,P16,0.0,0,
+Meta Ads,2026-11-07,Remi_US_20261102_P16_BOF_Retargeting_Pur,P16,75.25,2092,102.0
+Meta Ads,2026-11-07,Remi_US_20261102_P16_MOF_Purchase_C_VideoProof,P16,74.92,2346,49.0
+Meta Ads,2026-11-07,Remi_US_20261102_P16_MOF_Purchase_D_VideoLife,P16,0.0,0,
+Meta Ads,2026-11-07,Remi_US_20261102_P16_MOF_Purchase_E_SpaceTime,P16,129.15,3412,61.0
+Meta Ads,2026-11-07,Remi_US_20261106_P16_ABO_自制_AudienceTest,P16,78.11,3875,189.0
+Meta Ads,2026-11-07,Remi_US_20261106_P16_MOF_Purchase_F_AllVideo_Broad,P16,41.64,1114,25.0
+Google Ads,2026-11-08,DemandGen_P16_Image_TOF_US_20261102_Jiayi,P16,89.61,9419,287.0
+Google Ads,2026-11-08,DemandGen_P16_TVC_TOF_US_20261102_Jiayi,P16,149.16,7598,58.0
+Google Ads,2026-11-08,PMax_P16_MOF_US_20261102_Jiayi,P16,113.43,4794,155.0
+Google Ads,2026-11-08,Search_P16_BOF_Brand_US_20261102_Jiayi,P16,43.58,46,13.0
+Google Ads,2026-11-08,Search_P16_MOF_General_US_20261102_Jiayi,P16,39.25,128,5.0
+Meta Ads,2026-11-08,Remi_US_20261101_P16_MOF_Purchase_A_Stills,P16,141.67,5462,110.0
+Meta Ads,2026-11-08,Remi_US_20261101_P16_MOF_Purchase_B_Formats,P16,0.0,0,
+Meta Ads,2026-11-08,Remi_US_20261102_P16_BOF_Retargeting_Pur,P16,93.86,2301,91.0
+Meta Ads,2026-11-08,Remi_US_20261102_P16_MOF_Purchase_C_VideoProof,P16,112.66,3376,67.0
+Meta Ads,2026-11-08,Remi_US_20261102_P16_MOF_Purchase_D_VideoLife,P16,0.0,0,
+Meta Ads,2026-11-08,Remi_US_20261102_P16_MOF_Purchase_E_SpaceTime,P16,115.53,3358,48.0
+Meta Ads,2026-11-08,Remi_US_20261106_P16_ABO_自制_AudienceTest,P16,101.81,4767,229.0
+Meta Ads,2026-11-08,Remi_US_20261106_P16_MOF_Purchase_F_AllVideo_Broad,P16,55.36,1689,40.0
+Google Ads,2026-11-09,DemandGen_P16_Image_TOF_US_20261102_Jiayi,P16,51.42,6127,176.0
+Google Ads,2026-11-09,DemandGen_P16_TVC_TOF_US_20261102_Jiayi,P16,64.27,3201,26.0
+Google Ads,2026-11-09,PMax_P16_MOF_US_20261102_Jiayi,P16,101.01,5291,138.0
+Google Ads,2026-11-09,Search_P16_BOF_Brand_US_20261102_Jiayi,P16,9.67,37,4.0
+Google Ads,2026-11-09,Search_P16_MOF_General_US_20261102_Jiayi,P16,15.73,222,7.0
+Meta Ads,2026-11-09,Remi_US_20261101_P16_MOF_Purchase_A_Stills,P16,26.78,1055,24.0
+Meta Ads,2026-11-09,Remi_US_20261101_P16_MOF_Purchase_B_Formats,P16,0.0,0,
+Meta Ads,2026-11-09,Remi_US_20261102_P16_BOF_Retargeting_Pur,P16,78.67,1863,70.0
+Meta Ads,2026-11-09,Remi_US_20261102_P16_MOF_Purchase_C_VideoProof,P16,35.91,888,15.0
+Meta Ads,2026-11-09,Remi_US_20261102_P16_MOF_Purchase_E_SpaceTime,P16,0.0,0,
+Meta Ads,2026-11-09,Remi_US_20261106_P16_ABO_自制_AudienceTest,P16,85.08,3341,155.0
+Meta Ads,2026-11-09,Remi_US_20261106_P16_MOF_Purchase_F_AllVideo_Broad,P16,39.62,1083,28.0
+Google Ads,2026-11-10,DemandGen_P16_Image_TOF_US_20261102_Jiayi,P16,46.07,5943,147.0
+Google Ads,2026-11-10,DemandGen_P16_TVC_TOF_US_20261102_Jiayi,P16,66.54,3199,17.0
+Google Ads,2026-11-10,PMax_P16_MOF_US_20261102_Jiayi,P16,0.0,0,0.0
+Google Ads,2026-11-10,Search_P16_BOF_Brand_US_20261102_Jiayi,P16,0.0,0,0.0
+Google Ads,2026-11-10,Search_P16_MOF_General_US_20261102_Jiayi,P16,0.0,0,0.0
+Meta Ads,2026-11-10,Remi_US_20261101_P16_MOF_Purchase_A_Stills,P16,26.34,997,14.0
+Meta Ads,2026-11-10,Remi_US_20261102_P16_BOF_Retargeting_Pur,P16,78.39,2259,90.0
+Meta Ads,2026-11-10,Remi_US_20261102_P16_MOF_Purchase_C_VideoProof,P16,29.99,781,16.0
+Meta Ads,2026-11-10,Remi_US_20261102_P16_MOF_Purchase_E_SpaceTime,P16,0.0,0,
+Meta Ads,2026-11-10,Remi_US_20261106_P16_ABO_自制_AudienceTest,P16,76.77,3155,134.0
+Meta Ads,2026-11-10,Remi_US_20261106_P16_MOF_Purchase_F_AllVideo_Broad,P16,28.23,861,15.0
+Meta Ads,2026-11-10,Remi_US_20261109_P16_Catalog_Pur_Strength_Retargeting,P16,23.16,2287,58.0
+</script>
+<script type="text/csv" id="csv-attr_campaigns">
+spu,channel,campaign_id,campaign_name,scope,source_product,sessions,atc,checkout,orders_attr,revenue_attr
+P15,Meta Ads,120256588318150321,Remi_US_20261102_P16_BOF_Retargeting_Pur,无氧专投,P16,3.0,7.0,15.0,1.6,437.99
+P15,Meta Ads,120256662056110321,Remi_US_20261106_P16_ABO_自制_AudienceTest,无氧专投,P16,2.0,3.0,4.0,0.8,292.0
+P15,Meta Ads,,(未匹配到名称),未匹配到名称,—,17.0,11.0,13.0,3.0,269.99
+P15,Google Ads,23798747459,PLA-Indoor Cycling Bikes-US-260428,其他产品广告,单车,0.0,3.0,2.0,1.0,19.99
+P15,Bing Ads,524692988,Pmax-NCA-Bid Higher-S29R2&S29R3&S26B4-20260916-YJ_bing,其他产品广告,S29R2/S29R3/S26B4,0.0,3.0,2.0,1.0,19.99
+P15,Meta Ads,120239340894290536,Remi_US_251118_TK_ASC+ACA_BF_Sale_Pur_Essential,大促 / 通用,—,110.0,12.0,10.0,3.099,0.0
+P15,Google Ads,21556512890,Search-Brand-US-24.10.10,品牌词搜索,品牌,19.0,12.0,6.0,0.0,0.0
+P15,Meta Ads,120256700895130321,Remi_US_20261109_P16_Catalog_Pur_Strength_Retargeting,无氧专投,P16,17.0,0.0,0.0,0.0,0.0
+P15,Meta Ads,120256577470110321,Remi_US_20261101_P16_MOF_Purchase_A_Stills,无氧专投,P16,11.0,10.0,17.0,0.0,0.0
+P15,Meta Ads,120251896527580751,Danni_US_261023_2519_MOF_Pur,其他产品广告,2519,7.0,1.0,1.0,0.0,0.0
+P15,Google Ads,23275447343,Search-Brand-FullSite-MultiAngle-20261012(20251118)-YJ,品牌词搜索,品牌,6.0,9.0,5.0,0.074,0.0
+P15,Meta Ads,120236050902480717,Winnie_US_251031_TKvideo_ASC_PUR_R26,其他产品广告,R26,5.0,0.0,1.0,0.0,0.0
+P15,Meta Ads,120256577470060321,Remi_US_20261101_P16_MOF_Purchase_B_Formats,无氧专投,P16,5.0,9.0,4.0,0.0,0.0
+P15,Google Ads,24420815885,DemandGen_P16_Image_TOF_US_20261102_Jiayi,无氧专投,P16,5.0,3.0,3.0,0.0,0.0
+P15,Google Ads,22934640863,PMax_Treadmill_MOF_US_20260920,其他产品广告,跑步机,4.0,0.0,0.0,0.0,0.0
+P15,Meta Ads,120250087831480291,Remi_US_20260904_T27_MOF_ASC_MenGym,其他产品广告,T27,4.0,3.0,5.0,0.0,0.0
+P15,Meta Ads,120256589297840321,Remi_US_20261102_P16_MOF_Purchase_E_SpaceTime,无氧专投,P16,3.0,2.0,4.0,0.0,0.0
+P15,Meta Ads,120248342095940307,Lyfi_US_260710_P14_creativetest,其他产品广告,P14,3.0,0.0,0.0,0.0,0.0
+P15,Google Ads,24415654473,Search_P16_BOF_Brand_US_20261102_Jiayi,无氧专投,P16,3.0,6.0,3.0,2.0,0.0
+P15,Google Ads,24420806558,PMax_P16_MOF_US_20261102_Jiayi,无氧专投,P16,3.0,4.0,4.0,0.0,0.0
+P15,Meta Ads,120231080177330077,Winnie_US_250912_ASC_2448_PUR_TKvideo,其他产品广告,2448,2.0,0.0,0.0,0.0,0.0
+P15,Meta Ads,120255058776710039,Winnie_US_261102_R11B4_MOF_Pur_BF-Deposit_1,其他产品广告,R11B4,2.0,0.0,0.0,0.0,0.0
+P15,Meta Ads,120245399526740291,Remi_US_260520_2_INS_R50_Guide,其他产品广告,R50,2.0,1.0,0.0,0.0,0.0
+P15,Meta Ads,120256485219560321,Remi_US_20261026_P16_TOF_Lead_PageEngaged_180D,无氧专投,P16,2.0,5.0,4.0,0.0,0.0
+P15,Meta Ads,120256589297850321,Remi_US_20261102_P16_MOF_Purchase_D_VideoLife,无氧专投,P16,2.0,2.0,2.0,0.0,0.0
+P15,Meta Ads,120246427910120077,Winnie_US_260630_2519_MOF_Pur,其他产品广告,2519,2.0,3.0,2.0,0.0,0.0
+P15,Meta Ads,120247017970140307,Lyfi_US_260617_T27_MOF_creativetest,其他产品广告,T27,2.0,0.0,0.0,0.08,0.0
+P15,Meta Ads,120218584981320450,Remi_US_250327_TK_ASC_CreativeTest_PUR_2398,其他产品广告,2398,2.0,0.0,0.0,0.0,0.0
+P15,Meta Ads,120247787462920077,Winnie_US_260902_2440_MOF_Pur,其他产品广告,2440,1.0,3.0,1.0,0.0,0.0
+P15,Meta Ads,120243458212920567,Lyfi_US_260512_2440_Pur,其他产品广告,2440,1.0,0.0,0.0,0.0,0.0
+P15,Meta Ads,120248343077950480,Danni_US_260724_2510_MOF_Pur,其他产品广告,2510,1.0,0.0,0.0,0.074,0.0
+P15,Meta Ads,120250535360310307,Lyfi_US_261101_T27_MOF_pic_Pur_BF-Deposit,其他产品广告,T27,1.0,0.0,0.0,0.0,0.0
+P15,Google Ads,24246181885,DemandGen_All_salepage_TOF_Custom Intend_US_20260911_Jiayi,大促 / 通用,—,1.0,0.0,0.0,0.0,0.0
+P15,Meta Ads,120249377314400307,Lyfi_US_260824_T27_MOF_creativetest,其他产品广告,T27,1.0,0.0,0.0,0.0,0.0
+P15,Google Ads,,(未匹配到名称),未匹配到名称,—,1.0,0.0,0.0,0.0,0.0
+P15,Meta Ads,120247983291590717,Winnie_US_260602_2440_PUR_TKvideo_CBO,其他产品广告,2440,1.0,2.0,1.0,0.005,0.0
+P15,Google Ads,24375604541,PLA-S26-MOF-261021-US-Jiayi,其他产品广告,S26,1.0,0.0,0.0,0.0,0.0
+P15,Meta Ads,120248702736350077,Winnie_US_261106_2519_MOF_Pur_TKvideo,其他产品广告,2519,1.0,0.0,0.0,0.0,0.0
+P15,Meta Ads,120256589297810321,Remi_US_20261102_P16_MOF_Purchase_C_VideoProof,无氧专投,P16,1.0,2.0,3.0,0.0,0.0
+P15,Google Ads,23279971627,PLA-Best Seller-R11B4&R26&R30-Custom Audience-20260902(20251118)-YJ,其他产品广告,R11B4/R26/R30,1.0,1.0,0.0,0.0,0.0
+P15,Meta Ads,120236307899200480,Danni_US_251203_S19B1_PUR_TKvideo,其他产品广告,S19B1,1.0,1.0,0.0,0.0,0.0
+P15,Google Ads,23530124581,Products Type Search(Brand+Product&Product)-20260203-YJ,品牌词搜索,品牌,1.0,1.0,2.0,1.0,0.0
+P15,Meta Ads,120250864959170291,Remi_US_261101_T27_BF_Deposit_Pur,其他产品广告,T27,1.0,0.0,0.0,0.0,0.0
+P15,Google Ads,23276908543,PLA-Best Seller-Interest Audience-20251118-YJ,大促 / 通用,—,1.0,0.0,1.0,0.0,0.0
+P15,Meta Ads,120252139585170751,Danni_US_261106_2519_MOF_Pur,其他产品广告,2519,1.0,0.0,0.0,0.0,0.0
+P15,Google Ads,24349241240,Search-Clearance Sale-Rowers-9SKU-20261013-YJ,其他产品广告,划船机,1.0,0.0,0.0,0.0,0.0
+P15,Meta Ads,120235886555010291,Remi_US_251121_BFCM_ASC+ACA-CreativeTest_PUR_R50_Guide,其他产品广告,R50,0.0,3.0,3.0,0.005,0.0
+P15,Meta Ads,120235901777530291,Remi_US_251121_TK_ASC+ACA-CreativeTest_PUR_R26,其他产品广告,R26,0.0,1.0,1.0,0.0,0.0
+P15,Meta Ads,120253002281650717,Winnie_US_261023_R11B4_MOF_Pur,其他产品广告,R11B4,0.0,1.0,0.0,0.0,0.0
+P15,Meta Ads,120248719573010307,Lyfi_US_260727_T27_MOF_creativetest,其他产品广告,T27,0.0,1.0,1.0,0.005,0.0
+P15,Meta Ads,120248509453560077,Winnie_US_261023_R26_MOF_Pur_TKvideo,其他产品广告,R26,0.0,1.0,0.0,0.0,0.0
+P15,Google Ads,23141279217,Pmax-Sales页面-US-251017,大促 / 通用,—,0.0,1.0,2.0,0.0,0.0
+P15,Meta Ads,120246902717360077,Winnie_US_260717_2510_MOF_Pur,其他产品广告,2510,0.0,3.0,2.0,0.0,0.0
+P15,Meta Ads,120243023568280751,Danni_US_260401_2440_PUR_Tkvideo,其他产品广告,2440,0.0,1.0,0.0,0.005,0.0
+P15,Meta Ads,120250652346510291,Remi_US_20261016_Sale_Halloween_Sale_Sitewide50,大促 / 通用,—,0.0,0.0,0.0,0.005,0.0
+P15,Meta Ads,120250051880860480,Danni_US_261026_R11B4_MOF_Pur_Carousel,其他产品广告,R11B4,0.0,3.0,5.0,0.149,0.0
+P15,Meta Ads,120253061004320717,Winnie_US_261029_R30_MOF_Pur,其他产品广告,R30,0.0,1.0,0.0,0.0,0.0
+P15,Meta Ads,120256417072150321,Remi_US_20261021_P16_TOF_Lead,无氧专投,P16,0.0,17.0,18.0,0.0,0.0
+P15,Google Ads,24338740796,Search-FitnessGoal-Pages-20261010-YJ,大促 / 通用,—,0.0,2.0,1.0,0.0,0.0
+P15,Bing Ads,524893131,Search-Brand-FullSite-MultiAngle-20261020-YJ_bing,品牌词搜索,品牌,0.0,1.0,1.0,1.4,0.0
+P15,Meta Ads,120246888717140717,Winnie_US_260520_2440_PUR_TKvideo_CBO,其他产品广告,2440,0.0,1.0,0.0,0.0,0.0
+P15,Google Ads,23690137645,Products Search-Vibration(Phrase match)-20260324-YJ,其他产品广告,甩脂机,0.0,1.0,0.0,0.0,0.0
+P15,Meta Ads,120243748816520077,Winnie_US_260520_TKvideo_PUR_R26_CBO,其他产品广告,R26,0.0,0.0,1.0,0.0,0.0
+P15,Google Ads,22548584583,Search-Bikes-Brand-US-20250514,品牌词搜索,品牌,0.0,1.0,1.0,0.0,0.0
+P15,Google Ads,24419309187,DemandGen_picture_R50Pro_TOF_US_20261103-YJ,其他产品广告,R50P,0.0,1.0,1.0,0.0,0.0
+P15,Bing Ads,523564711,Brand Search-High Conversion-20251119-YJ_bing,品牌词搜索,品牌,0.0,1.0,1.0,0.2,0.0
+P15,Meta Ads,120244121526400077,Winnie_US_260526_PUR_R26_Flash Sale_IMG,其他产品广告,R26,0.0,0.0,2.0,0.0,0.0
+P15,Meta Ads,120247675311580077,Winnie_US_260824_2448_MOF_Pur,其他产品广告,2448,0.0,1.0,0.0,0.0,0.0
+P15,Meta Ads,120245827501200450,Remi_US_260409_2440_Pur_TK,其他产品广告,2440,0.0,0.0,1.0,0.0,0.0
+P15,Meta Ads,120254748075610450,Remi_US_261001_2515_Pur_TK_自制,其他产品广告,2515,0.0,0.0,1.0,0.0,0.0
+P15,Meta Ads,120235899884340291,Remi_US_251121_W50_ASC+ACA_Guide_Pur,其他产品广告,W50,0.0,0.0,0.0,0.005,0.0
+P15,Meta Ads,120249658736410307,Lyfi_US_260907_T27_MOF_creativetest,其他产品广告,T27,0.0,0.0,0.0,0.01,0.0
+P15,Meta Ads,120252517334230717,Winnie_US_260923_R11B4_MOF_Pur,其他产品广告,R11B4,0.0,0.0,0.0,0.005,0.0
+P15,Meta Ads,120252799674450717,Winnie_US_261010_R30_MOF_Pur,其他产品广告,R30,0.0,0.0,0.0,0.005,0.0
+P15,Meta Ads,120252882523560717,Winnie_US_261015_R11B4_MOF_Pur_Halloween Sale,其他产品广告,R11B4,0.0,0.0,0.0,0.005,0.0
+P15,Meta Ads,120245461012460077,Winnie_US_260615_R26_MOF_Pur_PD Sale,其他产品广告,R26,0.0,2.0,1.0,1.08,0.0
+P15,Meta Ads,120248853898540701,Danni_US_261015_Bikes_MOF_Pur_Halloweensale,其他产品广告,单车,0.0,1.0,0.0,0.0,0.0
+P15,Meta Ads,120249293469290717,Winnie_US_260616_R11B4_MOF_Pur_PD Sale,其他产品广告,R11B4,0.0,4.0,5.0,0.169,0.0
+P15,Google Ads,24335368745,Search-Rower-Brand+Category-20261009-YJ,品牌词搜索,品牌,0.0,1.0,0.0,0.0,0.0
+P15,Meta Ads,120252514039250717,Winnie_US_260923_R26_MOF_Pur,其他产品广告,R26,0.0,2.0,3.0,0.005,0.0
+P15,Meta Ads,120249296049630717,Winnie_US_260616_R11B4_MOF_Pur,其他产品广告,R11B4,0.0,1.0,0.0,0.223,0.0
+P15,Meta Ads,120250341103730307,Lyfi_US_261019_T27_MOF_pur,其他产品广告,T27,0.0,1.0,2.0,0.0,0.0
+P15,Meta Ads,120252964976550717,Winnie_US_261021_Air Rower_DPA_MOF+BOF_Pur,其他产品广告,划船机,0.0,2.0,5.0,0.08,0.0
+P15,Meta Ads,120251672107900751,Danni_US_261010_R11B4_MOF_Pur,其他产品广告,R11B4,0.0,0.0,0.0,0.01,0.0
+P15,Meta Ads,120222313072920717,Winnie_US_250427_INSpost_ASC_PUR_R50 Campaign,其他产品广告,R50,0.0,1.0,0.0,2.805,0.0
+P15,Meta Ads,120251459523760717,Winnie_US_260804_R11B4_MOF_Pur_Pic Test,其他产品广告,R11B4,0.0,1.0,0.0,0.015,0.0
+P15,Meta Ads,120252932436840717,Winnie_US_261019_R30_MOF_Pur,其他产品广告,R30,0.0,1.0,0.0,0.0,0.0
+P15,Meta Ads,120253060130860717,Winnie_US_261027_R11B4_MOF_Pur_INSpost,其他产品广告,R11B4,0.0,3.0,5.0,0.074,0.0
+P15,Meta Ads,120256448657550321,Remi_US_20261023_P16_TOF_Lead_LargeEngagers_90D,无氧专投,P16,0.0,2.0,1.0,0.0,0.0
+P15,Google Ads,24299019342,PMax-Rower-AirPower-R50&R60N-20260930-YJ,其他产品广告,R50/R60N,0.0,1.0,0.0,0.0,0.0
+P15,Meta Ads,120256448657530321,Remi_US_20261023_P16_TOF_Lead_SiteEngagers_90D,无氧专投,P16,0.0,2.0,1.0,0.0,0.0
+P15,Google Ads,24140760844,DSA-Vibration-20260814-YJ,其他产品广告,甩脂机,0.0,1.0,1.0,0.0,0.0
+P15,Meta Ads,120236402653370077,Winnie_US_251212_2510_PUR_TKvideo_CBO,其他产品广告,2510,0.0,1.0,0.0,0.0,0.0
+P15,Meta Ads,52563364167356,Lyfi_US_260812_2510_CreativeTest,其他产品广告,2510,0.0,1.0,0.0,0.0,0.0
+P15,Meta Ads,120249538120530291,Remi_US_20260805_T27_MOF_ASC_Guide,其他产品广告,T27,0.0,0.0,0.0,0.005,0.0
+P16,Bing Ads,524893131,Search-Brand-FullSite-MultiAngle-20261020-YJ_bing,品牌词搜索,品牌,6.0,2.0,1.0,1.4,4059.99
+P16,Google Ads,23530124581,Products Type Search(Brand+Product&Product)-20260203-YJ,品牌词搜索,品牌,7.0,2.0,2.0,1.0,2899.99
+P16,Meta Ads,120245461012460077,Winnie_US_260615_R26_MOF_Pur_PD Sale,其他产品广告,R26,2.0,4.0,2.0,1.0,2813.0
+P16,Meta Ads,120256588318150321,Remi_US_20261102_P16_BOF_Retargeting_Pur,无氧专投,P16,391.0,52.0,39.0,1.0,2539.99
+P16,Meta Ads,,(未匹配到名称),未匹配到名称,—,531.0,42.0,39.0,1.0,2299.99
+P16,Meta Ads,120248343077950480,Danni_US_260724_2510_MOF_Pur,其他产品广告,2510,16.0,7.0,7.0,0.492,1427.69
+P16,Meta Ads,120245460337800567,Lyfi_US_260605_2510_pur,其他产品广告,2510,3.0,1.0,1.0,0.446,1293.84
+P16,Meta Ads,120239340894290536,Remi_US_251118_TK_ASC+ACA_BF_Sale_Pur_Essential,大促 / 通用,—,243.0,22.0,14.0,0.4,1160.0
+P16,Meta Ads,120236402653370077,Winnie_US_251212_2510_PUR_TKvideo_CBO,其他产品广告,2510,7.0,3.0,2.0,0.4,1160.0
+P16,Meta Ads,120256662056110321,Remi_US_20261106_P16_ABO_自制_AudienceTest,无氧专投,P16,372.0,35.0,24.0,0.4,920.0
+P16,Bing Ads,523564711,Brand Search-High Conversion-20251119-YJ_bing,品牌词搜索,品牌,15.0,3.0,2.0,0.2,580.0
+P16,Meta Ads,52563364167356,Lyfi_US_260812_2510_CreativeTest,其他产品广告,2510,7.0,2.0,2.0,0.046,133.85
+P16,Meta Ads,120256417072150321,Remi_US_20261021_P16_TOF_Lead,无氧专投,P16,105.0,73.0,57.0,0.044,128.89
+P16,Google Ads,23275447343,Search-Brand-FullSite-MultiAngle-20261012(20251118)-YJ,品牌词搜索,品牌,33.0,27.0,18.0,0.044,128.89
+P16,Meta Ads,120247787462920077,Winnie_US_260902_2440_MOF_Pur,其他产品广告,2440,5.0,12.0,9.0,0.022,64.44
+P16,Meta Ads,52547900487156,Lyfi_US_260708_2510_CreativeTest,其他产品广告,2510,2.0,1.0,1.0,0.015,44.62
+P16,Meta Ads,120256448657530321,Remi_US_20261023_P16_TOF_Lead_SiteEngagers_90D,无氧专投,P16,8.0,10.0,4.0,0.011,32.22
+P16,Google Ads,23141279217,Pmax-Sales页面-US-251017,大促 / 通用,—,4.0,6.0,4.0,0.011,32.22
+P16,Meta Ads,120249293469290717,Winnie_US_260616_R11B4_MOF_Pur_PD Sale,其他产品广告,R11B4,4.0,6.0,2.0,0.011,32.22
+P16,Google Ads,22548584583,Search-Bikes-Brand-US-20250514,品牌词搜索,品牌,3.0,3.0,2.0,0.011,32.22
+P16,Meta Ads,120235586125610480,Danni_US_251122_W50_PUR_TKvideo,其他产品广告,W50,1.0,1.0,1.0,0.011,32.22
+P16,Meta Ads,120249986189980291,Remi_US_20260827_T27_MOF_ASC,其他产品广告,T27,1.0,3.0,1.0,0.011,32.22
+P16,Meta Ads,120250088449570291,Remi_US_20260905_T27_MOF_ASC,其他产品广告,T27,1.0,3.0,0.0,0.011,32.22
+P16,Google Ads,24140760844,DSA-Vibration-20260814-YJ,其他产品广告,甩脂机,0.0,2.0,2.0,0.011,32.22
+P16,Google Ads,24420815885,DemandGen_P16_Image_TOF_US_20261102_Jiayi,无氧专投,P16,732.0,38.0,27.0,0.0,0.0
+P16,Google Ads,24420806558,PMax_P16_MOF_US_20261102_Jiayi,无氧专投,P16,514.0,15.0,8.0,0.0,0.0
+P16,Meta Ads,120256577470110321,Remi_US_20261101_P16_MOF_Purchase_A_Stills,无氧专投,P16,489.0,47.0,40.0,0.0,0.0
+P16,Meta Ads,120256577470060321,Remi_US_20261101_P16_MOF_Purchase_B_Formats,无氧专投,P16,214.0,25.0,17.0,0.0,0.0
+P16,Meta Ads,120256589297810321,Remi_US_20261102_P16_MOF_Purchase_C_VideoProof,无氧专投,P16,173.0,12.0,10.0,0.0,0.0
+P16,Google Ads,24426513997,Search_P16_MOF_General_US_20261102_Jiayi,无氧专投,P16,137.0,2.0,3.0,0.0,0.0
+P16,Google Ads,21556512890,Search-Brand-US-24.10.10,品牌词搜索,品牌,115.0,38.0,18.0,0.0,0.0
+P16,Meta Ads,120256589297840321,Remi_US_20261102_P16_MOF_Purchase_E_SpaceTime,无氧专投,P16,86.0,4.0,4.0,0.0,0.0
+P16,Google Ads,24415654473,Search_P16_BOF_Brand_US_20261102_Jiayi,无氧专投,P16,76.0,13.0,7.0,0.0,0.0
+P16,Google Ads,24420815996,DemandGen_P16_TVC_TOF_US_20261102_Jiayi,无氧专投,P16,42.0,1.0,1.0,0.0,0.0
+P16,Meta Ads,120236050902480717,Winnie_US_251031_TKvideo_ASC_PUR_R26,其他产品广告,R26,38.0,0.0,1.0,0.0,0.0
+P16,Meta Ads,120256664565300321,Remi_US_20261106_P16_MOF_Purchase_F_AllVideo_Broad,无氧专投,P16,37.0,3.0,2.0,0.0,0.0
+P16,Meta Ads,120248010014650701,Danni_US_260828_2440_MOF_Pur,其他产品广告,2440,34.0,3.0,2.0,0.0,0.0
+P16,Meta Ads,120256485219560321,Remi_US_20261026_P16_TOF_Lead_PageEngaged_180D,无氧专投,P16,21.0,14.0,12.0,0.0,0.0
+P16,Meta Ads,120256589297850321,Remi_US_20261102_P16_MOF_Purchase_D_VideoLife,无氧专投,P16,19.0,6.0,7.0,0.0,0.0
+P16,Meta Ads,120256448657550321,Remi_US_20261023_P16_TOF_Lead_LargeEngagers_90D,无氧专投,P16,15.0,5.0,5.0,0.0,0.0
+P16,Meta Ads,120235901777530291,Remi_US_251121_TK_ASC+ACA-CreativeTest_PUR_R26,其他产品广告,R26,12.0,1.0,1.0,0.0,0.0
+P16,Meta Ads,120256700895130321,Remi_US_20261109_P16_Catalog_Pur_Strength_Retargeting,无氧专投,P16,12.0,1.0,0.0,0.0,0.0
+P16,Meta Ads,120250087831480291,Remi_US_20260904_T27_MOF_ASC_MenGym,其他产品广告,T27,10.0,5.0,5.0,0.0,0.0
+P16,Google Ads,23276908543,PLA-Best Seller-Interest Audience-20251118-YJ,大促 / 通用,—,9.0,1.0,1.0,0.0,0.0
+P16,Meta Ads,120247675311580077,Winnie_US_260824_2448_MOF_Pur,其他产品广告,2448,9.0,3.0,2.0,0.0,0.0
+P16,Meta Ads,120247983291590717,Winnie_US_260602_2440_PUR_TKvideo_CBO,其他产品广告,2440,8.0,3.0,5.0,0.0,0.0
+P16,Meta Ads,120243390578880717,Winnie_US_260325_2440_PUR_TKvideo_CBO,其他产品广告,2440,8.0,3.0,2.0,0.0,0.0
+P16,Meta Ads,120252932436840717,Winnie_US_261019_R30_MOF_Pur,其他产品广告,R30,7.0,2.0,3.0,0.0,0.0
+P16,Bing Ads,523567755,PMax-Best Seller-20251122-YJ_bing,大促 / 通用,—,7.0,1.0,0.0,0.0,0.0
+P16,Meta Ads,120234745633550717,Winnie_US_251011_2448_PUR_TKvideo_CBO,其他产品广告,2448,7.0,0.0,1.0,0.0,0.0
+P16,Meta Ads,120248342095940307,Lyfi_US_260710_P14_creativetest,其他产品广告,P14,6.0,8.0,2.0,0.0,0.0
+P16,Meta Ads,120244121526400077,Winnie_US_260526_PUR_R26_Flash Sale_IMG,其他产品广告,R26,6.0,4.0,3.0,0.0,0.0
+P16,Google Ads,24299019342,PMax-Rower-AirPower-R50&R60N-20260930-YJ,其他产品广告,R50/R60N,5.0,1.0,0.0,0.0,0.0
+P16,Meta Ads,120235886555010291,Remi_US_251121_BFCM_ASC+ACA-CreativeTest_PUR_R50_Guide,其他产品广告,R50,5.0,7.0,2.0,0.0,0.0
+P16,Meta Ads,120246902717360077,Winnie_US_260717_2510_MOF_Pur,其他产品广告,2510,5.0,7.0,7.0,0.0,0.0
+P16,Google Ads,22934640863,PMax_Treadmill_MOF_US_20260920,其他产品广告,跑步机,5.0,5.0,1.0,0.0,0.0
+P16,Meta Ads,120247645017550480,Danni_US_260703_R26_MOF_Pur,其他产品广告,R26,5.0,1.0,0.0,0.0,0.0
+P16,Meta Ads,120252968941120717,Winnie_US_261021_R11B4_MOF_Pur,其他产品广告,R11B4,5.0,1.0,0.0,0.0,0.0
+P16,Meta Ads,120218584981320450,Remi_US_250327_TK_ASC_CreativeTest_PUR_2398,其他产品广告,2398,5.0,0.0,0.0,0.0,0.0
+P16,Google Ads,23303345239,Search-DSA-US-20251125,大促 / 通用,—,4.0,1.0,0.0,0.0,0.0
+P16,Meta Ads,120231080177330077,Winnie_US_250912_ASC_2448_PUR_TKvideo,其他产品广告,2448,4.0,1.0,1.0,0.0,0.0
+P16,Bing Ads,525116554,Search-FitnessGoal-Pages-MOF-20261029-YJ_bing,大促 / 通用,—,4.0,0.0,1.0,0.0,0.0
+P16,Bing Ads,524304676,PLA-R26&R11B4&S29R2&T27- In-market Audiences-TROAS-20260608-YJ_bing,其他产品广告,R26/R11B4/S29R2/T27,4.0,0.0,0.0,0.0,0.0
+P16,Meta Ads,120222313072920717,Winnie_US_250427_INSpost_ASC_PUR_R50 Campaign,其他产品广告,R50,3.0,2.0,1.0,0.0,0.0
+P16,Meta Ads,120248719573010307,Lyfi_US_260727_T27_MOF_creativetest,其他产品广告,T27,3.0,8.0,1.0,0.0,0.0
+P16,Google Ads,24299019093,PMax-Rower-MagneticQuiet-RS3&R7-20260930-YJ,其他产品广告,划船机,3.0,2.0,0.0,0.0,0.0
+P16,Bing Ads,524692988,Pmax-NCA-Bid Higher-S29R2&S29R3&S26B4-20260916-YJ_bing,其他产品广告,S29R2/S29R3/S26B4,3.0,1.0,3.0,0.0,0.0
+P16,Meta Ads,120251896527580751,Danni_US_261023_2519_MOF_Pur,其他产品广告,2519,3.0,0.0,0.0,0.0,0.0
+P16,Meta Ads,120247017970140307,Lyfi_US_260617_T27_MOF_creativetest,其他产品广告,T27,3.0,10.0,0.0,0.0,0.0
+P16,Google Ads,23279971627,PLA-Best Seller-R11B4&R26&R30-Custom Audience-20260902(20251118)-YJ,其他产品广告,R11B4/R26/R30,3.0,1.0,0.0,0.0,0.0
+P16,Meta Ads,120247718999470077,Winnie_US_260827_2510_MOF_Pur,其他产品广告,2510,2.0,0.0,0.0,0.0,0.0
+P16,Meta Ads,120248668949330077,Winnie_US_261104_2519_MOF_Pur_TKvideo,其他产品广告,2519,2.0,1.0,0.0,0.0,0.0
+P16,Meta Ads,120247252745030077,Winnie_US_260804_R26_MOF_Pur_2,其他产品广告,R26,2.0,1.0,0.0,0.0,0.0
+P16,Google Ads,24246181885,DemandGen_All_salepage_TOF_Custom Intend_US_20260911_Jiayi,大促 / 通用,—,2.0,5.0,1.0,0.0,0.0
+P16,Meta Ads,120245714862700751,Danni_US_260511_2398_PUR_Tkvideo_CBO,其他产品广告,2398,2.0,1.0,0.0,0.0,0.0
+P16,Bing Ads,523830267,Search-Bike-Generic-TOF-20261104(20260123)-YJ_bing,其他产品广告,单车,2.0,0.0,0.0,0.0,0.0
+P16,Meta Ads,120243748816520077,Winnie_US_260520_TKvideo_PUR_R26_CBO,其他产品广告,R26,2.0,2.0,1.0,0.0,0.0
+P16,Google Ads,23798747459,PLA-Indoor Cycling Bikes-US-260428,其他产品广告,单车,2.0,1.0,0.0,0.0,0.0
+P16,Bing Ads,525088735,Brand-ECPC,品牌词搜索,品牌,2.0,1.0,0.0,0.0,0.0
+P16,Google Ads,24415684276,PMax_Exercise Bikes_MOF_US_20261029_Jiayi,其他产品广告,单车,2.0,1.0,0.0,0.0,0.0
+P16,Google Ads,24335368745,Search-Rower-Brand+Category-20261009-YJ,品牌词搜索,品牌,2.0,0.0,0.0,0.0,0.0
+P16,Bing Ads,523901551,Shop Goal Products Search-By Fitness Goal-20261104-20260213-YJ_bing,大促 / 通用,—,2.0,0.0,0.0,0.0,0.0
+P16,Google Ads,23550477040,Shop Goal Products Search-By Fitness Goal(Brand+Product)-20260209-YJ,品牌词搜索,品牌,2.0,1.0,0.0,0.0,0.0
+P16,Meta Ads,120249498069650536,Remi_US_260520_TK_2448_Pur,其他产品广告,2448,1.0,1.0,0.0,0.0,0.0
+P16,Meta Ads,120249981977740480,Danni_US_261021_S19B1_MOF_Pur,其他产品广告,S19B1,1.0,0.0,2.0,0.0,0.0
+P16,Meta Ads,120236307899200480,Danni_US_251203_S19B1_PUR_TKvideo,其他产品广告,S19B1,1.0,1.0,0.0,0.0,0.0
+P16,Meta Ads,120242868102980480,Danni_US_260428_2510_TKvideo,其他产品广告,2510,1.0,0.0,0.0,0.0,0.0
+P16,Meta Ads,120253265692220222,Danni_US_261101_S29R2_MOF_Pur_BF-Deposit_2,其他产品广告,S29R2,1.0,0.0,0.0,0.0,0.0
+P16,Meta Ads,120250162008450480,Danni_US_2601102_S19B1_MOF_Pur_Cut,其他产品广告,S19B1,1.0,0.0,0.0,0.0,0.0
+P16,Meta Ads,{{campaign.id}},(未匹配到名称),未匹配到名称,—,1.0,0.0,0.0,0.0,0.0
+P16,Google Ads,23693253280,Search-Rower-ResistanceType-20261009-YJ,其他产品广告,划船机,1.0,0.0,1.0,0.0,0.0
+P16,Meta Ads,120247540780790450,Remi_US_260429_2_TK_PUR_2398,其他产品广告,2398,1.0,0.0,0.0,0.0,0.0
+P16,Google Ads,23381217311,PLA-Rowing Machine-Clearance Sale-Audience-20260903(20251219)-YJ,其他产品广告,划船机,1.0,0.0,0.0,0.0,0.0
+P16,Google Ads,24008356781,DemandGen_NickDompierre_S29_TOF_US_20260707_Jiayi,其他产品广告,S29,1.0,0.0,0.0,0.0,0.0
+P16,Meta Ads,120248830489790701,Danni_US_261015_S19B1_MOF_Pur_Halloweensale,其他产品广告,S19B1,1.0,6.0,0.0,0.0,0.0
+P16,Meta Ads,120250606510150307,Lyfi_US_261103_T27_MOF_sammie_interest,其他产品广告,T27,1.0,0.0,0.0,0.0,0.0
+P16,Bing Ads,525133245,PMax-Rower-MagneticQuiet-RS3&R7-20261102-YJ_bing,其他产品广告,划船机,1.0,0.0,1.0,0.0,0.0
+P16,Meta Ads,120246654117070536,Remi_US_260409_TK_2448_Pur,其他产品广告,2448,1.0,1.0,0.0,0.0,0.0
+P16,Google Ads,23884941568,Search_T27_BOF_Brand_US_20260526_Jiayi,品牌词搜索,品牌,1.0,1.0,0.0,0.0,0.0
+P16,Meta Ads,120253001900930717,Winnie_US_261023_2515_MOF_Pur_2_自制,其他产品广告,2515,1.0,0.0,0.0,0.0,0.0
+P16,Meta Ads,120250993190700291,Remi_US_20261106_T27_BF-Deposit_UGCTest_Pur,其他产品广告,T27,1.0,3.0,0.0,0.0,0.0
+P16,Meta Ads,120246661547740536,Remi_US_260409_2510_TK,其他产品广告,2510,1.0,0.0,0.0,0.0,0.0
+P16,Meta Ads,120245827501200450,Remi_US_260409_2440_Pur_TK,其他产品广告,2440,1.0,4.0,1.0,0.0,0.0
+P16,Google Ads,,(未匹配到名称),未匹配到名称,—,1.0,1.0,0.0,0.0,0.0
+P16,Meta Ads,120246656981160536,Remi_US_260410_TK_2448_Pur,其他产品广告,2448,1.0,1.0,0.0,0.0,0.0
+P16,Google Ads,24375604541,PLA-S26-MOF-261021-US-Jiayi,其他产品广告,S26,1.0,0.0,0.0,0.0,0.0
+P16,Bing Ads,523879995,Products Sales Search-20261019-0920-0205-YJ_bing,大促 / 通用,—,1.0,0.0,0.0,0.0,0.0
+P16,Bing Ads,525133956,PMax-Rower-AirPower-R50&R60N-20261102-YJ_bing,其他产品广告,R50/R60N,1.0,1.0,0.0,0.0,0.0
+P16,Google Ads,24338740796,Search-FitnessGoal-Pages-20261010-YJ,大促 / 通用,—,1.0,1.0,0.0,0.0,0.0
+P16,Meta Ads,120225971863860751,Danni_US_250531_2415_PUR_TKvideo_ABO_2909,其他产品广告,2415,1.0,0.0,0.0,0.0,0.0
+P16,Meta Ads,120233437479130536,Remi_US_250818_Rower_ASC+ACA_CreactiveTest_Pur,其他产品广告,划船机,1.0,0.0,0.0,0.0,0.0
+P16,Meta Ads,120248702736350077,Winnie_US_261106_2519_MOF_Pur_TKvideo,其他产品广告,2519,1.0,0.0,0.0,0.0,0.0
+P16,Google Ads,22856764526,PLA-Recumbent Bikes-2-US-251016,其他产品广告,单车,1.0,0.0,0.0,0.0,0.0
+P16,Meta Ads,120248853898540701,Danni_US_261015_Bikes_MOF_Pur_Halloweensale,其他产品广告,单车,1.0,4.0,0.0,0.0,0.0
+P16,Meta Ads,120249296049630717,Winnie_US_260616_R11B4_MOF_Pur,其他产品广告,R11B4,1.0,1.0,0.0,0.0,0.0
+P16,Google Ads,24235163979,DemandGen_All_salepage_TOF_Affinity_US_20260911_Jiayi,大促 / 通用,—,1.0,2.0,1.0,0.0,0.0
+P16,Meta Ads,120250340489300307,Lyfi_US_261019_T27_MOF_creativetest,其他产品广告,T27,1.0,0.0,1.0,0.0,0.0
+P16,Google Ads,23681240387,Products Search-Vibration(Exact match)-20260323-YJ,其他产品广告,甩脂机,1.0,0.0,0.0,0.0,0.0
+P16,Bing Ads,524231413,PMax-Vibration-20260519-YJ_bing,其他产品广告,甩脂机,1.0,0.0,0.0,0.0,0.0
+P16,Meta Ads,120246427910120077,Winnie_US_260630_2519_MOF_Pur,其他产品广告,2519,1.0,1.0,0.0,0.0,0.0
+P16,Google Ads,24019394590,Search_Recumbent Bikes_MOF_General_US_20260709_Jiayi,其他产品广告,单车,1.0,0.0,0.0,0.0,0.0
+P16,Meta Ads,120250114670060717,Winnie_US_260626_R26_MOF_Pur_2,其他产品广告,R26,1.0,0.0,0.0,0.0,0.0
+P16,Google Ads,24335373032,Search-Rower-Generic-MOF-20261009-YJ,其他产品广告,划船机,1.0,0.0,0.0,0.0,0.0
+P16,Meta Ads,120247627407210077,Winnie_US_260820_2510_MOF_Pur,其他产品广告,2510,0.0,1.0,0.0,0.0,0.0
+P16,Other Ads,120249377314400307,Lyfi_US_260824_T27_MOF_creativetest,其他产品广告,T27,0.0,1.0,0.0,0.0,0.0
+P16,Meta Ads,120249538829940291,Remi_US_20260805_T27_MOF_ASC_AI,其他产品广告,T27,0.0,5.0,0.0,0.0,0.0
+P16,Meta Ads,120250864476160291,Remi_US_20261030_T27_BF-Deposit_Pur,其他产品广告,T27,0.0,6.0,0.0,0.0,0.0
+P16,Meta Ads,120250864959170291,Remi_US_261101_T27_BF_Deposit_Pur,其他产品广告,T27,0.0,3.0,0.0,0.0,0.0
+P16,Meta Ads,120251459523760717,Winnie_US_260804_R11B4_MOF_Pur_Pic Test,其他产品广告,R11B4,0.0,2.0,2.0,0.0,0.0
+P16,Meta Ads,120249538120530291,Remi_US_20260805_T27_MOF_ASC_Guide,其他产品广告,T27,0.0,3.0,1.0,0.0,0.0
+P16,Meta Ads,120252139585170751,Danni_US_261106_2519_MOF_Pur,其他产品广告,2519,0.0,1.0,0.0,0.0,0.0
+P16,Bing Ads,,(未匹配到名称),未匹配到名称,—,0.0,1.0,0.0,0.0,0.0
+P16,Bing Ads,525138926,Search-Rower-Generic-TOF-20261103-YJ_bing,其他产品广告,划船机,0.0,1.0,0.0,0.0,0.0
+P16,Meta Ads,120250568574110291,Remi_US_20261010_T27_MOF_LifestyleMid_Pur,其他产品广告,T27,0.0,1.0,0.0,0.0,0.0
+P16,Meta Ads,120250457648380307,Lyfi_US_261026_T27_MOF_creativetest,其他产品广告,T27,0.0,1.0,0.0,0.0,0.0
+P16,Meta Ads,120249377314400307,Lyfi_US_260824_T27_MOF_creativetest,其他产品广告,T27,0.0,13.0,4.0,0.0,0.0
+P16,Meta Ads,120250535360310307,Lyfi_US_261101_T27_MOF_pic_Pur_BF-Deposit,其他产品广告,T27,0.0,11.0,0.0,0.0,0.0
+P16,Meta Ads,120250721921640291,Remi_US_20261021_T27_MOF_CreativeTest_Pur_Procut,其他产品广告,T27,0.0,1.0,0.0,0.0,0.0
+P16,Meta Ads,120243458212920567,Lyfi_US_260512_2440_Pur,其他产品广告,2440,0.0,2.0,0.0,0.0,0.0
+P16,Meta Ads,120245399526740291,Remi_US_260520_2_INS_R50_Guide,其他产品广告,R50,0.0,2.0,0.0,0.0,0.0
+P16,Meta Ads,120248509453560077,Winnie_US_261023_R26_MOF_Pur_TKvideo,其他产品广告,R26,0.0,1.0,0.0,0.0,0.0
+P16,Google Ads,24279521444,DemandGen_Partnership Ads_nicknilsson1_R26_TOF_US_20260924(20261123stop)_YJ,其他产品广告,R26,0.0,1.0,0.0,0.0,0.0
+P16,Meta Ads,120249857968380291,Remi_US_20260819_T27_MOF_ASC_cutlikeagem,其他产品广告,T27,0.0,4.0,0.0,0.0,0.0
+P16,Google Ads,24246255493,DemandGen_All_salepage_TOF_In Market_US_20260911_Jiayi,大促 / 通用,—,0.0,3.0,2.0,0.0,0.0
+P16,Bing Ads,524687476,Pmax-NCA-Bid Higher-R11B4&R26&R30-20260910-YJ_bing,其他产品广告,R11B4/R26/R30,0.0,1.0,0.0,0.0,0.0
+P16,Meta Ads,120248358768190077,Winnie_US_261013_2440_MOF_Pur_02,其他产品广告,2440,0.0,1.0,0.0,0.0,0.0
+P16,Google Ads,23783941643,PLA-T25-US-New-20260423,其他产品广告,T25,0.0,2.0,0.0,0.0,0.0
+P16,Meta Ads,120246888717140717,Winnie_US_260520_2440_PUR_TKvideo_CBO,其他产品广告,2440,0.0,1.0,0.0,0.0,0.0
+P16,Google Ads,23690137645,Products Search-Vibration(Phrase match)-20260324-YJ,其他产品广告,甩脂机,0.0,2.0,0.0,0.0,0.0
+P16,Meta Ads,120252799674450717,Winnie_US_261010_R30_MOF_Pur,其他产品广告,R30,0.0,1.0,2.0,0.0,0.0
+P16,Meta Ads,120235899884340291,Remi_US_251121_W50_ASC+ACA_Guide_Pur,其他产品广告,W50,0.0,1.0,0.0,0.0,0.0
+P16,Meta Ads,120248138552380077,Winnie_US_260928_R26_MOF_Pur,其他产品广告,R26,0.0,2.0,0.0,0.0,0.0
+P16,Meta Ads,120255177052180450,Remi_US_261028_2440_Pur_TK,其他产品广告,2440,0.0,1.0,1.0,0.0,0.0
+P16,Google Ads,23875796148,PLA_T27_MOF_US_20260526_Jiayi,其他产品广告,T27,0.0,2.0,0.0,0.0,0.0
+P16,Meta Ads,120248556362270077,Winnie_US_261030_R26_MOF_Pur_TKvideo_2,其他产品广告,R26,0.0,1.0,0.0,0.0,0.0
+P16,Google Ads,24209351196,DemandGen_All_salepage_BOF_US_20260904_Jiayi,大促 / 通用,—,0.0,1.0,0.0,0.0,0.0
+P16,Meta Ads,120254748075610450,Remi_US_261001_2515_Pur_TK_自制,其他产品广告,2515,0.0,2.0,1.0,0.0,0.0
+P16,Google Ads,24419309187,DemandGen_picture_R50Pro_TOF_US_20261103-YJ,其他产品广告,R50P,0.0,0.0,1.0,0.0,0.0
+P16,Google Ads,23885103772,Search_T27_MOF_General_US_20260526_Jiayi,其他产品广告,T27,0.0,1.0,0.0,0.0,0.0
+P16,Meta Ads,120253264511950222,Danni_US_261101_T27+R11B4_S29R2_MOF_Pur_BF-Deposit,其他产品广告,T27/R11B4/S29R2,0.0,2.0,0.0,0.0,0.0
+P16,Meta Ads,120252514039250717,Winnie_US_260923_R26_MOF_Pur,其他产品广告,R26,0.0,6.0,8.0,0.0,0.0
+P16,Meta Ads,120252964976550717,Winnie_US_261021_Air Rower_DPA_MOF+BOF_Pur,其他产品广告,划船机,0.0,0.0,2.0,0.0,0.0
+P16,Meta Ads,120245838014640450,Remi_US_260410_2440_Pur_TK,其他产品广告,2440,0.0,3.0,0.0,0.0,0.0
+P16,Meta Ads,52559776854556,Lyfi_US_260805_2440_pur,其他产品广告,2440,0.0,1.0,0.0,0.0,0.0
+P16,Meta Ads,120250341103730307,Lyfi_US_261019_T27_MOF_pur,其他产品广告,T27,0.0,8.0,2.0,0.0,0.0
+P16,Meta Ads,120250864010690291,Remi_US_20261030_BF-Deposit_Traffic,大促 / 通用,—,0.0,1.0,0.0,0.0,0.0
+P16,Google Ads,24423603576,DemandGen_Partnership Ads_fit-tested_T27_TOF_US_20261104_Jiayi,其他产品广告,T27,0.0,1.0,3.0,0.0,0.0
+P16,Meta Ads,120254748075640450,Remi_US_261002_2515_Pur_TK_2_自制,其他产品广告,2515,0.0,1.0,0.0,0.0,0.0
+P16,Meta Ads,120256222759950321,Remi_US_20261008_T27_TOF_CreativeTest_ATC_Olympics,其他产品广告,T27,0.0,1.0,0.0,0.0,0.0
+P16,Meta Ads,120250577934300307,Lyfi_US_261102_T27_MOF_video_creativetest,其他产品广告,T27,0.0,2.0,0.0,0.0,0.0
+P16,Meta Ads,120248453886530701,Danni_US_260921_S19B1_MOF_Pur_Fallsale_Cut,其他产品广告,S19B1,0.0,1.0,0.0,0.0,0.0
+P16,Meta Ads,120250459514570307,Lyfi_US_261026_T27_MOF_pur,其他产品广告,T27,0.0,2.0,0.0,0.0,0.0
+P17,Meta Ads,120256485219560321,Remi_US_20261026_P16_TOF_Lead_PageEngaged_180D,无氧专投,P16,1.0,1.0,0.0,0.0,0.0
+P17,Meta Ads,120248556362270077,Winnie_US_261030_R26_MOF_Pur_TKvideo_2,其他产品广告,R26,1.0,0.0,0.0,0.0,0.0
+P17,Google Ads,21556512890,Search-Brand-US-24.10.10,品牌词搜索,品牌,1.0,0.0,0.0,0.0,0.0
+P18,Meta Ads,120256588318150321,Remi_US_20261102_P16_BOF_Retargeting_Pur,无氧专投,P16,1.0,8.0,3.0,1.0,329.99
+P18,Google Ads,23275447343,Search-Brand-FullSite-MultiAngle-20261012(20251118)-YJ,品牌词搜索,品牌,1.0,0.0,0.0,1.0,329.99
+P18,Google Ads,23530124581,Products Type Search(Brand+Product&Product)-20260203-YJ,品牌词搜索,品牌,1.0,1.0,1.0,1.0,329.99
+P18,Meta Ads,120245461012460077,Winnie_US_260615_R26_MOF_Pur_PD Sale,其他产品广告,R26,0.0,0.0,0.0,1.0,329.99
+P18,Bing Ads,524893131,Search-Brand-FullSite-MultiAngle-20261020-YJ_bing,品牌词搜索,品牌,0.0,0.0,0.0,0.4,132.0
+P18,Meta Ads,120256662056110321,Remi_US_20261106_P16_ABO_自制_AudienceTest,无氧专投,P16,0.0,4.0,1.0,0.4,132.0
+P18,Bing Ads,523564711,Brand Search-High Conversion-20251119-YJ_bing,品牌词搜索,品牌,1.0,1.0,1.0,0.2,66.0
+P18,Meta Ads,120239340894290536,Remi_US_251118_TK_ASC+ACA_BF_Sale_Pur_Essential,大促 / 通用,—,59.0,3.0,0.0,0.0,0.0
+P18,Google Ads,21556512890,Search-Brand-US-24.10.10,品牌词搜索,品牌,14.0,5.0,1.0,0.0,0.0
+P18,Meta Ads,120256700895130321,Remi_US_20261109_P16_Catalog_Pur_Strength_Retargeting,无氧专投,P16,10.0,0.0,0.0,0.0,0.0
+P18,Meta Ads,,(未匹配到名称),未匹配到名称,—,9.0,8.0,2.0,0.0,0.0
+P18,Meta Ads,120256577470060321,Remi_US_20261101_P16_MOF_Purchase_B_Formats,无氧专投,P16,4.0,7.0,0.0,0.0,0.0
+P18,Meta Ads,120248342095940307,Lyfi_US_260710_P14_creativetest,其他产品广告,P14,4.0,0.0,0.0,0.0,0.0
+P18,Meta Ads,120256577470110321,Remi_US_20261101_P16_MOF_Purchase_A_Stills,无氧专投,P16,3.0,6.0,2.0,0.0,0.0
+P18,Meta Ads,120256417072150321,Remi_US_20261021_P16_TOF_Lead,无氧专投,P16,2.0,3.0,1.0,0.0,0.0
+P18,Google Ads,24420806558,PMax_P16_MOF_US_20261102_Jiayi,无氧专投,P16,2.0,3.0,1.0,0.0,0.0
+P18,Meta Ads,120231080177330077,Winnie_US_250912_ASC_2448_PUR_TKvideo,其他产品广告,2448,1.0,0.0,0.0,0.0,0.0
+P18,Meta Ads,120235901777530291,Remi_US_251121_TK_ASC+ACA-CreativeTest_PUR_R26,其他产品广告,R26,1.0,0.0,0.0,0.0,0.0
+P18,Meta Ads,120251896527580751,Danni_US_261023_2519_MOF_Pur,其他产品广告,2519,1.0,0.0,0.0,0.0,0.0
+P18,Meta Ads,120247645017550480,Danni_US_260703_R26_MOF_Pur,其他产品广告,R26,1.0,0.0,0.0,0.0,0.0
+P18,Google Ads,24338740796,Search-FitnessGoal-Pages-20261010-YJ,大促 / 通用,—,1.0,0.0,0.0,0.0,0.0
+P18,Meta Ads,120256589297810321,Remi_US_20261102_P16_MOF_Purchase_C_VideoProof,无氧专投,P16,1.0,2.0,1.0,0.0,0.0
+P18,Meta Ads,120249293469290717,Winnie_US_260616_R11B4_MOF_Pur_PD Sale,其他产品广告,R11B4,1.0,1.0,0.0,0.0,0.0
+P18,Meta Ads,120249296049630717,Winnie_US_260616_R11B4_MOF_Pur,其他产品广告,R11B4,1.0,1.0,0.0,0.0,0.0
+P18,Bing Ads,524304676,PLA-R26&R11B4&S29R2&T27- In-market Audiences-TROAS-20260608-YJ_bing,其他产品广告,R26/R11B4/S29R2/T27,1.0,0.0,0.0,0.0,0.0
+P18,Google Ads,24420815885,DemandGen_P16_Image_TOF_US_20261102_Jiayi,无氧专投,P16,1.0,3.0,2.0,0.0,0.0
+P18,Meta Ads,120234745633550717,Winnie_US_251011_2448_PUR_TKvideo_CBO,其他产品广告,2448,1.0,0.0,0.0,0.0,0.0
+P18,Google Ads,24415654473,Search_P16_BOF_Brand_US_20261102_Jiayi,无氧专投,P16,1.0,3.0,0.0,0.0,0.0
+P18,Meta Ads,120247718999470077,Winnie_US_260827_2510_MOF_Pur,其他产品广告,2510,1.0,0.0,0.0,0.0,0.0
+P18,Google Ads,23303345239,Search-DSA-US-20251125,大促 / 通用,—,1.0,1.0,1.0,0.0,0.0
+P18,Meta Ads,120248719573010307,Lyfi_US_260727_T27_MOF_creativetest,其他产品广告,T27,0.0,1.0,0.0,0.0,0.0
+P18,Meta Ads,120256589297840321,Remi_US_20261102_P16_MOF_Purchase_E_SpaceTime,无氧专投,P16,0.0,1.0,0.0,0.0,0.0
+P18,Meta Ads,120247787462920077,Winnie_US_260902_2440_MOF_Pur,其他产品广告,2440,0.0,1.0,0.0,0.0,0.0
+P18,Meta Ads,120256485219560321,Remi_US_20261026_P16_TOF_Lead_PageEngaged_180D,无氧专投,P16,0.0,1.0,0.0,0.0,0.0
+P18,Meta Ads,120256664565300321,Remi_US_20261106_P16_MOF_Purchase_F_AllVideo_Broad,无氧专投,P16,0.0,1.0,0.0,0.0,0.0
+P18,Google Ads,24419309187,DemandGen_picture_R50Pro_TOF_US_20261103-YJ,其他产品广告,R50P,0.0,0.0,1.0,0.0,0.0
+P18,Meta Ads,120247017970140307,Lyfi_US_260617_T27_MOF_creativetest,其他产品广告,T27,0.0,2.0,0.0,0.0,0.0
+P18,Google Ads,24420815996,DemandGen_P16_TVC_TOF_US_20261102_Jiayi,无氧专投,P16,0.0,1.0,0.0,0.0,0.0
+P18,Meta Ads,120256448657530321,Remi_US_20261023_P16_TOF_Lead_SiteEngagers_90D,无氧专投,P16,0.0,1.0,0.0,0.0,0.0
+P18,Meta Ads,120256448657550321,Remi_US_20261023_P16_TOF_Lead_LargeEngagers_90D,无氧专投,P16,0.0,1.0,0.0,0.0,0.0
+P18,Meta Ads,120222313072920717,Winnie_US_250427_INSpost_ASC_PUR_R50 Campaign,其他产品广告,R50,0.0,1.0,0.0,0.0,0.0
+</script>
+<script type="text/csv" id="csv-attr_sources">
+spu,channel_group,channel,product_views,sessions,atc,checkout,orders_attr,revenue_attr
+P16,Paid Ads,Bing Ads,78.5,46.0,9.0,6.0,1.467,4253.32
+P15,Direct,Direct,428.0,193.0,13.0,16.0,0.0,0.0
+P16,Organic Search,DuckDuckGo,8.0,7.0,0.0,0.0,0.0,0.0
+P15,Organic Social,Facebook Social,9.4,8.0,9.0,9.0,1.079,21.32
+P15,Organic Search,Google Search,30.5,19.0,21.0,7.0,0.0,0.0
+P16,Affiliate,Impact,59.5,42.0,34.0,26.0,0.075,218.55
+P16,Organic Social,Instagram Social,15.0,10.0,1.0,0.0,0.0,0.0
+P16,Organic Search,Yahoo Search,2.6,3.0,0.0,0.0,0.067,193.33
+P18,Affiliate,bixgrow_affiliate,4.5,5.0,4.0,0.0,0.0,0.0
+P16,Other Sources,social,4.0,1.0,0.0,2.0,0.0,0.0
+P16,Other Sources,OC260410,2.0,1.0,1.0,1.0,0.0,0.0
+P16,Other Sources,merachfit.de,0.0,0.0,7.0,3.0,0.0,0.0
+P16,Review & Loyalty,Judgeme,1.0,1.0,1.0,0.0,0.0,0.0
+P16,Other Sources,Shop APP,1.0,1.0,0.0,0.0,0.0,0.0
+P16,Other Sources,linkinreach.feishu.cn,7.8,7.0,0.0,0.0,0.0,0.0
+P16,Other Sources,merachfit.eu,0.0,0.0,7.0,3.0,0.0,0.0
+P15,Other Sources,app.impact.com,0.0,0.0,0.0,1.0,0.0,0.0
+P16,Other Sources,tenociglobal.feishu.cn,7.0,5.0,0.0,1.0,0.0,0.0
+P16,Other Sources,DC261002-01,0.0,0.0,5.0,2.0,0.0,0.0
+P16,Paid Ads,Other Ads,0.0,0.0,1.0,0.0,0.0,0.0
+P15,Other Sources,gmail,12.0,2.0,1.0,1.0,0.0,0.0
+P17,Direct,Direct,9.0,8.0,0.0,0.0,0.0,0.0
+P17,Organic Social,Facebook Social,0.5,1.0,0.0,0.0,0.0,0.0
+P17,Organic Search,Google Search,1.0,1.0,0.0,0.0,0.0,0.0
+P16,Organic Social,YouTube Social,4.0,3.0,1.0,1.0,0.0,0.0
+P18,Other Sources,flex_shop,1.0,1.0,0.0,0.0,0.0,0.0
+P18,Organic Search,Bing Search,0.0,0.0,2.0,1.0,0.0,0.0
+P18,Other Sources,HP250602-02,0.0,0.0,2.0,0.0,0.0,0.0
+P15,Organic Social,Other Social,0.0,0.0,5.0,1.0,0.0,0.0
+P18,Other Sources,app.freegifts.io,0.0,0.0,2.0,0.0,0.0,0.0
+P16,Other Sources,www.merachfit.ca,1.0,1.0,0.0,0.0,0.0,0.0
+P16,Organic Search,Bing Search,11.5,9.0,8.0,7.0,0.0,0.0
+P18,Direct,Direct,181.0,155.0,11.0,8.0,0.0,0.0
+P15,Paid Ads,Facebook Ads,307.4,188.0,49.0,48.0,12.48,999.98
+P18,Organic Social,Facebook Social,8.2,9.0,5.0,2.0,0.0,0.0
+P15,Paid Ads,Google Ads,96.7,45.0,34.0,23.0,3.127,1.33
+P18,Organic Search,Google Search,21.4,20.0,4.0,1.0,0.6,197.99
+P15,Email & SMS,Klaviyo,73.9,52.0,13.0,12.0,1.592,0.0
+P16,Other Sources,PR,9.5,4.0,1.0,1.0,0.0,0.0
+P16,Affiliate,bixgrow_affiliate,76.8,44.0,14.0,10.0,0.0,0.0
+P16,AI Assistant,chatgpt.com,20.0,13.0,7.0,6.0,0.133,386.67
+P16,Other Sources,klarna,2.0,1.0,0.0,1.0,0.0,0.0
+P16,Other Sources,app.freegifts.io,2.0,2.0,6.0,3.0,0.0,0.0
+P16,Other Sources,shopify_email,0.0,0.0,1.0,0.0,0.0,0.0
+P16,Other Sources,HP250602-02,0.0,0.0,5.0,2.0,0.0,0.0
+P15,Other Sources,track123,1.0,1.0,3.0,2.0,0.8,15.99
+P15,Organic Search,Brave Search,0.0,0.0,1.0,1.0,0.0,0.0
+P17,Paid Ads,Facebook Ads,2.0,2.0,1.0,0.0,0.0,0.0
+P17,Paid Ads,Google Ads,0.5,1.0,0.0,0.0,0.0,0.0
+P16,Other Sources,flex_shop,3.5,3.0,0.0,0.0,0.0,0.0
+P15,Other Sources,KOL,3.0,1.0,5.0,1.0,0.0,0.0
+P18,Organic Social,Other Social,0.0,0.0,2.0,0.0,0.0,0.0
+P18,Email & SMS,Email,7.0,4.0,0.0,0.0,0.0,0.0
+P15,Other Sources,Linktree,5.0,1.0,0.0,0.0,0.0,0.0
+P16,Other Sources,GG241202,0.0,0.0,0.0,1.0,0.0,0.0
+P16,Direct,Direct,2094.0,1245.0,43.0,29.0,0.0,0.0
+P16,Email & SMS,Email,8.0,5.0,0.0,0.0,0.0,0.0
+P18,Paid Ads,Facebook Ads,95.8,89.0,23.0,6.0,1.8,593.98
+P16,Organic Social,Facebook Social,158.4,111.0,21.0,16.0,0.0,0.0
+P18,Paid Ads,Google Ads,20.1,20.0,15.0,6.0,1.4,461.99
+P16,Organic Search,Google Search,336.1,179.0,54.0,30.0,0.035,100.87
+P15,Affiliate,Impact,22.4,13.0,17.0,15.0,0.067,0.0
+P18,Email & SMS,Klaviyo,56.4,55.0,5.0,2.0,0.6,197.99
+P16,Organic Social,Other Social,21.4,15.0,6.0,4.0,0.0,0.0
+P16,Other Sources,eir1tseugu5.feishu.cn,14.0,8.0,1.0,0.0,0.0,0.0
+P16,Other Sources,gmail,29.4,26.0,1.0,1.0,0.0,0.0
+P18,Other Sources,merach.feishu.cn,5.0,4.0,0.0,0.0,0.0,0.0
+P16,Other Sources,cristobalworkingdu-create.github.io,12.0,7.0,2.0,1.0,0.0,0.0
+P15,Paid Ads,Bing Ads,0.0,0.0,5.0,4.0,1.533,1.33
+P16,Organic Social,Yotube Shopping,0.0,0.0,0.0,1.0,0.0,0.0
+P16,Other Sources,app.impact.com,1.0,1.0,1.0,1.0,0.0,0.0
+P15,Other Sources,linkinreach.feishu.cn,4.6,4.0,0.0,0.0,0.0,0.0
+P15,Other Sources,social,0.0,0.0,1.0,0.0,0.0,0.0
+P15,Other Sources,DC261002-01,0.0,0.0,5.0,1.0,0.0,0.0
+P18,Other Sources,KOL,0.0,0.0,2.0,0.0,0.0,0.0
+P15,Organic Social,YouTube Social,0.0,0.0,1.0,0.0,0.0,0.0
+P15,Other Sources,merachfit.de,0.0,0.0,5.0,1.0,0.0,0.0
+P15,Other Sources,merachfit.eu,0.0,0.0,5.0,1.0,0.0,0.0
+P15,Other Sources,tenociglobal.feishu.cn,0.0,0.0,0.0,1.0,0.0,0.0
+P15,Organic Search,Yahoo Search,0.0,0.0,0.0,0.0,0.067,0.0
+P15,Organic Social,Instagram Social,0.0,0.0,1.0,0.0,0.0,0.0
+P16,Paid Ads,Facebook Ads,3640.5,2480.0,225.0,135.0,4.252,11096.47
+P16,Paid Ads,Google Ads,2424.6,1700.0,135.0,81.0,1.03,2988.25
+P16,Email & SMS,Klaviyo,591.7,394.0,53.0,31.0,1.941,5575.47
+P16,Other Sources,Linktree,18.3,13.0,0.0,0.0,0.0,0.0
+P15,Affiliate,bixgrow_affiliate,13.0,5.0,8.0,2.0,0.121,0.0
+P15,AI Assistant,chatgpt.com,1.0,1.0,1.0,3.0,0.133,0.0
+P18,Affiliate,Impact,5.4,6.0,3.0,0.0,0.067,22.0
+P16,Other Sources,track123,3.0,2.0,3.0,1.0,0.0,0.0
+P18,Paid Ads,Bing Ads,1.4,2.0,1.0,1.0,0.467,154.0
+P16,Other Sources,KOL,7.7,2.0,6.0,5.0,0.0,0.0
+P16,Other Sources,merach.feishu.cn,9.1,3.0,1.0,1.0,0.0,0.0
+P15,Organic Search,Bing Search,0.0,0.0,6.0,2.0,0.0,0.0
+P18,Organic Social,Instagram Social,4.0,5.0,0.0,0.0,0.0,0.0
+P16,Other Sources,kagi.com,1.0,1.0,0.0,0.0,0.0,0.0
+P18,Other Sources,linkinreach.feishu.cn,3.6,4.0,0.0,0.0,0.0,0.0
+P16,Organic Social,Reddit Social,10.0,1.0,0.0,0.0,0.0,0.0
+P15,Other Sources,flex_shop,5.0,3.0,1.0,0.0,0.0,0.0
+P18,Other Sources,DC261002-01,0.0,0.0,2.0,0.0,0.0,0.0
+P15,Other Sources,HP250602-02,0.0,0.0,5.0,1.0,0.0,0.0
+P15,Other Sources,app.freegifts.io,0.0,0.0,5.0,1.0,0.0,0.0
+P18,Other Sources,merachfit.de,0.0,0.0,2.0,0.0,0.0,0.0
+P18,Other Sources,merachfit.eu,0.0,0.0,2.0,0.0,0.0,0.0
+P16,Other Sources,t.yesware.com,4.0,1.0,0.0,0.0,0.0,0.0
+P18,Organic Search,Yahoo Search,0.2,1.0,1.0,0.0,0.067,22.0
+P16,Other Sources,safe.menlosecurity.com,3.0,1.0,0.0,0.0,0.0,0.0
+P16,Other Sources,shared.outlook.inky.com,1.0,1.0,0.0,0.0,0.0,0.0
+</script>
+<script type="text/csv" id="csv-meta_ads">
+campaign_name,funnel,objective,adset_name,audience,interests,ad_name,format,spend,impressions,clicks,lpv,video_3s,sessions,atc,checkout,orders_attr,revenue_attr,other_units,other_revenue
+Remi_US_20261101_P16_MOF_Purchase_A_Stills,中层 MOF,Purchase,Male_Broad_25-54_Purchase,宽泛,无兴趣标签（仅性别、年龄）,IMG_P16_Product_早鸟海报,图片,496.8,22603,470,434,0,248.0,23.0,21.0,0.0,0.0,0.0,0.0
+Remi_US_20261021_P16_TOF_Lead,上层 TOF,Lead,Male_Broad_25-54,宽泛,无兴趣标签（仅性别、年龄）,IMG_P16_Info-001_QuickTilt_HSA,图片,480.09,22356,1060,993,0,70.0,43.0,36.0,0.0,0.0,0.0,0.0
+Remi_US_20261023_P16_TOF_Lead_LargeEngagers_90D,上层 TOF,Lead,Re_LargeItem_Engagers_90D,再营销,自定义受众：90 天大件商品互动,IMG_P16_Product_IG_1_var_v2,图片,346.61,14083,334,328,0,13.0,3.0,2.0,0.0,0.0,0.0,0.0
+Remi_US_20261102_P16_BOF_Retargeting_Pur,下层 BOF,Purchase,Male_Engagers_25-54_Purchase,再营销,自定义受众：互动用户（男性 25-54）,IMG_P16_AIO-001_SixStations,图片,346.12,11578,613,592,0,326.0,44.0,35.0,1.0,2539.99,2.6,767.98
+Remi_US_20261101_P16_MOF_Purchase_B_Formats,中层 MOF,Purchase,Male_Broad_25-54_Purchase,宽泛,无兴趣标签（仅性别、年龄）,Post_P16_IG_20261020,IG 帖子,273.38,11600,303,296,10382,182.0,21.0,16.0,0.0,0.0,0.0,0.0
+Remi_US_20261021_P16_TOF_Lead,上层 TOF,Lead,Male_Broad_25-54,宽泛,无兴趣标签（仅性别、年龄）,IMG_P16_Product_早鸟海报,图片,253.63,9091,341,317,0,3.0,4.0,3.0,0.0,0.0,0.0,0.0
+Remi_US_20261102_P16_MOF_Purchase_C_VideoProof,中层 MOF,Purchase,Male_25-54_FitContent_Purchase,健身内容兴趣,Men's Fitness; Muscle & Fitness; WorkoutHealthy; Fitness news and content,VID_P16_MuscleGuide_Edu,视频,216.48,7938,151,142,7079,60.0,3.0,2.0,0.0,0.0,0.0,0.0
+Remi_US_20261101_P16_MOF_Purchase_A_Stills,中层 MOF,Purchase,Male_Broad_25-54_Purchase,宽泛,无兴趣标签（仅性别、年龄）,IMG_P16_Info-001_QuickTilt_HSA,图片,211.62,7862,251,235,0,139.0,18.0,15.0,0.0,0.0,0.0,0.0
+Remi_US_20261021_P16_TOF_Lead,上层 TOF,Lead,Male_Broad_25-54,宽泛,无兴趣标签（仅性别、年龄）,IMG_P16_Product_IG_1,图片,197.05,8734,475,444,318,7.0,26.0,25.0,0.044,128.89,0.0,0.0
+Remi_US_20261106_P16_ABO_自制_AudienceTest,测试,Purchase,P16_AS_GymBrands_25-54_Pur_$30,健身房品牌兴趣,Planet Fitness; Gold's Gym; Life Time Fitness; Crunch Fitness; Equinox; 24 Hour Fitness; Anytime Fitness; LA Fitness; Snap Fitness,Video_P16_自制_TwoPaths_GymBrands_20261106,视频,140.21,6668,318,304,6190,134.0,15.0,5.0,0.0,0.0,0.0,0.0
+Remi_US_20261102_P16_MOF_Purchase_C_VideoProof,中层 MOF,Purchase,Male_25-54_Broad_Purchase,宽泛,无兴趣标签（仅性别、年龄）,VID_P16_MuscleGuide_Edu,视频,130.3,4771,112,110,4232,54.0,5.0,4.0,0.0,0.0,0.0,0.0
+Remi_US_20261102_P16_MOF_Purchase_E_SpaceTime,中层 MOF,Purchase,Male_25-54_GymStrength_Purchase,力量训练兴趣,Powerlifting; Squat; Barbell; Weight training; Bodybuilding; Strength training,VID_P16_30Min_Workout,视频,128.33,3507,55,56,2988,21.0,1.0,3.0,0.0,0.0,0.0,0.0
+Remi_US_20261101_P16_MOF_Purchase_A_Stills,中层 MOF,Purchase,Male_Broad_25-54_Purchase,宽泛,无兴趣标签（仅性别、年龄）,IMG_P16_Product_IG_1_var_v2,图片,128.12,4965,124,116,0,90.0,11.0,7.0,0.0,0.0,0.0,0.0
+Remi_US_20261106_P16_ABO_自制_AudienceTest,测试,Purchase,P16_AS_CrossFit_25-54_Pur_$30,CrossFit 兴趣,CrossFit,Video_P16_自制_TwoPaths_CrossFit_20261106,视频,119.97,5316,230,228,4968,100.0,10.0,7.0,0.0,0.0,0.0,0.0
+Remi_US_20261102_P16_MOF_Purchase_E_SpaceTime,中层 MOF,Purchase,Male_25-54_Broad_Purchase,宽泛,无兴趣标签（仅性别、年龄）,VID_P16_30Min_Workout,视频,119.83,3407,56,52,2824,17.0,1.0,0.0,0.0,0.0,0.0,0.0
+Remi_US_20261102_P16_MOF_Purchase_C_VideoProof,中层 MOF,Purchase,Male_25-54_GymStrength_Purchase,力量训练兴趣,Powerlifting; Squat; Barbell; Weight training; Bodybuilding; Strength training,VID_P16_MuscleGuide_Edu,视频,118.19,4434,101,100,3878,41.0,3.0,2.0,0.0,0.0,0.0,0.0
+Remi_US_20261102_P16_BOF_Retargeting_Pur,下层 BOF,Purchase,Male_Engagers_25-54_Purchase,再营销,自定义受众：互动用户（男性 25-54）,IMG_P16_UGC-002-2_FamilyGuide,图片,116.06,1891,36,30,0,9.0,1.0,0.0,0.0,0.0,0.0,0.0
+Remi_US_20261023_P16_TOF_Lead_SiteEngagers_90D,上层 TOF,Lead,AllSite_Engagers_90D,再营销,自定义受众：90 天全站访客,IMG_P16_Product_早鸟海报_var_v2,图片,114.29,3215,110,115,0,5.0,2.0,0.0,0.0,0.0,0.0,0.0
+Remi_US_20261102_P16_MOF_Purchase_E_SpaceTime,中层 MOF,Purchase,Male_25-54_FitContent_Purchase,健身内容兴趣,Men's Fitness; Muscle & Fitness; WorkoutHealthy; Fitness news and content,VID_P16_30Min_Workout,视频,103.76,2966,56,49,2513,16.0,1.0,0.0,0.0,0.0,0.0,0.0
+Remi_US_20261106_P16_ABO_自制_AudienceTest,测试,Purchase,P16_AS_Broad_25-54_Pur_$30,宽泛,无兴趣标签（仅性别、年龄）,Video_P16_自制_TwoPaths_Broad_20261106,视频,102.55,4584,235,230,4189,110.0,11.0,11.0,0.4,920.0,1.2,424.0
+Remi_US_20261023_P16_TOF_Lead_SiteEngagers_90D,上层 TOF,Lead,AllSite_Engagers_90D,再营销,自定义受众：90 天全站访客,IMG_P16_Product_早鸟海报,图片,97.71,2129,67,60,0,2.0,2.0,0.0,0.0,0.0,0.0,0.0
+Remi_US_20261101_P16_MOF_Purchase_B_Formats,中层 MOF,Purchase,Male_Broad_25-54_Purchase,宽泛,无兴趣标签（仅性别、年龄）,IMG_P16_Product_Carousel_IG,轮播,77.17,3318,81,62,0,32.0,4.0,1.0,0.0,0.0,0.0,0.0
+Remi_US_20261026_P16_TOF_Lead_PageEngaged_180D,上层 TOF,Lead,PageEngaged_180D,再营销,自定义受众：180 天主页互动,IMG_P16_UGC-001-2_AssemblyAngle_HSA,图片,75.22,3939,95,91,0,8.0,4.0,2.0,0.0,0.0,0.0,0.0
+Remi_US_20261102_P16_MOF_Purchase_E_SpaceTime,中层 MOF,Purchase,Male_25-54_Broad_Purchase,宽泛,无兴趣标签（仅性别、年龄）,VID_P16_FeelTheMuscle_Split,视频,74.36,2200,32,29,1784,6.0,0.0,0.0,0.0,0.0,0.0,0.0
+Remi_US_20261021_P16_TOF_Lead,上层 TOF,Lead,Male_Broad_25-54,宽泛,无兴趣标签（仅性别、年龄）,Post_P16_IG_20261020,IG 帖子,67.42,2391,164,149,2142,5.0,13.0,12.0,0.0,0.0,0.0,0.0
+Remi_US_20261102_P16_MOF_Purchase_E_SpaceTime,中层 MOF,Purchase,Male_25-54_GymStrength_Purchase,力量训练兴趣,Powerlifting; Squat; Barbell; Weight training; Bodybuilding; Strength training,VID_P16_FeelTheMuscle_Split,视频,67.15,2486,28,26,2051,12.0,0.0,0.0,0.0,0.0,0.0,0.0
+Remi_US_20261102_P16_MOF_Purchase_E_SpaceTime,中层 MOF,Purchase,Male_25-54_FitContent_Purchase,健身内容兴趣,Men's Fitness; Muscle & Fitness; WorkoutHealthy; Fitness news and content,VID_P16_FeelTheMuscle_Split,视频,66.98,2422,34,33,1972,8.0,0.0,0.0,0.0,0.0,0.0,0.0
+Remi_US_20261106_P16_MOF_Purchase_F_AllVideo_Broad,中层 MOF,Purchase,Male_25-54_Broad_Purchase,宽泛,无兴趣标签（仅性别、年龄）,VID_P16_Unbox_DreamGym,视频,62.77,1963,49,46,1593,15.0,1.0,1.0,0.0,0.0,0.0,0.0
+Remi_US_20261102_P16_MOF_Purchase_C_VideoProof,中层 MOF,Purchase,Male_25-54_GymStrength_Purchase,力量训练兴趣,Powerlifting; Squat; Barbell; Weight training; Bodybuilding; Strength training,VID_P16_GluteBias_Feature,视频,62.56,1194,21,20,809,6.0,1.0,2.0,0.0,0.0,0.0,0.0
+Remi_US_20261023_P16_TOF_Lead_LargeEngagers_90D,上层 TOF,Lead,Re_LargeItem_Engagers_90D,再营销,自定义受众：90 天大件商品互动,IMG_P16_Product_IG_1_var_v1,图片,58.21,2098,56,51,0,2.0,1.0,1.0,0.0,0.0,0.0,0.0
+Remi_US_20261106_P16_MOF_Purchase_F_AllVideo_Broad,中层 MOF,Purchase,Male_25-54_Broad_Purchase,宽泛,无兴趣标签（仅性别、年龄）,VID_P16_MuscleGuide_Edu,视频,57.59,1815,33,33,1571,13.0,1.0,1.0,0.0,0.0,0.0,0.0
+Remi_US_20261102_P16_MOF_Purchase_C_VideoProof,中层 MOF,Purchase,Male_25-54_Broad_Purchase,宽泛,无兴趣标签（仅性别、年龄）,VID_P16_Invest_FullBody,视频,54.47,1505,25,23,1140,8.0,0.0,1.0,0.0,0.0,0.0,0.0
+Remi_US_20261023_P16_TOF_Lead_SiteEngagers_90D,上层 TOF,Lead,AllSite_Engagers_90D,再营销,自定义受众：90 天全站访客,IMG_P16_Product_早鸟海报_var_v1,图片,48.39,1309,49,43,0,1.0,6.0,4.0,0.011,32.22,0.0,0.0
+Remi_US_20261101_P16_MOF_Purchase_A_Stills,中层 MOF,Purchase,Male_Broad_25-54_Purchase,宽泛,无兴趣标签（仅性别、年龄）,IMG_P16_Product_IG_1,图片,45.3,1425,26,22,0,13.0,0.0,0.0,0.0,0.0,0.0,0.0
+Remi_US_20261021_P16_TOF_Lead,上层 TOF,Lead,Male_Broad_25-54,宽泛,无兴趣标签（仅性别、年龄）,IMG_P16_Product_Carousel_IG,轮播,44.42,2040,94,89,0,6.0,3.0,1.0,0.0,0.0,0.0,0.0
+Remi_US_20261026_P16_TOF_Lead_PageEngaged_180D,上层 TOF,Lead,PageEngaged_180D,再营销,自定义受众：180 天主页互动,IMG_P16_实拍_承重,图片,43.95,2433,56,53,122,1.0,3.0,2.0,0.0,0.0,0.0,0.0
+Remi_US_20261020_P16_TOF_Traffic_Product,上层 TOF,Traffic,P16_Male_Broad_25-54,宽泛,无兴趣标签（仅性别、年龄）,IMG_P16_Product_早鸟海报,图片,43.88,8767,200,190,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Remi_US_20261020_P16_TOF_Family_Traffic_early-access,上层 TOF,Traffic,P16_Male_GymBrands_25+,健身房品牌兴趣,Planet Fitness; Gold's Gym; Life Time Fitness; Crunch Fitness; 24 Hour Fitness,IMG_P16_Family_Warm_自制_2,图片,43.64,7196,242,195,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Remi_US_20261102_P16_MOF_Purchase_E_SpaceTime,中层 MOF,Purchase,Male_25-54_FitContent_Purchase,健身内容兴趣,Men's Fitness; Muscle & Fitness; WorkoutHealthy; Fitness news and content,VID_P16_38sqft_Space,视频,42.52,1064,22,21,861,3.0,1.0,1.0,0.0,0.0,0.0,0.0
+Remi_US_20261102_P16_MOF_Purchase_D_VideoLife,中层 MOF,Purchase,Male_25-54_FitContent_Purchase,健身内容兴趣,Men's Fitness; Muscle & Fitness; WorkoutHealthy; Fitness news and content,VID_P16_Unbox_DreamGym,视频,40.61,1415,24,21,1148,7.0,6.0,7.0,0.0,0.0,0.0,0.0
+Remi_US_20261102_P16_BOF_Retargeting_Pur,下层 BOF,Purchase,Male_Engagers_25-54_Purchase,再营销,自定义受众：互动用户（男性 25-54）,VID_P16_ExtremeWeightTest,视频,40.48,775,28,26,663,17.0,4.0,3.0,0.0,0.0,0.0,0.0
+Remi_US_20261020_P16_TOF_Traffic_Product,上层 TOF,Traffic,P16_Male_Broad_25-54,宽泛,无兴趣标签（仅性别、年龄）,IMG_P16_Product_家用全景_自制_2,图片,39.17,11656,246,224,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Remi_US_20261020_P16_TOF_Family_Traffic_early-access,上层 TOF,Traffic,P16_Male_Broad_25+,宽泛,无兴趣标签（仅性别、年龄）,IMG_P16_Family_Warm_自制_2,图片,36.76,5797,211,174,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Remi_US_20261106_P16_ABO_自制_AudienceTest,测试,Purchase,P16_AS_Broad_25-54_Pur_$30,宽泛,无兴趣标签（仅性别、年龄）,Video_P16_自制_BarPath_Broad_20261106,视频,36.16,1199,44,40,1030,17.0,2.0,1.0,0.0,0.0,0.0,0.0
+Remi_US_20261106_P16_MOF_Purchase_F_AllVideo_Broad,中层 MOF,Purchase,Male_25-54_Broad_Purchase,宽泛,无兴趣标签（仅性别、年龄）,VID_P16_30Min_Workout,视频,34.14,874,23,23,807,5.0,1.0,0.0,0.0,0.0,0.0,0.0
+Remi_US_20261102_P16_BOF_Retargeting_Pur,下层 BOF,Purchase,Male_Engagers_25-54_Purchase,再营销,自定义受众：互动用户（男性 25-54）,IMG_P16_UGC-001-1_GarageAssembly,图片,32.69,1084,37,35,0,19.0,4.0,2.0,0.0,0.0,0.0,0.0
+Remi_US_20261102_P16_BOF_Retargeting_Pur,下层 BOF,Purchase,Male_Engagers_25-54_Purchase,再营销,自定义受众：互动用户（男性 25-54）,IMG_P16_Info-001_QuickTilt,图片,32.09,905,23,24,0,10.0,1.0,0.0,0.0,0.0,0.0,0.0
+Remi_US_20261102_P16_MOF_Purchase_D_VideoLife,中层 MOF,Purchase,Male_25-54_Broad_Purchase,宽泛,无兴趣标签（仅性别、年龄）,VID_P16_Unbox_DreamGym,视频,31.16,1077,15,16,843,3.0,0.0,0.0,0.0,0.0,0.0,0.0
+Remi_US_20261102_P16_MOF_Purchase_D_VideoLife,中层 MOF,Purchase,Male_25-54_GymStrength_Purchase,力量训练兴趣,Powerlifting; Squat; Barbell; Weight training; Bodybuilding; Strength training,VID_P16_Unbox_DreamGym,视频,31.06,1163,17,15,918,3.0,0.0,0.0,0.0,0.0,0.0,0.0
+Remi_US_20261023_P16_TOF_Lead_LargeEngagers_90D,上层 TOF,Lead,Re_LargeItem_Engagers_90D,再营销,自定义受众：90 天大件商品互动,IMG_P16_Product_IG_1,图片,29.06,1036,26,23,0,0.0,1.0,2.0,0.0,0.0,0.0,0.0
+Remi_US_20261102_P16_MOF_Purchase_C_VideoProof,中层 MOF,Purchase,Male_25-54_FitContent_Purchase,健身内容兴趣,Men's Fitness; Muscle & Fitness; WorkoutHealthy; Fitness news and content,VID_P16_Invest_FullBody,视频,27.98,782,10,10,534,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+Remi_US_20261102_P16_MOF_Purchase_C_VideoProof,中层 MOF,Purchase,Male_25-54_GymStrength_Purchase,力量训练兴趣,Powerlifting; Squat; Barbell; Weight training; Bodybuilding; Strength training,VID_P16_Invest_FullBody,视频,26.18,655,13,12,447,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+Remi_US_20261102_P16_MOF_Purchase_C_VideoProof,中层 MOF,Purchase,Male_25-54_FitContent_Purchase,健身内容兴趣,Men's Fitness; Muscle & Fitness; WorkoutHealthy; Fitness news and content,VID_P16_GluteBias_Feature,视频,24.73,534,3,4,341,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Remi_US_20261109_P16_Catalog_Pur_Strength_Retargeting,再营销 Catalog,Purchase,P16_RE_WV-30D,再营销,自定义受众：30 天网站访客（Catalog 再营销）,P16_Catalog_Carousel_Strength,轮播,23.16,2287,58,47,0,12.0,1.0,0.0,0.0,0.0,0.0,0.0
+Remi_US_20261102_P16_MOF_Purchase_C_VideoProof,中层 MOF,Purchase,Male_25-54_Broad_Purchase,宽泛,无兴趣标签（仅性别、年龄）,VID_P16_GluteBias_Feature,视频,22.6,519,8,6,350,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Remi_US_20261102_P16_MOF_Purchase_E_SpaceTime,中层 MOF,Purchase,Male_25-54_Broad_Purchase,宽泛,无兴趣标签（仅性别、年龄）,VID_P16_38sqft_Space,视频,20.08,547,11,11,439,2.0,0.0,0.0,0.0,0.0,0.0,0.0
+Remi_US_20261102_P16_BOF_Retargeting_Pur,下层 BOF,Purchase,Male_Engagers_25-54_Purchase,再营销,自定义受众：互动用户（男性 25-54）,IMG_P16_UGC-002_GarageSetup,图片,18.85,534,8,7,0,3.0,0.0,3.0,0.0,0.0,0.0,0.0
+Remi_US_20261102_P16_BOF_Retargeting_Pur,下层 BOF,Purchase,Male_Engagers_25-54_Purchase,再营销,自定义受众：互动用户（男性 25-54）,IMG_P16_UGC-001-2_GarageAssembly,图片,18.41,622,13,12,0,3.0,1.0,0.0,0.0,0.0,0.0,0.0
+Remi_US_20261102_P16_BOF_Retargeting_Pur,下层 BOF,Purchase,Male_Engagers_25-54_Purchase,再营销,自定义受众：互动用户（男性 25-54）,IMG_P16_UGC-002-1_FamilyGuide,图片,18.31,390,9,8,0,3.0,1.0,0.0,0.0,0.0,0.0,0.0
+Remi_US_20261102_P16_MOF_Purchase_E_SpaceTime,中层 MOF,Purchase,Male_25-54_GymStrength_Purchase,力量训练兴趣,Powerlifting; Squat; Barbell; Weight training; Bodybuilding; Strength training,VID_P16_38sqft_Space,视频,17.28,453,5,3,379,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+Remi_US_20261026_P16_TOF_Lead_PageEngaged_180D,上层 TOF,Lead,PageEngaged_180D,再营销,自定义受众：180 天主页互动,IMG_P16_UGC-002-3_FamilyBar_HSA,图片,16.64,682,18,15,0,3.0,8.0,9.0,0.0,0.0,0.0,0.0
+Remi_US_20261102_P16_MOF_Purchase_D_VideoLife,中层 MOF,Purchase,Male_25-54_Broad_Purchase,宽泛,无兴趣标签（仅性别、年龄）,VID_P16_HomeGymWithMe,视频,15.89,366,8,7,313,3.0,0.0,0.0,0.0,0.0,0.0,0.0
+Remi_US_20261020_P16_TOF_Family_Traffic_early-access,上层 TOF,Traffic,P16_Male_HomeFitContent_25+,健身内容兴趣,WorkoutHealthy; Fitness news and content,IMG_P16_Family_Warm_自制_2,图片,15.75,3109,71,65,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Remi_US_20261106_P16_MOF_Purchase_F_AllVideo_Broad,中层 MOF,Purchase,Male_25-54_Broad_Purchase,宽泛,无兴趣标签（仅性别、年龄）,VID_P16_FamilyTime,视频,14.35,391,12,9,309,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Remi_US_20261106_P16_MOF_Purchase_F_AllVideo_Broad,中层 MOF,Purchase,Male_25-54_Broad_Purchase,宽泛,无兴趣标签（仅性别、年龄）,VID_P16_FeelTheMuscle_Split,视频,14.13,332,8,8,277,3.0,0.0,0.0,0.0,0.0,0.0,0.0
+Remi_US_20261102_P16_MOF_Purchase_D_VideoLife,中层 MOF,Purchase,Male_25-54_GymStrength_Purchase,力量训练兴趣,Powerlifting; Squat; Barbell; Weight training; Bodybuilding; Strength training,VID_P16_HomeGymWithMe,视频,12.81,312,2,1,274,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+Remi_US_20261021_P16_TOF_Lead,上层 TOF,Lead,Male_Broad_25-54,宽泛,无兴趣标签（仅性别、年龄）,IMG_P16_AIO-001_SixStations_HSA,图片,12.69,637,32,30,0,0.0,3.0,1.0,0.0,0.0,0.0,0.0
+Remi_US_20261106_P16_ABO_自制_AudienceTest,测试,Purchase,P16_AS_CrossFit_25-54_Pur_$30,CrossFit 兴趣,CrossFit,Video_P16_自制_BarPath_CrossFit_20261106,视频,12.5,448,15,14,385,7.0,1.0,0.0,0.0,0.0,0.0,0.0
+Remi_US_20261102_P16_MOF_Purchase_D_VideoLife,中层 MOF,Purchase,Male_25-54_FitContent_Purchase,健身内容兴趣,Men's Fitness; Muscle & Fitness; WorkoutHealthy; Fitness news and content,VID_P16_HomeGymWithMe,视频,10.98,240,4,3,209,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+Remi_US_20261020_P16_TOF_Traffic_Product,上层 TOF,Traffic,P16_Male_Broad_25-54,宽泛,无兴趣标签（仅性别、年龄）,IMG_P16_Product_正面全机_自制_3,图片,10.25,2781,64,61,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Remi_US_20261102_P16_BOF_Retargeting_Pur,下层 BOF,Purchase,Male_Engagers_25-54_Purchase,再营销,自定义受众：互动用户（男性 25-54）,IMG_P16_UGC-002-3_FamilyGuide,图片,10.23,244,4,4,0,1.0,3.0,1.0,0.0,0.0,0.0,0.0
+Remi_US_20261026_P16_TOF_Lead_PageEngaged_180D,上层 TOF,Lead,PageEngaged_180D,再营销,自定义受众：180 天主页互动,IMG_P16_实拍_整体,图片,10.05,565,7,10,38,3.0,1.0,1.0,0.0,0.0,0.0,0.0
+Remi_US_20261102_P16_MOF_Purchase_C_VideoProof,中层 MOF,Purchase,Male_25-54_FitContent_Purchase,健身内容兴趣,Men's Fitness; Muscle & Fitness; WorkoutHealthy; Fitness news and content,VID_P16_MythBuster_AngledSmith,视频,9.83,274,8,6,226,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+Remi_US_20261106_P16_ABO_自制_AudienceTest,测试,Purchase,P16_AS_GymBrands_25-54_Pur_$30,健身房品牌兴趣,Planet Fitness; Gold's Gym; Life Time Fitness; Crunch Fitness; Equinox; 24 Hour Fitness; Anytime Fitness; LA Fitness; Snap Fitness,Video_P16_自制_BarPath_GymBrands_20261106,视频,8.24,276,8,8,237,4.0,0.0,0.0,0.0,0.0,0.0,0.0
+Remi_US_20261106_P16_MOF_Purchase_F_AllVideo_Broad,中层 MOF,Purchase,Male_25-54_Broad_Purchase,宽泛,无兴趣标签（仅性别、年龄）,VID_P16_HomeGymWithMe,视频,7.52,204,0,0,165,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Remi_US_20261020_P16_TOF_Family_Traffic_early-access,上层 TOF,Traffic,P16_Male_HomeFitContent_25+,健身内容兴趣,WorkoutHealthy; Fitness news and content,IMG_P16_Family_Angle_自制_1,图片,7.48,1044,49,40,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Remi_US_20261106_P16_MOF_Purchase_F_AllVideo_Broad,中层 MOF,Purchase,Male_25-54_Broad_Purchase,宽泛,无兴趣标签（仅性别、年龄）,VID_P16_GluteBias_Feature,视频,7.33,181,2,2,141,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Remi_US_20261102_P16_MOF_Purchase_D_VideoLife,中层 MOF,Purchase,Male_25-54_GymStrength_Purchase,力量训练兴趣,Powerlifting; Squat; Barbell; Weight training; Bodybuilding; Strength training,VID_P16_FamilyTime,视频,6.66,221,5,5,184,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+Remi_US_20261021_P16_TOF_Lead,上层 TOF,Lead,Male_Broad_25-54,宽泛,无兴趣标签（仅性别、年龄）,IMG_P16_Product_配件,图片,5.59,286,12,14,6,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+Remi_US_20261102_P16_MOF_Purchase_C_VideoProof,中层 MOF,Purchase,Male_25-54_GymStrength_Purchase,力量训练兴趣,Powerlifting; Squat; Barbell; Weight training; Bodybuilding; Strength training,VID_P16_MythBuster_AngledSmith,视频,5.39,146,2,1,129,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+Remi_US_20261102_P16_MOF_Purchase_D_VideoLife,中层 MOF,Purchase,Male_25-54_Broad_Purchase,宽泛,无兴趣标签（仅性别、年龄）,VID_P16_FamilyTime,视频,5.37,140,3,3,123,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Remi_US_20261020_P16_TOF_Family_Traffic_early-access,上层 TOF,Traffic,P16_Male_Broad_25+,宽泛,无兴趣标签（仅性别、年龄）,IMG_P16_Family_OneRack_自制_3,图片,5.28,913,21,19,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Remi_US_20261020_P16_TOF_Traffic_Product,上层 TOF,Traffic,P16_Male_Broad_25-54,宽泛,无兴趣标签（仅性别、年龄）,IMG_P16_Product_承重_自制_1,图片,5.18,1366,30,28,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Remi_US_20261102_P16_MOF_Purchase_C_VideoProof,中层 MOF,Purchase,Male_25-54_Broad_Purchase,宽泛,无兴趣标签（仅性别、年龄）,VID_P16_MythBuster_AngledSmith,视频,5.14,128,2,2,114,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+Remi_US_20261020_P16_TOF_Family_Traffic_early-access,上层 TOF,Traffic,P16_Male_GymBrands_25+,健身房品牌兴趣,Planet Fitness; Gold's Gym; Life Time Fitness; Crunch Fitness; 24 Hour Fitness,IMG_P16_Family_Angle_自制_1,图片,4.31,706,32,23,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Remi_US_20261106_P16_MOF_Purchase_F_AllVideo_Broad,中层 MOF,Purchase,Male_25-54_Broad_Purchase,宽泛,无兴趣标签（仅性别、年龄）,VID_P16_Invest_FullBody,视频,4.29,130,2,2,99,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+Remi_US_20261026_P16_TOF_Lead_PageEngaged_180D,上层 TOF,Lead,PageEngaged_180D,再营销,自定义受众：180 天主页互动,IMG_P16_UGC-001-1_Assembly_HSA,图片,3.84,169,4,3,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Remi_US_20261020_P16_TOF_Family_Traffic_early-access,上层 TOF,Traffic,P16_Male_Broad_25+,宽泛,无兴趣标签（仅性别、年龄）,IMG_P16_Family_Angle_自制_1,图片,3.41,683,17,15,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Remi_US_20261106_P16_MOF_Purchase_F_AllVideo_Broad,中层 MOF,Purchase,Male_25-54_Broad_Purchase,宽泛,无兴趣标签（仅性别、年龄）,VID_P16_38sqft_Space,视频,3.02,86,0,0,71,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Remi_US_20261106_P16_MOF_Purchase_F_AllVideo_Broad,中层 MOF,Purchase,Male_25-54_Broad_Purchase,宽泛,无兴趣标签（仅性别、年龄）,VID_P16_MythBuster_AngledSmith,视频,2.81,93,3,3,81,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Remi_US_20261021_P16_TOF_Lead,上层 TOF,Lead,Male_Broad_25-54,宽泛,无兴趣标签（仅性别、年龄）,IMG_P16_UGC-002_Delivery_HSA,图片,2.58,104,3,3,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+Remi_US_20261102_P16_MOF_Purchase_D_VideoLife,中层 MOF,Purchase,Male_25-54_FitContent_Purchase,健身内容兴趣,Men's Fitness; Muscle & Fitness; WorkoutHealthy; Fitness news and content,VID_P16_FamilyTime,视频,2.57,72,1,2,56,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Remi_US_20261020_P16_TOF_Traffic_Product,上层 TOF,Traffic,P16_Male_Broad_25-54,宽泛,无兴趣标签（仅性别、年龄）,IMG_P16_Product_斜侧细节_自制_4,图片,2.35,665,8,9,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Remi_US_20261106_P16_ABO_自制_AudienceTest,测试,Purchase,P16_AS_CrossFit_25-54_Pur_$30,CrossFit 兴趣,CrossFit,Video_P16_自制_NoGym_CrossFit_20261106,视频,2.25,74,1,1,64,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Remi_US_20261020_P16_TOF_Family_Traffic_early-access,上层 TOF,Traffic,P16_Male_GymBrands_25+,健身房品牌兴趣,Planet Fitness; Gold's Gym; Life Time Fitness; Crunch Fitness; 24 Hour Fitness,IMG_P16_Family_OneRack_自制_3,图片,2.25,574,16,12,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Remi_US_20261106_P16_ABO_自制_AudienceTest,测试,Purchase,P16_AS_GymBrands_25-54_Pur_$30,健身房品牌兴趣,Planet Fitness; Gold's Gym; Life Time Fitness; Crunch Fitness; Equinox; 24 Hour Fitness; Anytime Fitness; LA Fitness; Snap Fitness,Video_P16_自制_NoGym_GymBrands_20261106,视频,1.59,35,0,0,31,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Remi_US_20261106_P16_ABO_自制_AudienceTest,测试,Purchase,P16_AS_Broad_25-54_Pur_$30,宽泛,无兴趣标签（仅性别、年龄）,Video_P16_自制_NoGym_Broad_20261106,视频,1.55,72,0,0,64,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Remi_US_20261026_P16_TOF_Lead_PageEngaged_180D,上层 TOF,Lead,PageEngaged_180D,再营销,自定义受众：180 天主页互动,IMG_P16_UGC-002-1_FamilyGuide_HSA,图片,1.09,68,1,1,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Remi_US_20261026_P16_TOF_Lead_PageEngaged_180D,上层 TOF,Lead,PageEngaged_180D,再营销,自定义受众：180 天主页互动,IMG_P16_UGC-002-2_FamilyCable_HSA,图片,0.65,36,1,1,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Remi_US_20261020_P16_TOF_Family_Traffic_early-access,上层 TOF,Traffic,P16_Male_HomeFitContent_25+,健身内容兴趣,WorkoutHealthy; Fitness news and content,IMG_P16_Family_OneRack_自制_3,图片,0.59,210,7,3,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+</script>
+<script>
+['sales_daily', 'spend_daily', 'attr_campaigns', 'attr_sources', 'meta_ads'].forEach((id) => dash.load(id, document.getElementById('csv-' + id).textContent));
+</script>
+<style>
+.p16 { --p16-gap: var(--cds-gap-lg); display: flex; flex-direction: column; gap: var(--cds-gap-xl); font-family: var(--font-anthropic-sans); color: var(--color-fg); }
+.p16 h1 { font-family: var(--font-anthropic-serif); font-weight: 400; font-size: var(--cds-font-size-title); margin: 0; text-wrap: balance; }
+.p16 h2 { font-size: var(--cds-font-size-heading); font-weight: var(--cds-font-weight-medium); margin: 0; text-wrap: balance; }
+.p16 p { margin: 0; line-height: 1.6; }
+.p16-head { display: flex; flex-direction: column; gap: var(--cds-gap-sm); }
+.p16-window { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); letter-spacing: .02em; }
+.p16-lede { max-width: 72ch; }
+.p16-lede b { font-weight: var(--cds-font-weight-medium); font-variant-numeric: tabular-nums; }
+.p16-section { display: flex; flex-direction: column; gap: var(--cds-gap-md); }
+.p16-sub { color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); max-width: 80ch; }
+.p16-tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: var(--cds-gap-md); }
+.p16-tile { background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-lg); display: flex; flex-direction: column; gap: var(--cds-gap-xs); min-width: 0; }
+.p16-tile-label { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+.p16-tile-value { font-family: var(--font-anthropic-serif); font-weight: 400; font-size: 1.9rem; line-height: 1.15; font-variant-numeric: tabular-nums; }
+.p16-tile-note { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); font-variant-numeric: tabular-nums; }
+.p16-funnels { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--cds-gap-lg); }
+.p16-card { background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-lg); display: flex; flex-direction: column; gap: var(--cds-gap-md); min-width: 0; }
+.p16-card h3 { margin: 0; font-size: var(--cds-font-size-body); font-weight: var(--cds-font-weight-medium); }
+.p16-steps { display: flex; flex-direction: column; gap: 6px; }
+.p16-step { display: grid; grid-template-columns: 4.5em 1fr auto; align-items: center; gap: var(--cds-gap-sm); font-size: var(--cds-font-size-caption); }
+.p16-step-name { color: var(--color-fg-muted); }
+.p16-step-bar { height: 18px; border-radius: 3px; min-width: 2px; }
+.p16-step-track { background: var(--cds-chart-grid); border-radius: 3px; overflow: hidden; }
+.p16-step-val { font-variant-numeric: tabular-nums; text-align: right; white-space: nowrap; }
+.p16-step-rate { grid-column: 2 / 4; color: var(--color-fg-muted); font-size: 11px; padding-left: 2px; margin-top: -2px; }
+.p16-chart { position: relative; min-height: 260px; width: 100%; }
+.p16-chart svg text { font-size: 11px; fill: var(--cds-text-secondary); font-family: var(--font-anthropic-sans); }
+.p16-chart .domain, .p16-chart .tick line { stroke: var(--cds-chart-axis); }
+.p16-chart .grid line { stroke: var(--cds-chart-grid); }
+.p16-tip { position: absolute; pointer-events: none; background: var(--cds-surface-popover); border: 1px solid var(--cds-border); box-shadow: var(--cds-shadow-popover); border-radius: var(--cds-radius); padding: 8px 10px; font-size: 12px; line-height: 1.5; color: var(--color-fg); z-index: 2; max-width: 280px; }
+.p16-tip b { font-weight: var(--cds-font-weight-medium); }
+.p16-legend { display: flex; flex-wrap: wrap; gap: var(--cds-gap-md); font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+.p16-legend span { display: inline-flex; align-items: center; gap: 6px; }
+.p16-legend i { display: inline-block; width: 10px; height: 10px; border-radius: 2px; }
+.p16-legend i.p16-dot { border-radius: 50%; }
+.p16-tablewrap { overflow-x: auto; border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); }
+.p16-table { border-collapse: collapse; width: 100%; font-size: 12px; font-variant-numeric: tabular-nums; }
+.p16-table th { text-align: right; font-weight: var(--cds-font-weight-medium); color: var(--color-fg-muted); padding: 8px 10px; border-bottom: 1px solid var(--color-border-line); white-space: nowrap; background: var(--color-panel); }
+.p16-table td { text-align: right; padding: 7px 10px; border-bottom: 1px solid var(--color-border-line); white-space: nowrap; }
+.p16-table th:first-child, .p16-table td:first-child { text-align: left; }
+.p16-table td.p16-name { max-width: 340px; white-space: normal; word-break: break-all; }
+.p16-table td.p16-text, .p16-table th.p16-text { text-align: left; }
+.p16-table tr:last-child td { border-bottom: 0; }
+.p16-pill { display: inline-block; padding: 1px 7px; border-radius: 999px; font-size: 11px; border: 1px solid var(--color-border-line); color: var(--color-fg-muted); }
+.p16-good { color: var(--color-ok); }
+.p16-muted { color: var(--color-fg-muted); }
+.p16-notes summary { cursor: pointer; font-weight: var(--cds-font-weight-medium); }
+.p16-notes ul { margin: var(--cds-gap-sm) 0 0; padding-left: 1.2em; display: flex; flex-direction: column; gap: 6px; color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); line-height: 1.6; }
+.p16-foot { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); border-top: 1px solid var(--color-border-line); padding-top: var(--cds-pad-md); }
+.p16 [data-dash-source-state=refreshing] { opacity: .5; }
+.p16-controls { display: flex; flex-wrap: wrap; gap: var(--cds-gap-md); align-items: center; font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+.p16-controls label { display: inline-flex; align-items: center; gap: 6px; }
+.p16-heat { border-collapse: separate; border-spacing: 2px; font-size: 12px; font-variant-numeric: tabular-nums; width: 100%; }
+.p16-heat th { font-weight: var(--cds-font-weight-medium); color: var(--color-fg-muted); padding: 6px 8px; text-align: center; white-space: nowrap; }
+.p16-heat th.p16-rowhead { text-align: left; font-weight: 400; color: var(--color-fg); max-width: 260px; white-space: normal; word-break: break-all; }
+.p16-heat td { text-align: center; padding: 8px 6px; border-radius: 4px; min-width: 64px; position: relative; cursor: default; }
+.p16-heat td.p16-empty { color: var(--color-fg-muted); background: transparent; }
+.p16-heat td .p16-order { position: absolute; top: 3px; right: 4px; width: 7px; height: 7px; border-radius: 50%; background: var(--color-ok); }
+.p16-heat td small { display: block; color: var(--color-fg-muted); font-size: 10px; }
+.p16-scale { display: flex; align-items: center; gap: 6px; font-size: 11px; color: var(--color-fg-muted); }
+.p16-scale i { display: inline-block; width: 80px; height: 8px; border-radius: 4px; }
+.p16-bars { display: flex; flex-direction: column; gap: 10px; }
+.p16-bar-row { display: grid; grid-template-columns: 7.5em 1fr 9em; gap: var(--cds-gap-sm); align-items: center; font-size: 12px; font-variant-numeric: tabular-nums; }
+.p16-bar-row .p16-bar-track { background: var(--cds-chart-grid); border-radius: 3px; height: 20px; overflow: hidden; }
+.p16-bar-row .p16-bar { height: 100%; border-radius: 3px; }
+.p16-bar-row .p16-bar-note { color: var(--color-fg-muted); text-align: right; white-space: nowrap; }
+.p16-two { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: var(--cds-gap-lg); }
+.p16-fail { color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); padding: var(--cds-pad-md) 0; }
+.wy-tabs { display: flex; flex-wrap: wrap; gap: 6px; }
+.wy-tab { font: inherit; font-size: var(--cds-font-size-caption); padding: 6px 12px; border-radius: 999px; border: 1px solid var(--color-border-line); background: var(--color-bg); color: var(--color-fg-muted); cursor: pointer; }
+.wy-tab:hover { color: var(--color-fg); }
+.wy-tab.is-on { background: var(--color-fg); color: var(--color-bg); border-color: var(--color-fg); }
+.wy-tab:focus-visible { outline: 2px solid var(--color-fg); outline-offset: 2px; }
+.wy-stack { display: flex; flex-direction: column; gap: 12px; position: relative; min-height: 120px; }
+.wy-stack-row { display: grid; grid-template-columns: 4.5em 1fr 6.5em; gap: var(--cds-gap-sm); align-items: center; font-size: 12px; font-variant-numeric: tabular-nums; }
+.wy-stack-name { color: var(--color-fg-muted); }
+.wy-stack-track { display: flex; height: 28px; background: var(--cds-chart-grid); border-radius: 4px; overflow: hidden; }
+.wy-seg { height: 100%; display: flex; align-items: center; justify-content: center; color: var(--color-bg); font-size: 11px; white-space: nowrap; overflow: hidden; border-right: 1px solid var(--color-panel); }
+.wy-stack-total { text-align: right; font-weight: var(--cds-font-weight-medium); }
+.wy-swatch { display: inline-block; width: 8px; height: 8px; border-radius: 2px; margin-right: 5px; vertical-align: 0; }
+.wy-divider { border-top: 2px solid var(--color-fg); padding-top: var(--cds-pad-lg); display: flex; flex-direction: column; gap: var(--cds-gap-sm); }
+.wy-divider h2 { font-family: var(--font-anthropic-serif); font-weight: 400; font-size: var(--cds-font-size-title); margin: 0; }
+.p16-bar-row { grid-template-columns: 7.5em 1fr 12em; }
+@media (max-width: 520px) { .p16-bar-row { grid-template-columns: 6em 1fr; } .p16-bar-row .p16-bar-note { grid-column: 1 / 3; text-align: left; } }
+</style>
+
+<div class="p16" lang="zh-CN">
+  <header class="p16-head" id="overview">
+    <span class="p16-window">MERACH 无氧系列 · 美国站 · 2026-10-20 至 <span data-draw="asof" data-source="sales_daily" data-field="date">—</span>（美西时间）· 数据快照</span>
+    <h1>无氧系列广告看板</h1>
+    <div class="wy-tabs" role="tablist" aria-label="选择产品">
+      <button type="button" class="wy-tab is-on" role="tab" aria-selected="true" data-spu="全部">系列合计</button>
+      <button type="button" class="wy-tab" role="tab" aria-selected="false" data-spu="P15">P15 杠铃片</button>
+      <button type="button" class="wy-tab" role="tab" aria-selected="false" data-spu="P16">P16 史密斯机</button>
+      <button type="button" class="wy-tab" role="tab" aria-selected="false" data-spu="P17">P17</button>
+      <button type="button" class="wy-tab" role="tab" aria-selected="false" data-spu="P18">P18 训练凳</button>
+    </div>
+    <p class="p16-lede" data-read lang="zh-CN"><span data-draw="lede-name">—</span>：Shopify 实际成交 <b data-draw="lede-orders" data-source="kpi_spu" data-field="orders">—</b> 单、净销售 <b data-draw="lede-net" data-source="kpi_spu" data-field="net_sales">—</b>。付费广告归因营收 <b data-draw="lede-paid" data-source="kpi_spu" data-field="paid_revenue">—</b>，其中无氧专投广告 <b data-draw="lede-ded" data-source="kpi_spu" data-field="ded_revenue">—</b>，其他广告带动 <b data-draw="lede-halo" data-source="kpi_spu" data-field="halo_revenue">—</b>；非付费来源（邮件、自然搜索等）归因营收 <b data-draw="lede-nonpaid" data-source="kpi_spu" data-field="nonpaid_revenue">—</b>。</p>
+  </header>
+
+  <section class="p16-section" id="kpis">
+    <div class="p16-tiles">
+      <div class="p16-tile">
+        <span class="p16-tile-label">Shopify 实际订单</span>
+        <span class="p16-tile-value" data-draw="t-orders" data-source="kpi_spu" data-field="orders">—</span>
+        <span class="p16-tile-note">销量 <span data-draw="t-units" data-source="kpi_spu" data-field="units">—</span> 件</span>
+      </div>
+      <div class="p16-tile">
+        <span class="p16-tile-label">净销售额</span>
+        <span class="p16-tile-value" data-draw="t-net" data-source="kpi_spu" data-field="net_sales">—</span>
+        <span class="p16-tile-note">客单价 <span data-draw="t-aov" data-source="kpi_spu" data-field="aov">—</span></span>
+      </div>
+      <div class="p16-tile">
+        <span class="p16-tile-label">专投广告花费</span>
+        <span class="p16-tile-value" data-draw="t-spend" data-source="kpi_spu" data-field="spend">—</span>
+        <span class="p16-tile-note">目前只有 P16 有专投 Campaign</span>
+      </div>
+      <div class="p16-tile">
+        <span class="p16-tile-label">综合投产比</span>
+        <span class="p16-tile-value" data-draw="t-roas" data-source="kpi_spu" data-field="blended_roas">—</span>
+        <span class="p16-tile-note">实际净销售 ÷ 专投花费</span>
+      </div>
+      <div class="p16-tile">
+        <span class="p16-tile-label">付费广告归因营收</span>
+        <span class="p16-tile-value" data-draw="t-paid" data-source="kpi_spu" data-field="paid_revenue">—</span>
+        <span class="p16-tile-note">专投 <span data-draw="t-ded" data-source="kpi_spu" data-field="ded_revenue">—</span> · 其他广告带动 <span data-draw="t-halo" data-source="kpi_spu" data-field="halo_revenue">—</span></span>
+      </div>
+      <div class="p16-tile">
+        <span class="p16-tile-label">非付费来源归因营收</span>
+        <span class="p16-tile-value" data-draw="t-nonpaid" data-source="kpi_spu" data-field="nonpaid_revenue">—</span>
+        <span class="p16-tile-note">其中邮件 / 短信 <span data-draw="t-email" data-source="kpi_spu" data-field="email_revenue">—</span></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="p16-section" id="drivers">
+    <h2>谁带动了无氧：付费广告归因拆分</h2>
+    <p class="p16-sub">每个渠道的条形总长 = 该渠道全部广告带来的归因，再按广告类型拆开：无氧专投、品牌词搜索、其他产品的广告（如 R26、2510）、大促 / 通用广告，以及 Convbox 中未匹配到名称的 Campaign。专投与带动两部分相加等于渠道合计。</p>
+    <div class="p16-controls">
+      <label for="wy-driver-metric">指标
+        <select id="wy-driver-metric" class="dash-select" aria-label="拆分指标">
+          <option value="revenue_attr">归因营收</option>
+          <option value="orders_attr">归因件数</option>
+          <option value="sessions">进站</option>
+        </select>
+      </label>
+    </div>
+    <div class="p16-legend" data-draw="scope-legend"></div>
+    <div class="p16-card" id="driver-chart">
+      <div class="wy-stack" data-draw="driver-stack" data-source="driver_scope"></div>
+    </div>
+    <div class="p16-two">
+      <div class="p16-card" id="driver-products">
+        <h3>哪些产品的广告在带动无氧</h3>
+        <p class="p16-sub">“其他产品广告”按 Campaign 名称里的产品代号归并，按归因营收排序。</p>
+        <div class="p16-bars" data-draw="product-bars" data-source="driver_products"></div>
+      </div>
+      <div class="p16-card" id="sources">
+        <h3>全部流量来源（含非付费）</h3>
+        <p class="p16-sub">来自 Convbox 渠道报表，付费广告一项与左侧广告报表的统计层级不同，数字略有差异。</p>
+        <div class="p16-bars" data-draw="source-bars" data-source="sources_spu"></div>
+      </div>
+    </div>
+    <div class="p16-tablewrap">
+      <table class="p16-table" data-source="drivers" data-row-key="key">
+        <thead><tr>
+          <th data-field="campaign_name">Campaign</th>
+          <th class="p16-text" data-field="channel">渠道</th>
+          <th class="p16-text" data-field="scope">类型</th>
+          <th class="p16-text" data-field="source_product">来源产品</th>
+          <th data-field="sessions">进站</th>
+          <th data-field="atc">加购</th>
+          <th data-field="checkout">结账</th>
+          <th data-field="orders_attr">归因件数</th>
+          <th data-field="revenue_attr">归因营收</th>
+        </tr></thead>
+        <tbody data-draw="drivers-body"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="p16-section" id="trend">
+    <h2>每日专投花费与实际订单</h2>
+    <div class="p16-legend">
+      <span><i data-draw="legend-meta"></i>Meta 专投花费</span>
+      <span><i data-draw="legend-google"></i>Google 专投花费</span>
+      <span><i class="p16-dot" data-draw="legend-orders"></i>所选产品的 Shopify 实际订单（圆点上方为单数）</span>
+    </div>
+    <div class="p16-chart" data-draw="trend" data-source="trend"></div>
+  </section>
+
+  <div class="wy-divider" id="p16-layer">
+    <h2>P16 专投内容表现</h2>
+    <p class="p16-sub">以下只看 Campaign 名称带 P16 的专投广告，用来评估 P16 素材、人群和投放本身的效果。归因订单只计 P16；“带动其他无氧”是这些广告带来的 P15 / P17 / P18 归因。</p>
+  </div>
+
+  <section class="p16-section" id="p16-kpis">
+    <div class="p16-tiles">
+      <div class="p16-tile">
+        <span class="p16-tile-label">P16 专投花费</span>
+        <span class="p16-tile-value" data-draw="k-spend" data-source="p16_kpi" data-field="spend" data-row="0">—</span>
+        <span class="p16-tile-note">Meta <span data-draw="k-meta" data-source="p16_kpi" data-field="meta_spend" data-row="0">—</span> · Google <span data-draw="k-google" data-source="p16_kpi" data-field="google_spend" data-row="0">—</span></span>
+      </div>
+      <div class="p16-tile">
+        <span class="p16-tile-label">专投带来的进站 / 加购</span>
+        <span class="p16-tile-value" data-draw="k-sess" data-source="p16_kpi" data-field="sessions" data-row="0">—</span>
+        <span class="p16-tile-note">加购 <span data-draw="k-atc" data-source="p16_kpi" data-field="atc" data-row="0">—</span> · 单次加购成本 <span data-draw="k-cpa" data-source="p16_kpi" data-field="cost_per_atc" data-row="0">—</span></span>
+      </div>
+      <div class="p16-tile">
+        <span class="p16-tile-label">P16 归因订单（专投）</span>
+        <span class="p16-tile-value" data-draw="k-orders" data-source="p16_kpi" data-field="orders_attr" data-row="0">—</span>
+        <span class="p16-tile-note">归因营收 <span data-draw="k-rev" data-source="p16_kpi" data-field="revenue_attr" data-row="0">—</span> · 归因 ROAS <span data-draw="k-roas" data-source="p16_kpi" data-field="attr_roas" data-row="0">—</span></span>
+      </div>
+      <div class="p16-tile">
+        <span class="p16-tile-label">带动其他无氧</span>
+        <span class="p16-tile-value" data-draw="k-other" data-source="p16_kpi" data-field="other_revenue" data-row="0">—</span>
+        <span class="p16-tile-note">归因件数 <span data-draw="k-otheru" data-source="p16_kpi" data-field="other_units" data-row="0">—</span></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="p16-section" id="funnel">
+    <h2>投放到成交：每一层留下了多少人</h2>
+    <p class="p16-sub">展示和点击来自广告平台，进站、加购、结账和归因订单来自 Convbox（只计 P16）。条形长度按对数刻度绘制，便于看清后面几层。</p>
+    <div class="p16-funnels">
+      <div class="p16-card" id="funnel-meta">
+        <h3>Meta</h3>
+        <div class="p16-steps" data-draw="funnel-meta" data-source="funnel"></div>
+      </div>
+      <div class="p16-card" id="funnel-google">
+        <h3>Google</h3>
+        <div class="p16-steps" data-draw="funnel-google" data-source="funnel"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="p16-section" id="matrix">
+    <h2>多维视图：素材 × 人群 × 投放层级</h2>
+    <p class="p16-sub">Meta P16 专投。每一格是一个素材投给一类人群的结果，颜色越深表示所选指标越好；右上角绿点表示该组合有 P16 归因订单。只列出所选范围内花费最高的 20 个素材。</p>
+    <div class="p16-controls">
+      <label for="p16-metric">指标
+        <select id="p16-metric" class="dash-select" aria-label="热力图指标">
+          <option value="cost_per_atc">单次加购成本</option>
+          <option value="atc_rate">加购率</option>
+          <option value="ctr">CTR</option>
+          <option value="sessions">进站</option>
+          <option value="spend">花费</option>
+        </select>
+      </label>
+      <label for="p16-scope">投放层级
+        <select id="p16-scope" class="dash-select" aria-label="投放层级">
+          <option value="全部">全部</option>
+          <option value="上层 TOF">上层 TOF</option>
+          <option value="中层 MOF">中层 MOF</option>
+          <option value="下层 BOF">下层 BOF</option>
+          <option value="再营销 Catalog">再营销 Catalog</option>
+          <option value="测试">测试（ABO）</option>
+        </select>
+      </label>
+      <label for="p16-format">素材格式
+        <select id="p16-format" class="dash-select" aria-label="素材格式">
+          <option value="">全部</option>
+          <option value="图片">图片</option>
+          <option value="视频">视频</option>
+          <option value="IG 帖子">IG 帖子</option>
+          <option value="轮播">轮播</option>
+        </select>
+      </label>
+      <span class="p16-scale"><span>差</span><i data-draw="heat-scale"></i><span>好</span></span>
+    </div>
+    <div class="p16-tablewrap" data-draw="heatmap" data-source="matrix"></div>
+  </section>
+
+  <section class="p16-section" id="audiences">
+    <h2>人群表现</h2>
+    <p class="p16-sub">按 Ad Set 的定向归类。兴趣标签来自 Meta Ad Set 设置；再营销为自定义受众，兴趣标签表中不记录，需在 Meta 后台查看具体受众包。</p>
+    <div class="p16-two">
+      <div class="p16-card" id="audience-cost">
+        <h3>各类人群的单次加购成本</h3>
+        <p class="p16-sub">只统计以 Purchase 为目标的 Campaign。条形越短越好，右侧为花费与加购率。各类人群用的素材不同，差异里也包含素材本身的影响；人群之间的对比以右侧同条件测试为准。</p>
+        <div class="p16-bars" data-draw="audience-bars" data-source="audiences"></div>
+      </div>
+      <div class="p16-card" id="audience-tests">
+        <h3>两组同条件人群测试</h3>
+        <p class="p16-sub">中层视频 Campaign C / D / E 用同一批素材测试宽泛、健身内容、力量训练三组人群；11 月 6 日起的 ABO 自制视频测试宽泛、健身房品牌、CrossFit 三组，每组 $30/天。</p>
+        <div class="p16-tablewrap">
+          <table class="p16-table" data-source="audience_tests" data-row-key="test,adset_name">
+            <thead><tr>
+              <th class="p16-text" data-field="test">测试</th>
+              <th class="p16-text" data-field="audience">人群</th>
+              <th data-field="spend">花费</th>
+              <th data-field="ctr">CTR</th>
+              <th data-field="sessions">进站</th>
+              <th data-field="atc_rate">加购率</th>
+              <th data-field="cost_per_atc">单次加购成本</th>
+            </tr></thead>
+            <tbody data-draw="tests-body"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="p16-tablewrap">
+      <table class="p16-table" data-source="adsets" data-row-key="adset_name">
+        <thead><tr>
+          <th data-field="adset_name">Ad Set</th>
+          <th class="p16-text" data-field="audience">人群类型</th>
+          <th class="p16-text" data-field="interests">兴趣标签 / 受众</th>
+          <th data-field="spend">花费</th>
+          <th data-field="impressions">展示</th>
+          <th data-field="ctr">CTR</th>
+          <th data-field="cpc">CPC</th>
+          <th data-field="sessions">进站</th>
+          <th data-field="atc_rate">加购率</th>
+          <th data-field="cost_per_atc">单次加购成本</th>
+          <th data-field="orders_attr">P16 归因订单</th>
+          <th data-field="other_revenue">带动其他无氧</th>
+        </tr></thead>
+        <tbody data-draw="adsets-body"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="p16-section" id="creatives">
+    <h2>素材表现（按广告名称汇总）</h2>
+    <p class="p16-sub">同一个广告名称在多个 Campaign 和受众里投放时合并计算。点击到进站反映素材承诺与落地页是否一致，进站到加购反映页面和价格能否接住流量。</p>
+    <div class="p16-card" id="creative-map">
+      <h3>素材象限：吸引力（CTR）× 承接力（加购率）</h3>
+      <p class="p16-sub">仅显示进站 ≥ 10 且加购率不超过 100% 的素材，圆点大小代表花费，标注了花费最高的 6 条。</p>
+      <div class="p16-chart" data-draw="scatter" data-source="creatives"></div>
+    </div>
+    <div class="p16-tablewrap">
+      <table class="p16-table" data-source="creatives" data-row-key="ad_name">
+        <thead><tr>
+          <th data-field="ad_name">素材（广告名称）</th>
+          <th class="p16-text" data-field="format">格式</th>
+          <th data-field="spend">花费</th>
+          <th data-field="impressions">展示</th>
+          <th data-field="ctr">CTR</th>
+          <th data-field="cpc">CPC</th>
+          <th data-field="sessions">进站</th>
+          <th data-field="visit_rate">进站率</th>
+          <th data-field="atc_rate">加购率</th>
+          <th data-field="orders_attr">P16 归因订单</th>
+          <th data-field="revenue_attr">P16 归因营收</th>
+          <th data-field="other_revenue">带动其他无氧</th>
+        </tr></thead>
+        <tbody data-draw="creatives-body"></tbody>
+      </table>
+    </div>
+    <div class="p16-tablewrap">
+      <table class="p16-table" data-source="formats" data-row-key="format">
+        <thead><tr>
+          <th data-field="format">格式</th>
+          <th data-field="ads">素材数</th>
+          <th data-field="spend">花费</th>
+          <th data-field="ctr">CTR</th>
+          <th data-field="cpc">CPC</th>
+          <th data-field="visit_rate">进站率</th>
+          <th data-field="atc_rate">加购率</th>
+          <th data-field="cost_per_atc">单次加购成本</th>
+          <th data-field="orders_attr">P16 归因订单</th>
+        </tr></thead>
+        <tbody data-draw="formats-body"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="p16-section" id="campaigns">
+    <h2>Meta P16 专投 Campaign</h2>
+    <p class="p16-sub">上层 Lead 和 Traffic 目标的 Campaign 主要在站外收集线索或带量，进站和加购本来就低，不宜和 Purchase 目标的 Campaign 直接比较。</p>
+    <div class="p16-tablewrap">
+      <table class="p16-table" data-source="campaigns" data-row-key="campaign_name">
+        <thead><tr>
+          <th data-field="campaign_name">Campaign</th>
+          <th class="p16-text" data-field="funnel">层级</th>
+          <th class="p16-text" data-field="objective">目标</th>
+          <th data-field="spend">花费</th>
+          <th data-field="impressions">展示</th>
+          <th data-field="ctr">CTR</th>
+          <th data-field="cpc">CPC</th>
+          <th data-field="sessions">进站</th>
+          <th data-field="atc_rate">加购率</th>
+          <th data-field="orders_attr">P16 归因订单</th>
+          <th data-field="revenue_attr">P16 归因营收</th>
+          <th data-field="other_revenue">带动其他无氧</th>
+        </tr></thead>
+        <tbody data-draw="campaigns-body"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="p16-section" id="google">
+    <h2>Google P16 专投 Campaign</h2>
+    <div class="p16-tablewrap">
+      <table class="p16-table" data-source="google_p16" data-row-key="campaign_name">
+        <thead><tr>
+          <th data-field="campaign_name">Campaign</th>
+          <th data-field="spend">花费</th>
+          <th data-field="impressions">展示</th>
+          <th data-field="clicks">点击</th>
+          <th data-field="sessions">进站</th>
+          <th data-field="atc">加购</th>
+          <th data-field="checkout">结账</th>
+          <th data-field="orders_attr">P16 归因订单</th>
+          <th data-field="revenue_attr">P16 归因营收</th>
+          <th data-field="other_units">带动其他无氧（件）</th>
+        </tr></thead>
+        <tbody data-draw="google-body"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <details class="p16-notes" id="notes">
+    <summary>口径说明</summary>
+    <ul>
+      <li>无氧系列：P15（杠铃片组，含 BOGOS 赠品）、P16（史密斯机，Elite / Pro）、P17、P18（可调训练凳），按 Shopify 商品对应。</li>
+      <li>实际订单与净销售：Shopify 订单汇总（miaoda.total_site_sku_by_date），已排除 P16 测试 SKU。</li>
+      <li>归因：统一来自 Convbox 原始归因表（product_ad_report_v2 / product_report_v2），U 型归因，一单的功劳按触点拆分，所以会出现小数。</li>
+      <li>归因件数：Convbox 统计的是成交件数而不是订单数。P15 有 BOGOS 买赠，一单会送出多片杠铃片，因此 P15 的归因件数偏高、营收偏低；P16 一单一台，件数与订单数一致。</li>
+      <li>广告类型：无氧专投 = Campaign 名称含 P15–P18；品牌词搜索 = 名称含 Brand；其他产品广告 = 名称含其他产品代号或品类；大促 / 通用 = 全站促销、Best Seller、DSA 等；未匹配到名称 = Convbox 有转化但 Campaign 信息表里查不到名称。</li>
+      <li>专投花费：Meta 来自 facebook_ad_insights，Google 来自 google_campaign，只统计名称含 P15–P18 的 Campaign。其他广告带动的转化没有分摊花费。</li>
+      <li>全部流量来源来自 Convbox 渠道报表，付费广告一项与广告报表（Campaign 层级）的统计层级不同，数字略有差异。</li>
+      <li>加购率 = 加购会话 ÷ 进站会话；单次加购成本 = 花费 ÷ 加购会话。热力图中进站不足 5 的格子不计算比率。Lead 目标的 Campaign 进站很少，个别加购率会超过 100%。</li>
+      <li>综合投产比 = 实际净销售 ÷ 专投花费，不区分订单是否由广告带来；归因 ROAS 只计算 Convbox 归到专投广告的部分。</li>
+      <li>本看板是数据快照，打开时不会查询 BigQuery；需要更新时请 Claude 运行一次查询并替换快照。日期按美西时间，截止日当天的数据可能还不完整。</li>
+    </ul>
+  </details>
+
+  <footer class="p16-foot">© Cristobal Du Peiming (杜沛明) — All Rights Reserved / 知识产权所有</footer>
+</div>
+
+<script>
+dash.calc('kpi_spu', {
+  title: '各产品核心指标',
+  description: '按产品（含系列合计）汇总 Shopify 实际订单与销售、专投花费，以及 Convbox 付费广告与非付费来源的归因营收。',
+  inputs: ['sales_daily', 'spend_daily', 'attr_campaigns', 'attr_sources'],
+  fn: (sales, spend, campaigns, sources) => {
+    const n = (v) => (v == null || v === '' ? 0 : Number(v));
+    const rd = (v, d) => (v == null ? null : Math.round(v * 10 ** d) / 10 ** d);
+    const pick = (rows, s) => (s === '全部' ? rows : rows.filter((r) => r.spu === s));
+    const sum = (rows, k) => rows.reduce((a, r) => a + n(r[k]), 0);
+    return ['全部', 'P15', 'P16', 'P17', 'P18'].map((s) => {
+      const sa = pick(sales, s), sp = pick(spend, s), ca = pick(campaigns, s), so = pick(sources, s);
+      const orders = sum(sa, 'orders'), net = sum(sa, 'net_sales'), sp_total = sum(sp, 'spend');
+      const paid = sum(ca, 'revenue_attr'), ded = sum(ca.filter((r) => r.scope === '无氧专投'), 'revenue_attr');
+      const nonpaid = so.filter((r) => r.channel_group !== 'Paid Ads');
+      return {
+        spu: s, orders, units: sum(sa, 'units'), net_sales: rd(net, 2), cogs: rd(sum(sa, 'cogs'), 2),
+        orders_elite: sum(sa.filter((r) => r.variant === 'Elite'), 'orders'), orders_pro: sum(sa.filter((r) => r.variant === 'Pro'), 'orders'),
+        aov: orders ? rd(net / orders, 2) : null,
+        spend: rd(sp_total, 2), blended_roas: sp_total ? rd(net / sp_total, 2) : null,
+        paid_units: rd(sum(ca, 'orders_attr'), 2), paid_revenue: rd(paid, 2),
+        ded_revenue: rd(ded, 2), halo_revenue: rd(paid - ded, 2),
+        nonpaid_revenue: rd(sum(nonpaid, 'revenue_attr'), 2),
+        email_revenue: rd(sum(nonpaid.filter((r) => r.channel_group === 'Email & SMS'), 'revenue_attr'), 2),
+      };
+    });
+  },
+});
+
+dash.calc('driver_scope', {
+  title: '付费广告归因：渠道 × 广告类型',
+  description: '按产品（含系列合计）、渠道和广告类型汇总 Convbox 付费广告归因（Campaign 层级）。',
+  inputs: ['attr_campaigns'],
+  fn: (campaigns) => {
+    const n = (v) => (v == null || v === '' ? 0 : Number(v));
+    const by = new Map();
+    for (const r of campaigns) {
+      for (const s of ['全部', r.spu]) {
+        const key = s + '|' + r.channel + '|' + r.scope;
+        if (!by.has(key)) by.set(key, { key, spu: s, channel: r.channel, scope: r.scope, sessions: 0, atc: 0, orders_attr: 0, revenue_attr: 0 });
+        const o = by.get(key);
+        for (const f of ['sessions', 'atc', 'orders_attr', 'revenue_attr']) o[f] += n(r[f]);
+      }
+    }
+    return [...by.values()].map((o) => ({ ...o, sessions: Math.round(o.sessions * 10) / 10, atc: Math.round(o.atc * 10) / 10, orders_attr: Math.round(o.orders_attr * 100) / 100, revenue_attr: Math.round(o.revenue_attr * 100) / 100 }));
+  },
+});
+
+dash.calc('driver_products', {
+  title: '带动无氧的其他产品广告',
+  description: '“其他产品广告”按 Campaign 名称中的产品代号归并，按产品（含系列合计）汇总归因。',
+  inputs: ['attr_campaigns'],
+  fn: (campaigns) => {
+    const n = (v) => (v == null || v === '' ? 0 : Number(v));
+    const by = new Map();
+    for (const r of campaigns.filter((x) => x.scope === '其他产品广告')) {
+      for (const s of ['全部', r.spu]) {
+        const key = s + '|' + r.source_product;
+        if (!by.has(key)) by.set(key, { key, spu: s, source_product: r.source_product, sessions: 0, orders_attr: 0, revenue_attr: 0 });
+        const o = by.get(key);
+        for (const f of ['sessions', 'orders_attr', 'revenue_attr']) o[f] += n(r[f]);
+      }
+    }
+    return [...by.values()].map((o) => ({ ...o, sessions: Math.round(o.sessions * 10) / 10, orders_attr: Math.round(o.orders_attr * 100) / 100, revenue_attr: Math.round(o.revenue_attr * 100) / 100 }))
+      .sort((a, b) => b.revenue_attr - a.revenue_attr || b.orders_attr - a.orders_attr || b.sessions - a.sessions);
+  },
+});
+
+dash.calc('drivers', {
+  title: '带动无氧的 Campaign 明细',
+  description: '按产品（含系列合计）和 Campaign 汇总 Convbox 付费广告归因，附广告类型和来源产品。',
+  inputs: ['attr_campaigns'],
+  fn: (campaigns) => {
+    const n = (v) => (v == null || v === '' ? 0 : Number(v));
+    const by = new Map();
+    for (const r of campaigns) {
+      for (const s of ['全部', r.spu]) {
+        const key = s + '|' + r.channel + '|' + r.campaign_id;
+        if (!by.has(key)) by.set(key, { key, spu: s, channel: r.channel, campaign_name: r.campaign_name, scope: r.scope, source_product: r.source_product, sessions: 0, atc: 0, checkout: 0, orders_attr: 0, revenue_attr: 0 });
+        const o = by.get(key);
+        for (const f of ['sessions', 'atc', 'checkout', 'orders_attr', 'revenue_attr']) o[f] += n(r[f]);
+      }
+    }
+    return [...by.values()].map((o) => ({ ...o, sessions: Math.round(o.sessions * 10) / 10, atc: Math.round(o.atc * 10) / 10, checkout: Math.round(o.checkout * 10) / 10, orders_attr: Math.round(o.orders_attr * 100) / 100, revenue_attr: Math.round(o.revenue_attr * 100) / 100 }))
+      .sort((a, b) => b.revenue_attr - a.revenue_attr || b.orders_attr - a.orders_attr || b.sessions - a.sessions);
+  },
+});
+
+dash.calc('sources_spu', {
+  title: '全部流量来源',
+  description: '按产品（含系列合计）和渠道组汇总 Convbox 渠道报表的 U 型归因，含付费与非付费来源。',
+  inputs: ['attr_sources'],
+  fn: (sources) => {
+    const n = (v) => (v == null || v === '' ? 0 : Number(v));
+    const by = new Map();
+    for (const r of sources) {
+      for (const s of ['全部', r.spu]) {
+        const key = s + '|' + r.channel_group;
+        if (!by.has(key)) by.set(key, { key, spu: s, channel_group: r.channel_group, sessions: 0, atc: 0, orders_attr: 0, revenue_attr: 0 });
+        const o = by.get(key);
+        for (const f of ['sessions', 'atc', 'orders_attr', 'revenue_attr']) o[f] += n(r[f]);
+      }
+    }
+    return [...by.values()].map((o) => ({ ...o, sessions: Math.round(o.sessions * 10) / 10, atc: Math.round(o.atc * 10) / 10, orders_attr: Math.round(o.orders_attr * 100) / 100, revenue_attr: Math.round(o.revenue_attr * 100) / 100 }))
+      .sort((a, b) => b.revenue_attr - a.revenue_attr || b.sessions - a.sessions);
+  },
+});
+
+dash.calc('trend', {
+  title: '每日专投花费与实际订单',
+  description: '按日期和产品（含系列合计）汇总 Meta / Google 专投花费与 Shopify 实际订单、净销售。',
+  inputs: ['sales_daily', 'spend_daily'],
+  fn: (sales, spend) => {
+    const n = (v) => (v == null || v === '' ? 0 : Number(v));
+    const dates = [...new Set([...sales.map((r) => r.date), ...spend.map((r) => r.date)])].sort();
+    if (!dates.length) return [];
+    const all = [];
+    const start = new Date(dates[0] + 'T00:00:00Z'), end = new Date(dates[dates.length - 1] + 'T00:00:00Z');
+    for (let t = start; t <= end; t = new Date(t.getTime() + 86400000)) all.push(t.toISOString().slice(0, 10));
+    const out = [];
+    for (const s of ['全部', 'P15', 'P16', 'P17', 'P18']) {
+      for (const d of all) {
+        const sa = sales.filter((r) => r.date === d && (s === '全部' || r.spu === s));
+        const sp = spend.filter((r) => r.date === d && (s === '全部' || r.spu === s));
+        out.push({
+          key: s + '|' + d, spu: s, date: d,
+          meta_spend: Math.round(sp.filter((r) => r.channel === 'Meta Ads').reduce((a, r) => a + n(r.spend), 0) * 100) / 100,
+          google_spend: Math.round(sp.filter((r) => r.channel === 'Google Ads').reduce((a, r) => a + n(r.spend), 0) * 100) / 100,
+          orders: sa.reduce((a, r) => a + n(r.orders), 0),
+          net_sales: Math.round(sa.reduce((a, r) => a + n(r.net_sales), 0) * 100) / 100,
+        });
+      }
+    }
+    return out;
+  },
+});
+
+dash.calc('google_p16', {
+  title: 'Google P16 专投 Campaign',
+  description: '名称含 P16 的 Google Campaign：花费、展示、点击来自 Google 广告数据，进站与归因来自 Convbox（P16），另附带动的其他无氧件数。',
+  inputs: ['spend_daily', 'attr_campaigns'],
+  fn: (spend, campaigns) => {
+    const n = (v) => (v == null || v === '' ? 0 : Number(v));
+    const by = new Map();
+    const get = (name) => {
+      if (!by.has(name)) by.set(name, { campaign_name: name, spend: 0, impressions: 0, clicks: 0, sessions: 0, atc: 0, checkout: 0, orders_attr: 0, revenue_attr: 0, other_units: 0, other_revenue: 0 });
+      return by.get(name);
+    };
+    for (const r of spend.filter((x) => x.channel === 'Google Ads' && /P16/.test(x.campaign_name))) {
+      const o = get(r.campaign_name); o.spend += n(r.spend); o.impressions += n(r.impressions); o.clicks += n(r.clicks);
+    }
+    for (const r of campaigns.filter((x) => x.channel === 'Google Ads' && /P16/.test(x.campaign_name))) {
+      const o = get(r.campaign_name);
+      if (r.spu === 'P16') { for (const f of ['sessions', 'atc', 'checkout', 'orders_attr', 'revenue_attr']) o[f] += n(r[f]); }
+      else { o.other_units += n(r.orders_attr); o.other_revenue += n(r.revenue_attr); }
+    }
+    const rd = (v, d) => Math.round(v * 10 ** d) / 10 ** d;
+    return [...by.values()].map((o) => ({ ...o, spend: rd(o.spend, 2), sessions: rd(o.sessions, 1), atc: rd(o.atc, 1), checkout: rd(o.checkout, 1), orders_attr: rd(o.orders_attr, 2), revenue_attr: rd(o.revenue_attr, 2), other_units: rd(o.other_units, 2), other_revenue: rd(o.other_revenue, 2) }))
+      .sort((a, b) => b.spend - a.spend);
+  },
+});
+
+dash.calc('p16_kpi', {
+  title: 'P16 专投核心指标',
+  description: 'Meta 与 Google 的 P16 专投广告合计：花费、进站、加购、P16 归因订单与营收、归因 ROAS，以及带动的其他无氧。',
+  inputs: ['meta_ads', 'google_p16'],
+  fn: (metaAds, googleP16) => {
+    const n = (v) => (v == null || v === '' ? 0 : Number(v));
+    const s = (rows, k) => rows.reduce((a, r) => a + n(r[k]), 0);
+    const rd = (v, d) => (v == null ? null : Math.round(v * 10 ** d) / 10 ** d);
+    const meta = s(metaAds, 'spend'), google = s(googleP16, 'spend'), spend = meta + google;
+    const atc = s(metaAds, 'atc') + s(googleP16, 'atc'), rev = s(metaAds, 'revenue_attr') + s(googleP16, 'revenue_attr');
+    return [{
+      spend: rd(spend, 2), meta_spend: rd(meta, 2), google_spend: rd(google, 2),
+      sessions: rd(s(metaAds, 'sessions') + s(googleP16, 'sessions'), 1), atc: rd(atc, 1), cost_per_atc: atc ? rd(spend / atc, 2) : null,
+      orders_attr: rd(s(metaAds, 'orders_attr') + s(googleP16, 'orders_attr'), 2), revenue_attr: rd(rev, 2), attr_roas: spend ? rd(rev / spend, 2) : null,
+      other_units: rd(s(metaAds, 'other_units') + s(googleP16, 'other_units'), 2), other_revenue: rd(s(metaAds, 'other_revenue') + s(googleP16, 'other_revenue'), 2),
+    }];
+  },
+});
+
+dash.calc('funnel', {
+  title: 'P16 专投广告漏斗',
+  description: 'Meta 与 Google 的 P16 专投广告，从展示到 P16 归因订单每一层的合计。',
+  inputs: ['meta_ads', 'google_p16'],
+  fn: (metaAds, googleP16) => {
+    const n = (v) => (v == null || v === '' ? 0 : Number(v));
+    const tot = (rows, platform) => ({
+      platform,
+      impressions: rows.reduce((a, r) => a + n(r.impressions), 0),
+      clicks: rows.reduce((a, r) => a + n(r.clicks), 0),
+      sessions: Math.round(rows.reduce((a, r) => a + n(r.sessions), 0) * 10) / 10,
+      atc: Math.round(rows.reduce((a, r) => a + n(r.atc), 0) * 10) / 10,
+      checkout: Math.round(rows.reduce((a, r) => a + n(r.checkout), 0) * 10) / 10,
+      orders_attr: Math.round(rows.reduce((a, r) => a + n(r.orders_attr), 0) * 100) / 100,
+    });
+    return [tot(metaAds, 'Meta'), tot(googleP16, 'Google')];
+  },
+});
+
+dash.calc('campaigns', {
+  title: 'Meta P16 专投 Campaign 汇总',
+  description: '把 Meta P16 专投广告按 Campaign 汇总，并算出 CTR、CPC、加购率。',
+  inputs: ['meta_ads'],
+  fn: (metaAds) => {
+    const n = (v) => (v == null || v === '' ? 0 : Number(v));
+    const rd = (v, d) => (v == null ? null : Math.round(v * 10 ** d) / 10 ** d);
+    const by = new Map();
+    for (const r of metaAds) {
+      if (!by.has(r.campaign_name)) by.set(r.campaign_name, { campaign_name: r.campaign_name, funnel: r.funnel, objective: r.objective, spend: 0, impressions: 0, clicks: 0, sessions: 0, atc: 0, orders_attr: 0, revenue_attr: 0, other_revenue: 0 });
+      const o = by.get(r.campaign_name);
+      for (const f of ['spend', 'impressions', 'clicks', 'sessions', 'atc', 'orders_attr', 'revenue_attr', 'other_revenue']) o[f] += n(r[f]);
+    }
+    return [...by.values()].map((o) => ({
+      ...o, spend: rd(o.spend, 2), sessions: rd(o.sessions, 1), atc: rd(o.atc, 1), orders_attr: rd(o.orders_attr, 2), revenue_attr: rd(o.revenue_attr, 2), other_revenue: rd(o.other_revenue, 2),
+      ctr: o.impressions ? rd(o.clicks / o.impressions, 4) : null, cpc: o.clicks ? rd(o.spend / o.clicks, 2) : null, atc_rate: o.sessions ? rd(o.atc / o.sessions, 4) : null,
+    })).sort((a, b) => b.spend - a.spend);
+  },
+});
+
+dash.calc('creatives', {
+  title: '素材汇总',
+  description: '把 Meta P16 专投广告按广告名称（素材）汇总，跨 Campaign 合并，并算出 CTR、CPC、进站率、加购率。',
+  inputs: ['meta_ads'],
+  fn: (metaAds) => {
+    const n = (v) => (v == null || v === '' ? 0 : Number(v));
+    const rd = (v, d) => (v == null ? null : Math.round(v * 10 ** d) / 10 ** d);
+    const by = new Map();
+    for (const r of metaAds) {
+      if (!by.has(r.ad_name)) by.set(r.ad_name, { ad_name: r.ad_name, format: r.format, spend: 0, impressions: 0, clicks: 0, sessions: 0, atc: 0, checkout: 0, orders_attr: 0, revenue_attr: 0, other_revenue: 0 });
+      const o = by.get(r.ad_name);
+      for (const f of ['spend', 'impressions', 'clicks', 'sessions', 'atc', 'checkout', 'orders_attr', 'revenue_attr', 'other_revenue']) o[f] += n(r[f]);
+    }
+    return [...by.values()].map((o) => ({
+      ...o, spend: rd(o.spend, 2), sessions: rd(o.sessions, 1), atc: rd(o.atc, 1), checkout: rd(o.checkout, 1), orders_attr: rd(o.orders_attr, 2), revenue_attr: rd(o.revenue_attr, 2), other_revenue: rd(o.other_revenue, 2),
+      ctr: o.impressions ? rd(o.clicks / o.impressions, 4) : null, cpc: o.clicks ? rd(o.spend / o.clicks, 2) : null,
+      visit_rate: o.clicks ? rd(o.sessions / o.clicks, 4) : null, atc_rate: o.sessions ? rd(o.atc / o.sessions, 4) : null,
+    })).sort((a, b) => b.spend - a.spend);
+  },
+});
+
+dash.calc('formats', {
+  title: '素材格式对比',
+  description: '按素材格式（图片、视频、IG 帖子、轮播）汇总 Meta P16 专投广告。',
+  inputs: ['meta_ads'],
+  fn: (metaAds) => {
+    const n = (v) => (v == null || v === '' ? 0 : Number(v));
+    const rd = (v, d) => (v == null ? null : Math.round(v * 10 ** d) / 10 ** d);
+    const by = new Map();
+    for (const r of metaAds) {
+      if (!by.has(r.format)) by.set(r.format, { format: r.format, names: new Set(), spend: 0, impressions: 0, clicks: 0, sessions: 0, atc: 0, orders_attr: 0 });
+      const o = by.get(r.format); o.names.add(r.ad_name);
+      for (const f of ['spend', 'impressions', 'clicks', 'sessions', 'atc', 'orders_attr']) o[f] += n(r[f]);
+    }
+    return [...by.values()].map((o) => ({
+      format: o.format, ads: o.names.size, spend: rd(o.spend, 2), impressions: o.impressions, clicks: o.clicks, sessions: rd(o.sessions, 1), atc: rd(o.atc, 1), orders_attr: rd(o.orders_attr, 2),
+      ctr: o.impressions ? rd(o.clicks / o.impressions, 4) : null, cpc: o.clicks ? rd(o.spend / o.clicks, 2) : null,
+      visit_rate: o.clicks ? rd(o.sessions / o.clicks, 4) : null, atc_rate: o.sessions ? rd(o.atc / o.sessions, 4) : null, cost_per_atc: o.atc ? rd(o.spend / o.atc, 2) : null,
+    })).sort((a, b) => b.spend - a.spend);
+  },
+});
+
+dash.calc('matrix', {
+  title: '素材 × 人群矩阵',
+  description: '按投放层级（含“全部”）、人群类型和素材汇总 Meta P16 专投广告，并算出 CTR、加购率、单次加购成本。进站不足 5 时不计算比率。',
+  inputs: ['meta_ads'],
+  fn: (metaAds) => {
+    const n = (v) => (v == null || v === '' ? 0 : Number(v));
+    const rd = (v, d) => Math.round(v * 10 ** d) / 10 ** d;
+    const by = new Map();
+    for (const r of metaAds) {
+      for (const scope of ['全部', r.funnel]) {
+        const key = scope + '|' + r.audience + '|' + r.ad_name;
+        if (!by.has(key)) by.set(key, { key, scope, audience: r.audience, ad_name: r.ad_name, format: r.format, spend: 0, impressions: 0, clicks: 0, sessions: 0, atc: 0, orders_attr: 0, revenue_attr: 0 });
+        const o = by.get(key);
+        for (const f of ['spend', 'impressions', 'clicks', 'sessions', 'atc', 'orders_attr', 'revenue_attr']) o[f] += n(r[f]);
+      }
+    }
+    return [...by.values()].map((o) => ({
+      ...o, spend: rd(o.spend, 2), sessions: rd(o.sessions, 1), atc: rd(o.atc, 1), orders_attr: rd(o.orders_attr, 3), revenue_attr: rd(o.revenue_attr, 2),
+      ctr: o.impressions ? rd(o.clicks / o.impressions, 4) : null,
+      atc_rate: o.sessions >= 5 ? rd(o.atc / o.sessions, 4) : null,
+      cost_per_atc: o.sessions >= 5 && o.atc > 0 ? rd(o.spend / o.atc, 2) : null,
+    }));
+  },
+});
+
+dash.calc('audiences', {
+  title: '人群类型汇总（Purchase 目标）',
+  description: '只统计 Purchase 目标的 Meta P16 专投 Campaign，按人群类型汇总花费、加购率和单次加购成本。',
+  inputs: ['meta_ads'],
+  fn: (metaAds) => {
+    const n = (v) => (v == null || v === '' ? 0 : Number(v));
+    const rd = (v, d) => (v == null ? null : Math.round(v * 10 ** d) / 10 ** d);
+    const by = new Map();
+    for (const r of metaAds.filter((x) => x.objective === 'Purchase')) {
+      if (!by.has(r.audience)) by.set(r.audience, { audience: r.audience, spend: 0, impressions: 0, clicks: 0, sessions: 0, atc: 0, orders_attr: 0 });
+      const o = by.get(r.audience);
+      for (const f of ['spend', 'impressions', 'clicks', 'sessions', 'atc', 'orders_attr']) o[f] += n(r[f]);
+    }
+    return [...by.values()].map((o) => ({
+      ...o, spend: rd(o.spend, 2), sessions: rd(o.sessions, 1), atc: rd(o.atc, 1), orders_attr: rd(o.orders_attr, 3),
+      ctr: o.impressions ? rd(o.clicks / o.impressions, 4) : null, atc_rate: o.sessions ? rd(o.atc / o.sessions, 4) : null, cost_per_atc: o.atc ? rd(o.spend / o.atc, 2) : null,
+    })).sort((a, b) => (a.cost_per_atc ?? 1e9) - (b.cost_per_atc ?? 1e9));
+  },
+});
+
+dash.calc('adsets', {
+  title: 'Ad Set 汇总',
+  description: '按 Ad Set 汇总 Meta P16 专投广告，附人群类型和兴趣标签。',
+  inputs: ['meta_ads'],
+  fn: (metaAds) => {
+    const n = (v) => (v == null || v === '' ? 0 : Number(v));
+    const rd = (v, d) => (v == null ? null : Math.round(v * 10 ** d) / 10 ** d);
+    const by = new Map();
+    for (const r of metaAds) {
+      if (!by.has(r.adset_name)) by.set(r.adset_name, { adset_name: r.adset_name, audience: r.audience, interests: r.interests, spend: 0, impressions: 0, clicks: 0, sessions: 0, atc: 0, orders_attr: 0, other_revenue: 0 });
+      const o = by.get(r.adset_name);
+      for (const f of ['spend', 'impressions', 'clicks', 'sessions', 'atc', 'orders_attr', 'other_revenue']) o[f] += n(r[f]);
+    }
+    return [...by.values()].map((o) => ({
+      ...o, spend: rd(o.spend, 2), sessions: rd(o.sessions, 1), atc: rd(o.atc, 1), orders_attr: rd(o.orders_attr, 3), other_revenue: rd(o.other_revenue, 2),
+      ctr: o.impressions ? rd(o.clicks / o.impressions, 4) : null, cpc: o.clicks ? rd(o.spend / o.clicks, 2) : null,
+      atc_rate: o.sessions ? rd(o.atc / o.sessions, 4) : null, cost_per_atc: o.atc ? rd(o.spend / o.atc, 2) : null,
+    })).sort((a, b) => b.spend - a.spend);
+  },
+});
+
+dash.calc('audience_tests', {
+  title: '同条件人群测试',
+  description: '中层视频 Campaign C/D/E 的三组人群，以及 ABO 自制视频测试的三组人群，分别汇总。',
+  inputs: ['meta_ads'],
+  fn: (metaAds) => {
+    const n = (v) => (v == null || v === '' ? 0 : Number(v));
+    const rd = (v, d) => (v == null ? null : Math.round(v * 10 ** d) / 10 ** d);
+    const groups = [['中层视频 C/D/E', (r) => /_Purchase_[CDE]_/.test(r.campaign_name)], ['ABO 自制视频', (r) => /AudienceTest/.test(r.campaign_name)]];
+    const out = [];
+    for (const [test, keep] of groups) {
+      const by = new Map();
+      for (const r of metaAds.filter(keep)) {
+        if (!by.has(r.adset_name)) by.set(r.adset_name, { test, adset_name: r.adset_name, audience: r.audience, spend: 0, impressions: 0, clicks: 0, sessions: 0, atc: 0 });
+        const o = by.get(r.adset_name);
+        for (const f of ['spend', 'impressions', 'clicks', 'sessions', 'atc']) o[f] += n(r[f]);
+      }
+      out.push(...[...by.values()].map((o) => ({
+        ...o, spend: rd(o.spend, 2), sessions: rd(o.sessions, 1), atc: rd(o.atc, 1),
+        ctr: o.impressions ? rd(o.clicks / o.impressions, 4) : null, atc_rate: o.sessions ? rd(o.atc / o.sessions, 4) : null, cost_per_atc: o.atc ? rd(o.spend / o.atc, 2) : null,
+      })).sort((a, b) => (a.cost_per_atc ?? 1e9) - (b.cost_per_atc ?? 1e9)));
+    }
+    return out;
+  },
+});
+</script>
+
+<script>
+window.p16fmt = {
+  usd: d3.format('$,.0f'),
+  usd2: d3.format('$,.2f'),
+  int: d3.format(',.0f'),
+  num1: (v) => (v == null ? '—' : (Math.abs(v - Math.round(v)) < 1e-9 ? d3.format(',.0f')(v) : d3.format(',.1f')(v))),
+  num2: (v) => (v == null ? '—' : (Math.abs(v - Math.round(v)) < 1e-9 ? d3.format(',.0f')(v) : d3.format(',.2f')(v))),
+  pct: (v) => (v == null ? '—' : d3.format('.1%')(v)),
+  ratio: (v) => (v == null ? '—' : d3.format('.2f')(v)),
+};
+window.wySpu = '全部';
+window.wyEnc = (s) => String(s).replace(/%/g, '%25').replace(/&/g, '%26').replace(/=/g, '%3D');
+window.wyScopeColor = (scope) => ({
+  '无氧专投': dash.colors[0], '品牌词搜索': dash.colors[1], '其他产品广告': dash.colors[2], '大促 / 通用': dash.colors[3], '未匹配到名称': 'var(--cds-chart-muted)',
+}[scope] || dash.colors[4]);
+window.wyLayer1 = ['lede-name', 'lede-orders', 'lede-net', 'lede-paid', 'lede-ded', 'lede-halo', 'lede-nonpaid',
+  't-orders', 't-units', 't-net', 't-aov', 't-spend', 't-roas', 't-paid', 't-ded', 't-halo', 't-nonpaid', 't-email',
+  'driver-stack', 'product-bars', 'source-bars', 'drivers-body', 'trend'];
+
+document.querySelectorAll('.wy-tab').forEach((btn) => {
+  btn.addEventListener('click', () => {
+    window.wySpu = btn.dataset.spu;
+    document.querySelectorAll('.wy-tab').forEach((b) => {
+      const on = b === btn;
+      b.classList.toggle('is-on', on);
+      b.setAttribute('aria-selected', on ? 'true' : 'false');
+    });
+    for (const name of window.wyLayer1) dash.draw(name);
+  });
+});
+document.querySelectorAll('#wy-driver-metric').forEach((sel) => sel.addEventListener('change', () => dash.draw('driver-stack')));
+
+(function () {
+  const F = window.p16fmt;
+  const names = { '全部': '无氧系列合计', P15: 'P15 杠铃片', P16: 'P16 史密斯机', P17: 'P17', P18: 'P18 训练凳' };
+  dash.draw('lede-name', (el) => { el.textContent = names[window.wySpu] || window.wySpu; });
+
+  const kpiCell = (name, field, fmt) => dash.draw(name, (el) => {
+    const k = dash.data('kpi_spu');
+    const idx = k.status === 'ok' && Array.isArray(k.data) ? k.data.findIndex((r) => r.spu === window.wySpu) : -1;
+    el.dataset.where = 'spu=' + window.wyEnc(window.wySpu);
+    if (idx < 0) { el.textContent = '—'; el.classList.toggle('dash-skeleton', k.status === 'loading'); return; }
+    el.classList.remove('dash-skeleton');
+    const v = k.data[idx][field];
+    el.textContent = v == null ? '—' : fmt(v);
+  });
+  for (const [name, field, fmt] of [
+    ['lede-orders', 'orders', F.int], ['lede-net', 'net_sales', F.usd], ['lede-paid', 'paid_revenue', F.usd], ['lede-ded', 'ded_revenue', F.usd],
+    ['lede-halo', 'halo_revenue', F.usd], ['lede-nonpaid', 'nonpaid_revenue', F.usd],
+    ['t-orders', 'orders', F.int], ['t-units', 'units', F.int], ['t-net', 'net_sales', F.usd], ['t-aov', 'aov', F.usd],
+    ['t-spend', 'spend', F.usd], ['t-roas', 'blended_roas', F.ratio], ['t-paid', 'paid_revenue', F.usd], ['t-ded', 'ded_revenue', F.usd],
+    ['t-halo', 'halo_revenue', F.usd], ['t-nonpaid', 'nonpaid_revenue', F.usd], ['t-email', 'email_revenue', F.usd],
+  ]) kpiCell(name, field, fmt);
+
+  const p16Cell = (name, field, fmt) => dash.draw(name, (el) => {
+    const k = dash.data('p16_kpi');
+    const row = k.status === 'ok' && Array.isArray(k.data) ? k.data[0] : null;
+    if (!row) { el.textContent = '—'; el.classList.toggle('dash-skeleton', k.status === 'loading'); return; }
+    el.classList.remove('dash-skeleton');
+    el.textContent = row[field] == null ? '—' : fmt(row[field]);
+  });
+  for (const [name, field, fmt] of [
+    ['k-spend', 'spend', F.usd], ['k-meta', 'meta_spend', F.usd], ['k-google', 'google_spend', F.usd], ['k-sess', 'sessions', F.num1],
+    ['k-atc', 'atc', F.num1], ['k-cpa', 'cost_per_atc', F.usd2], ['k-orders', 'orders_attr', F.num2], ['k-rev', 'revenue_attr', F.usd],
+    ['k-roas', 'attr_roas', F.ratio], ['k-other', 'other_revenue', F.usd], ['k-otheru', 'other_units', F.num2],
+  ]) p16Cell(name, field, fmt);
+
+  dash.draw('asof', (el) => {
+    const d = dash.data('sales_daily');
+    const s = dash.data('spend_daily');
+    const dates = [...(d.status === 'ok' ? d.data : []), ...(s.status === 'ok' ? s.data : [])].map((r) => r.date).sort();
+    el.textContent = dates.length ? dates[dates.length - 1] : '—';
+  });
+  dash.draw('legend-meta', (el) => { el.style.background = dash.colors[0]; });
+  dash.draw('legend-google', (el) => { el.style.background = dash.colors[1]; });
+  dash.draw('legend-orders', (el) => { el.style.background = dash.colors[2]; });
+  dash.draw('heat-scale', (el) => { el.style.background = 'linear-gradient(90deg, color-mix(in srgb, ' + dash.colors[0] + ' 8%, transparent), ' + dash.colors[0] + ')'; });
+})();
+</script>
+
+<script>
+(function () {
+  const F = window.p16fmt;
+  const SCOPES = ['无氧专投', '品牌词搜索', '其他产品广告', '大促 / 通用', '未匹配到名称'];
+  const CHANNELS = ['Meta Ads', 'Google Ads', 'Bing Ads'];
+  const metricFmt = { revenue_attr: F.usd, orders_attr: F.num2, sessions: F.num1 };
+  const td = (text, cls) => { const c = document.createElement('td'); if (cls) c.className = cls; c.textContent = text; return c; };
+  const pill = (text, color) => {
+    const c = document.createElement('td'); c.className = 'p16-text';
+    const s = document.createElement('span'); s.className = 'p16-pill'; s.textContent = text;
+    if (color) { const dot = document.createElement('i'); dot.className = 'wy-swatch'; dot.style.background = color; s.prepend(dot); }
+    c.append(s); return c;
+  };
+  const placeholder = (box, status, cols) => {
+    if (cols) {
+      const tr = document.createElement('tr'); const c = document.createElement('td'); c.colSpan = cols;
+      c.className = status === 'error' ? 'p16-fail' : 'p16-fail dash-skeleton'; if (status === 'error') c.textContent = '加载失败';
+      tr.append(c); box.append(tr);
+    } else {
+      const p = document.createElement('div'); p.className = status === 'error' ? 'p16-fail' : 'p16-fail dash-skeleton'; if (status === 'error') p.textContent = '加载失败'; box.append(p);
+    }
+  };
+  const empty = (box, text) => { const p = document.createElement('div'); p.className = 'p16-fail'; p.textContent = text; box.append(p); };
+
+  dash.draw('scope-legend', (el) => {
+    el.replaceChildren();
+    for (const s of SCOPES) {
+      const sp = document.createElement('span'); const i = document.createElement('i'); i.style.background = window.wyScopeColor(s);
+      sp.append(i, s); el.append(sp);
+    }
+  });
+
+  dash.draw('driver-stack', (box) => {
+    const d = dash.data('driver_scope'); box.replaceChildren();
+    if (d.status !== 'ok' || !Array.isArray(d.data)) { placeholder(box, d.status); return; }
+    const sel = document.getElementById('wy-driver-metric');
+    const metric = sel ? sel.value : 'revenue_attr';
+    const fmt = metricFmt[metric];
+    const rows = d.data.filter((r) => r.spu === window.wySpu);
+    const totals = CHANNELS.map((ch) => d3.sum(rows.filter((r) => r.channel === ch), (r) => r[metric] || 0));
+    const max = d3.max(totals) || 0;
+    if (!max) { empty(box, '所选产品在这段时间没有付费广告归因。'); return; }
+    const tip = document.createElement('div'); tip.className = 'p16-tip'; tip.hidden = true;
+    CHANNELS.forEach((ch, ci) => {
+      const row = document.createElement('div'); row.className = 'wy-stack-row';
+      const name = document.createElement('span'); name.className = 'wy-stack-name'; name.textContent = ch.replace(' Ads', '');
+      const track = document.createElement('div'); track.className = 'wy-stack-track';
+      for (const s of SCOPES) {
+        const r = rows.find((x) => x.channel === ch && x.scope === s);
+        const v = r ? r[metric] || 0 : 0;
+        if (!(v > 0)) continue;
+        const seg = document.createElement('div'); seg.className = 'wy-seg';
+        seg.style.width = (v / max * 100) + '%'; seg.style.background = window.wyScopeColor(s);
+        seg.dataset.source = 'driver_scope'; seg.dataset.where = 'key=' + window.wyEnc(r.key); seg.dataset.field = metric;
+        if (v / max > 0.12) seg.textContent = fmt(v);
+        seg.addEventListener('pointerenter', () => {
+          tip.replaceChildren();
+          const h = document.createElement('b'); h.textContent = ch.replace(' Ads', '') + ' · ' + s; tip.append(h);
+          for (const [lab, f, ff] of [['归因营收', 'revenue_attr', F.usd2], ['归因件数', 'orders_attr', F.num2], ['进站', 'sessions', F.num1], ['加购', 'atc', F.num1]]) {
+            const p = document.createElement('div'); p.append(lab + '：'); const b = document.createElement('b'); b.textContent = ff(r[f]); p.append(b); tip.append(p);
+          }
+          const br = box.getBoundingClientRect(), sr = seg.getBoundingClientRect();
+          tip.hidden = false;
+          tip.style.left = Math.max(0, Math.min(br.width - 240, sr.left - br.left)) + 'px';
+          tip.style.top = (sr.bottom - br.top + 6) + 'px';
+        });
+        seg.addEventListener('pointerleave', () => { tip.hidden = true; });
+        track.append(seg);
+      }
+      const total = document.createElement('span'); total.className = 'wy-stack-total'; total.textContent = fmt(totals[ci]);
+      row.append(name, track, total);
+      box.append(row);
+    });
+    box.style.position = 'relative';
+    box.append(tip);
+  });
+
+  const barList = (name, calc, labelKey, filterFn) => dash.draw(name, (box) => {
+    const d = dash.data(calc); box.replaceChildren();
+    if (d.status !== 'ok' || !Array.isArray(d.data)) { placeholder(box, d.status); return; }
+    const rows = d.data.map((r, i) => ({ r, i })).filter(({ r }) => r.spu === window.wySpu && (!filterFn || filterFn(r))).slice(0, 10);
+    if (!rows.length) { empty(box, '所选产品在这段时间没有相关归因。'); return; }
+    const max = d3.max(rows, ({ r }) => r.revenue_attr) || 1;
+    for (const { r } of rows) {
+      const row = document.createElement('div'); row.className = 'p16-bar-row';
+      const lab = document.createElement('span'); lab.textContent = r[labelKey];
+      const track = document.createElement('div'); track.className = 'p16-bar-track';
+      const bar = document.createElement('div'); bar.className = 'p16-bar'; bar.style.width = (r.revenue_attr / max * 100) + '%'; bar.style.background = dash.colors[2];
+      track.append(bar);
+      const note = document.createElement('span'); note.className = 'p16-bar-note';
+      const v = document.createElement('b'); v.textContent = F.usd(r.revenue_attr);
+      v.dataset.source = calc; v.dataset.where = 'key=' + window.wyEnc(r.key); v.dataset.field = 'revenue_attr';
+      const s = document.createElement('span'); s.textContent = ' · ' + F.num2(r.orders_attr) + ' 件 · 进站 ' + F.num1(r.sessions);
+      note.append(v, s);
+      row.append(lab, track, note);
+      box.append(row);
+    }
+  });
+  barList('product-bars', 'driver_products', 'source_product', (r) => r.revenue_attr > 0 || r.orders_attr > 0 || r.sessions >= 5);
+  barList('source-bars', 'sources_spu', 'channel_group', (r) => r.revenue_attr > 0 || r.sessions >= 5);
+
+  dash.draw('drivers-body', (tbody) => {
+    const d = dash.data('drivers'); tbody.replaceChildren();
+    if (d.status !== 'ok' || !Array.isArray(d.data)) { placeholder(tbody, d.status, 9); return; }
+    const rows = d.data.filter((r) => r.spu === window.wySpu && (r.revenue_attr > 0 || r.orders_attr > 0 || r.sessions >= 5)).slice(0, 40);
+    if (!rows.length) { const tr = document.createElement('tr'); const c = td('所选产品在这段时间没有付费广告归因。', 'p16-fail'); c.colSpan = 9; tr.append(c); tbody.append(tr); return; }
+    for (const r of rows) {
+      const tr = document.createElement('tr'); tr.dataset.key = window.wyEnc(r.key);
+      tr.append(td(r.campaign_name, 'p16-name'), td(r.channel.replace(' Ads', ''), 'p16-text'), pill(r.scope, window.wyScopeColor(r.scope)), td(r.source_product, 'p16-text'),
+        td(F.num1(r.sessions)), td(F.num1(r.atc)), td(F.num1(r.checkout)),
+        td(F.num2(r.orders_attr), r.orders_attr > 0 ? 'p16-good' : 'p16-muted'), td(F.usd(r.revenue_attr), r.revenue_attr > 0 ? 'p16-good' : 'p16-muted'));
+      tbody.append(tr);
+    }
+  });
+
+  dash.draw('trend', (el) => {
+    const d = dash.data('trend');
+    el.replaceChildren();
+    if (d.status !== 'ok' || !Array.isArray(d.data)) { placeholder(el, d.status); return; }
+    const rows = d.data.filter((r) => r.spu === window.wySpu).map((r) => ({ ...r, total: (r.meta_spend || 0) + (r.google_spend || 0) }));
+    const W = Math.max(280, el.clientWidth || 600), H = 280;
+    const parse = d3.utcParse('%Y-%m-%d'), fmtDay = d3.utcFormat('%m-%d');
+    const svg = d3.select(el).append('svg').attr('width', '100%').attr('height', H).attr('viewBox', `0 0 ${W} ${H}`)
+      .attr('role', 'img').attr('aria-label', '每日专投花费（Meta 与 Google 堆叠）及所选产品的 Shopify 实际订单');
+    const y = d3.scaleLinear().domain([0, (d3.max(rows, (r) => r.total) || 1) * 1.15]).nice();
+    const tmp = svg.append('g');
+    const widest = d3.max(y.ticks(5).map((t) => { const t1 = tmp.append('text').text(F.usd(t)); const w = t1.node().getComputedTextLength(); t1.remove(); return w; })) || 30;
+    tmp.remove();
+    const m = { top: 34, right: 8, bottom: 26, left: Math.ceil(widest) + 10 };
+    const x = d3.scaleBand().domain(rows.map((r) => r.date)).range([m.left, W - m.right]).padding(0.25);
+    y.range([H - m.bottom, m.top]);
+    svg.append('g').attr('class', 'grid').attr('transform', `translate(${m.left},0)`)
+      .call(d3.axisLeft(y).ticks(5).tickSize(-(W - m.left - m.right)).tickFormat('')).call((g) => g.select('.domain').remove());
+    svg.append('g').attr('transform', `translate(${m.left},0)`).call(d3.axisLeft(y).ticks(5).tickFormat(F.usd)).call((g) => g.select('.domain').remove()).call((g) => g.selectAll('.tick line').remove());
+    const every = Math.max(1, Math.ceil(rows.length / Math.floor((W - m.left) / 46)));
+    svg.append('g').attr('transform', `translate(0,${H - m.bottom})`)
+      .call(d3.axisBottom(x).tickValues(rows.map((r) => r.date).filter((_, i) => i % every === 0)).tickFormat((s) => fmtDay(parse(s))).tickSizeOuter(0));
+    const bars = svg.append('g');
+    bars.selectAll('rect.m').data(rows).join('rect').attr('class', 'm').attr('x', (r) => x(r.date)).attr('width', x.bandwidth())
+      .attr('y', (r) => y(r.meta_spend || 0)).attr('height', (r) => y(0) - y(r.meta_spend || 0)).style('fill', dash.colors[0]);
+    bars.selectAll('rect.g').data(rows).join('rect').attr('class', 'g').attr('x', (r) => x(r.date)).attr('width', x.bandwidth())
+      .attr('y', (r) => y(r.total)).attr('height', (r) => y(r.meta_spend || 0) - y(r.total)).style('fill', dash.colors[1]);
+    const withOrders = rows.filter((r) => r.orders > 0);
+    const dots = svg.append('g');
+    dots.selectAll('circle').data(withOrders).join('circle')
+      .attr('cx', (r) => x(r.date) + x.bandwidth() / 2).attr('cy', (r) => y(r.total) - 12).attr('r', (r) => 4 + Math.sqrt(r.orders) * 2).style('fill', dash.colors[2]);
+    dots.selectAll('text').data(withOrders).join('text')
+      .attr('x', (r) => x(r.date) + x.bandwidth() / 2).attr('y', (r) => y(r.total) - 22 - Math.sqrt(r.orders) * 2).attr('text-anchor', 'middle').text((r) => F.int(r.orders));
+    const tip = document.createElement('div'); tip.className = 'p16-tip'; tip.hidden = true; el.append(tip);
+    const line = (label, value) => { const p = document.createElement('div'); p.append(label + '：'); const b = document.createElement('b'); b.textContent = value; p.append(b); return p; };
+    svg.append('g').selectAll('rect').data(rows).join('rect')
+      .attr('x', (r) => x(r.date) - x.step() * x.paddingInner() / 2).attr('width', x.step()).attr('y', m.top).attr('height', H - m.top - m.bottom).style('fill', 'transparent')
+      .on('pointerenter pointermove', (ev, r) => {
+        tip.replaceChildren();
+        const h = document.createElement('div'); const hb = document.createElement('b'); hb.textContent = r.date; h.append(hb); tip.append(h);
+        tip.append(line('Meta 专投花费', F.usd2(r.meta_spend || 0)), line('Google 专投花费', F.usd2(r.google_spend || 0)), line('实际订单', F.int(r.orders || 0)), line('净销售', F.usd(r.net_sales || 0)));
+        tip.hidden = false;
+        const [px] = d3.pointer(ev, el);
+        tip.style.left = Math.max(0, Math.min(el.clientWidth - tip.offsetWidth, px + 12)) + 'px';
+        tip.style.top = m.top + 'px';
+      })
+      .on('pointerleave', () => { tip.hidden = true; });
+  });
+})();
+</script>
+
+<script>
+
+(function () {
+  const F = window.p16fmt;
+  const steps = [
+    ['impressions', '展示', F.int], ['clicks', '点击', F.int], ['sessions', '进站', F.num1],
+    ['atc', '加购', F.num1], ['checkout', '结账', F.num1], ['orders_attr', '归因订单', F.num2],
+  ];
+  const rateName = { clicks: 'CTR', sessions: '点击 → 进站', atc: '进站 → 加购', checkout: '加购 → 结账', orders_attr: '结账 → 订单' };
+  const drawFunnel = (platform, colorIdx) => (el) => {
+    const f = dash.data('funnel');
+    el.replaceChildren();
+    if (f.status !== 'ok' || !Array.isArray(f.data)) {
+      if (f.status === 'error') { const p = document.createElement('div'); p.className = 'p16-fail'; p.textContent = '加载失败'; el.append(p); }
+      else { const p = document.createElement('div'); p.className = 'p16-fail dash-skeleton'; el.append(p); }
+      return;
+    }
+    const idx = f.data.findIndex((r) => r.platform === platform);
+    const row = f.data[idx];
+    if (!row) return;
+    const max = Math.max(1, row.impressions || 0);
+    const scale = d3.scaleLog().domain([1, max]).range([2, 100]).clamp(true);
+    let prev = null;
+    for (const [key, label, fmt] of steps) {
+      const v = row[key] || 0;
+      const wrap = document.createElement('div');
+      wrap.className = 'p16-step';
+      const name = document.createElement('span'); name.className = 'p16-step-name'; name.textContent = label;
+      const track = document.createElement('div'); track.className = 'p16-step-track';
+      const bar = document.createElement('div'); bar.className = 'p16-step-bar';
+      bar.style.width = (v > 0 ? scale(Math.max(1, v)) : 0) + '%';
+      bar.style.background = dash.colors[colorIdx];
+      track.append(bar);
+      const val = document.createElement('span'); val.className = 'p16-step-val';
+      val.textContent = fmt(v);
+      val.dataset.source = 'funnel'; val.dataset.field = key; val.dataset.row = String(idx);
+      wrap.append(name, track, val);
+      if (prev != null && rateName[key]) {
+        const rate = document.createElement('span'); rate.className = 'p16-step-rate';
+        rate.textContent = rateName[key] + ' ' + (prev > 0 ? F.pct(v / prev) : '—');
+        wrap.append(rate);
+      }
+      el.append(wrap);
+      prev = v;
+    }
+  };
+  dash.draw('funnel-meta', drawFunnel('Meta', 0));
+  dash.draw('funnel-google', drawFunnel('Google', 1));
+})();
+
+
+(function () {
+  const F = window.p16fmt;
+  const short = (s) => String(s || '').replace(/^(IMG|VID|Video|Post|Image)_P16_/i, '');
+  dash.draw('scatter', (el) => {
+    const c = dash.data('creatives');
+    el.replaceChildren();
+    if (c.status !== 'ok' || !Array.isArray(c.data)) {
+      const p = document.createElement('div');
+      p.className = c.status === 'error' ? 'p16-fail' : 'p16-fail dash-skeleton';
+      if (c.status === 'error') p.textContent = '加载失败';
+      el.append(p);
+      return;
+    }
+    const pts = c.data.filter((r) => (r.sessions || 0) >= 10 && r.ctr != null && r.atc_rate != null && r.atc_rate <= 1);
+    const W = Math.max(280, el.clientWidth || 600), H = 320;
+    const m = { top: 16, right: 16, bottom: 40, left: 52 };
+    const svg = d3.select(el).append('svg').attr('width', '100%').attr('height', H).attr('viewBox', `0 0 ${W} ${H}`)
+      .attr('role', 'img').attr('aria-label', 'P16 素材的 CTR 与加购率散点图，圆点大小代表花费');
+    const x = d3.scaleLinear().domain([0, (d3.max(pts, (p) => p.ctr) || 0.05) * 1.1]).nice().range([m.left, W - m.right]);
+    const y = d3.scaleLinear().domain([0, (d3.max(pts, (p) => p.atc_rate) || 0.2) * 1.1]).nice().range([H - m.bottom, m.top]);
+    const r = d3.scaleSqrt().domain([0, d3.max(pts, (p) => p.spend) || 1]).range([3, 18]);
+    svg.append('g').attr('class', 'grid').attr('transform', `translate(${m.left},0)`).call(d3.axisLeft(y).ticks(5).tickSize(-(W - m.left - m.right)).tickFormat('')).call((g) => g.select('.domain').remove());
+    svg.append('g').attr('transform', `translate(${m.left},0)`).call(d3.axisLeft(y).ticks(5).tickFormat(d3.format('.0%'))).call((g) => g.select('.domain').remove()).call((g) => g.selectAll('.tick line').remove());
+    svg.append('g').attr('transform', `translate(0,${H - m.bottom})`).call(d3.axisBottom(x).ticks(Math.max(3, Math.floor(W / 110))).tickFormat(d3.format('.1%')));
+    svg.append('text').attr('x', W - m.right).attr('y', H - 6).attr('text-anchor', 'end').text('CTR（点击 ÷ 展示）');
+    svg.append('text').attr('x', m.left).attr('y', m.top - 4).attr('text-anchor', 'start').text('加购率（加购 ÷ 进站）');
+    const colorOf = (fmt) => ({ '图片': dash.colors[0], '视频': dash.colors[1], 'IG 帖子': dash.colors[2], '轮播': dash.colors[3] }[fmt] || dash.colors[4]);
+    svg.append('g').selectAll('circle').data(pts.slice().sort((a, b) => b.spend - a.spend)).join('circle')
+      .attr('cx', (p) => x(p.ctr)).attr('cy', (p) => y(p.atc_rate)).attr('r', (p) => r(p.spend))
+      .style('fill', (p) => colorOf(p.format)).style('fill-opacity', 0.55).style('stroke', (p) => colorOf(p.format));
+    const top = pts.slice().sort((a, b) => b.spend - a.spend).slice(0, 6);
+    svg.append('g').attr('class', 'p16-labels').selectAll('text').data(top).join('text')
+      .attr('x', (p) => x(p.ctr) + r(p.spend) + 3).attr('y', (p) => y(p.atc_rate) + 4)
+      .attr('text-anchor', (p) => (x(p.ctr) > W * 0.7 ? 'end' : 'start'))
+      .attr('dx', (p) => (x(p.ctr) > W * 0.7 ? -(2 * r(p.spend) + 6) : 0))
+      .text((p) => short(p.ad_name).slice(0, 24));
+    const placed = [];
+    svg.selectAll('.p16-labels text').each(function () {
+      const node = this;
+      let b = node.getBBox();
+      for (let i = 0; i < 12; i++) {
+        const hit = placed.find((q) => b.x < q.x + q.width && q.x < b.x + b.width && b.y < q.y + q.height && q.y < b.y + b.height);
+        if (!hit) break;
+        node.setAttribute('y', +node.getAttribute('y') + (hit.y + hit.height - b.y) + 1);
+        b = node.getBBox();
+      }
+      placed.push(b);
+    });
+    const tip = document.createElement('div'); tip.className = 'p16-tip'; tip.hidden = true; el.append(tip);
+    const line = (label, value) => { const d = document.createElement('div'); d.append(label + '：'); const b = document.createElement('b'); b.textContent = value; d.append(b); return d; };
+    svg.append('g').selectAll('circle').data(pts).join('circle')
+      .attr('cx', (p) => x(p.ctr)).attr('cy', (p) => y(p.atc_rate)).attr('r', (p) => Math.max(10, r(p.spend)))
+      .style('fill', 'transparent')
+      .on('pointerenter pointermove', (ev, p) => {
+        tip.replaceChildren();
+        const h = document.createElement('div'); const hb = document.createElement('b'); hb.textContent = p.ad_name; h.append(hb); tip.append(h);
+        tip.append(line('格式', p.format), line('花费', F.usd2(p.spend)), line('CTR', F.pct(p.ctr)), line('进站', F.num1(p.sessions)),
+          line('加购率', F.pct(p.atc_rate)), line('归因订单', F.num2(p.orders_attr)));
+        tip.hidden = false;
+        const [px, py] = d3.pointer(ev, el);
+        const tw = tip.offsetWidth;
+        tip.style.left = Math.max(0, Math.min(el.clientWidth - tw, px + 12)) + 'px';
+        tip.style.top = Math.max(0, py - 10) + 'px';
+      })
+      .on('pointerleave', () => { tip.hidden = true; });
+  });
+})();
+
+
+(function () {
+  const F = window.p16fmt;
+  const td = (text, cls) => { const c = document.createElement('td'); if (cls) c.className = cls; c.textContent = text; return c; };
+  const pill = (text) => { const c = document.createElement('td'); c.className = 'p16-text'; const s = document.createElement('span'); s.className = 'p16-pill'; s.textContent = text; c.append(s); return c; };
+  const fail = (tbody, status, cols) => {
+    const tr = document.createElement('tr'); const c = document.createElement('td'); c.colSpan = cols;
+    c.className = status === 'error' ? 'p16-fail' : 'p16-fail dash-skeleton';
+    if (status === 'error') c.textContent = '加载失败';
+    tr.append(c); tbody.append(tr);
+  };
+
+  dash.draw('campaigns-body', (tbody) => {
+    const d = dash.data('campaigns');
+    tbody.replaceChildren();
+    if (d.status !== 'ok' || !Array.isArray(d.data)) { fail(tbody, d.status, 12); return; }
+    for (const r of d.data) {
+      const tr = document.createElement('tr');
+      tr.append(td(r.campaign_name, 'p16-name'), pill(r.funnel), pill(r.objective), td(F.usd2(r.spend)), td(F.int(r.impressions)),
+        td(F.pct(r.ctr)), td(r.cpc == null ? '—' : F.usd2(r.cpc)), td(F.num1(r.sessions)), td(F.pct(r.atc_rate)),
+        td(F.num2(r.orders_attr), r.orders_attr > 0 ? 'p16-good' : 'p16-muted'), td(F.usd(r.revenue_attr), r.revenue_attr > 0 ? 'p16-good' : 'p16-muted'),
+        td(F.usd(r.other_revenue), r.other_revenue > 0 ? 'p16-good' : 'p16-muted'));
+      tbody.append(tr);
+    }
+  });
+
+  dash.draw('creatives-body', (tbody) => {
+    const d = dash.data('creatives');
+    tbody.replaceChildren();
+    if (d.status !== 'ok' || !Array.isArray(d.data)) { fail(tbody, d.status, 12); return; }
+    for (const r of d.data) {
+      const tr = document.createElement('tr');
+      tr.append(td(r.ad_name, 'p16-name'), pill(r.format), td(F.usd2(r.spend)), td(F.int(r.impressions)), td(F.pct(r.ctr)),
+        td(r.cpc == null ? '—' : F.usd2(r.cpc)), td(F.num1(r.sessions)), td(F.pct(r.visit_rate)), td(F.pct(r.atc_rate)),
+        td(F.num2(r.orders_attr), r.orders_attr > 0 ? 'p16-good' : 'p16-muted'), td(F.usd(r.revenue_attr), r.revenue_attr > 0 ? 'p16-good' : 'p16-muted'),
+        td(F.usd(r.other_revenue), r.other_revenue > 0 ? 'p16-good' : 'p16-muted'));
+      tbody.append(tr);
+    }
+  });
+
+  dash.draw('formats-body', (tbody) => {
+    const d = dash.data('formats');
+    tbody.replaceChildren();
+    if (d.status !== 'ok' || !Array.isArray(d.data)) { fail(tbody, d.status, 9); return; }
+    for (const r of d.data) {
+      const tr = document.createElement('tr');
+      tr.append(td(r.format), td(F.int(r.ads)), td(F.usd2(r.spend)), td(F.pct(r.ctr)), td(r.cpc == null ? '—' : F.usd2(r.cpc)),
+        td(F.pct(r.visit_rate)), td(F.pct(r.atc_rate)), td(r.cost_per_atc == null ? '—' : F.usd2(r.cost_per_atc)), td(F.num2(r.orders_attr)));
+      tbody.append(tr);
+    }
+  });
+
+  dash.draw('google-body', (tbody) => {
+    const d = dash.data('google_p16');
+    tbody.replaceChildren();
+    if (d.status !== 'ok' || !Array.isArray(d.data)) { fail(tbody, d.status, 10); return; }
+    for (const r of d.data) {
+      const tr = document.createElement('tr');
+      tr.append(td(r.campaign_name, 'p16-name'), td(F.usd2(r.spend)), td(F.int(r.impressions)), td(F.int(r.clicks)),
+        td(F.num1(r.sessions)), td(F.num1(r.atc)), td(F.num1(r.checkout)),
+        td(F.num2(r.orders_attr), r.orders_attr > 0 ? 'p16-good' : 'p16-muted'), td(F.usd(r.revenue_attr), r.revenue_attr > 0 ? 'p16-good' : 'p16-muted'),
+        td(F.num2(r.other_units), r.other_units > 0 ? 'p16-good' : 'p16-muted'));
+      tbody.append(tr);
+    }
+  });
+})();
+
+
+(function () {
+  const F = window.p16fmt;
+  const td = (text, cls) => { const c = document.createElement('td'); if (cls) c.className = cls; c.textContent = text; return c; };
+  const pill = (text) => { const c = document.createElement('td'); c.className = 'p16-text'; const s = document.createElement('span'); s.className = 'p16-pill'; s.textContent = text; c.append(s); return c; };
+  const fail = (box, status, cols) => {
+    if (cols) {
+      const tr = document.createElement('tr'); const c = document.createElement('td'); c.colSpan = cols;
+      c.className = status === 'error' ? 'p16-fail' : 'p16-fail dash-skeleton'; if (status === 'error') c.textContent = '加载失败';
+      tr.append(c); box.append(tr);
+    } else {
+      const p = document.createElement('div'); p.className = status === 'error' ? 'p16-fail' : 'p16-fail dash-skeleton'; if (status === 'error') p.textContent = '加载失败'; box.append(p);
+    }
+  };
+  const enc = (s) => String(s).replace(/%/g, '%25').replace(/&/g, '%26').replace(/=/g, '%3D');
+
+  dash.draw('adsets-body', (tbody) => {
+    const d = dash.data('adsets'); tbody.replaceChildren();
+    if (d.status !== 'ok' || !Array.isArray(d.data)) { fail(tbody, d.status, 12); return; }
+    for (const r of d.data) {
+      const tr = document.createElement('tr');
+      tr.append(td(r.adset_name, 'p16-name'), pill(r.audience), td(r.interests, 'p16-name p16-text'), td(F.usd2(r.spend)), td(F.int(r.impressions)),
+        td(F.pct(r.ctr)), td(r.cpc == null ? '—' : F.usd2(r.cpc)), td(F.num1(r.sessions)), td(F.pct(r.atc_rate)),
+        td(r.cost_per_atc == null ? '—' : F.usd2(r.cost_per_atc)), td(F.num2(r.orders_attr), r.orders_attr > 0 ? 'p16-good' : 'p16-muted'),
+        td(F.usd(r.other_revenue), r.other_revenue > 0 ? 'p16-good' : 'p16-muted'));
+      tbody.append(tr);
+    }
+  });
+
+  dash.draw('tests-body', (tbody) => {
+    const d = dash.data('audience_tests'); tbody.replaceChildren();
+    if (d.status !== 'ok' || !Array.isArray(d.data)) { fail(tbody, d.status, 7); return; }
+    for (const r of d.data) {
+      const tr = document.createElement('tr');
+      tr.dataset.key = enc(r.test) + ',' + enc(r.adset_name);
+      tr.append(pill(r.test), td(r.audience, 'p16-text'), td(F.usd2(r.spend)), td(F.pct(r.ctr)), td(F.num1(r.sessions)), td(F.pct(r.atc_rate)),
+        td(r.cost_per_atc == null ? '—' : F.usd2(r.cost_per_atc)));
+      tbody.append(tr);
+    }
+  });
+
+  dash.draw('audience-bars', (box) => {
+    const d = dash.data('audiences'); box.replaceChildren();
+    if (d.status !== 'ok' || !Array.isArray(d.data)) { fail(box, d.status); return; }
+    const rows = d.data.filter((r) => r.cost_per_atc != null);
+    const max = d3.max(rows, (r) => r.cost_per_atc) || 1;
+    rows.forEach((r) => {
+      const idx = d.data.indexOf(r);
+      const row = document.createElement('div'); row.className = 'p16-bar-row';
+      const name = document.createElement('span'); name.textContent = r.audience;
+      const track = document.createElement('div'); track.className = 'p16-bar-track';
+      const bar = document.createElement('div'); bar.className = 'p16-bar'; bar.style.width = (r.cost_per_atc / max * 100) + '%'; bar.style.background = dash.colors[0];
+      track.append(bar);
+      const note = document.createElement('span'); note.className = 'p16-bar-note';
+      const v = document.createElement('b'); v.textContent = F.usd2(r.cost_per_atc); v.dataset.source = 'audiences'; v.dataset.field = 'cost_per_atc'; v.dataset.row = String(idx);
+      const s = document.createElement('span'); s.textContent = ' · ' + F.usd(r.spend) + ' · ' + F.pct(r.atc_rate);
+      note.append(v, s);
+      row.append(name, track, note);
+      box.append(row);
+    });
+  });
+
+  const metricInfo = {
+    cost_per_atc: { label: '单次加购成本', fmt: (v) => F.usd(v), better: 'low' },
+    atc_rate: { label: '加购率', fmt: (v) => F.pct(v), better: 'high' },
+    ctr: { label: 'CTR', fmt: (v) => F.pct(v), better: 'high' },
+    sessions: { label: '进站', fmt: (v) => F.num1(v), better: 'high' },
+    spend: { label: '花费', fmt: (v) => F.usd(v), better: 'high' },
+  };
+  const audOrder = ['宽泛', '健身内容兴趣', '力量训练兴趣', '健身房品牌兴趣', 'CrossFit 兴趣', '再营销'];
+
+  for (const id of ['p16-metric', 'p16-scope', 'p16-format']) {
+    document.querySelectorAll('#' + id).forEach((sel) => sel.addEventListener('change', () => dash.draw('heatmap')));
+  }
+
+  dash.draw('heatmap', (box) => {
+    const d = dash.data('matrix'); box.replaceChildren();
+    if (d.status !== 'ok' || !Array.isArray(d.data)) { fail(box, d.status); return; }
+    const get = (id, dflt) => { const el = document.getElementById(id); return el ? el.value : dflt; };
+    const metric = get('p16-metric', 'cost_per_atc'), scope = get('p16-scope', '全部'), fmtSel = get('p16-format', '');
+    const info = metricInfo[metric];
+    const rows = d.data.filter((r) => r.scope === scope && (!fmtSel || r.format === fmtSel));
+    if (!rows.length) { const p = document.createElement('div'); p.className = 'p16-fail'; p.textContent = '这个范围内没有投放。'; box.append(p); return; }
+    const adSpend = d3.rollup(rows, (v) => d3.sum(v, (r) => r.spend), (r) => r.ad_name);
+    const ads = [...adSpend.entries()].sort((a, b) => b[1] - a[1]).slice(0, 20).map((e) => e[0]);
+    const auds = audOrder.filter((a) => rows.some((r) => r.audience === a));
+    const vals = rows.filter((r) => ads.includes(r.ad_name) && r[metric] != null && r.spend > 0).map((r) => r[metric]);
+    const ext = d3.extent(vals);
+    const t = (v) => {
+      if (ext[0] == null || ext[0] === ext[1]) return 0.6;
+      const x = (v - ext[0]) / (ext[1] - ext[0]);
+      return info.better === 'low' ? 1 - x : x;
+    };
+    const table = document.createElement('table'); table.className = 'p16-heat';
+    const thead = document.createElement('thead'); const hr = document.createElement('tr');
+    const corner = document.createElement('th'); corner.className = 'p16-rowhead'; corner.textContent = '素材 ＼ 人群'; hr.append(corner);
+    for (const a of auds) { const th = document.createElement('th'); th.textContent = a; hr.append(th); }
+    thead.append(hr); table.append(thead);
+    const tbody = document.createElement('tbody');
+    const tip = document.createElement('div'); tip.className = 'p16-tip'; tip.hidden = true;
+    const line = (label, value) => { const p = document.createElement('div'); p.append(label + '：'); const b = document.createElement('b'); b.textContent = value; p.append(b); return p; };
+    for (const ad of ads) {
+      const tr = document.createElement('tr');
+      const th = document.createElement('th'); th.className = 'p16-rowhead'; th.textContent = ad; tr.append(th);
+      for (const a of auds) {
+        const r = rows.find((x) => x.ad_name === ad && x.audience === a);
+        const c = document.createElement('td');
+        if (!r || !(r.spend > 0)) { c.className = 'p16-empty'; c.textContent = '·'; tr.append(c); continue; }
+        const v = r[metric];
+        c.dataset.source = 'matrix'; c.dataset.where = 'key=' + enc(r.key); c.dataset.field = metric;
+        if (v == null) { c.className = 'p16-empty'; c.textContent = '样本少'; }
+        else {
+          const k = t(v);
+          c.style.background = 'color-mix(in srgb, ' + dash.colors[0] + ' ' + Math.round(8 + k * 72) + '%, transparent)';
+          c.style.color = k > 0.6 ? 'var(--color-bg)' : 'var(--color-fg)';
+          c.textContent = info.fmt(v);
+        }
+        if (r.orders_attr > 0) { const dot = document.createElement('span'); dot.className = 'p16-order'; c.append(dot); }
+        c.addEventListener('pointerenter', (ev) => {
+          tip.replaceChildren();
+          const h = document.createElement('div'); const hb = document.createElement('b'); hb.textContent = ad + ' × ' + a; h.append(hb); tip.append(h);
+          tip.append(line('花费', F.usd2(r.spend)), line('CTR', F.pct(r.ctr)), line('进站', F.num1(r.sessions)), line('加购', F.num1(r.atc)),
+            line('加购率', r.atc_rate == null ? '样本少' : F.pct(r.atc_rate)), line('单次加购成本', r.cost_per_atc == null ? '—' : F.usd2(r.cost_per_atc)),
+            line('归因订单', F.num2(r.orders_attr)));
+          tip.hidden = false;
+          const br = box.getBoundingClientRect(), cr = c.getBoundingClientRect();
+          tip.style.left = Math.max(0, Math.min(br.width - 280, cr.left - br.left + box.scrollLeft)) + 'px';
+          tip.style.top = (cr.bottom - br.top + 4) + 'px';
+        });
+        c.addEventListener('pointerleave', () => { tip.hidden = true; });
+        tr.append(c);
+      }
+      tbody.append(tr);
+    }
+    table.append(tbody);
+    box.style.position = 'relative';
+    box.append(table, tip);
+  });
+})();
+</script>
+
+</div>
+<script>
+dash.boot();
+</script>
+</body>
+</html>

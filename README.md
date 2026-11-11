@@ -2,7 +2,8 @@
 
 美国站无氧系列（P15 / P16 / P17 / P18）的广告闭环看板源码归档，包括看板页面、计算逻辑、数据快照和取数查询。
 
-- 线上看板：https://claude.ai/artifact/25qHmdwquaqfwF6Gp5YdAn
+- 独立网页：https://cristobalworkingdu-create.github.io/P16ads/ （仓库根目录 `index.html`，数据已内嵌，直接打开即可）
+- Claude 看板：https://claude.ai/artifact/25qHmdwquaqfwF6Gp5YdAn
 - 数据范围：2026-10-20 至 2026-11-10（美西时间）
 - 数据来源：公司 BigQuery 项目 `merach-452802`（Convbox、Meta、Google、Shopify 汇总表）
 
@@ -24,6 +25,7 @@
 
 | 路径 | 说明 |
 |---|---|
+| `index.html` | 独立网页版：内嵌数据快照与运行层，可直接用浏览器或 GitHub Pages 打开 |
 | `dashboard/index.html` | 看板页面（含计算逻辑与绘图代码），运行于 Claude 看板环境（依赖 `dash` 与 `d3`） |
 | `dashboard/datasets/*.json` | 看板数据集定义（标题、说明、快照时间） |
 | `data/*.csv` | 数据快照 |
@@ -49,7 +51,7 @@
 
 ## 刷新
 
-看板为数据快照，打开时不查询 BigQuery。刷新时按 `queries/` 中的查询重新取数（截止到美西时间前一天），整理后替换 `data/` 中的快照。
+看板为数据快照，打开时不查询 BigQuery。刷新时按 `queries/` 中的查询重新取数（截止到美西时间前一天），整理后替换 `data/` 中的快照，并重新生成根目录的 `index.html`。
 
 ---
 
