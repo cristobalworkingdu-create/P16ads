@@ -963,6 +963,17 @@ Remi_US_20261020_P16_TOF_Family_Traffic_early-access,上层 TOF,Traffic,P16_Male
 .p16-bar-row .p16-bar { height: 100%; border-radius: 3px; }
 .p16-bar-row .p16-bar-note { color: var(--color-fg-muted); text-align: right; white-space: nowrap; }
 .p16-two { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: var(--cds-gap-lg); }
+.wy-actions { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 440px), 1fr)); gap: var(--cds-gap-lg); }
+.wy-act-group { background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-lg); min-width: 0; }
+.wy-act-group h3 { margin: 0 0 var(--cds-gap-md); font-size: var(--cds-font-size-body); font-weight: var(--cds-font-weight-medium); }
+.wy-act-group ol { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: var(--cds-gap-md); }
+.wy-act-group li { display: grid; grid-template-columns: 2.6em 1fr; gap: var(--cds-gap-sm); align-items: start; }
+.wy-act-group li b { font-weight: var(--cds-font-weight-medium); line-height: 1.5; }
+.wy-act-group li p { margin: 4px 0 0; color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); line-height: 1.6; }
+.wy-pri { display: inline-block; text-align: center; font-size: 11px; font-weight: var(--cds-font-weight-medium); padding: 2px 0; border-radius: 4px; margin-top: 2px; }
+.wy-p0 { background: var(--color-bad); color: var(--color-bg); }
+.wy-p1 { background: var(--color-warn); color: var(--color-bg); }
+.wy-p2 { background: transparent; color: var(--color-fg-muted); border: 1px solid var(--color-border-line); }
 .p16-fail { color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); padding: var(--cds-pad-md) 0; }
 .wy-tabs { display: flex; flex-wrap: wrap; gap: 6px; }
 .wy-tab { font: inherit; font-size: var(--cds-font-size-caption); padding: 6px 12px; border-radius: 999px; border: 1px solid var(--color-border-line); background: var(--color-bg); color: var(--color-fg-muted); cursor: pointer; }
@@ -1027,6 +1038,52 @@ Remi_US_20261020_P16_TOF_Family_Traffic_early-access,上层 TOF,Traffic,P16_Male
         <span class="p16-tile-label">非付费来源归因营收</span>
         <span class="p16-tile-value" data-draw="t-nonpaid" data-source="kpi_spu" data-field="nonpaid_revenue">—</span>
         <span class="p16-tile-note">其中邮件 / 短信 <span data-draw="t-email" data-source="kpi_spu" data-field="email_revenue">—</span></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="p16-section" id="actions">
+    <h2>下一步行动建议</h2>
+    <p class="p16-sub">根据 2026-10-20 至 2026-11-10 的数据快照整理，刷新数据后需重新评估。P0 = 本周执行，P1 = 两周内执行，P2 = 持续优化。</p>
+    <div class="wy-actions">
+      <div class="wy-act-group" id="act-ads">
+        <h3>广告投放</h3>
+        <ol>
+          <li><span class="wy-pri wy-p0">P0</span><div><b>暂停 Google DemandGen TVC 与 Search General，预算转向品牌词搜索和 DemandGen 图片。</b><p>TVC 花费 $1,151 只带来 1 次加购；Search General 花费 $685 带来 2 次加购（每次 $342）。品牌词 Search 单次加购 $12.5，DemandGen 图片 $18.3；Google 与 Bing 的品牌词搜索合计带来约 $8,600 无氧归因营收，是目前最大的成交来源。</p></div></li>
+          <li><span class="wy-pri wy-p0">P0</span><div><b>加预算到 Meta 下层再营销和 ABO 自制视频。</b><p>BOF Retargeting 花费 $633，单次加购 $10.7，带来专投广告中唯一一整单 P16（$2,540），并带动 $768 其他无氧；ABO 自制视频单次加购 $10.9。</p></div></li>
+          <li><span class="wy-pri wy-p1">P1</span><div><b>收缩中层视频 Campaign C、E，去掉“力量训练兴趣”人群。</b><p>C（VideoProof）花费 $704、单次加购 $58.7，E（SpaceTime）花费 $640、单次加购 $160，均无订单。同条件测试中力量训练兴趣单次加购 $95，健身内容兴趣 $50、宽泛 $80，保留健身内容兴趣。</p></div></li>
+          <li><span class="wy-pri wy-p1">P1</span><div><b>给 Google、Bing 品牌词 Campaign 补充 P16 关键词、Sitelink 和文案，确保预算不受限。</b><p>Bing 没有任何 P16 专投花费，却带来 P16 $4,640 归因营收，说明看到广告后搜索品牌的用户在这里成交。</p></div></li>
+          <li><span class="wy-pri wy-p1">P1</span><div><b>让 R26、2510 的流量为 P16 服务。</b><p>其他产品的 Meta 广告带来 P16 约 $7,100 归因营收（R26、2510 为主）。在这些产品的 Catalog / ASC 中加入 P16，并对其站内访客投放 P16 再营销。</p></div></li>
+          <li><span class="wy-pri wy-p2">P2</span><div><b>评估上层 Lead Campaign 的线索质量。</b><p>Lead 目标累计花费 $1,909，线索进入邮件培育；结合邮件带来的 P16 归因营收判断线索价值。进站最少的 LargeEngagers_90D（花费 $434，进站 15）先停。</p></div></li>
+        </ol>
+      </div>
+      <div class="wy-act-group" id="act-site">
+        <h3>网站承接</h3>
+        <ol>
+          <li><span class="wy-pri wy-p0">P0</span><div><b>排查结账流失，这是全链路最大的断点。</b><p>P16 共 413 个结账会话，只成交 9 单（约 2%）。重点检查运费与到货时间、分期付款（客单价 $2,100–2,900）、支付方式、退换和安装说明，并把这些信息前置到产品页和结账页。</p></div></li>
+          <li><span class="wy-pri wy-p0">P0</span><div><b>修正 Google 广告的落地页。</b><p>Google 专投流量进站后的加购率为 4.6%，Meta 为 16.9%。检查 PMax、DemandGen 的 Final URL 与资产组，统一落到 P16 产品页或教育页。</p></div></li>
+          <li><span class="wy-pri wy-p1">P1</span><div><b>强化邮件与短信承接。</b><p>Email &amp; SMS 以 399 个会话带来 P16 $5,575 归因营收，是转化效率最高的来源。为 P16 建立弃购、浏览未购和 Lead 培育流程，内容加入分期、组合优惠和真实使用场景。</p></div></li>
+          <li><span class="wy-pri wy-p1">P1</span><div><b>上线无氧组合。</b><p>P16 专投广告已带动 P15、P18 成交 $1,192。在 P16 产品页和结账前加入 P16 + P18 训练凳 + P15 杠铃片的组合，提高客单价和连带率。</p></div></li>
+          <li><span class="wy-pri wy-p2">P2</span><div><b>页面与广告以 Elite 为主推。</b><p>已成交 9 单中 Elite 7 单、Pro 2 单。主推 Elite，Pro 作为入门价格锚点。</p></div></li>
+        </ol>
+      </div>
+      <div class="wy-act-group" id="act-content">
+        <h3>内容素材</h3>
+        <ol>
+          <li><span class="wy-pri wy-p0">P0</span><div><b>放量有效素材。</b><p>SixStations（一机六站，单次加购 $7.9，唯一带来整单的专投素材）、QuickTilt（CTR 4.3%，加购率 29%，单次加购 $11.3）、IG 帖子（$10.0）、自制 TwoPaths 视频（$9–12）。</p></div></li>
+          <li><span class="wy-pri wy-p0">P0</span><div><b>停投低效素材。</b><p>30Min_Workout 单次加购 $96.5，GluteBias $117，FeelTheMuscle 花费 $223 无加购。</p></div></li>
+          <li><span class="wy-pri wy-p1">P1</span><div><b>调整视频的角色。</b><p>视频点击后的进站率 38%，高于图片的 18%，但进站后加购率只有 9.7%（图片 22%），讲解类视频吸引的多是“先了解”的人群。MuscleGuide 等教育视频改为落地 P16 教育页并进入再营销，不直接考核加购；新视频参考自制 TwoPaths 的对比形式，开头 3 秒给出核心功能和价格利益点。</p></div></li>
+          <li><span class="wy-pri wy-p2">P2</span><div><b>围绕已验证的卖点做下一批素材。</b><p>表现好的素材集中在“一机多站”和“倾斜轨迹、快速调节”两个卖点，下一批围绕这两点做 UGC 实拍、对比、组合价等变体。早鸟海报花费最高（$892），单次加购 $30.8，需要换成上市后的版本。</p></div></li>
+        </ol>
+      </div>
+      <div class="wy-act-group" id="act-data">
+        <h3>数据与追踪</h3>
+        <ol>
+          <li><span class="wy-pri wy-p0">P0</span><div><b>补齐 Convbox 中未匹配名称的 Meta Campaign。</b><p>该 Campaign 带来 P16 1 单（$2,300）、系列合计 $2,570，但查不到名称，无法判断是哪个广告的功劳。</p></div></li>
+          <li><span class="wy-pri wy-p1">P1</span><div><b>检查 Traffic 目标 Campaign 的追踪。</b><p>early-access 和 Traffic_Product 两个 Campaign 花费 $220，Convbox 中没有任何进站记录，需要核对落地页 UTM 与像素。</p></div></li>
+          <li><span class="wy-pri wy-p1">P1</span><div><b>统一 Campaign 命名规范。</b><p>名称中固定包含 SPU 代号和漏斗层级（TOF / MOF / BOF），看板才能自动区分专投与带动。</p></div></li>
+          <li><span class="wy-pri wy-p2">P2</span><div><b>设定周度目标并每周刷新看板。</b><p>建议跟踪：单次加购成本 ≤ $15、结账成交率 ≥ 5%、P16 归因 ROAS 与综合投产比。</p></div></li>
+        </ol>
       </div>
     </div>
   </section>
