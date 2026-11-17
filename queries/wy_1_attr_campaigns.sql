@@ -6,6 +6,7 @@ WITH prod AS (
 names AS (SELECT campaign_id, ANY_VALUE(campaign_name) campaign_name FROM `merach-452802.convbox.media_campaign_info` WHERE shop_name='merach-fitness-store' GROUP BY 1)
 SELECT p.spu, REPLACE(par.channel, 'Facebook Ads', 'Meta Ads') AS channel, par.campaign_id, IFNULL(n.campaign_name, '(未匹配到名称)') AS campaign_name,
   ROUND(SUM(par.sessions),1) AS sessions, ROUND(SUM(par.atc_sessions),1) AS atc, ROUND(SUM(par.ic_sessions),1) AS checkout,
+  ROUND(SUM(par.atc_events),2) AS atc_events, ROUND(SUM(par.ic_events),2) AS ic_events,
   ROUND(SUM(par.product_sold),3) AS orders_attr, ROUND(SUM(par.product_sales),2) AS revenue_attr
 FROM `merach-452802.convbox.product_ad_report_v2` par
 JOIN prod p ON p.product_id = par.product_id

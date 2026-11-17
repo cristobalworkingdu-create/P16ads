@@ -4,7 +4,7 @@
 
 - 独立网页：https://cristobalworkingdu-create.github.io/P16ads/ （仓库根目录 `index.html`，数据已内嵌，直接打开即可）
 - Claude 看板：https://claude.ai/artifact/25qHmdwquaqfwF6Gp5YdAn
-- 数据范围：2026-10-20 至 2026-11-10（美西时间）
+- 数据范围：2026-10-20 至 2026-11-16（美西时间）
 - 数据来源：公司 BigQuery 项目 `merach-452802`（Convbox、Meta、Google、Shopify 汇总表）
 
 ## 看板内容
@@ -16,6 +16,7 @@
 
 **第二层：P16 专投内容表现**
 - 专投漏斗（展示 → 点击 → 进站 → 加购 → 结账 → 归因订单）
+- 加购与结账同时提供两种口径：按会话（atc_sessions / ic_sessions，用于转化率）和按事件（atc_events / ic_events，与 Convbox 后台一致）
 - 素材 × 人群 × 投放层级热力图
 - 人群表现与同条件人群测试
 - 素材表现、素材格式对比

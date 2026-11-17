@@ -23,7 +23,7 @@
 .p16-step-name { color: var(--color-fg-muted); }
 .p16-step-bar { height: 18px; border-radius: 3px; min-width: 2px; }
 .p16-step-track { background: var(--cds-chart-grid); border-radius: 3px; overflow: hidden; }
-.p16-step-val { font-variant-numeric: tabular-nums; text-align: right; white-space: nowrap; }
+.p16-step-val { font-variant-numeric: tabular-nums; text-align: right; white-space: nowrap; min-width: 9.5em; }
 .p16-step-rate { grid-column: 2 / 4; color: var(--color-fg-muted); font-size: 11px; padding-left: 2px; margin-top: -2px; }
 .p16-chart { position: relative; min-height: 260px; width: 100%; }
 .p16-chart svg text { font-size: 11px; fill: var(--cds-text-secondary); font-family: var(--font-anthropic-sans); }
@@ -148,7 +148,7 @@
 
   <section class="p16-section" id="actions">
     <h2>下一步行动建议</h2>
-    <p class="p16-sub">根据 2026-10-20 至 2026-11-10 的数据快照整理，刷新数据后需重新评估。P0 = 本周执行，P1 = 两周内执行，P2 = 持续优化。</p>
+    <p class="p16-sub">以下建议及其中的数字来自 2026-10-20 至 2026-11-10 的快照；看板其余部分已刷新到 11-16，建议尚未按新数据重新评估。P0 = 本周执行，P1 = 两周内执行，P2 = 持续优化。</p>
     <div class="wy-actions">
       <div class="wy-act-group" id="act-ads">
         <h3>广告投放</h3>
@@ -229,8 +229,10 @@
           <th class="p16-text" data-field="scope">类型</th>
           <th class="p16-text" data-field="source_product">来源产品</th>
           <th data-field="sessions">进站</th>
-          <th data-field="atc">加购</th>
-          <th data-field="checkout">结账</th>
+          <th data-field="atc">加购（会话）</th>
+          <th data-field="checkout">结账（会话）</th>
+          <th data-field="atc_events">加购（事件）</th>
+          <th data-field="ic_events">结账（事件）</th>
           <th data-field="orders_attr">归因件数</th>
           <th data-field="revenue_attr">归因营收</th>
         </tr></thead>
@@ -276,12 +278,17 @@
         <span class="p16-tile-value" data-draw="k-other" data-source="p16_kpi" data-field="other_revenue" data-row="0">—</span>
         <span class="p16-tile-note">归因件数 <span data-draw="k-otheru" data-source="p16_kpi" data-field="other_units" data-row="0">—</span></span>
       </div>
+      <div class="p16-tile">
+        <span class="p16-tile-label">加购 / 发起结账（按事件）</span>
+        <span class="p16-tile-value" data-draw="k-atce" data-source="p16_kpi" data-field="atc_events" data-row="0">—</span>
+        <span class="p16-tile-note">发起结账 <span data-draw="k-ice" data-source="p16_kpi" data-field="ic_events" data-row="0">—</span> · 按会话 <span data-draw="k-atc2" data-source="p16_kpi" data-field="atc" data-row="0">—</span> / <span data-draw="k-ic2" data-source="p16_kpi" data-field="checkout" data-row="0">—</span></span>
+      </div>
     </div>
   </section>
 
   <section class="p16-section" id="funnel">
     <h2>投放到成交：每一层留下了多少人</h2>
-    <p class="p16-sub">展示和点击来自广告平台，进站、加购、结账和归因订单来自 Convbox（只计 P16）。条形长度按对数刻度绘制，便于看清后面几层。</p>
+    <p class="p16-sub">展示和点击来自广告平台，进站、加购、结账和归因订单来自 Convbox（只计 P16）。条形长度按对数刻度绘制，便于看清后面几层。加购和结账两层的数字按会话计，括注为按事件计的次数（与 Convbox 后台一致）。</p>
     <div class="p16-funnels">
       <div class="p16-card" id="funnel-meta">
         <h3>Meta</h3>
@@ -459,8 +466,10 @@
           <th data-field="impressions">展示</th>
           <th data-field="clicks">点击</th>
           <th data-field="sessions">进站</th>
-          <th data-field="atc">加购</th>
-          <th data-field="checkout">结账</th>
+          <th data-field="atc">加购（会话）</th>
+          <th data-field="checkout">结账（会话）</th>
+          <th data-field="atc_events">加购（事件）</th>
+          <th data-field="ic_events">结账（事件）</th>
           <th data-field="orders_attr">P16 归因订单</th>
           <th data-field="revenue_attr">P16 归因营收</th>
           <th data-field="other_units">带动其他无氧（件）</th>
@@ -480,6 +489,7 @@
       <li>广告类型：无氧专投 = Campaign 名称含 P15–P18；品牌词搜索 = 名称含 Brand；其他产品广告 = 名称含其他产品代号或品类；大促 / 通用 = 全站促销、Best Seller、DSA 等；未匹配到名称 = Convbox 有转化但 Campaign 信息表里查不到名称。</li>
       <li>专投花费：Meta 来自 facebook_ad_insights，Google 来自 google_campaign，只统计名称含 P15–P18 的 Campaign。其他广告带动的转化没有分摊花费。</li>
       <li>全部流量来源来自 Convbox 渠道报表，付费广告一项与广告报表（Campaign 层级）的统计层级不同，数字略有差异。</li>
+      <li>加购与结账有两种口径，看板同时保留：按会话 = 发生过加购 / 发起结账的会话数（atc_sessions / ic_sessions），可以和进站会话相除算转化率，看板里的加购率、单次加购成本都用这个口径；按事件 = 加购 / 发起结账（Initiate Checkout）事件数（atc_events / ic_events），与 Convbox 后台按事件显示的 ATC-All、IC 一致。两种口径在 Convbox 里的归因分配方式不同，按会话的合计明显高于按事件，两列不能相减或互相换算。</li>
       <li>加购率 = 加购会话 ÷ 进站会话；单次加购成本 = 花费 ÷ 加购会话。热力图中进站不足 5 的格子不计算比率。Lead 目标的 Campaign 进站很少，个别加购率会超过 100%。</li>
       <li>综合投产比 = 实际净销售 ÷ 专投花费，不区分订单是否由广告带来；归因 ROAS 只计算 Convbox 归到专投广告的部分。</li>
       <li>本看板是数据快照，打开时不会查询 BigQuery；需要更新时请 Claude 运行一次查询并替换快照。日期按美西时间，截止日当天的数据可能还不完整。</li>
@@ -490,6 +500,8 @@
 </div>
 
 <script>
+const WY_SPUS = ['全部', 'P15', 'P16', 'P17', 'P18'];
+
 dash.calc('kpi_spu', {
   title: '各产品核心指标',
   description: '按产品（含系列合计）汇总 Shopify 实际订单与销售、专投花费，以及 Convbox 付费广告与非付费来源的归因营收。',
@@ -528,12 +540,12 @@ dash.calc('driver_scope', {
     for (const r of campaigns) {
       for (const s of ['全部', r.spu]) {
         const key = s + '|' + r.channel + '|' + r.scope;
-        if (!by.has(key)) by.set(key, { key, spu: s, channel: r.channel, scope: r.scope, sessions: 0, atc: 0, orders_attr: 0, revenue_attr: 0 });
+        if (!by.has(key)) by.set(key, { key, spu: s, channel: r.channel, scope: r.scope, sessions: 0, atc: 0, atc_events: 0, ic_events: 0, orders_attr: 0, revenue_attr: 0 });
         const o = by.get(key);
-        for (const f of ['sessions', 'atc', 'orders_attr', 'revenue_attr']) o[f] += n(r[f]);
+        for (const f of ['sessions', 'atc', 'atc_events', 'ic_events', 'orders_attr', 'revenue_attr']) o[f] += n(r[f]);
       }
     }
-    return [...by.values()].map((o) => ({ ...o, sessions: Math.round(o.sessions * 10) / 10, atc: Math.round(o.atc * 10) / 10, orders_attr: Math.round(o.orders_attr * 100) / 100, revenue_attr: Math.round(o.revenue_attr * 100) / 100 }));
+    return [...by.values()].map((o) => ({ ...o, sessions: Math.round(o.sessions * 10) / 10, atc: Math.round(o.atc * 10) / 10, atc_events: Math.round(o.atc_events * 10) / 10, ic_events: Math.round(o.ic_events * 10) / 10, orders_attr: Math.round(o.orders_attr * 100) / 100, revenue_attr: Math.round(o.revenue_attr * 100) / 100 }));
   },
 });
 
@@ -567,12 +579,12 @@ dash.calc('drivers', {
     for (const r of campaigns) {
       for (const s of ['全部', r.spu]) {
         const key = s + '|' + r.channel + '|' + r.campaign_id;
-        if (!by.has(key)) by.set(key, { key, spu: s, channel: r.channel, campaign_name: r.campaign_name, scope: r.scope, source_product: r.source_product, sessions: 0, atc: 0, checkout: 0, orders_attr: 0, revenue_attr: 0 });
+        if (!by.has(key)) by.set(key, { key, spu: s, channel: r.channel, campaign_name: r.campaign_name, scope: r.scope, source_product: r.source_product, sessions: 0, atc: 0, checkout: 0, atc_events: 0, ic_events: 0, orders_attr: 0, revenue_attr: 0 });
         const o = by.get(key);
-        for (const f of ['sessions', 'atc', 'checkout', 'orders_attr', 'revenue_attr']) o[f] += n(r[f]);
+        for (const f of ['sessions', 'atc', 'checkout', 'atc_events', 'ic_events', 'orders_attr', 'revenue_attr']) o[f] += n(r[f]);
       }
     }
-    return [...by.values()].map((o) => ({ ...o, sessions: Math.round(o.sessions * 10) / 10, atc: Math.round(o.atc * 10) / 10, checkout: Math.round(o.checkout * 10) / 10, orders_attr: Math.round(o.orders_attr * 100) / 100, revenue_attr: Math.round(o.revenue_attr * 100) / 100 }))
+    return [...by.values()].map((o) => ({ ...o, sessions: Math.round(o.sessions * 10) / 10, atc: Math.round(o.atc * 10) / 10, checkout: Math.round(o.checkout * 10) / 10, atc_events: Math.round(o.atc_events * 10) / 10, ic_events: Math.round(o.ic_events * 10) / 10, orders_attr: Math.round(o.orders_attr * 100) / 100, revenue_attr: Math.round(o.revenue_attr * 100) / 100 }))
       .sort((a, b) => b.revenue_attr - a.revenue_attr || b.orders_attr - a.orders_attr || b.sessions - a.sessions);
   },
 });
@@ -587,9 +599,9 @@ dash.calc('sources_spu', {
     for (const r of sources) {
       for (const s of ['全部', r.spu]) {
         const key = s + '|' + r.channel_group;
-        if (!by.has(key)) by.set(key, { key, spu: s, channel_group: r.channel_group, sessions: 0, atc: 0, orders_attr: 0, revenue_attr: 0 });
+        if (!by.has(key)) by.set(key, { key, spu: s, channel_group: r.channel_group, sessions: 0, atc: 0, atc_events: 0, ic_events: 0, orders_attr: 0, revenue_attr: 0 });
         const o = by.get(key);
-        for (const f of ['sessions', 'atc', 'orders_attr', 'revenue_attr']) o[f] += n(r[f]);
+        for (const f of ['sessions', 'atc', 'atc_events', 'ic_events', 'orders_attr', 'revenue_attr']) o[f] += n(r[f]);
       }
     }
     return [...by.values()].map((o) => ({ ...o, sessions: Math.round(o.sessions * 10) / 10, atc: Math.round(o.atc * 10) / 10, orders_attr: Math.round(o.orders_attr * 100) / 100, revenue_attr: Math.round(o.revenue_attr * 100) / 100 }))
@@ -634,7 +646,7 @@ dash.calc('google_p16', {
     const n = (v) => (v == null || v === '' ? 0 : Number(v));
     const by = new Map();
     const get = (name) => {
-      if (!by.has(name)) by.set(name, { campaign_name: name, spend: 0, impressions: 0, clicks: 0, sessions: 0, atc: 0, checkout: 0, orders_attr: 0, revenue_attr: 0, other_units: 0, other_revenue: 0 });
+      if (!by.has(name)) by.set(name, { campaign_name: name, spend: 0, impressions: 0, clicks: 0, sessions: 0, atc: 0, checkout: 0, atc_events: 0, ic_events: 0, orders_attr: 0, revenue_attr: 0, other_units: 0, other_revenue: 0 });
       return by.get(name);
     };
     for (const r of spend.filter((x) => x.channel === 'Google Ads' && /P16/.test(x.campaign_name))) {
@@ -642,11 +654,11 @@ dash.calc('google_p16', {
     }
     for (const r of campaigns.filter((x) => x.channel === 'Google Ads' && /P16/.test(x.campaign_name))) {
       const o = get(r.campaign_name);
-      if (r.spu === 'P16') { for (const f of ['sessions', 'atc', 'checkout', 'orders_attr', 'revenue_attr']) o[f] += n(r[f]); }
+      if (r.spu === 'P16') { for (const f of ['sessions', 'atc', 'checkout', 'atc_events', 'ic_events', 'orders_attr', 'revenue_attr']) o[f] += n(r[f]); }
       else { o.other_units += n(r.orders_attr); o.other_revenue += n(r.revenue_attr); }
     }
     const rd = (v, d) => Math.round(v * 10 ** d) / 10 ** d;
-    return [...by.values()].map((o) => ({ ...o, spend: rd(o.spend, 2), sessions: rd(o.sessions, 1), atc: rd(o.atc, 1), checkout: rd(o.checkout, 1), orders_attr: rd(o.orders_attr, 2), revenue_attr: rd(o.revenue_attr, 2), other_units: rd(o.other_units, 2), other_revenue: rd(o.other_revenue, 2) }))
+    return [...by.values()].map((o) => ({ ...o, spend: rd(o.spend, 2), sessions: rd(o.sessions, 1), atc: rd(o.atc, 1), checkout: rd(o.checkout, 1), atc_events: rd(o.atc_events, 1), ic_events: rd(o.ic_events, 1), orders_attr: rd(o.orders_attr, 2), revenue_attr: rd(o.revenue_attr, 2), other_units: rd(o.other_units, 2), other_revenue: rd(o.other_revenue, 2) }))
       .sort((a, b) => b.spend - a.spend);
   },
 });
@@ -664,6 +676,8 @@ dash.calc('p16_kpi', {
     return [{
       spend: rd(spend, 2), meta_spend: rd(meta, 2), google_spend: rd(google, 2),
       sessions: rd(s(metaAds, 'sessions') + s(googleP16, 'sessions'), 1), atc: rd(atc, 1), cost_per_atc: atc ? rd(spend / atc, 2) : null,
+      checkout: rd(s(metaAds, 'checkout') + s(googleP16, 'checkout'), 1),
+      atc_events: rd(s(metaAds, 'atc_events') + s(googleP16, 'atc_events'), 1), ic_events: rd(s(metaAds, 'ic_events') + s(googleP16, 'ic_events'), 1),
       orders_attr: rd(s(metaAds, 'orders_attr') + s(googleP16, 'orders_attr'), 2), revenue_attr: rd(rev, 2), attr_roas: spend ? rd(rev / spend, 2) : null,
       other_units: rd(s(metaAds, 'other_units') + s(googleP16, 'other_units'), 2), other_revenue: rd(s(metaAds, 'other_revenue') + s(googleP16, 'other_revenue'), 2),
     }];
@@ -683,11 +697,25 @@ dash.calc('funnel', {
       sessions: Math.round(rows.reduce((a, r) => a + n(r.sessions), 0) * 10) / 10,
       atc: Math.round(rows.reduce((a, r) => a + n(r.atc), 0) * 10) / 10,
       checkout: Math.round(rows.reduce((a, r) => a + n(r.checkout), 0) * 10) / 10,
+      atc_events: Math.round(rows.reduce((a, r) => a + n(r.atc_events), 0) * 10) / 10,
+      ic_events: Math.round(rows.reduce((a, r) => a + n(r.ic_events), 0) * 10) / 10,
       orders_attr: Math.round(rows.reduce((a, r) => a + n(r.orders_attr), 0) * 100) / 100,
     });
     return [tot(metaAds, 'Meta'), tot(googleP16, 'Google')];
   },
 });
+
+const wyGroup = (rows, keyFn, init, fields) => {
+  const n = (v) => (v == null || v === '' ? 0 : Number(v));
+  const by = new Map();
+  for (const r of rows) {
+    const k = keyFn(r);
+    if (!by.has(k)) by.set(k, init(r));
+    const o = by.get(k);
+    for (const f of fields) o[f] += n(r[f]);
+  }
+  return [...by.values()];
+};
 
 dash.calc('campaigns', {
   title: 'Meta P16 专投 Campaign 汇总',
@@ -698,12 +726,12 @@ dash.calc('campaigns', {
     const rd = (v, d) => (v == null ? null : Math.round(v * 10 ** d) / 10 ** d);
     const by = new Map();
     for (const r of metaAds) {
-      if (!by.has(r.campaign_name)) by.set(r.campaign_name, { campaign_name: r.campaign_name, funnel: r.funnel, objective: r.objective, spend: 0, impressions: 0, clicks: 0, sessions: 0, atc: 0, orders_attr: 0, revenue_attr: 0, other_revenue: 0 });
+      if (!by.has(r.campaign_name)) by.set(r.campaign_name, { campaign_name: r.campaign_name, funnel: r.funnel, objective: r.objective, spend: 0, impressions: 0, clicks: 0, sessions: 0, atc: 0, atc_events: 0, ic_events: 0, orders_attr: 0, revenue_attr: 0, other_revenue: 0 });
       const o = by.get(r.campaign_name);
-      for (const f of ['spend', 'impressions', 'clicks', 'sessions', 'atc', 'orders_attr', 'revenue_attr', 'other_revenue']) o[f] += n(r[f]);
+      for (const f of ['spend', 'impressions', 'clicks', 'sessions', 'atc', 'atc_events', 'ic_events', 'orders_attr', 'revenue_attr', 'other_revenue']) o[f] += n(r[f]);
     }
     return [...by.values()].map((o) => ({
-      ...o, spend: rd(o.spend, 2), sessions: rd(o.sessions, 1), atc: rd(o.atc, 1), orders_attr: rd(o.orders_attr, 2), revenue_attr: rd(o.revenue_attr, 2), other_revenue: rd(o.other_revenue, 2),
+      ...o, spend: rd(o.spend, 2), sessions: rd(o.sessions, 1), atc: rd(o.atc, 1), atc_events: rd(o.atc_events, 1), ic_events: rd(o.ic_events, 1), orders_attr: rd(o.orders_attr, 2), revenue_attr: rd(o.revenue_attr, 2), other_revenue: rd(o.other_revenue, 2),
       ctr: o.impressions ? rd(o.clicks / o.impressions, 4) : null, cpc: o.clicks ? rd(o.spend / o.clicks, 2) : null, atc_rate: o.sessions ? rd(o.atc / o.sessions, 4) : null,
     })).sort((a, b) => b.spend - a.spend);
   },
@@ -718,12 +746,12 @@ dash.calc('creatives', {
     const rd = (v, d) => (v == null ? null : Math.round(v * 10 ** d) / 10 ** d);
     const by = new Map();
     for (const r of metaAds) {
-      if (!by.has(r.ad_name)) by.set(r.ad_name, { ad_name: r.ad_name, format: r.format, spend: 0, impressions: 0, clicks: 0, sessions: 0, atc: 0, checkout: 0, orders_attr: 0, revenue_attr: 0, other_revenue: 0 });
+      if (!by.has(r.ad_name)) by.set(r.ad_name, { ad_name: r.ad_name, format: r.format, spend: 0, impressions: 0, clicks: 0, sessions: 0, atc: 0, checkout: 0, atc_events: 0, ic_events: 0, orders_attr: 0, revenue_attr: 0, other_revenue: 0 });
       const o = by.get(r.ad_name);
-      for (const f of ['spend', 'impressions', 'clicks', 'sessions', 'atc', 'checkout', 'orders_attr', 'revenue_attr', 'other_revenue']) o[f] += n(r[f]);
+      for (const f of ['spend', 'impressions', 'clicks', 'sessions', 'atc', 'checkout', 'atc_events', 'ic_events', 'orders_attr', 'revenue_attr', 'other_revenue']) o[f] += n(r[f]);
     }
     return [...by.values()].map((o) => ({
-      ...o, spend: rd(o.spend, 2), sessions: rd(o.sessions, 1), atc: rd(o.atc, 1), checkout: rd(o.checkout, 1), orders_attr: rd(o.orders_attr, 2), revenue_attr: rd(o.revenue_attr, 2), other_revenue: rd(o.other_revenue, 2),
+      ...o, spend: rd(o.spend, 2), sessions: rd(o.sessions, 1), atc: rd(o.atc, 1), checkout: rd(o.checkout, 1), atc_events: rd(o.atc_events, 1), ic_events: rd(o.ic_events, 1), orders_attr: rd(o.orders_attr, 2), revenue_attr: rd(o.revenue_attr, 2), other_revenue: rd(o.other_revenue, 2),
       ctr: o.impressions ? rd(o.clicks / o.impressions, 4) : null, cpc: o.clicks ? rd(o.spend / o.clicks, 2) : null,
       visit_rate: o.clicks ? rd(o.sessions / o.clicks, 4) : null, atc_rate: o.sessions ? rd(o.atc / o.sessions, 4) : null,
     })).sort((a, b) => b.spend - a.spend);
@@ -908,6 +936,7 @@ document.querySelectorAll('#wy-driver-metric').forEach((sel) => sel.addEventList
     ['k-spend', 'spend', F.usd], ['k-meta', 'meta_spend', F.usd], ['k-google', 'google_spend', F.usd], ['k-sess', 'sessions', F.num1],
     ['k-atc', 'atc', F.num1], ['k-cpa', 'cost_per_atc', F.usd2], ['k-orders', 'orders_attr', F.num2], ['k-rev', 'revenue_attr', F.usd],
     ['k-roas', 'attr_roas', F.ratio], ['k-other', 'other_revenue', F.usd], ['k-otheru', 'other_units', F.num2],
+    ['k-atce', 'atc_events', F.num1], ['k-ice', 'ic_events', F.num1], ['k-atc2', 'atc', F.num1], ['k-ic2', 'checkout', F.num1],
   ]) p16Cell(name, field, fmt);
 
   dash.draw('asof', (el) => {
@@ -1026,13 +1055,13 @@ document.querySelectorAll('#wy-driver-metric').forEach((sel) => sel.addEventList
 
   dash.draw('drivers-body', (tbody) => {
     const d = dash.data('drivers'); tbody.replaceChildren();
-    if (d.status !== 'ok' || !Array.isArray(d.data)) { placeholder(tbody, d.status, 9); return; }
+    if (d.status !== 'ok' || !Array.isArray(d.data)) { placeholder(tbody, d.status, 11); return; }
     const rows = d.data.filter((r) => r.spu === window.wySpu && (r.revenue_attr > 0 || r.orders_attr > 0 || r.sessions >= 5)).slice(0, 40);
-    if (!rows.length) { const tr = document.createElement('tr'); const c = td('所选产品在这段时间没有付费广告归因。', 'p16-fail'); c.colSpan = 9; tr.append(c); tbody.append(tr); return; }
+    if (!rows.length) { const tr = document.createElement('tr'); const c = td('所选产品在这段时间没有付费广告归因。', 'p16-fail'); c.colSpan = 11; tr.append(c); tbody.append(tr); return; }
     for (const r of rows) {
       const tr = document.createElement('tr'); tr.dataset.key = window.wyEnc(r.key);
       tr.append(td(r.campaign_name, 'p16-name'), td(r.channel.replace(' Ads', ''), 'p16-text'), pill(r.scope, window.wyScopeColor(r.scope)), td(r.source_product, 'p16-text'),
-        td(F.num1(r.sessions)), td(F.num1(r.atc)), td(F.num1(r.checkout)),
+        td(F.num1(r.sessions)), td(F.num1(r.atc)), td(F.num1(r.checkout)), td(F.num1(r.atc_events)), td(F.num1(r.ic_events)),
         td(F.num2(r.orders_attr), r.orders_attr > 0 ? 'p16-good' : 'p16-muted'), td(F.usd(r.revenue_attr), r.revenue_attr > 0 ? 'p16-good' : 'p16-muted'));
       tbody.append(tr);
     }
@@ -1090,7 +1119,6 @@ document.querySelectorAll('#wy-driver-metric').forEach((sel) => sel.addEventList
 </script>
 
 <script>
-
 (function () {
   const F = window.p16fmt;
   const steps = [
@@ -1124,6 +1152,8 @@ document.querySelectorAll('#wy-driver-metric').forEach((sel) => sel.addEventList
       track.append(bar);
       const val = document.createElement('span'); val.className = 'p16-step-val';
       val.textContent = fmt(v);
+      const evKey = { atc: 'atc_events', checkout: 'ic_events' }[key];
+      if (evKey) val.textContent += '（事件 ' + F.num1(row[evKey] || 0) + '）';
       val.dataset.source = 'funnel'; val.dataset.field = key; val.dataset.row = String(idx);
       wrap.append(name, track, val);
       if (prev != null && rateName[key]) {
@@ -1263,11 +1293,11 @@ document.querySelectorAll('#wy-driver-metric').forEach((sel) => sel.addEventList
   dash.draw('google-body', (tbody) => {
     const d = dash.data('google_p16');
     tbody.replaceChildren();
-    if (d.status !== 'ok' || !Array.isArray(d.data)) { fail(tbody, d.status, 10); return; }
+    if (d.status !== 'ok' || !Array.isArray(d.data)) { fail(tbody, d.status, 12); return; }
     for (const r of d.data) {
       const tr = document.createElement('tr');
       tr.append(td(r.campaign_name, 'p16-name'), td(F.usd2(r.spend)), td(F.int(r.impressions)), td(F.int(r.clicks)),
-        td(F.num1(r.sessions)), td(F.num1(r.atc)), td(F.num1(r.checkout)),
+        td(F.num1(r.sessions)), td(F.num1(r.atc)), td(F.num1(r.checkout)), td(F.num1(r.atc_events)), td(F.num1(r.ic_events)),
         td(F.num2(r.orders_attr), r.orders_attr > 0 ? 'p16-good' : 'p16-muted'), td(F.usd(r.revenue_attr), r.revenue_attr > 0 ? 'p16-good' : 'p16-muted'),
         td(F.num2(r.other_units), r.other_units > 0 ? 'p16-good' : 'p16-muted'));
       tbody.append(tr);

@@ -5,6 +5,7 @@ WITH prod AS (
 )
 SELECT ai.campaign_name, ai.adset_name, ai.ads_name AS ad_name, p.spu,
   ROUND(SUM(par.sessions),1) AS sessions, ROUND(SUM(par.atc_sessions),1) AS atc, ROUND(SUM(par.ic_sessions),1) AS checkout,
+  ROUND(SUM(par.atc_events),2) AS atc_events, ROUND(SUM(par.ic_events),2) AS ic_events,
   ROUND(SUM(par.product_sold),3) AS orders_attr, ROUND(SUM(par.product_sales),2) AS revenue_attr
 FROM `merach-452802.convbox.product_ad_report_v2` par
 JOIN prod p ON p.product_id = par.product_id
