@@ -1,0 +1,562 @@
+<meta name="dash-one-writer">
+<style>
+.dy { display: grid; gap: var(--cds-gap-xl); font-variant-numeric: tabular-nums; }
+.dy-head { display: grid; gap: var(--cds-gap-md); }
+.dy-title { font-family: var(--font-anthropic-serif); font-weight: 400; font-size: var(--cds-font-size-title); margin: 0; text-wrap: balance; }
+.dy-lede { margin: 0; color: var(--color-fg); max-width: 70ch; line-height: 1.7; }
+.dy-lede b { font-weight: var(--cds-font-weight-medium); }
+.dy-meta { color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); margin: 0; }
+.dy-bar { display: flex; flex-wrap: wrap; gap: var(--cds-gap-md); align-items: center; }
+.dy-tabs { display: flex; flex-wrap: wrap; gap: 4px; padding: 3px; border: 1px solid var(--color-border-line); border-radius: 999px; background: var(--color-panel); }
+.dy-tab { font: inherit; font-size: 13px; border: 0; background: transparent; color: var(--color-fg-muted); padding: 5px 12px; border-radius: 999px; cursor: pointer; }
+.dy-tab:hover { color: var(--color-fg); }
+.dy-tab.is-on { background: var(--color-fg); color: var(--color-bg); }
+.dy-tab:focus-visible, .dy-seg button:focus-visible { outline: 2px solid var(--c1, currentColor); outline-offset: 2px; }
+.dy-field { display: inline-flex; align-items: center; gap: var(--cds-gap-sm); font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+.dy-seg { display: inline-flex; border: 1px solid var(--color-border-line); border-radius: 8px; overflow: hidden; }
+.dy-seg button { font: inherit; font-size: 12px; border: 0; background: var(--color-panel); color: var(--color-fg-muted); padding: 5px 10px; cursor: pointer; }
+.dy-seg button.is-on { background: var(--color-fg); color: var(--color-bg); }
+.dy-section { display: grid; gap: var(--cds-gap-md); min-width: 0; }
+.dy-section > h2 { font-size: var(--cds-font-size-heading); font-weight: var(--cds-font-weight-medium); margin: 0; }
+.dy-sub { margin: 0; color: var(--color-fg-muted); font-size: 13px; max-width: 80ch; }
+.dy-kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: var(--cds-gap-md); }
+.dy-kpi { background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-md) var(--cds-pad-lg); display: grid; gap: 4px; min-width: 0; }
+.dy-kpi-label { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+.dy-kpi-value { font-family: var(--font-anthropic-serif); font-size: 26px; line-height: 1.2; }
+.dy-kpi-cmp { font-size: 12px; color: var(--color-fg-muted); display: grid; gap: 2px; }
+.dy-up { color: var(--color-ok); }
+.dy-down { color: var(--color-bad); }
+.dy-flat { color: var(--color-fg-muted); }
+.dy-card { background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-lg); min-width: 0; }
+.dy-scroll { overflow-x: auto; }
+.dy-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.dy-table th { text-align: right; font-weight: 500; color: var(--color-fg-muted); font-size: 12px; padding: 6px 8px; border-bottom: 1px solid var(--color-border-line); white-space: nowrap; }
+.dy-table td { text-align: right; padding: 7px 8px; border-bottom: 1px solid var(--color-border-line); white-space: nowrap; }
+.dy-table th:first-child, .dy-table td:first-child { text-align: left; }
+.dy-table tr.is-sel td { background: color-mix(in srgb, var(--color-fg) 5%, transparent); }
+.dy-table td.dy-name { font-weight: 500; }
+.dy-rate { color: var(--color-fg-muted); font-size: 11px; margin-left: 4px; }
+.dy-spark { display: block; }
+.dy-muted { color: var(--color-fg-muted); }
+.dy-two { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: var(--cds-gap-lg); }
+.dy-chart { position: relative; min-height: 240px; }
+.dy-chart svg text { fill: var(--cds-text-secondary); font-size: 11px; }
+.dy-chart .domain { stroke: var(--cds-chart-axis); }
+.dy-chart .tick line { stroke: var(--cds-chart-grid); }
+.dy-tip { position: absolute; pointer-events: none; background: var(--cds-surface-popover); border: 1px solid var(--cds-border); box-shadow: var(--cds-shadow-popover); border-radius: 8px; padding: 8px 10px; font-size: 12px; line-height: 1.5; z-index: 5; min-width: 160px; }
+.dy-tip b { font-weight: 600; }
+.dy-tip .row { display: flex; justify-content: space-between; gap: 12px; }
+.dy-legend { display: flex; flex-wrap: wrap; gap: var(--cds-gap-md); font-size: 12px; color: var(--color-fg-muted); }
+.dy-legend span { display: inline-flex; align-items: center; gap: 6px; }
+.dy-legend i { width: 10px; height: 10px; border-radius: 2px; display: inline-block; }
+.dy-orders { display: grid; gap: var(--cds-gap-md); }
+.dy-order { background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-md) var(--cds-pad-lg); display: grid; gap: var(--cds-gap-sm); min-width: 0; }
+.dy-order-top { display: flex; flex-wrap: wrap; gap: var(--cds-gap-sm) var(--cds-gap-md); align-items: baseline; }
+.dy-order-name { font-weight: 600; }
+.dy-order-amt { font-family: var(--font-anthropic-serif); font-size: 18px; margin-left: auto; }
+.dy-chip { display: inline-block; font-size: 12px; padding: 2px 8px; border-radius: 999px; border: 1px solid var(--color-border-line); color: var(--color-fg); }
+.dy-chip.is-gift { color: var(--color-fg-muted); border-style: dashed; }
+.dy-chip.is-bundle { border-color: var(--color-ok); color: var(--color-ok); }
+.dy-path { display: flex; flex-wrap: wrap; gap: 4px; align-items: center; font-size: 12px; }
+.dy-step { display: inline-flex; align-items: center; gap: 5px; padding: 3px 8px; border-radius: 6px; background: color-mix(in srgb, var(--color-fg) 5%, transparent); max-width: 100%; }
+.dy-step i { width: 8px; height: 8px; border-radius: 50%; flex: none; }
+.dy-step span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 260px; }
+.dy-step.is-end { outline: 1px solid var(--color-fg-muted); }
+.dy-arrow { color: var(--color-fg-muted); }
+.dy-note { font-size: 12px; color: var(--color-fg-muted); }
+.dy-summary { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: var(--cds-gap-lg); }
+.dy-hbar { display: grid; grid-template-columns: minmax(90px, 140px) 1fr auto; gap: 6px 10px; align-items: center; font-size: 12px; }
+.dy-hbar .bar { height: 10px; border-radius: 3px; }
+.dy-hbar h4 { grid-column: 1 / -1; margin: 0 0 2px; font-size: 13px; font-weight: 500; }
+.dy-empty { color: var(--color-fg-muted); font-size: 13px; padding: var(--cds-pad-md) 0; }
+.dy-notes summary { cursor: pointer; color: var(--color-fg-muted); font-size: 13px; }
+.dy-notes ul { margin: var(--cds-gap-sm) 0 0; padding-left: 1.2em; color: var(--color-fg-muted); font-size: 13px; line-height: 1.7; max-width: 90ch; }
+.dy-foot { color: var(--color-fg-muted); font-size: 12px; border-top: 1px solid var(--color-border-line); padding-top: var(--cds-pad-md); }
+</style>
+
+<div class="dy">
+  <header class="dy-head" id="top">
+    <h1 class="dy-title">无氧系列日报</h1>
+    <p class="dy-lede" id="lede"><b data-draw="lede-date">—</b>（美西时间），<b data-draw="lede-name">—</b>成交 <b data-draw="lede-orders">—</b> 单、销售额 <b data-draw="lede-sales">—</b>；商品浏览 <b data-draw="lede-views">—</b> 次，加购 <b data-draw="lede-atc">—</b> 次，发起结账 <b data-draw="lede-ic">—</b> 次。<span data-draw="lede-cmp"></span></p>
+    <div class="dy-bar">
+      <div class="dy-tabs" role="tablist" aria-label="商品">
+        <button class="dy-tab is-on" role="tab" aria-selected="true" data-spu="全部">合计</button>
+        <button class="dy-tab" role="tab" aria-selected="false" data-spu="P15">P15 杠铃片</button>
+        <button class="dy-tab" role="tab" aria-selected="false" data-spu="P16">P16 史密斯机</button>
+        <button class="dy-tab" role="tab" aria-selected="false" data-spu="P17">P17</button>
+        <button class="dy-tab" role="tab" aria-selected="false" data-spu="P18">P18 训练凳</button>
+        <button class="dy-tab" role="tab" aria-selected="false" data-spu="地垫套装">地垫套装</button>
+      </div>
+      <label class="dy-field" for="dy-date">截至 <select class="dash-select" id="dy-date" data-draw="date-select" aria-label="截至日期"></select></label>
+      <div class="dy-seg" role="group" aria-label="统计区间">
+        <button type="button" class="is-on" data-win="1" id="win-1">当日</button>
+        <button type="button" data-win="7" id="win-7">近 7 天</button>
+        <button type="button" data-win="all" id="win-all">全周期</button>
+      </div>
+    </div>
+    <p class="dy-meta">“合计”包含 P15–P18 与地垫套装（地垫 + 收边条）。数据只含已结束的美西完整日，截至 <span data-draw="asof">—</span>。</p>
+  </header>
+
+  <section class="dy-section" id="kpis">
+    <h2>核心数字</h2>
+    <p class="dy-sub">数值为所选区间的合计。当日与前 7 日日均、上周同日对比；近 7 天与再往前 7 天对比；全周期显示日均。订单与销售额来自 Shopify；浏览、加购、发起结账来自 Convbox，按事件计。</p>
+    <div class="dy-kpis" data-source="daily_spu">
+      <div class="dy-kpi" id="k-orders"><span class="dy-kpi-label">订单</span><span class="dy-kpi-value" data-draw="kv" data-k="orders">—</span><span class="dy-kpi-cmp" data-draw="kc" data-k="orders"></span></div>
+      <div class="dy-kpi" id="k-units"><span class="dy-kpi-label">销量（件）</span><span class="dy-kpi-value" data-draw="kv" data-k="units">—</span><span class="dy-kpi-cmp" data-draw="kc" data-k="units"></span></div>
+      <div class="dy-kpi" id="k-sales"><span class="dy-kpi-label">销售额</span><span class="dy-kpi-value" data-draw="kv" data-k="net_sales">—</span><span class="dy-kpi-cmp" data-draw="kc" data-k="net_sales"></span></div>
+      <div class="dy-kpi" id="k-aov"><span class="dy-kpi-label">客单价</span><span class="dy-kpi-value" data-draw="kv" data-k="aov">—</span><span class="dy-kpi-cmp" data-draw="kc" data-k="aov"></span></div>
+      <div class="dy-kpi" id="k-views"><span class="dy-kpi-label">商品浏览</span><span class="dy-kpi-value" data-draw="kv" data-k="views">—</span><span class="dy-kpi-cmp" data-draw="kc" data-k="views"></span></div>
+      <div class="dy-kpi" id="k-atc"><span class="dy-kpi-label">加购（事件）</span><span class="dy-kpi-value" data-draw="kv" data-k="atc_events">—</span><span class="dy-kpi-cmp" data-draw="kc" data-k="atc_events"></span></div>
+      <div class="dy-kpi" id="k-ic"><span class="dy-kpi-label">发起结账（事件）</span><span class="dy-kpi-value" data-draw="kv" data-k="ic_events">—</span><span class="dy-kpi-cmp" data-draw="kc" data-k="ic_events"></span></div>
+    </div>
+  </section>
+
+  <section class="dy-section" id="funnel">
+    <h2>按商品拆分的流量漏斗</h2>
+    <p class="dy-sub">所选区间内，商品浏览 → 加购 → 发起结账 → 订单。括注为相对上一步的转化率；小图为截至所选日期近 14 天的每日商品浏览（灰）与加购（色）。</p>
+    <div class="dy-card dy-scroll">
+      <table class="dy-table" id="funnel-table" data-source="daily_spu">
+        <thead><tr><th>商品</th><th>商品浏览</th><th>加购（事件）</th><th>发起结账（事件）</th><th>订单</th><th>销量</th><th>销售额</th><th>近 14 天</th></tr></thead>
+        <tbody data-draw="funnel-body"></tbody>
+      </table>
+    </div>
+    <div class="dy-card" id="channels">
+      <div class="dy-summary" data-source="funnel" data-draw="channel-bars"></div>
+    </div>
+  </section>
+
+  <section class="dy-section" id="orders">
+    <h2>系列订单与归因路径</h2>
+    <p class="dy-sub">所选区间内含无氧系列或地垫套装的订单（已排除取消单），按时间倒序，与上方的区间切换联动。路径为 Convbox 记录的下单前触点，连续落在同一渠道、同一 Campaign 的点击合并为一步；方框标出首次与最后一次触点。</p>
+    <div class="dy-card">
+      <div class="dy-summary" data-source="orders paths" data-draw="touch-summary"></div>
+    </div>
+    <div class="dy-orders" data-source="orders paths" data-draw="order-list"></div>
+  </section>
+
+  <section class="dy-section" id="trend">
+    <h2>近 30 天销量与销售额</h2>
+    <div class="dy-legend" data-draw="trend-legend"></div>
+    <div class="dy-two">
+      <div class="dy-card"><p class="dy-sub" style="margin-bottom:8px">每日销售额（按商品堆叠，折线为 7 日移动平均）</p><div class="dy-chart" data-source="daily_spu" data-draw="trend-sales"></div></div>
+      <div class="dy-card"><p class="dy-sub" style="margin-bottom:8px">每日销量（件，按商品堆叠）</p><div class="dy-chart" data-source="daily_spu" data-draw="trend-units"></div></div>
+    </div>
+  </section>
+
+  <details class="dy-notes" id="notes">
+    <summary>口径说明</summary>
+    <ul>
+      <li>日期按美西时间（America/Los_Angeles），只统计已经结束的完整日；当天尚未结束的数据不纳入。</li>
+      <li>订单、销量、销售额来自 Shopify 汇总（不含测试 SKU 与取消单，销售额为折后净额）。“合计”的订单数按订单去重，一单含多个商品只算一次；各商品的订单数为含该商品的订单数。</li>
+      <li>P15 赠品（随 P16 赠送的杠铃片）售价为 0，不计入销量与销售额，在订单明细中以虚线标签显示。</li>
+      <li>商品浏览、加购、发起结账来自 Convbox，按事件计（与 Convbox 后台按事件显示的数字一致）；订单一栏为 Shopify 实际订单。</li>
+      <li>渠道分布按 Convbox U 型归因（Position-based）汇总，浏览与加购按触发时的来源计。</li>
+      <li>归因路径来自 Convbox 订单触点记录（order_adclicks），只包含能识别来源的访问；没有记录的订单视为直接访问。问卷答案为下单后问卷“Which of the following led you to purchase today?”。</li>
+      <li>地垫套装 = MERACH Interlocking Rubber Gym Floor Tiles 商品下的地垫（MR-2603）与收边条（MR-2604）。</li>
+    </ul>
+  </details>
+
+  <p class="dy-foot">© Cristobal Du Peiming (杜沛明) — All Rights Reserved / 知识产权所有</p>
+</div>
+
+<script>
+const SPUS = ['全部', 'P15', 'P16', 'P17', 'P18', '地垫套装'];
+const n = (v) => (v == null || v === '' ? 0 : Number(v));
+window.dySPUS = SPUS;
+window.dyN = n;
+
+dash.calc('days', {
+  title: '日期列表',
+  description: '销售与漏斗数据覆盖的全部日期（美西时间），从最早一天连续排到最新一天。',
+  inputs: ['sales', 'funnel'],
+  fn: (sales, funnel) => {
+    const ds = [...sales, ...funnel].map((r) => r.date).filter(Boolean).sort();
+    if (!ds.length) return [];
+    const out = [];
+    const d = new Date(ds[0] + 'T00:00:00Z');
+    const end = new Date(ds[ds.length - 1] + 'T00:00:00Z');
+    while (d <= end) { out.push({ date: d.toISOString().slice(0, 10) }); d.setUTCDate(d.getUTCDate() + 1); }
+    return out;
+  },
+});
+
+dash.calc('daily_spu', {
+  title: '每日商品指标',
+  description: '每个商品（及合计）每天的订单、销量、销售额（Shopify）与商品浏览、加购、发起结账（Convbox 按事件）。合计订单按订单去重，赠品不计。',
+  inputs: ['days', 'sales', 'funnel', 'orders'],
+  fn: (days, sales, funnel, orders) => {
+    const rows = new Map();
+    const blank = (spu, date) => ({ key: spu + '|' + date, spu, date, orders: 0, units: 0, net_sales: 0, elite: 0, pro: 0, views: 0, sessions: 0, atc_events: 0, ic_events: 0, atc_sessions: 0, ic_sessions: 0 });
+    for (const d of days) for (const s of SPUS) rows.set(s + '|' + d.date, blank(s, d.date));
+    const add = (spu, date, f, v) => { const r = rows.get(spu + '|' + date); if (r) r[f] += v; };
+    for (const r of sales) {
+      for (const s of [r.spu, '全部']) { add(s, r.date, 'units', n(r.units)); add(s, r.date, 'net_sales', n(r.net_sales)); }
+      if (r.item === 'P16 Elite') add('P16', r.date, 'elite', n(r.units));
+      if (r.item === 'P16 Pro') add('P16', r.date, 'pro', n(r.units));
+    }
+    for (const r of funnel) {
+      for (const s of [r.spu, '全部']) {
+        add(s, r.date, 'views', n(r.product_views)); add(s, r.date, 'sessions', n(r.sessions));
+        add(s, r.date, 'atc_events', n(r.atc_events)); add(s, r.date, 'ic_events', n(r.ic_events));
+        add(s, r.date, 'atc_sessions', n(r.atc_sessions)); add(s, r.date, 'ic_sessions', n(r.ic_sessions));
+      }
+    }
+    const seen = new Set();
+    for (const r of orders) {
+      if (r.gift === '1') continue;
+      for (const s of [r.spu, '全部']) {
+        const k = s + '|' + r.order_id;
+        if (seen.has(k)) continue;
+        seen.add(k); add(s, r.date, 'orders', 1);
+      }
+    }
+    return [...rows.values()].map((r) => ({ ...r, net_sales: Math.round(r.net_sales * 100) / 100, views: Math.round(r.views), sessions: Math.round(r.sessions),
+      atc_events: Math.round(r.atc_events * 10) / 10, ic_events: Math.round(r.ic_events * 10) / 10, atc_sessions: Math.round(r.atc_sessions), ic_sessions: Math.round(r.ic_sessions),
+      aov: r.orders ? Math.round(r.net_sales / r.orders * 100) / 100 : null }));
+  },
+});
+</script>
+
+<script>
+window.dyState = { spu: '全部', date: null, win: 1 };
+window.dyFmt = {
+  usd: d3.format('$,.0f'),
+  int: d3.format(',.0f'),
+  num: (v) => (v == null ? '—' : Math.abs(v - Math.round(v)) < 0.05 ? d3.format(',.0f')(v) : d3.format(',.1f')(v)),
+  pct: (v) => (v == null || !isFinite(v) ? '—' : d3.format('.1%')(v)),
+};
+window.dyNames = { '全部': '无氧系列与地垫套装合计', P15: 'P15 杠铃片', P16: 'P16 史密斯机', P17: 'P17', P18: 'P18 训练凳', '地垫套装': '地垫套装' };
+window.dySpuColor = (s) => ({ P15: dash.colors[1], P16: dash.colors[0], P17: dash.colors[3], P18: dash.colors[2], '地垫套装': dash.colors[4] }[s] || 'var(--cds-chart-muted)');
+window.dyGroupColor = (g) => ({ 'Paid Ads': dash.colors[0], 'Email & SMS': dash.colors[1], 'Organic Search': dash.colors[2], 'Direct': 'var(--cds-chart-muted)', 'Affiliate': dash.colors[3], 'Organic Social': dash.colors[4] }[g] || 'var(--cds-chart-reference)');
+window.dyShift = (date, k) => { const d = new Date(date + 'T00:00:00Z'); d.setUTCDate(d.getUTCDate() + k); return d.toISOString().slice(0, 10); };
+window.dyDate = () => {
+  const d = dash.data('days');
+  const list = d.status === 'ok' && Array.isArray(d.data) ? d.data.map((r) => r.date) : [];
+  if (!list.length) return null;
+  return window.dyState.date && list.includes(window.dyState.date) ? window.dyState.date : list[list.length - 1];
+};
+window.dyRange = () => {
+  const d = dash.data('days');
+  const list = d.status === 'ok' && Array.isArray(d.data) ? d.data.map((r) => r.date) : [];
+  const to = window.dyDate();
+  if (!to) return null;
+  const w = window.dyState.win;
+  const from = w === 'all' ? list[0] : window.dyShift(to, -(w - 1));
+  const days = list.filter((x) => x >= from && x <= to).length;
+  return { from, to, days, win: w, label: from === to ? to : from + ' 至 ' + to };
+};
+window.dyRows = () => { const d = dash.data('daily_spu'); return d.status === 'ok' && Array.isArray(d.data) ? d.data : null; };
+window.dyAll = ['lede-date', 'lede-name', 'lede-orders', 'lede-sales', 'lede-views', 'lede-atc', 'lede-ic', 'lede-cmp', 'kv', 'kc', 'funnel-body', 'channel-bars', 'touch-summary', 'order-list', 'trend-sales', 'trend-units', 'trend-legend', 'date-select'];
+window.dyRedraw = () => { for (const name of window.dyAll) dash.draw(name); };
+
+document.querySelectorAll('.dy-tab').forEach((btn) => btn.addEventListener('click', () => {
+  window.dyState.spu = btn.dataset.spu;
+  document.querySelectorAll('.dy-tab').forEach((b) => { const on = b === btn; b.classList.toggle('is-on', on); b.setAttribute('aria-selected', on ? 'true' : 'false'); });
+  window.dyRedraw();
+}));
+document.querySelectorAll('.dy-seg button').forEach((btn) => btn.addEventListener('click', () => {
+  window.dyState.win = btn.dataset.win === 'all' ? 'all' : Number(btn.dataset.win);
+  document.querySelectorAll('.dy-seg button').forEach((b) => b.classList.toggle('is-on', b === btn));
+  window.dyRedraw();
+}));
+</script>
+
+<script>
+(function () {
+  const F = window.dyFmt;
+  dash.draw('date-select', (sel) => {
+    const d = dash.data('days');
+    const list = d.status === 'ok' && Array.isArray(d.data) ? d.data.map((r) => r.date).reverse() : [];
+    sel.replaceChildren(...list.map((v) => new Option(v, v)));
+    const cur = window.dyDate();
+    if (cur) sel.value = cur;
+    sel.onchange = () => { window.dyState.date = sel.value; window.dyRedraw(); };
+  });
+  dash.draw('asof', (el) => { const d = dash.data('days'); el.textContent = d.status === 'ok' && d.data.length ? d.data[d.data.length - 1].date : '—'; });
+
+  const n = window.dyN;
+  const pick = (spu, date) => { const rows = window.dyRows(); return rows ? rows.find((r) => r.spu === spu && r.date === date) : null; };
+  const KS = ['orders', 'units', 'net_sales', 'views', 'atc_events', 'ic_events'];
+  const agg = (spu, from, to) => {
+    const rows = window.dyRows(); if (!rows) return null;
+    const rs = rows.filter((r) => r.spu === spu && r.date >= from && r.date <= to);
+    if (!rs.length) return null;
+    const o = { n: rs.length };
+    for (const k of KS) o[k] = d3.sum(rs, (r) => r[k] || 0);
+    o.aov = o.orders ? o.net_sales / o.orders : null;
+    return o;
+  };
+  const fmtK = (k, v) => (v == null ? '—' : (k === 'net_sales' || k === 'aov') ? F.usd(v) : F.num(v));
+  const cur = () => { const R = window.dyRange(); return R ? { R, v: agg(window.dyState.spu, R.from, R.to) } : null; };
+
+  dash.draw('lede-date', (el) => { const R = window.dyRange(); el.textContent = R ? R.label : '—'; });
+  dash.draw('lede-name', (el) => { el.textContent = window.dyNames[window.dyState.spu]; });
+  const ledeCell = (name, k, fmt) => dash.draw(name, (el) => { const c = cur(); el.textContent = c && c.v ? fmt(c.v[k]) : '—'; });
+  ledeCell('lede-orders', 'orders', F.int);
+  ledeCell('lede-sales', 'net_sales', F.usd);
+  ledeCell('lede-views', 'views', F.int);
+  ledeCell('lede-atc', 'atc_events', F.num);
+  ledeCell('lede-ic', 'ic_events', F.num);
+  dash.draw('lede-cmp', (el) => {
+    const c = cur(); el.textContent = '';
+    if (!c || !c.v) return;
+    const { R, v } = c; const spu = window.dyState.spu;
+    if (R.win === 'all') { el.textContent = '共 ' + R.days + ' 天，日均销售额 ' + F.usd(v.net_sales / R.days) + '、日均商品浏览 ' + F.int(v.views / R.days) + ' 次。'; return; }
+    const base = R.win === 1 ? agg(spu, window.dyShift(R.to, -7), window.dyShift(R.to, -1)) : agg(spu, window.dyShift(R.from, -7), window.dyShift(R.from, -1));
+    if (!base || base.n < 7 || !base.views) return;
+    const b = R.win === 1 ? base.views / 7 : base.views;
+    const ch = v.views / b - 1;
+    el.textContent = '商品浏览较' + (R.win === 1 ? '前 7 日日均' : '再往前 7 天') + (ch >= 0 ? '高 ' : '低 ') + d3.format('.0%')(Math.abs(ch)) + '。';
+  });
+
+  dash.draw('kv', (el) => {
+    const k = el.dataset.k; const c = cur();
+    el.classList.toggle('dash-skeleton', !(c && c.v) && dash.data('daily_spu').status === 'loading');
+    el.dataset.source = 'daily_spu';
+    el.dataset.field = k;
+    const one = c && c.R.from === c.R.to ? pick(window.dyState.spu, c.R.to) : null;
+    if (one) el.dataset.where = 'key=' + one.key; else el.removeAttribute('data-where');
+    el.textContent = c && c.v ? fmtK(k, c.v[k]) : '—';
+  });
+  dash.draw('kc', (el) => {
+    const k = el.dataset.k; const c = cur(); const spu = window.dyState.spu;
+    el.replaceChildren();
+    if (!c || !c.v) return;
+    const { R, v } = c;
+    const line = (label, base) => {
+      const s = document.createElement('span');
+      if (base == null || v[k] == null) { s.textContent = label + ' —'; s.className = 'dy-flat'; return s; }
+      const diff = v[k] - base; const pct = base ? diff / base : null;
+      s.className = Math.abs(diff) < 1e-9 ? 'dy-flat' : diff > 0 ? 'dy-up' : 'dy-down';
+      s.textContent = label + ' ' + fmtK(k, base) + (pct == null ? '' : '（' + (pct >= 0 ? '+' : '') + d3.format('.0%')(pct) + '）');
+      return s;
+    };
+    const plain = (txt) => { const s = document.createElement('span'); s.className = 'dy-flat'; s.textContent = txt; return s; };
+    if (R.win === 1) {
+      const p7 = agg(spu, window.dyShift(R.to, -7), window.dyShift(R.to, -1));
+      const avg = p7 && p7.n === 7 ? (k === 'aov' ? p7.aov : p7[k] / 7) : null;
+      const lw = pick(spu, window.dyShift(R.to, -7));
+      el.append(line('前 7 日日均', avg), line('上周同日', lw ? lw[k] : null));
+    } else if (R.win === 7) {
+      const p = agg(spu, window.dyShift(R.from, -7), window.dyShift(R.from, -1));
+      el.append(line('再往前 7 天', p && p.n === 7 ? p[k] : null));
+    } else {
+      el.append(plain(k === 'aov' ? '全周期 ' + R.days + ' 天' : '日均 ' + fmtK(k, v[k] / R.days)));
+    }
+  });
+})();
+</script>
+
+<script>
+(function () {
+  const F = window.dyFmt;
+  const SPUS = window.dySPUS, n = window.dyN;
+  const winRows = (spu) => {
+    const rows = window.dyRows(); const R = window.dyRange(); if (!rows || !R) return [];
+    return rows.filter((r) => r.spu === spu && r.date >= R.from && r.date <= R.to);
+  };
+  const sum = (rs, k) => d3.sum(rs, (r) => r[k] || 0);
+
+  dash.draw('funnel-body', (tbody) => {
+    const date = window.dyDate(); const rows = window.dyRows();
+    tbody.replaceChildren();
+    if (!date || !rows) { const tr = tbody.insertRow(); const c = tr.insertCell(); c.colSpan = 8; c.className = 'dy-empty'; c.textContent = dash.data('daily_spu').status === 'loading' ? '加载中…' : '暂无数据'; return; }
+    for (const spu of SPUS) {
+      const rs = winRows(spu);
+      const v = { views: sum(rs, 'views'), atc: sum(rs, 'atc_events'), ic: sum(rs, 'ic_events'), orders: sum(rs, 'orders'), units: sum(rs, 'units'), sales: sum(rs, 'net_sales') };
+      const tr = tbody.insertRow(); tr.dataset.key = spu;
+      if (spu === window.dyState.spu) tr.className = 'is-sel';
+      const cell = (txt, rate, cls) => { const c = tr.insertCell(); if (cls) c.className = cls; c.append(txt); if (rate !== undefined) { const s = document.createElement('span'); s.className = 'dy-rate'; s.textContent = rate; c.append(s); } return c; };
+      cell(spu === '全部' ? '合计' : window.dyNames[spu], undefined, 'dy-name');
+      cell(F.int(v.views));
+      cell(F.num(v.atc), v.views ? F.pct(v.atc / v.views) : '—');
+      cell(F.num(v.ic), v.atc ? F.pct(v.ic / v.atc) : '—');
+      cell(F.int(v.orders), v.ic ? F.pct(v.orders / v.ic) : '—');
+      cell(F.int(v.units));
+      cell(F.usd(v.sales));
+      const sc = tr.insertCell();
+      const hist = rows.filter((r) => r.spu === spu && r.date <= date && r.date > window.dyShift(date, -14)).sort((a, b) => d3.ascending(a.date, b.date));
+      const W = 110, H = 26;
+      const svg = d3.select(sc).append('svg').attr('class', 'dy-spark').attr('width', W).attr('height', H).attr('role', 'img').attr('aria-label', '近 14 天商品浏览与加购');
+      if (hist.length > 1) {
+        const x = d3.scaleLinear().domain([0, hist.length - 1]).range([2, W - 2]);
+        const yv = d3.scaleLinear().domain([0, d3.max(hist, (r) => r.views) || 1]).range([H - 2, 2]);
+        const ya = d3.scaleLinear().domain([0, d3.max(hist, (r) => r.atc_events) || 1]).range([H - 2, 2]);
+        svg.append('path').attr('d', d3.line().x((d, i) => x(i)).y((d) => yv(d.views))(hist)).attr('fill', 'none').style('stroke', 'var(--cds-chart-muted)').attr('stroke-width', 1.2);
+        svg.append('path').attr('d', d3.line().x((d, i) => x(i)).y((d) => ya(d.atc_events))(hist)).attr('fill', 'none').style('stroke', window.dySpuColor(spu === '全部' ? 'P16' : spu)).attr('stroke-width', 1.5);
+      }
+    }
+  });
+
+  dash.draw('channel-bars', (el) => {
+    const f = dash.data('funnel'); const date = window.dyDate();
+    el.replaceChildren();
+    if (f.status !== 'ok' || !date) { el.textContent = f.status === 'loading' ? '加载中…' : '—'; return; }
+    const spu = window.dyState.spu; const R = window.dyRange();
+    const rs = f.data.filter((r) => r.date >= R.from && r.date <= R.to && (spu === '全部' || r.spu === spu));
+    const block = (title, field, fmt) => {
+      const by = d3.rollups(rs, (v) => d3.sum(v, (r) => n(r[field])), (r) => r.channel_group).filter((d) => d[1] > 0.0001).sort((a, b) => b[1] - a[1]);
+      const box = document.createElement('div'); box.className = 'dy-hbar';
+      const h = document.createElement('h4'); h.textContent = title; box.append(h);
+      if (!by.length) { const p = document.createElement('span'); p.className = 'dy-muted'; p.style.gridColumn = '1 / -1'; p.textContent = '该区间无记录'; box.append(p); return box; }
+      const max = d3.max(by, (d) => d[1]); const tot = d3.sum(by, (d) => d[1]);
+      for (const [g, v] of by.slice(0, 7)) {
+        const a = document.createElement('span'); a.textContent = g;
+        const b = document.createElement('div'); const bar = document.createElement('div'); bar.className = 'bar'; bar.style.width = Math.max(2, v / max * 100) + '%'; bar.style.background = window.dyGroupColor(g); b.append(bar);
+        const c = document.createElement('span'); c.className = 'dy-muted'; c.textContent = fmt(v) + ' · ' + d3.format('.0%')(v / tot);
+        box.append(a, b, c);
+      }
+      return box;
+    };
+    const label = R.label + '，' + (spu === '全部' ? '合计' : window.dyNames[spu]);
+    const cap = document.createElement('p'); cap.className = 'dy-sub'; cap.style.gridColumn = '1 / -1'; cap.textContent = '流量与归因来源（' + label + '）';
+    el.append(cap, block('商品浏览', 'product_views', F.int), block('加购（事件）', 'atc_events', F.num), block('归因销售额（U 型）', 'sales_attr', F.usd));
+  });
+})();
+</script>
+
+<script>
+(function () {
+  const F = window.dyFmt;
+  const n = window.dyN;
+  const orderWindow = () => {
+    const o = dash.data('orders'); const R = window.dyRange();
+    if (o.status !== 'ok' || !R) return null;
+    const spu = window.dyState.spu;
+    const by = d3.groups(o.data.filter((r) => r.date >= R.from && r.date <= R.to), (r) => r.order_id)
+      .filter(([, lines]) => spu === '全部' || lines.some((l) => l.spu === spu && l.gift !== '1'));
+    return by.map(([id, lines]) => ({ id, lines, date: lines[0].date, name: lines[0].order_name, survey: lines.find((l) => l.survey)?.survey || '',
+      amount: d3.sum(lines, (l) => n(l.net_amount)), spus: [...new Set(lines.filter((l) => l.gift !== '1').map((l) => l.spu))] }))
+      .sort((a, b) => d3.descending(a.date, b.date) || d3.descending(a.name, b.name));
+  };
+  const pathsOf = (id) => { const p = dash.data('paths'); return p.status === 'ok' ? p.data.filter((r) => r.order_id === id).sort((a, b) => n(a.step) - n(b.step)) : []; };
+  const short = (s) => (s || '').replace(/_US_/, '_').replace(/_\d{8}_Jiayi$/, '').replace(/^(Remi|Danni|Winnie|Lyfi)_/, '');
+
+  dash.draw('touch-summary', (el) => {
+    el.replaceChildren();
+    const list = orderWindow();
+    if (!list) { el.textContent = '—'; return; }
+    const R = window.dyRange();
+    const cap = document.createElement('p'); cap.className = 'dy-sub'; cap.style.gridColumn = '1 / -1';
+    cap.textContent = R.label + '：' + list.length + ' 单，销售额 ' + F.usd(d3.sum(list, (o) => o.amount)) + '，其中 ' + list.filter((o) => o.spus.length > 1).length + ' 单为多商品组合。';
+    el.append(cap);
+    if (!list.length) return;
+    const tally = (which) => {
+      const m = new Map();
+      for (const o of list) {
+        const p = pathsOf(o.id);
+        const t = p.length ? (which === 'first' ? p[0] : p[p.length - 1]) : null;
+        const k = t ? t.channel_group : 'Direct（无触点记录）';
+        m.set(k, (m.get(k) || 0) + 1);
+      }
+      return [...m].sort((a, b) => b[1] - a[1]);
+    };
+    for (const [title, which] of [['首次触点（谁带来的）', 'first'], ['最后触点（谁促成的）', 'last']]) {
+      const box = document.createElement('div'); box.className = 'dy-hbar';
+      const h = document.createElement('h4'); h.textContent = title; box.append(h);
+      const t = tally(which); const max = d3.max(t, (d) => d[1]);
+      for (const [g, v] of t) {
+        const a = document.createElement('span'); a.textContent = g;
+        const b = document.createElement('div'); const bar = document.createElement('div'); bar.className = 'bar'; bar.style.width = (v / max * 100) + '%'; bar.style.background = window.dyGroupColor(g); b.append(bar);
+        const c = document.createElement('span'); c.className = 'dy-muted'; c.textContent = v + ' 单';
+        box.append(a, b, c);
+      }
+      el.append(box);
+    }
+  });
+
+  dash.draw('order-list', (el) => {
+    el.replaceChildren();
+    const list = orderWindow();
+    if (!list) { const p = document.createElement('p'); p.className = 'dy-empty'; p.textContent = dash.data('orders').status === 'loading' ? '加载中…' : '—'; el.append(p); return; }
+    if (!list.length) { const p = document.createElement('p'); p.className = 'dy-empty'; p.textContent = window.dyRange().win === 1 ? '当天没有相关订单。可切换到“近 7 天”或“全周期”查看。' : '该区间内没有相关订单。'; el.append(p); return; }
+    for (const o of list) {
+      const card = document.createElement('article'); card.className = 'dy-order';
+      const top = document.createElement('div'); top.className = 'dy-order-top';
+      const nm = document.createElement('span'); nm.className = 'dy-order-name'; nm.textContent = o.name;
+      const dt = document.createElement('span'); dt.className = 'dy-muted'; dt.textContent = o.date;
+      top.append(nm, dt);
+      for (const l of o.lines) {
+        const c = document.createElement('span'); c.className = 'dy-chip' + (l.gift === '1' ? ' is-gift' : '');
+        c.textContent = l.item + (n(l.quantity) > 1 ? ' ×' + l.quantity : '') + (l.gift === '1' ? '（赠品）' : '') + (l.refunded === '1' ? '（已退款）' : '');
+        top.append(c);
+      }
+      if (o.spus.length > 1) { const c = document.createElement('span'); c.className = 'dy-chip is-bundle'; c.textContent = '组合'; top.append(c); }
+      const amt = document.createElement('span'); amt.className = 'dy-order-amt'; amt.textContent = F.usd(o.amount); top.append(amt);
+      card.append(top);
+      const p = pathsOf(o.id);
+      const path = document.createElement('div'); path.className = 'dy-path';
+      if (!p.length) { const s = document.createElement('span'); s.className = 'dy-muted'; s.textContent = '无触点记录（直接访问或未被追踪）'; path.append(s); }
+      const shown = p.length > 9 ? [...p.slice(0, 4), null, ...p.slice(-4)] : p;
+      shown.forEach((t, i) => {
+        if (i) { const a = document.createElement('span'); a.className = 'dy-arrow'; a.textContent = '›'; path.append(a); }
+        if (!t) { const s = document.createElement('span'); s.className = 'dy-muted'; s.textContent = '中间另有 ' + (p.length - 8) + ' 步'; path.append(s); return; }
+        const s = document.createElement('span'); s.className = 'dy-step' + (n(t.step) === 1 || n(t.step) === p.length ? ' is-end' : '');
+        const dot = document.createElement('i'); dot.style.background = window.dyGroupColor(t.channel_group);
+        const lab = document.createElement('span');
+        lab.textContent = t.channel + (t.campaign_name ? ' · ' + short(t.campaign_name) : '') + (n(t.clicks) > 1 ? ' ×' + t.clicks : '');
+        s.title = t.time + '｜' + t.channel + (t.campaign_name ? '｜' + t.campaign_name : '') + (t.ad_name ? '｜' + t.ad_name : '') + (t.landing_page ? '｜' + t.landing_page : '');
+        s.append(dot, lab); path.append(s);
+      });
+      card.append(path);
+      const meta = [];
+      if (p.length) meta.push('首次触点 ' + p[0].time.slice(0, 10) + '，共 ' + p.length + ' 步');
+      if (o.survey) meta.push('下单问卷：' + o.survey);
+      if (meta.length) { const m = document.createElement('div'); m.className = 'dy-note'; m.textContent = meta.join('；'); card.append(m); }
+      el.append(card);
+    }
+  });
+})();
+</script>
+
+<script>
+(function () {
+  const F = window.dyFmt;
+  const ITEMS = ['P16', 'P15', 'P17', 'P18', '地垫套装'];
+  dash.draw('trend-legend', (el) => {
+    el.replaceChildren();
+    for (const s of ITEMS) { const sp = document.createElement('span'); const i = document.createElement('i'); i.style.background = window.dySpuColor(s); sp.append(i, document.createTextNode(window.dyNames[s])); el.append(sp); }
+  });
+  const stackChart = (field, fmt, ma) => (el) => {
+    const rows = window.dyRows(); const end = window.dyDate();
+    el.replaceChildren();
+    if (!rows || !end) { el.textContent = dash.data('daily_spu').status === 'error' ? '加载失败' : '—'; return; }
+    const sel = window.dyState.spu;
+    const show = sel === '全部' ? ITEMS : [sel];
+    const dates = []; for (let i = 29; i >= 0; i--) dates.push(window.dyShift(end, -i));
+    const idx = new Map(rows.map((r) => [r.spu + '|' + r.date, r]));
+    const data = dates.map((d) => { const o = { date: d }; for (const s of show) o[s] = idx.get(s + '|' + d)?.[field] || 0; o.total = d3.sum(show, (s) => o[s]); return o; });
+    const stack = d3.stack().keys(show)(data);
+    const W = el.clientWidth || 480, H = 240, m = { t: 10, r: 10, b: 24, l: 10 };
+    const yMax = d3.max(data, (d) => d.total) || 1;
+    const y = d3.scaleLinear().domain([0, yMax]).nice().range([H - m.b, m.t]);
+    const svg = d3.select(el).append('svg').attr('width', '100%').attr('height', H).attr('viewBox', `0 0 ${W} ${H}`).attr('role', 'img').attr('aria-label', '近 30 天每日' + (field === 'net_sales' ? '销售额' : '销量'));
+    const gy = svg.append('g').call(d3.axisLeft(y).ticks(4).tickSize(0).tickFormat(fmt));
+    const wy = d3.max(gy.selectAll('text').nodes(), (t) => t.getComputedTextLength()) || 0;
+    m.l = wy + 10; gy.attr('transform', `translate(${m.l - 4},0)`); gy.select('.domain').remove();
+    const x = d3.scaleBand().domain(dates).range([m.l, W - m.r]).padding(0.2);
+    svg.insert('g', ':first-child').selectAll('line').data(y.ticks(4)).join('line').attr('x1', m.l).attr('x2', W - m.r).attr('y1', (d) => y(d)).attr('y2', (d) => y(d)).style('stroke', 'var(--cds-chart-grid)');
+    const step = Math.ceil(dates.length / Math.max(2, Math.floor((W - m.l) / 56)));
+    svg.append('g').attr('transform', `translate(0,${H - m.b})`).call(d3.axisBottom(x).tickValues(dates.filter((d, i) => (dates.length - 1 - i) % step === 0)).tickSize(0).tickPadding(6).tickFormat((d) => d.slice(5))).select('.domain').style('stroke', 'var(--cds-chart-axis)');
+    svg.append('g').selectAll('g').data(stack).join('g').style('fill', (s) => window.dySpuColor(s.key))
+      .selectAll('rect').data((s) => s).join('rect').attr('x', (d) => x(d.data.date)).attr('width', x.bandwidth()).attr('y', (d) => y(d[1])).attr('height', (d) => Math.max(0, y(d[0]) - y(d[1])));
+    svg.append('rect').attr('x', x(end) - 2).attr('width', x.bandwidth() + 4).attr('y', m.t).attr('height', H - m.b - m.t).attr('fill', 'none').style('stroke', 'var(--cds-chart-reference)').attr('stroke-dasharray', '3 3');
+    if (ma) {
+      const all = dates.map((d) => { const o = { date: d }; const vals = []; for (let i = 0; i < 7; i++) { const dd = window.dyShift(d, -i); vals.push(d3.sum(show, (s) => idx.get(s + '|' + dd)?.[field] || 0)); } o.ma = d3.mean(vals); return o; });
+      svg.append('path').attr('d', d3.line().x((d) => x(d.date) + x.bandwidth() / 2).y((d) => y(d.ma))(all)).attr('fill', 'none').style('stroke', 'var(--color-fg)').attr('stroke-width', 1.5);
+    }
+    const tip = d3.select(el).append('div').attr('class', 'dy-tip').attr('hidden', '');
+    svg.append('g').selectAll('rect').data(data).join('rect').attr('x', (d) => x(d.date)).attr('width', x.bandwidth()).attr('y', m.t).attr('height', H - m.b - m.t).attr('fill', 'transparent')
+      .on('pointerenter pointermove', (ev, d) => {
+        tip.attr('hidden', null).html('');
+        tip.append('div').append('b').text(d.date + '　' + fmt(d.total));
+        for (const s of show) if (d[s]) { const r = tip.append('div').attr('class', 'row'); r.append('span').text(window.dyNames[s]); r.append('span').text(fmt(d[s])); }
+        const [px, py] = d3.pointer(ev, el); const tw = tip.node().offsetWidth;
+        tip.style('left', Math.min(px + 12, el.clientWidth - tw - 4) + 'px').style('top', Math.max(0, py - 40) + 'px');
+      })
+      .on('pointerleave', () => tip.attr('hidden', ''));
+  };
+  dash.draw('trend-sales', stackChart('net_sales', (v) => (v >= 1000 ? d3.format('$,.2~s')(v).replace('k', 'K') : d3.format('$,.0f')(v)), true));
+  dash.draw('trend-units', stackChart('units', d3.format(',.0f'), false));
+})();
+</script>

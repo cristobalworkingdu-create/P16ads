@@ -1,0 +1,1705 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>无氧系列日报</title>
+<meta name="description" content="MERACH 美国站无氧系列（P15–P18）与地垫套装日报：当日销售、按商品事件漏斗、订单归因路径与 30 天走势。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Serif+SC:wght@400;600&display=swap">
+<style>
+:root {
+  color-scheme: light;
+  --color-bg: #f6f7f9;
+  --color-panel: #ffffff;
+  --color-fg: #16191f;
+  --color-fg-muted: #5d6573;
+  --color-border-line: #e1e4ea;
+  --color-ok: #1f8a5b;
+  --color-warn: #b7791f;
+  --color-bad: #c0392b;
+  --c1: #2f5bea; --c2: #e0802b; --c3: #1f9e89; --c4: #9b59b6; --c5: #8a94a6;
+  --font-anthropic-sans: "Inter", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", system-ui, sans-serif;
+  --font-anthropic-serif: "Noto Serif SC", "Songti SC", Georgia, serif;
+  --cds-font-size-caption: 12px; --cds-font-size-body: 14px; --cds-font-size-heading: 18px; --cds-font-size-title: 28px;
+  --cds-font-weight-medium: 600;
+  --cds-gap-xs: 4px; --cds-gap-sm: 8px; --cds-gap-md: 12px; --cds-gap-lg: 20px; --cds-gap-xl: 36px;
+  --cds-pad-xs: 4px; --cds-pad-sm: 8px; --cds-pad-md: 12px; --cds-pad-lg: 18px; --cds-pad-xl: 28px;
+  --cds-radius: 10px;
+  --cds-chart-grid: #eceef2; --cds-chart-axis: #c7ccd5; --cds-chart-muted: #b8bfcb; --cds-chart-reference: #8a94a6;
+  --cds-text-secondary: #5d6573;
+  --cds-surface-popover: #ffffff; --cds-border: #dfe3ea; --cds-shadow-popover: 0 8px 24px rgba(20, 25, 35, .14);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --color-bg: #111318; --color-panel: #1a1d24; --color-fg: #eceff4; --color-fg-muted: #a3abb9; --color-border-line: #2c313b;
+    --color-ok: #4cc38a; --color-warn: #e0a84a; --color-bad: #ef6b5b;
+    --c1: #6e8ffb; --c2: #f0a057; --c3: #45c4ad; --c4: #bb86d6; --c5: #8f99ab;
+    --cds-chart-grid: #262a33; --cds-chart-axis: #3a404c; --cds-chart-muted: #5a6272; --cds-chart-reference: #8f99ab;
+    --cds-text-secondary: #a3abb9; --cds-surface-popover: #222630; --cds-border: #353b47; --cds-shadow-popover: 0 8px 24px rgba(0, 0, 0, .45);
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --color-bg: #111318; --color-panel: #1a1d24; --color-fg: #eceff4; --color-fg-muted: #a3abb9; --color-border-line: #2c313b;
+  --color-ok: #4cc38a; --color-warn: #e0a84a; --color-bad: #ef6b5b;
+  --c1: #6e8ffb; --c2: #f0a057; --c3: #45c4ad; --c4: #bb86d6; --c5: #8f99ab;
+  --cds-chart-grid: #262a33; --cds-chart-axis: #3a404c; --cds-chart-muted: #5a6272; --cds-chart-reference: #8f99ab;
+  --cds-text-secondary: #a3abb9; --cds-surface-popover: #222630; --cds-border: #353b47; --cds-shadow-popover: 0 8px 24px rgba(0, 0, 0, .45);
+}
+html, body { margin: 0; background: var(--color-bg); color: var(--color-fg); }
+body { font: 14px/1.5 var(--font-anthropic-sans); -webkit-font-smoothing: antialiased; }
+#dash-root { max-width: 1240px; margin: 0 auto; padding-block: 32px 48px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.dash-select { font: inherit; font-size: 12px; color: var(--color-fg); background-color: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: 8px; padding: 5px 26px 5px 10px; appearance: none;
+  background-image: linear-gradient(45deg, transparent 50%, var(--color-fg-muted) 50%), linear-gradient(135deg, var(--color-fg-muted) 50%, transparent 50%);
+  background-position: calc(100% - 14px) 52%, calc(100% - 9px) 52%; background-size: 5px 5px; background-repeat: no-repeat; }
+.dash-select:focus-visible { outline: 2px solid var(--c1); outline-offset: 1px; }
+.dash-skeleton { color: transparent !important; position: relative; }
+.dash-skeleton::after { content: ""; position: absolute; inset: 20% 0; border-radius: 4px; background: var(--cds-chart-grid); }
+@media (prefers-reduced-motion: no-preference) { .wy-seg, .p16-bar, .p16-step-bar { transition: width .4s ease-out; } }
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+<script>
+/* 独立网页运行层：提供看板页面所需的 dash 接口，数据来自页面内嵌的快照 */
+window.dash = (function () {
+  const sources = {};
+  const calcs = {};
+  const draws = new Map();
+  let booted = false;
+  const colors = ['var(--c1)', 'var(--c2)', 'var(--c3)', 'var(--c4)', 'var(--c5)'];
+  function data(id) {
+    if (Object.prototype.hasOwnProperty.call(sources, id)) return { status: 'ok', data: sources[id], columns: sources[id].columns || [], refreshing: false, meta: [] };
+    if (Object.prototype.hasOwnProperty.call(calcs, id)) {
+      const c = calcs[id];
+      if (!('value' in c)) { try { c.value = c.fn(...c.inputs.map((i) => data(i).data)); } catch (e) { console.error('calc ' + id, e); c.value = []; } }
+      return { status: 'ok', data: c.value, refreshing: false, meta: [] };
+    }
+    return { status: 'missing', data: [], refreshing: false, meta: [] };
+  }
+  function runDraw(name) {
+    const fn = draws.get(name);
+    if (!fn) return;
+    document.querySelectorAll('[data-draw="' + CSS.escape(name) + '"]').forEach((el) => {
+      try { fn(el); } catch (e) { console.error('draw ' + name, e); }
+    });
+  }
+  function draw(name, fn) {
+    if (fn) {
+      draws.set(name, typeof fn === 'function' ? fn : (el) => (fn.update || fn.mount)(el));
+      if (booted) runDraw(name);
+    } else runDraw(name);
+  }
+  function load(id, text) {
+    const rows = d3.csvParse(text.trim(), (r) => { for (const k in r) if (r[k] === '') r[k] = null; return r; });
+    sources[id] = rows;
+  }
+  function boot() {
+    booted = true;
+    for (const name of draws.keys()) runDraw(name);
+    let t = null, w = window.innerWidth;
+    window.addEventListener('resize', () => {
+      if (Math.abs(window.innerWidth - w) < 2) return;
+      w = window.innerWidth;
+      clearTimeout(t);
+      t = setTimeout(() => { for (const name of draws.keys()) runDraw(name); }, 150);
+    });
+  }
+  return {
+    data, draw, colors, load, boot,
+    calc: (id, o) => { calcs[id] = o; },
+    loader: () => {}, onData: (fn) => fn(), refresh: () => {},
+    params: () => ({}), setParams: () => {}, resetParams: () => {}, setLink: () => {},
+  };
+})();
+</script>
+</head>
+<body>
+<div id="dash-root">
+<script type="text/csv" id="csv-sales">
+date,spu,item,sku,orders,units,net_sales
+2026-11-01,P16,P16 Elite,MR-P16B3-US-DLZ01,1,1,2610.0
+2026-11-02,P16,P16 Elite,MR-P16B3-US-DLZ01,1,1,2813.0
+2026-11-02,P18,P18 训练凳,MR-P18B1-US-DLZ01,1,1,313.5
+2026-11-03,P16,P16 Elite,MR-P16B3-US-DLZ01,1,1,2699.99
+2026-11-04,P18,P18 训练凳,MR-P18B1-US-DLZ01,1,1,329.99
+2026-11-06,P16,P16 Elite,MR-P16B3-US-DLZ01,1,1,2899.99
+2026-11-06,P18,P18 训练凳,MR-P18B1-US-DLZ01,1,1,329.99
+2026-11-08,P15,P15 杠铃片,MR-P15L5-US-DLZ01,1,1,248.39
+2026-11-08,P16,P16 Pro,MR-P16B2-US-DLZ01,1,1,2116.0
+2026-11-09,P15,P15 杠铃片,MR-P15C-260-US-DLZ01,1,1,671.59
+2026-11-09,P16,P16 Pro,MR-P16B2-US-DLZ01,1,1,2116.0
+2026-11-09,P16,P16 Elite,MR-P16B3-US-DLZ01,3,3,8035.98
+2026-11-09,P18,P18 训练凳,MR-P18B1-US-DLZ01,2,2,633.58
+2026-11-12,P16,P16 Elite,MR-P16B3-US-DLZ01,1,1,2668.0
+2026-11-13,P16,P16 Elite,MR-P16B3-US-DLZ01,1,1,2668.0
+2026-11-13,P18,P18 训练凳,MR-P18B1-US-DLZ01,1,1,303.59
+2026-11-14,P16,P16 Elite,MR-P16B3-US-DLZ01,1,1,2668.0
+2026-11-14,地垫套装,地垫,MR-2603-US-DLZ01,2,25,2076.97
+2026-11-14,地垫套装,收边条,MR-2604-US-DLZ01,1,1,59.99
+2026-11-15,P15,P15 杠铃片,MR-P15YGJ12-US-DLZ01,1,1,73.59
+2026-11-15,P16,P16 Pro,MR-P16B2-US-DLZ01,1,1,2116.0
+2026-11-16,P15,P15 杠铃片,MR-P15YGJ12-US-DLZ01,1,1,73.6
+</script>
+<script type="text/csv" id="csv-funnel">
+date,spu,channel_group,channel,product_views,sessions,atc_sessions,ic_sessions,atc_events,ic_events,sold_attr,sales_attr
+2026-10-21,P16,Affiliate,bixgrow_affiliate,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-10-21,P16,Direct,Direct,44.0,20.0,1.0,1.0,1.0,1.0,0.0,0.0
+2026-10-21,P16,Organic Search,Google Search,5.85,2.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-10-21,P16,Paid Ads,Facebook Ads,23.5,18.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-10-21,P16,Paid Ads,Google Ads,3.65,4.0,1.0,1.0,1.0,1.0,0.0,0.0
+2026-10-22,P16,Affiliate,bixgrow_affiliate,3.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-10-22,P16,Direct,Direct,9.0,8.0,2.0,2.0,2.0,2.0,0.0,0.0
+2026-10-22,P16,Organic Social,Facebook Social,0.05,1.0,1.0,1.0,0.133,0.491,0.0,0.0
+2026-10-22,P16,Paid Ads,Facebook Ads,40.95,39.0,2.0,2.0,1.867,1.509,0.0,0.0
+2026-10-22,P16,Paid Ads,Google Ads,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0
+2026-10-23,P16,Direct,Direct,11.0,11.0,3.0,3.0,3.0,3.0,0.0,0.0
+2026-10-23,P16,Organic Search,Google Search,0.8,1.0,1.0,1.0,0.4,0.4,0.0,0.0
+2026-10-23,P16,Paid Ads,Facebook Ads,57.0,48.0,2.0,0.0,2.0,0.0,0.0,0.0
+2026-10-23,P16,Paid Ads,Google Ads,4.2,2.0,1.0,1.0,0.6,0.6,0.0,0.0
+2026-10-24,P16,Direct,Direct,5.0,5.0,1.0,1.0,1.0,1.0,0.0,0.0
+2026-10-24,P16,Organic Search,Google Search,11.0,3.0,1.0,1.0,1.0,1.0,0.0,0.0
+2026-10-24,P16,Organic Social,Facebook Social,2.5,2.0,0.0,1.0,0.0,0.5,0.0,0.0
+2026-10-24,P16,Paid Ads,Facebook Ads,30.5,28.0,1.0,2.0,1.0,1.5,0.0,0.0
+2026-10-24,P16,Paid Ads,Google Ads,2.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-10-25,P16,Affiliate,bixgrow_affiliate,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-10-25,P16,Direct,Direct,7.0,7.0,2.0,2.0,2.0,2.0,0.0,0.0
+2026-10-25,P16,Organic Search,Google Search,5.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-10-25,P16,Paid Ads,Facebook Ads,27.0,22.0,3.0,3.0,3.0,3.0,0.0,0.0
+2026-10-26,P16,Affiliate,bixgrow_affiliate,0.0,0.0,1.0,0.0,1.0,0.0,0.0,0.0
+2026-10-26,P16,Direct,Direct,8.0,7.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-10-26,P16,Organic Social,Facebook Social,0.5,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-10-26,P16,Other Sources,Linktree,5.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-10-26,P16,Paid Ads,Facebook Ads,28.5,20.0,1.0,0.0,1.0,0.0,0.0,0.0
+2026-10-27,P16,Affiliate,Impact,0.0,0.0,1.0,1.0,0.417,0.025,0.0,0.0
+2026-10-27,P16,Direct,Direct,2.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-10-27,P16,Email & SMS,Klaviyo,3.0,2.0,1.0,0.0,0.5,0.0,0.0,0.0
+2026-10-27,P16,Organic Search,Bing Search,0.5,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-10-27,P16,Organic Search,Google Search,12.3,7.0,3.0,3.0,0.955,0.95,0.0,0.0
+2026-10-27,P16,Organic Social,Facebook Social,5.0,2.0,2.0,2.0,1.05,0.925,0.0,0.0
+2026-10-27,P16,Other Sources,KOL,1.2,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-10-27,P16,Paid Ads,Bing Ads,0.5,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-10-27,P16,Paid Ads,Facebook Ads,24.0,20.0,5.0,4.0,2.568,2.184,0.0,0.0
+2026-10-27,P16,Paid Ads,Google Ads,4.5,2.0,2.0,2.0,0.514,0.915,0.0,0.0
+2026-10-28,P16,Affiliate,Impact,0.5,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-10-28,P16,Direct,Direct,8.0,7.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-10-28,P16,Organic Search,DuckDuckGo,2.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-10-28,P16,Organic Search,Google Search,7.9,7.0,2.0,1.0,1.4,0.4,0.0,0.0
+2026-10-28,P16,Other Sources,track123,0.0,0.0,0.0,1.0,0.0,1.0,0.0,0.0
+2026-10-28,P16,Paid Ads,Bing Ads,2.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-10-28,P16,Paid Ads,Facebook Ads,12.5,13.0,1.0,1.0,0.5,0.5,0.0,0.0
+2026-10-28,P16,Paid Ads,Google Ads,7.1,5.0,2.0,1.0,1.1,0.1,0.0,0.0
+2026-10-29,P16,Affiliate,bixgrow_affiliate,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-10-29,P16,Direct,Direct,13.0,7.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-10-29,P16,Email & SMS,Klaviyo,0.9,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-10-29,P16,Organic Search,Google Search,1.5,2.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-10-29,P16,Organic Search,Yahoo Search,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-10-29,P16,Organic Social,Facebook Social,0.5,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-10-29,P16,Other Sources,cristobalworkingdu-create.github.io,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-10-29,P16,Other Sources,eir1tseugu5.feishu.cn,0.0,0.0,1.0,0.0,1.0,0.0,0.0,0.0
+2026-10-29,P16,Other Sources,linkinreach.feishu.cn,0.1,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-10-29,P16,Other Sources,safe.menlosecurity.com,3.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-10-29,P16,Paid Ads,Facebook Ads,21.5,11.0,0.0,1.0,0.0,1.0,0.0,0.0
+2026-10-29,P16,Paid Ads,Google Ads,1.5,2.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-10-30,P16,Affiliate,Impact,6.5,3.0,3.0,1.0,0.644,0.45,0.0,0.0
+2026-10-30,P16,Direct,Direct,55.0,31.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-10-30,P16,Email & SMS,Klaviyo,9.9,3.0,3.0,0.0,1.96,0.0,0.0,0.0
+2026-10-30,P16,Organic Search,DuckDuckGo,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-10-30,P16,Organic Search,Google Search,11.0,7.0,2.0,0.0,0.433,0.0,0.0,0.0
+2026-10-30,P16,Organic Social,Facebook Social,11.5,8.0,1.0,0.0,1.0,0.0,0.0,0.0
+2026-10-30,P16,Organic Social,Other Social,0.0,0.0,1.0,0.0,0.1,0.0,0.0,0.0
+2026-10-30,P16,Other Sources,cristobalworkingdu-create.github.io,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-10-30,P16,Other Sources,klarna,2.0,1.0,0.0,1.0,0.0,0.4,0.0,0.0
+2026-10-30,P16,Paid Ads,Bing Ads,7.7,5.0,1.0,0.0,0.4,0.0,0.0,0.0
+2026-10-30,P16,Paid Ads,Facebook Ads,131.9,66.0,19.0,8.0,18.196,7.15,0.0,0.0
+2026-10-30,P16,Paid Ads,Google Ads,10.5,6.0,3.0,1.0,2.267,1.0,0.0,0.0
+2026-10-31,P15,Direct,Direct,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-10-31,P16,AI Assistant,chatgpt.com,2.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-10-31,P16,Affiliate,Impact,0.0,0.0,4.0,4.0,0.901,0.496,0.0,0.0
+2026-10-31,P16,Direct,Direct,44.0,24.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-10-31,P16,Email & SMS,Klaviyo,16.0,4.0,4.0,2.0,1.819,0.486,0.0,0.0
+2026-10-31,P16,Organic Search,Google Search,14.0,7.0,4.0,3.0,0.343,1.046,0.0,0.0
+2026-10-31,P16,Organic Social,Facebook Social,5.0,3.0,1.0,1.0,1.0,1.0,0.0,0.0
+2026-10-31,P16,Other Sources,track123,3.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-10-31,P16,Paid Ads,Bing Ads,0.0,0.0,1.0,1.0,0.014,0.014,0.0,0.0
+2026-10-31,P16,Paid Ads,Facebook Ads,154.0,89.0,15.0,13.0,15.401,11.445,0.0,0.0
+2026-10-31,P16,Paid Ads,Google Ads,19.0,6.0,4.0,4.0,0.524,1.513,0.0,0.0
+2026-10-31,P16,Review & Loyalty,Judgeme,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-01,P15,Affiliate,Impact,1.0,1.0,1.0,2.0,0.01,0.09,0.0,0.0
+2026-11-01,P15,Direct,Direct,148.0,50.0,1.0,0.0,2.0,0.0,0.0,0.0
+2026-11-01,P15,Email & SMS,Klaviyo,0.0,0.0,2.0,1.0,0.586,0.086,0.0,0.0
+2026-11-01,P15,Organic Search,Brave Search,0.0,0.0,1.0,1.0,2.0,1.0,0.0,0.0
+2026-11-01,P15,Organic Search,Google Search,4.0,2.0,3.0,2.0,0.113,0.918,0.0,0.0
+2026-11-01,P15,Organic Social,Facebook Social,0.0,0.0,2.0,0.0,0.975,0.0,0.0,0.0
+2026-11-01,P15,Other Sources,flex_shop,4.0,1.0,1.0,0.0,1.0,0.0,0.0,0.0
+2026-11-01,P15,Other Sources,social,0.0,0.0,1.0,0.0,0.025,0.0,0.0,0.0
+2026-11-01,P15,Paid Ads,Facebook Ads,19.0,14.0,8.0,4.0,6.808,3.873,0.0,0.0
+2026-11-01,P15,Paid Ads,Google Ads,15.0,4.0,5.0,2.0,3.484,1.033,0.0,0.0
+2026-11-01,P16,AI Assistant,chatgpt.com,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-01,P16,Affiliate,Impact,8.1,6.0,6.0,6.0,2.475,0.73,0.009,25.22
+2026-11-01,P16,Affiliate,bixgrow_affiliate,7.0,5.0,1.0,0.0,0.412,0.0,0.0,0.0
+2026-11-01,P16,Direct,Direct,382.0,104.0,5.0,2.0,6.0,2.0,0.0,0.0
+2026-11-01,P16,Email & SMS,Klaviyo,18.5,12.0,11.0,4.0,2.886,0.752,0.474,1374.34
+2026-11-01,P16,Organic Search,Bing Search,0.0,0.0,2.0,0.0,0.412,0.0,0.0,0.0
+2026-11-01,P16,Organic Search,Google Search,41.48,16.0,10.0,5.0,3.249,1.421,0.035,100.87
+2026-11-01,P16,Organic Social,Facebook Social,15.32,11.0,4.0,1.0,2.04,0.4,0.0,0.0
+2026-11-01,P16,Organic Social,Other Social,10.0,6.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-01,P16,Organic Social,Reddit Social,10.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-01,P16,Organic Social,YouTube Social,3.0,2.0,1.0,1.0,0.56,0.029,0.0,0.0
+2026-11-01,P16,Other Sources,DC261002-01,0.0,0.0,1.0,0.0,0.024,0.0,0.0,0.0
+2026-11-01,P16,Other Sources,HP250602-02,0.0,0.0,1.0,0.0,0.012,0.0,0.0,0.0
+2026-11-01,P16,Other Sources,KOL,6.5,1.0,1.0,1.0,0.047,0.5,0.0,0.0
+2026-11-01,P16,Other Sources,Linktree,1.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-01,P16,Other Sources,app.freegifts.io,1.0,1.0,1.0,0.0,0.012,0.0,0.0,0.0
+2026-11-01,P16,Other Sources,cristobalworkingdu-create.github.io,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-01,P16,Other Sources,eir1tseugu5.feishu.cn,7.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-01,P16,Other Sources,flex_shop,2.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-01,P16,Other Sources,gmail,0.0,0.0,1.0,0.0,0.017,0.0,0.0,0.0
+2026-11-01,P16,Other Sources,merachfit.de,0.0,0.0,1.0,0.0,0.012,0.0,0.0,0.0
+2026-11-01,P16,Other Sources,merachfit.eu,0.0,0.0,1.0,0.0,0.412,0.0,0.0,0.0
+2026-11-01,P16,Other Sources,track123,0.0,0.0,1.0,0.0,0.046,0.0,0.0,0.0
+2026-11-01,P16,Paid Ads,Bing Ads,7.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-01,P16,Paid Ads,Facebook Ads,479.7,292.0,27.0,13.0,22.634,12.757,0.452,1311.3
+2026-11-01,P16,Paid Ads,Google Ads,47.4,21.0,14.0,6.0,5.356,3.411,0.03,88.26
+2026-11-01,P16,Review & Loyalty,Judgeme,0.0,0.0,1.0,0.0,0.4,0.0,0.0,0.0
+2026-11-01,P17,Direct,Direct,9.0,8.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-01,P17,Organic Search,Google Search,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-01,P17,Organic Social,Facebook Social,0.5,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-01,P17,Paid Ads,Facebook Ads,2.0,2.0,1.0,0.0,1.0,0.0,0.0,0.0
+2026-11-01,P17,Paid Ads,Google Ads,0.5,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-01,P18,Affiliate,Impact,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-01,P18,Affiliate,bixgrow_affiliate,2.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-01,P18,Direct,Direct,19.0,17.0,2.0,2.0,2.0,2.0,0.0,0.0
+2026-11-01,P18,Organic Search,Google Search,4.4,4.0,1.0,0.0,0.02,0.0,0.0,0.0
+2026-11-01,P18,Organic Social,Facebook Social,2.0,2.0,1.0,0.0,0.42,0.0,0.0,0.0
+2026-11-01,P18,Other Sources,flex_shop,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-01,P18,Paid Ads,Facebook Ads,10.0,10.0,1.0,0.0,0.56,0.0,0.0,0.0
+2026-11-01,P18,Paid Ads,Google Ads,4.6,5.0,1.0,0.0,1.0,0.0,0.0,0.0
+2026-11-01,地垫套装,Direct,Direct,60.0,19.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-01,地垫套装,Email & SMS,Klaviyo,2.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-01,地垫套装,Organic Search,Google Search,4.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-01,地垫套装,Organic Social,Facebook Social,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-01,地垫套装,Paid Ads,Facebook Ads,13.0,9.0,1.0,0.0,2.0,0.0,0.0,0.0
+2026-11-01,地垫套装,Paid Ads,Google Ads,12.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-02,P15,AI Assistant,chatgpt.com,0.0,0.0,1.0,1.0,1.0,0.85,0.0,0.0
+2026-11-02,P15,Affiliate,Impact,0.0,0.0,1.0,0.0,0.015,0.0,0.0,0.0
+2026-11-02,P15,Affiliate,bixgrow_affiliate,1.0,1.0,5.0,1.0,2.052,0.411,0.0,0.0
+2026-11-02,P15,Direct,Direct,44.0,24.0,7.0,5.0,7.0,5.0,0.0,0.0
+2026-11-02,P15,Email & SMS,Klaviyo,14.0,6.0,5.0,2.0,1.564,1.48,0.6,0.0
+2026-11-02,P15,Organic Search,Bing Search,0.0,0.0,5.0,1.0,0.052,0.011,0.0,0.0
+2026-11-02,P15,Organic Search,Google Search,12.0,3.0,9.0,2.0,1.123,0.082,0.0,0.0
+2026-11-02,P15,Organic Social,Facebook Social,0.0,0.0,1.0,3.0,0.467,0.979,0.0,0.0
+2026-11-02,P15,Organic Social,Other Social,0.0,0.0,5.0,1.0,1.61,0.4,0.0,0.0
+2026-11-02,P15,Organic Social,YouTube Social,0.0,0.0,1.0,0.0,0.56,0.0,0.0,0.0
+2026-11-02,P15,Other Sources,DC261002-01,0.0,0.0,5.0,1.0,0.104,0.021,0.0,0.0
+2026-11-02,P15,Other Sources,HP250602-02,0.0,0.0,5.0,1.0,0.052,0.011,0.0,0.0
+2026-11-02,P15,Other Sources,KOL,0.0,0.0,5.0,1.0,0.26,0.053,0.0,0.0
+2026-11-02,P15,Other Sources,app.freegifts.io,0.0,0.0,5.0,1.0,0.052,0.011,0.0,0.0
+2026-11-02,P15,Other Sources,linkinreach.feishu.cn,2.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-02,P15,Other Sources,merachfit.de,0.0,0.0,5.0,1.0,0.052,0.011,0.0,0.0
+2026-11-02,P15,Other Sources,merachfit.eu,0.0,0.0,5.0,1.0,0.104,0.021,0.0,0.0
+2026-11-02,P15,Other Sources,tenociglobal.feishu.cn,0.0,0.0,0.0,1.0,0.0,0.038,0.0,0.0
+2026-11-02,P15,Other Sources,track123,0.0,0.0,1.0,0.0,0.4,0.0,0.0,0.0
+2026-11-02,P15,Paid Ads,Bing Ads,0.0,0.0,1.0,0.0,0.2,0.0,0.0,0.0
+2026-11-02,P15,Paid Ads,Facebook Ads,37.0,23.0,7.0,4.0,6.348,3.133,0.4,0.0
+2026-11-02,P15,Paid Ads,Google Ads,16.0,8.0,12.0,4.0,3.984,2.491,2.0,0.0
+2026-11-02,P16,AI Assistant,chatgpt.com,6.0,4.0,2.0,1.0,2.0,0.85,0.0,0.0
+2026-11-02,P16,Affiliate,Impact,2.4,4.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-02,P16,Affiliate,bixgrow_affiliate,5.0,4.0,5.0,2.0,3.863,0.821,0.0,0.0
+2026-11-02,P16,Direct,Direct,236.0,116.0,8.0,2.0,8.0,2.0,0.0,0.0
+2026-11-02,P16,Email & SMS,Klaviyo,25.9,8.0,6.0,3.0,3.435,2.369,0.6,1687.8
+2026-11-02,P16,Organic Search,Bing Search,0.0,0.0,3.0,2.0,0.063,0.021,0.0,0.0
+2026-11-02,P16,Organic Search,Google Search,31.0,17.0,9.0,4.0,2.385,0.169,0.0,0.0
+2026-11-02,P16,Organic Social,Facebook Social,9.0,3.0,1.0,2.0,0.5,0.546,0.0,0.0
+2026-11-02,P16,Organic Social,Instagram Social,3.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-02,P16,Organic Social,Other Social,5.9,4.0,3.0,2.0,2.4,0.8,0.0,0.0
+2026-11-02,P16,Other Sources,DC261002-01,0.0,0.0,3.0,2.0,0.126,0.042,0.0,0.0
+2026-11-02,P16,Other Sources,HP250602-02,0.0,0.0,3.0,2.0,0.063,0.021,0.0,0.0
+2026-11-02,P16,Other Sources,KOL,0.0,0.0,3.0,2.0,0.315,0.105,0.0,0.0
+2026-11-02,P16,Other Sources,app.freegifts.io,1.0,1.0,3.0,2.0,0.063,0.021,0.0,0.0
+2026-11-02,P16,Other Sources,eir1tseugu5.feishu.cn,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-02,P16,Other Sources,gmail,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-02,P16,Other Sources,linkinreach.feishu.cn,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-02,P16,Other Sources,merach.feishu.cn,3.1,2.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-02,P16,Other Sources,merachfit.de,0.0,0.0,3.0,2.0,0.063,0.021,0.0,0.0
+2026-11-02,P16,Other Sources,merachfit.eu,0.0,0.0,3.0,2.0,0.126,0.042,0.0,0.0
+2026-11-02,P16,Other Sources,tenociglobal.feishu.cn,0.0,0.0,0.0,1.0,0.0,0.038,0.0,0.0
+2026-11-02,P16,Other Sources,track123,0.0,0.0,1.0,0.0,0.4,0.0,0.0,0.0
+2026-11-02,P16,Paid Ads,Bing Ads,4.5,3.0,1.0,0.0,0.2,0.0,0.0,0.0
+2026-11-02,P16,Paid Ads,Facebook Ads,300.2,181.0,17.0,8.0,15.108,9.538,0.4,1125.2
+2026-11-02,P16,Paid Ads,Google Ads,207.0,149.0,18.0,8.0,10.887,4.596,0.0,0.0
+2026-11-02,P18,Affiliate,bixgrow_affiliate,0.0,0.0,2.0,0.0,0.821,0.0,0.0,0.0
+2026-11-02,P18,Direct,Direct,37.0,30.0,2.0,0.0,2.0,0.0,0.0,0.0
+2026-11-02,P18,Email & SMS,Klaviyo,1.0,1.0,0.0,1.0,0.0,1.0,0.6,197.99
+2026-11-02,P18,Organic Search,Bing Search,0.0,0.0,2.0,0.0,0.021,0.0,0.0,0.0
+2026-11-02,P18,Organic Search,Google Search,4.5,4.0,3.0,0.0,0.882,0.0,0.0,0.0
+2026-11-02,P18,Organic Social,Facebook Social,2.0,2.0,1.0,1.0,0.467,0.433,0.0,0.0
+2026-11-02,P18,Organic Social,Other Social,0.0,0.0,2.0,0.0,0.41,0.0,0.0,0.0
+2026-11-02,P18,Other Sources,DC261002-01,0.0,0.0,2.0,0.0,0.041,0.0,0.0,0.0
+2026-11-02,P18,Other Sources,HP250602-02,0.0,0.0,2.0,0.0,0.021,0.0,0.0,0.0
+2026-11-02,P18,Other Sources,KOL,0.0,0.0,2.0,0.0,0.102,0.0,0.0,0.0
+2026-11-02,P18,Other Sources,app.freegifts.io,0.0,0.0,2.0,0.0,0.021,0.0,0.0,0.0
+2026-11-02,P18,Other Sources,linkinreach.feishu.cn,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-02,P18,Other Sources,merachfit.de,0.0,0.0,2.0,0.0,0.021,0.0,0.0,0.0
+2026-11-02,P18,Other Sources,merachfit.eu,0.0,0.0,2.0,0.0,0.041,0.0,0.0,0.0
+2026-11-02,P18,Paid Ads,Facebook Ads,4.0,4.0,5.0,2.0,3.933,1.567,0.4,132.0
+2026-11-02,P18,Paid Ads,Google Ads,2.5,3.0,4.0,0.0,1.221,0.0,0.0,0.0
+2026-11-02,地垫套装,AI Assistant,chatgpt.com,3.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0
+2026-11-02,地垫套装,Affiliate,bixgrow_affiliate,0.0,0.0,1.0,0.0,0.411,0.0,0.0,0.0
+2026-11-02,地垫套装,Direct,Direct,21.0,9.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-02,地垫套装,Email & SMS,Klaviyo,5.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-02,地垫套装,Organic Search,Bing Search,0.0,0.0,1.0,0.0,0.011,0.0,0.0,0.0
+2026-11-02,地垫套装,Organic Search,Google Search,2.6,3.0,1.0,0.0,0.042,0.0,0.0,0.0
+2026-11-02,地垫套装,Organic Social,Other Social,0.0,0.0,1.0,0.0,0.4,0.0,0.0,0.0
+2026-11-02,地垫套装,Other Sources,DC261002-01,0.0,0.0,1.0,0.0,0.021,0.0,0.0,0.0
+2026-11-02,地垫套装,Other Sources,HP250602-02,0.0,0.0,1.0,0.0,0.011,0.0,0.0,0.0
+2026-11-02,地垫套装,Other Sources,KOL,0.0,0.0,1.0,0.0,0.053,0.0,0.0,0.0
+2026-11-02,地垫套装,Other Sources,app.freegifts.io,0.0,0.0,1.0,0.0,0.011,0.0,0.0,0.0
+2026-11-02,地垫套装,Other Sources,facebook-FeaturedOfferings,0.07,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-02,地垫套装,Other Sources,linkinreach.feishu.cn,4.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-02,地垫套装,Other Sources,merachfit.de,0.0,0.0,1.0,0.0,0.011,0.0,0.0,0.0
+2026-11-02,地垫套装,Other Sources,merachfit.eu,0.0,0.0,1.0,0.0,0.021,0.0,0.0,0.0
+2026-11-02,地垫套装,Paid Ads,Facebook Ads,7.93,5.0,0.0,1.0,0.0,1.0,0.0,0.0
+2026-11-02,地垫套装,Paid Ads,Google Ads,0.4,1.0,1.0,0.0,0.011,0.0,0.0,0.0
+2026-11-03,P15,Affiliate,Impact,0.5,1.0,2.0,1.0,0.05,0.04,0.0,0.0
+2026-11-03,P15,Affiliate,bixgrow_affiliate,10.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-03,P15,Direct,Direct,14.0,11.0,1.0,1.0,1.0,1.0,0.0,0.0
+2026-11-03,P15,Email & SMS,Klaviyo,13.5,10.0,3.0,3.0,1.52,1.406,0.0,0.0
+2026-11-03,P15,Organic Search,Google Search,5.0,4.0,2.0,1.0,0.035,0.02,0.0,0.0
+2026-11-03,P15,Organic Social,Facebook Social,1.0,1.0,3.0,2.0,1.072,1.033,1.067,21.32
+2026-11-03,P15,Other Sources,gmail,12.0,2.0,1.0,1.0,0.8,0.8,0.0,0.0
+2026-11-03,P15,Other Sources,linkinreach.feishu.cn,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-03,P15,Other Sources,merachfit.eu,0.0,0.0,0.0,1.0,0.0,0.514,0.0,0.0
+2026-11-03,P15,Other Sources,track123,1.0,1.0,2.0,2.0,0.8,0.82,0.8,15.99
+2026-11-03,P15,Paid Ads,Bing Ads,0.0,0.0,3.0,3.0,1.067,1.073,1.067,1.33
+2026-11-03,P15,Paid Ads,Facebook Ads,42.0,22.0,7.0,2.0,5.944,2.0,0.0,0.0
+2026-11-03,P15,Paid Ads,Google Ads,8.0,2.0,6.0,5.0,1.712,1.293,0.067,1.33
+2026-11-03,P16,AI Assistant,chatgpt.com,2.0,2.0,1.0,1.0,1.0,0.057,0.0,0.0
+2026-11-03,P16,Affiliate,Impact,5.9,4.0,4.0,2.0,0.87,0.033,0.0,0.0
+2026-11-03,P16,Affiliate,bixgrow_affiliate,4.0,3.0,2.0,1.0,0.419,0.4,0.0,0.0
+2026-11-03,P16,Direct,Direct,166.0,103.0,4.0,3.0,4.0,3.0,0.0,0.0
+2026-11-03,P16,Email & SMS,Klaviyo,110.0,74.0,6.0,3.0,5.121,3.28,0.0,0.0
+2026-11-03,P16,Organic Search,Bing Search,1.0,1.0,1.0,0.0,0.418,0.0,0.0,0.0
+2026-11-03,P16,Organic Search,Google Search,22.0,14.0,6.0,2.0,2.064,0.06,0.0,0.0
+2026-11-03,P16,Organic Social,Facebook Social,18.5,15.0,1.0,1.0,0.5,0.5,0.0,0.0
+2026-11-03,P16,Organic Social,Other Social,0.0,0.0,1.0,0.0,0.009,0.0,0.0,0.0
+2026-11-03,P16,Other Sources,DC261002-01,0.0,0.0,1.0,0.0,0.018,0.0,0.0,0.0
+2026-11-03,P16,Other Sources,HP250602-02,0.0,0.0,1.0,0.0,0.009,0.0,0.0,0.0
+2026-11-03,P16,Other Sources,KOL,0.0,0.0,1.0,0.0,0.045,0.0,0.0,0.0
+2026-11-03,P16,Other Sources,OC260410,0.0,0.0,1.0,0.0,1.0,0.0,0.0,0.0
+2026-11-03,P16,Other Sources,app.freegifts.io,0.0,0.0,1.0,0.0,0.009,0.0,0.0,0.0
+2026-11-03,P16,Other Sources,eir1tseugu5.feishu.cn,2.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-03,P16,Other Sources,gmail,12.0,11.0,0.0,1.0,0.0,0.4,0.0,0.0
+2026-11-03,P16,Other Sources,linkinreach.feishu.cn,2.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-03,P16,Other Sources,merachfit.de,0.0,0.0,1.0,0.0,0.009,0.0,0.0,0.0
+2026-11-03,P16,Other Sources,merachfit.eu,0.0,0.0,1.0,0.0,0.018,0.0,0.0,0.0
+2026-11-03,P16,Other Sources,track123,0.0,0.0,1.0,0.0,0.035,0.0,0.0,0.0
+2026-11-03,P16,Paid Ads,Bing Ads,11.5,7.0,1.0,3.0,1.0,1.514,1.0,2899.99
+2026-11-03,P16,Paid Ads,Facebook Ads,310.5,238.0,11.0,8.0,8.986,7.631,0.0,0.0
+2026-11-03,P16,Paid Ads,Google Ads,263.6,191.0,12.0,7.0,7.067,5.125,0.0,0.0
+2026-11-03,P16,Paid Ads,Other Ads,0.0,0.0,1.0,0.0,0.4,0.0,0.0,0.0
+2026-11-03,P18,Direct,Direct,30.0,27.0,1.0,1.0,1.0,1.0,0.0,0.0
+2026-11-03,P18,Email & SMS,Klaviyo,11.0,11.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-03,P18,Organic Search,Google Search,3.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-03,P18,Organic Social,Facebook Social,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0
+2026-11-03,P18,Organic Social,Instagram Social,0.04,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-03,P18,Other Sources,linkinreach.feishu.cn,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-03,P18,Paid Ads,Facebook Ads,1.96,2.0,1.0,0.0,1.0,0.0,0.0,0.0
+2026-11-03,P18,Paid Ads,Google Ads,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-03,地垫套装,Affiliate,bixgrow_affiliate,1.0,1.0,1.0,1.0,0.41,0.41,0.0,0.0
+2026-11-03,地垫套装,Direct,Direct,15.0,10.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-03,地垫套装,Organic Search,Bing Search,0.0,0.0,1.0,1.0,0.01,0.01,0.0,0.0
+2026-11-03,地垫套装,Organic Search,Google Search,1.0,1.0,1.0,1.0,0.44,0.44,0.0,0.0
+2026-11-03,地垫套装,Organic Social,Other Social,0.0,0.0,1.0,1.0,0.01,0.01,0.0,0.0
+2026-11-03,地垫套装,Other Sources,DC261002-01,0.0,0.0,1.0,1.0,0.02,0.02,0.0,0.0
+2026-11-03,地垫套装,Other Sources,HP250602-02,0.0,0.0,1.0,1.0,0.01,0.01,0.0,0.0
+2026-11-03,地垫套装,Other Sources,KOL,0.0,0.0,1.0,1.0,0.05,0.05,0.0,0.0
+2026-11-03,地垫套装,Other Sources,app.freegifts.io,0.0,0.0,1.0,1.0,0.01,0.01,0.0,0.0
+2026-11-03,地垫套装,Other Sources,merachfit.de,0.0,0.0,1.0,1.0,0.01,0.01,0.0,0.0
+2026-11-03,地垫套装,Other Sources,merachfit.eu,0.0,0.0,1.0,1.0,0.02,0.02,0.0,0.0
+2026-11-03,地垫套装,Paid Ads,Facebook Ads,6.0,6.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-03,地垫套装,Paid Ads,Google Ads,0.0,0.0,1.0,1.0,0.01,0.01,0.0,0.0
+2026-11-04,P15,Affiliate,Impact,1.0,1.0,2.0,1.0,1.015,1.0,0.0,0.0
+2026-11-04,P15,Affiliate,bixgrow_affiliate,1.0,1.0,1.0,0.0,1.0,0.0,0.066,0.0
+2026-11-04,P15,Direct,Direct,13.0,8.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-04,P15,Email & SMS,Klaviyo,8.0,5.0,2.0,1.0,0.415,0.4,0.07,0.0
+2026-11-04,P15,Organic Search,Google Search,2.0,1.0,2.0,0.0,0.546,0.0,0.0,0.0
+2026-11-04,P15,Organic Social,Facebook Social,0.0,0.0,0.0,0.0,0.0,0.0,0.013,0.0
+2026-11-04,P15,Organic Social,Instagram Social,0.0,0.0,1.0,0.0,0.4,0.0,0.0,0.0
+2026-11-04,P15,Other Sources,flex_shop,0.5,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-04,P15,Paid Ads,Facebook Ads,28.0,13.0,7.0,4.0,5.1,7.6,3.819,0.0
+2026-11-04,P15,Paid Ads,Google Ads,2.5,3.0,2.0,1.0,1.523,1.0,0.033,0.0
+2026-11-04,P16,Affiliate,bixgrow_affiliate,25.0,11.0,1.0,3.0,0.5,2.895,0.0,0.0
+2026-11-04,P16,Direct,Direct,162.0,101.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-04,P16,Email & SMS,Klaviyo,52.01,32.0,3.0,6.0,2.5,3.418,0.0,0.0
+2026-11-04,P16,Organic Search,Bing Search,1.0,1.0,1.0,2.0,0.013,0.032,0.0,0.0
+2026-11-04,P16,Organic Search,DuckDuckGo,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-04,P16,Organic Search,Google Search,22.3,11.0,2.0,2.0,2.487,0.529,0.0,0.0
+2026-11-04,P16,Organic Social,Facebook Social,48.0,32.0,1.0,1.0,0.4,0.4,0.0,0.0
+2026-11-04,P16,Organic Social,Instagram Social,3.5,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-04,P16,Organic Social,Other Social,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-04,P16,Other Sources,BP250101,0.0,0.0,0.0,1.0,0.0,0.015,0.0,0.0
+2026-11-04,P16,Other Sources,CC241006,0.0,0.0,0.0,1.0,0.0,0.015,0.0,0.0
+2026-11-04,P16,Other Sources,GG241202,0.0,0.0,0.0,1.0,0.0,0.03,0.0,0.0
+2026-11-04,P16,Other Sources,KOL,0.0,0.0,0.0,1.0,0.0,0.467,0.0,0.0
+2026-11-04,P16,Other Sources,Linktree,3.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-04,P16,Other Sources,cristobalworkingdu-create.github.io,0.0,0.0,1.0,0.0,1.0,0.0,0.0,0.0
+2026-11-04,P16,Other Sources,eir1tseugu5.feishu.cn,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-04,P16,Other Sources,flex_shop,0.46,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-04,P16,Other Sources,gmail,5.4,6.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-04,P16,Other Sources,shared.outlook.inky.com,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-04,P16,Other Sources,tenociglobal.feishu.cn,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-04,P16,Other Sources,www.merachfit.ca,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-04,P16,Paid Ads,Bing Ads,4.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-04,P16,Paid Ads,Facebook Ads,291.5,203.0,10.0,8.0,9.66,6.8,0.0,0.0
+2026-11-04,P16,Paid Ads,Google Ads,231.83,176.0,6.0,5.0,5.44,4.4,0.0,0.0
+2026-11-04,P18,Affiliate,bixgrow_affiliate,1.0,1.0,1.0,0.0,1.0,0.0,0.0,0.0
+2026-11-04,P18,Direct,Direct,14.0,13.0,1.0,1.0,1.0,1.0,0.0,0.0
+2026-11-04,P18,Email & SMS,Email,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-04,P18,Email & SMS,Klaviyo,5.0,5.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-04,P18,Organic Search,Google Search,2.0,2.0,0.0,1.0,0.0,1.0,0.6,197.99
+2026-11-04,P18,Other Sources,merach.feishu.cn,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-04,P18,Paid Ads,Facebook Ads,4.0,4.0,2.0,0.0,1.999,0.0,0.0,0.0
+2026-11-04,P18,Paid Ads,Google Ads,0.0,0.0,0.0,0.0,0.0,0.0,0.4,132.0
+2026-11-04,地垫套装,Direct,Direct,9.0,6.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-04,地垫套装,Email & SMS,Klaviyo,2.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-04,地垫套装,Organic Search,Google Search,1.6,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-04,地垫套装,Paid Ads,Facebook Ads,4.0,1.0,1.0,0.0,1.0,0.0,0.0,0.0
+2026-11-04,地垫套装,Paid Ads,Google Ads,1.4,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-05,P15,Affiliate,Impact,0.45,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-05,P15,Affiliate,bixgrow_affiliate,0.0,0.0,0.0,0.0,0.0,0.0,0.055,0.0
+2026-11-05,P15,Direct,Direct,58.0,22.0,0.0,1.0,0.0,1.0,0.0,0.0
+2026-11-05,P15,Email & SMS,Klaviyo,8.4,9.0,0.0,0.0,0.0,0.0,0.055,0.0
+2026-11-05,P15,Organic Search,Google Search,0.85,2.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-05,P15,Organic Social,Facebook Social,3.4,3.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-05,P15,Other Sources,KOL,3.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-05,P15,Other Sources,Linktree,5.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-05,P15,Other Sources,flex_shop,0.5,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-05,P15,Other Sources,linkinreach.feishu.cn,0.6,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-05,P15,Paid Ads,Facebook Ads,33.6,19.0,3.0,4.0,3.0,6.0,2.861,0.0
+2026-11-05,P15,Paid Ads,Google Ads,3.2,3.0,0.0,1.0,0.0,1.0,0.028,0.0
+2026-11-05,P16,AI Assistant,chatgpt.com,1.5,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-05,P16,Affiliate,Impact,4.0,3.0,2.0,1.0,1.417,0.028,0.0,0.0
+2026-11-05,P16,Affiliate,bixgrow_affiliate,7.0,2.0,1.0,1.0,0.04,0.05,0.0,0.0
+2026-11-05,P16,Direct,Direct,106.0,85.0,3.0,1.0,3.0,1.0,0.0,0.0
+2026-11-05,P16,Email & SMS,Klaviyo,38.82,34.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-05,P16,Organic Search,Bing Search,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-05,P16,Organic Search,DuckDuckGo,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-05,P16,Organic Search,Google Search,21.95,14.0,1.0,1.0,0.024,0.02,0.0,0.0
+2026-11-05,P16,Organic Social,Facebook Social,7.0,5.0,1.0,0.0,0.467,0.0,0.0,0.0
+2026-11-05,P16,Organic Social,Instagram Social,0.5,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-05,P16,Organic Social,Other Social,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-05,P16,Organic Social,YouTube Social,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-05,P16,Other Sources,Linktree,2.5,2.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-05,P16,Other Sources,PR,2.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-05,P16,Other Sources,cristobalworkingdu-create.github.io,6.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-05,P16,Other Sources,eir1tseugu5.feishu.cn,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-05,P16,Other Sources,gmail,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-05,P16,Other Sources,linkinreach.feishu.cn,2.73,2.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-05,P16,Other Sources,t.yesware.com,4.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-05,P16,Paid Ads,Bing Ads,2.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-05,P16,Paid Ads,Facebook Ads,203.0,156.0,9.0,4.0,8.276,4.402,0.0,0.0
+2026-11-05,P16,Paid Ads,Google Ads,330.0,240.0,9.0,8.0,7.774,6.5,0.0,0.0
+2026-11-05,P18,Affiliate,bixgrow_affiliate,0.5,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-05,P18,Direct,Direct,26.0,25.0,1.0,1.0,1.0,1.0,0.0,0.0
+2026-11-05,P18,Email & SMS,Email,2.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-05,P18,Email & SMS,Klaviyo,6.4,7.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-05,P18,Other Sources,linkinreach.feishu.cn,0.6,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-05,P18,Other Sources,merach.feishu.cn,2.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-05,P18,Paid Ads,Facebook Ads,10.0,10.0,1.0,0.0,1.0,0.0,0.0,0.0
+2026-11-05,P18,Paid Ads,Google Ads,2.5,3.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-05,地垫套装,Affiliate,bixgrow_affiliate,0.04,1.0,1.0,0.0,0.009,0.0,0.0,0.0
+2026-11-05,地垫套装,Direct,Direct,12.0,8.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-05,地垫套装,Email & SMS,Klaviyo,9.4,10.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-05,地垫套装,Organic Search,Google Search,5.78,4.0,1.0,0.0,0.446,0.0,0.0,0.0
+2026-11-05,地垫套装,Other Sources,linkinreach.feishu.cn,0.6,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-05,地垫套装,Other Sources,merach.feishu.cn,5.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-05,地垫套装,Paid Ads,Facebook Ads,0.0,0.0,1.0,0.0,1.0,0.0,0.0,0.0
+2026-11-05,地垫套装,Paid Ads,Google Ads,1.18,2.0,1.0,0.0,0.546,0.0,0.0,0.0
+2026-11-06,P15,Affiliate,Impact,5.0,3.0,4.0,4.0,2.862,1.837,0.067,0.0
+2026-11-06,P15,Affiliate,bixgrow_affiliate,0.0,0.0,2.0,1.0,1.546,0.467,0.0,0.0
+2026-11-06,P15,Direct,Direct,38.0,16.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-06,P15,Email & SMS,Klaviyo,7.0,7.0,0.0,3.0,0.0,1.618,0.0,0.0
+2026-11-06,P15,Organic Search,Bing Search,0.0,0.0,0.0,1.0,0.0,0.2,0.0,0.0
+2026-11-06,P15,Organic Search,Google Search,2.0,2.0,1.0,0.0,0.013,0.0,0.0,0.0
+2026-11-06,P15,Organic Search,Yahoo Search,0.0,0.0,0.0,0.0,0.0,0.0,0.067,0.0
+2026-11-06,P15,Paid Ads,Bing Ads,0.0,0.0,0.0,1.0,0.0,0.4,0.467,0.0
+2026-11-06,P15,Paid Ads,Facebook Ads,13.0,8.0,3.0,11.0,2.575,8.005,0.4,0.0
+2026-11-06,P15,Paid Ads,Google Ads,3.0,3.0,2.0,3.0,2.0,1.473,0.0,0.0
+2026-11-06,P16,Affiliate,Impact,6.0,3.0,2.0,2.0,0.86,0.885,0.067,193.33
+2026-11-06,P16,Affiliate,bixgrow_affiliate,5.0,3.0,1.0,0.0,0.003,0.0,0.0,0.0
+2026-11-06,P16,Direct,Direct,146.0,108.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-06,P16,Email & SMS,Klaviyo,48.0,30.0,2.0,2.0,0.052,1.018,0.0,0.0
+2026-11-06,P16,Organic Search,Bing Search,5.0,3.0,0.0,1.0,0.0,0.2,0.0,0.0
+2026-11-06,P16,Organic Search,DuckDuckGo,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-06,P16,Organic Search,Google Search,35.0,21.0,1.0,1.0,0.003,2.0,0.0,0.0
+2026-11-06,P16,Organic Search,Yahoo Search,0.63,1.0,0.0,0.0,0.0,0.0,0.067,193.33
+2026-11-06,P16,Organic Social,Facebook Social,4.5,4.0,1.0,0.0,0.003,0.0,0.0,0.0
+2026-11-06,P16,Organic Social,Instagram Social,0.0,0.0,1.0,0.0,0.4,0.0,0.0,0.0
+2026-11-06,P16,Organic Social,Other Social,0.5,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-06,P16,Other Sources,PR,1.5,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-06,P16,Other Sources,flex_shop,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-06,P16,Other Sources,gmail,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-06,P16,Paid Ads,Bing Ads,13.37,5.0,2.0,1.0,0.072,0.4,0.467,1353.33
+2026-11-06,P16,Paid Ads,Facebook Ads,362.0,230.0,25.0,13.0,23.126,10.557,0.4,1160.0
+2026-11-06,P16,Paid Ads,Google Ads,336.5,235.0,16.0,7.0,14.486,4.939,0.0,0.0
+2026-11-06,P18,Affiliate,Impact,1.4,2.0,2.0,0.0,1.1,0.0,0.067,22.0
+2026-11-06,P18,Direct,Direct,11.0,9.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-06,P18,Email & SMS,Email,4.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-06,P18,Email & SMS,Klaviyo,8.0,7.0,2.0,1.0,1.1,0.6,0.0,0.0
+2026-11-06,P18,Organic Search,Bing Search,0.0,0.0,0.0,1.0,0.0,0.2,0.0,0.0
+2026-11-06,P18,Organic Search,Yahoo Search,0.2,1.0,1.0,0.0,0.1,0.0,0.067,22.0
+2026-11-06,P18,Organic Social,Facebook Social,0.2,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-06,P18,Paid Ads,Bing Ads,0.4,1.0,1.0,1.0,0.4,0.4,0.467,154.0
+2026-11-06,P18,Paid Ads,Facebook Ads,7.8,8.0,6.0,1.0,3.801,0.4,0.4,132.0
+2026-11-06,P18,Paid Ads,Google Ads,2.0,2.0,2.0,2.0,1.5,1.4,0.0,0.0
+2026-11-06,地垫套装,Affiliate,Impact,5.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-06,地垫套装,Affiliate,bixgrow_affiliate,4.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-06,地垫套装,Direct,Direct,15.0,7.0,0.0,1.0,0.0,1.0,0.0,0.0
+2026-11-06,地垫套装,Email & SMS,Email,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-06,地垫套装,Email & SMS,Klaviyo,10.0,10.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-06,地垫套装,Paid Ads,Facebook Ads,13.0,10.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-06,地垫套装,Paid Ads,Google Ads,4.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-07,P15,Affiliate,Impact,1.0,1.0,1.0,3.0,0.09,0.484,0.0,0.0
+2026-11-07,P15,Direct,Direct,26.0,18.0,1.0,3.0,1.0,3.0,0.0,0.0
+2026-11-07,P15,Email & SMS,Klaviyo,14.0,8.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-07,P15,Organic Search,Google Search,0.0,0.0,1.0,2.0,0.045,0.06,0.0,0.0
+2026-11-07,P15,Organic Social,Facebook Social,3.05,2.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-07,P15,Paid Ads,Facebook Ads,52.95,28.0,6.0,7.0,6.207,6.207,0.0,0.0
+2026-11-07,P15,Paid Ads,Google Ads,26.0,10.0,2.0,3.0,2.654,2.25,0.0,0.0
+2026-11-07,P16,Affiliate,Impact,3.54,5.0,3.0,2.0,0.875,0.428,0.0,0.0
+2026-11-07,P16,Affiliate,bixgrow_affiliate,2.04,3.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-07,P16,Direct,Direct,170.0,140.0,3.0,2.0,3.0,2.0,0.0,0.0
+2026-11-07,P16,Email & SMS,Email,3.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-07,P16,Email & SMS,Klaviyo,141.68,99.0,5.0,4.0,5.2,5.0,0.0,0.0
+2026-11-07,P16,Organic Search,Bing Search,2.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-07,P16,Organic Search,Google Search,8.6,7.0,2.0,1.0,0.05,0.02,0.0,0.0
+2026-11-07,P16,Organic Social,Facebook Social,4.0,4.0,2.0,0.0,1.425,0.0,0.0,0.0
+2026-11-07,P16,Organic Social,Instagram Social,3.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-07,P16,Organic Social,Other Social,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-07,P16,Other Sources,Linktree,3.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-07,P16,Other Sources,OC260410,2.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-07,P16,Other Sources,gmail,6.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-07,P16,Other Sources,merachfit.de,0.0,0.0,1.0,0.0,1.0,0.0,0.0,0.0
+2026-11-07,P16,Paid Ads,Bing Ads,5.0,2.0,1.0,0.0,1.0,0.0,0.0,0.0
+2026-11-07,P16,Paid Ads,Facebook Ads,374.0,271.0,17.0,10.0,15.337,10.936,0.0,0.0
+2026-11-07,P16,Paid Ads,Google Ads,402.14,290.0,15.0,9.0,13.111,7.617,0.0,0.0
+2026-11-07,P18,Affiliate,Impact,1.0,1.0,1.0,0.0,1.0,0.0,0.0,0.0
+2026-11-07,P18,Direct,Direct,5.0,4.0,1.0,1.0,1.0,1.0,0.0,0.0
+2026-11-07,P18,Email & SMS,Klaviyo,12.0,11.0,1.0,0.0,0.4,0.0,0.0,0.0
+2026-11-07,P18,Organic Search,Google Search,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-07,P18,Paid Ads,Facebook Ads,10.0,8.0,2.0,0.0,1.6,0.0,0.0,0.0
+2026-11-07,P18,Paid Ads,Google Ads,3.0,3.0,3.0,1.0,3.0,1.0,0.0,0.0
+2026-11-07,地垫套装,AI Assistant,chatgpt.com,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-07,地垫套装,Direct,Direct,7.0,6.0,1.0,0.0,1.0,0.0,0.0,0.0
+2026-11-07,地垫套装,Email & SMS,Klaviyo,5.0,3.0,1.0,0.0,0.8,0.0,0.0,0.0
+2026-11-07,地垫套装,Paid Ads,Facebook Ads,1.0,1.0,1.0,0.0,0.2,0.0,0.0,0.0
+2026-11-07,地垫套装,Paid Ads,Google Ads,3.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-08,P15,AI Assistant,chatgpt.com,1.0,1.0,0.0,1.0,0.0,0.5,0.0,0.0
+2026-11-08,P15,Affiliate,Impact,0.0,0.0,2.0,2.0,0.49,0.482,0.0,0.0
+2026-11-08,P15,Affiliate,bixgrow_affiliate,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-08,P15,Direct,Direct,32.0,11.0,1.0,3.0,1.0,3.0,0.0,0.0
+2026-11-08,P15,Email & SMS,Klaviyo,1.0,1.0,0.0,2.0,0.0,0.962,0.0,0.0
+2026-11-08,P15,Organic Search,Google Search,2.0,2.0,1.0,0.0,0.045,0.0,0.0,0.0
+2026-11-08,P15,Organic Social,Facebook Social,1.0,1.0,2.0,4.0,1.4,2.8,0.0,0.0
+2026-11-08,P15,Paid Ads,Facebook Ads,44.0,27.0,5.0,7.0,3.407,4.803,3.0,269.99
+2026-11-08,P15,Paid Ads,Google Ads,13.0,3.0,2.0,2.0,2.654,1.454,0.0,0.0
+2026-11-08,P16,AI Assistant,chatgpt.com,5.0,1.0,1.0,1.0,1.0,0.5,0.0,0.0
+2026-11-08,P16,Affiliate,Impact,3.5,3.0,4.0,5.0,0.548,0.555,0.0,0.0
+2026-11-08,P16,Affiliate,bixgrow_affiliate,11.8,6.0,1.0,1.0,2.0,0.487,0.0,0.0
+2026-11-08,P16,Direct,Direct,189.0,138.0,5.0,4.0,5.0,5.0,0.0,0.0
+2026-11-08,P16,Email & SMS,Email,4.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-08,P16,Email & SMS,Klaviyo,85.5,59.0,2.0,4.0,1.046,1.972,0.0,0.0
+2026-11-08,P16,Organic Search,Bing Search,1.0,1.0,0.0,1.0,0.0,0.01,0.0,0.0
+2026-11-08,P16,Organic Search,DuckDuckGo,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-08,P16,Organic Search,Google Search,15.5,10.0,3.0,2.0,0.922,0.512,0.0,0.0
+2026-11-08,P16,Organic Search,Yahoo Search,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-08,P16,Organic Social,Facebook Social,8.0,8.0,1.0,3.0,0.55,1.95,0.0,0.0
+2026-11-08,P16,Organic Social,Instagram Social,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-08,P16,Organic Social,Other Social,2.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-08,P16,Other Sources,Linktree,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-08,P16,Other Sources,PR,4.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-08,P16,Other Sources,eir1tseugu5.feishu.cn,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-08,P16,Other Sources,gmail,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-08,P16,Other Sources,social,4.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-08,P16,Paid Ads,Bing Ads,10.0,3.0,1.0,0.0,1.0,0.0,0.0,0.0
+2026-11-08,P16,Paid Ads,Facebook Ads,423.0,310.0,25.0,15.0,20.04,11.643,1.0,2299.99
+2026-11-08,P16,Paid Ads,Google Ads,380.7,253.0,16.0,8.0,11.894,5.37,0.0,0.0
+2026-11-08,P18,Affiliate,bixgrow_affiliate,0.0,0.0,1.0,0.0,1.0,0.0,0.0,0.0
+2026-11-08,P18,Direct,Direct,10.0,9.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-08,P18,Email & SMS,Klaviyo,7.0,7.0,1.0,0.0,0.046,0.0,0.0,0.0
+2026-11-08,P18,Organic Search,Google Search,4.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-08,P18,Organic Social,Facebook Social,0.0,0.0,1.0,0.0,0.029,0.0,0.0,0.0
+2026-11-08,P18,Other Sources,merach.feishu.cn,2.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-08,P18,Paid Ads,Facebook Ads,25.0,21.0,3.0,2.0,2.914,2.0,0.0,0.0
+2026-11-08,P18,Paid Ads,Google Ads,0.0,0.0,3.0,1.0,2.011,1.0,0.0,0.0
+2026-11-08,地垫套装,Affiliate,Impact,0.5,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-08,地垫套装,Direct,Direct,13.0,8.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-08,地垫套装,Email & SMS,Klaviyo,10.0,5.0,1.0,0.0,0.013,0.0,0.0,0.0
+2026-11-08,地垫套装,Organic Search,Google Search,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-08,地垫套装,Paid Ads,Facebook Ads,6.5,5.0,1.0,0.0,0.986,0.0,0.0,0.0
+2026-11-09,P15,AI Assistant,chatgpt.com,0.0,0.0,0.0,1.0,0.0,0.06,0.133,0.0
+2026-11-09,P15,Affiliate,Impact,13.0,4.0,2.0,0.0,1.015,0.0,0.0,0.0
+2026-11-09,P15,Direct,Direct,32.0,20.0,1.0,2.0,1.0,2.0,0.0,0.0
+2026-11-09,P15,Email & SMS,Klaviyo,6.0,4.0,1.0,1.0,0.015,0.85,0.867,0.0
+2026-11-09,P15,Organic Search,Google Search,2.0,1.0,1.0,0.0,0.046,0.0,0.0,0.0
+2026-11-09,P15,Organic Social,Facebook Social,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-09,P15,Paid Ads,Facebook Ads,13.0,10.0,1.0,3.0,0.4,2.09,2.0,729.99
+2026-11-09,P15,Paid Ads,Google Ads,3.0,3.0,1.0,1.0,0.523,1.0,1.0,0.0
+2026-11-09,P16,AI Assistant,chatgpt.com,2.5,3.0,3.0,3.0,0.908,0.467,0.133,386.67
+2026-11-09,P16,Affiliate,Impact,9.0,4.0,4.0,1.0,1.523,0.013,0.0,0.0
+2026-11-09,P16,Affiliate,bixgrow_affiliate,4.0,3.0,1.0,2.0,0.024,0.6,0.0,0.0
+2026-11-09,P16,Direct,Direct,185.0,121.0,5.0,4.0,5.0,4.0,0.0,0.0
+2026-11-09,P16,Email & SMS,Klaviyo,32.0,27.0,8.0,5.0,4.389,2.165,0.867,2513.32
+2026-11-09,P16,Organic Search,Bing Search,0.0,0.0,1.0,1.0,0.048,0.044,0.0,0.0
+2026-11-09,P16,Organic Search,DuckDuckGo,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-09,P16,Organic Search,Google Search,39.0,20.0,3.0,2.0,0.089,0.515,0.0,0.0
+2026-11-09,P16,Organic Social,Facebook Social,15.0,9.0,3.0,2.0,0.468,1.705,0.0,0.0
+2026-11-09,P16,Organic Social,Instagram Social,2.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-09,P16,Organic Social,Other Social,0.0,0.0,1.0,1.0,0.008,0.007,0.0,0.0
+2026-11-09,P16,Other Sources,KOL,0.0,0.0,1.0,1.0,0.008,0.007,0.0,0.0
+2026-11-09,P16,Other Sources,OC260410,0.0,0.0,0.0,1.0,0.0,0.033,0.0,0.0
+2026-11-09,P16,Other Sources,PR,2.0,1.0,1.0,1.0,0.4,0.007,0.0,0.0
+2026-11-09,P16,Other Sources,Shop APP,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-09,P16,Other Sources,app.freegifts.io,0.0,0.0,1.0,1.0,0.4,0.4,0.0,0.0
+2026-11-09,P16,Other Sources,cristobalworkingdu-create.github.io,1.0,1.0,1.0,1.0,0.008,0.007,0.0,0.0
+2026-11-09,P16,Other Sources,eir1tseugu5.feishu.cn,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-09,P16,Other Sources,gmail,2.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-09,P16,Other Sources,linkinreach.feishu.cn,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-09,P16,Other Sources,merach.feishu.cn,6.0,1.0,1.0,1.0,0.04,0.037,0.0,0.0
+2026-11-09,P16,Other Sources,merachfit.de,0.0,0.0,1.0,1.0,0.008,0.407,0.0,0.0
+2026-11-09,P16,Other Sources,merachfit.eu,0.0,0.0,2.0,1.0,1.016,0.015,0.0,0.0
+2026-11-09,P16,Other Sources,shopify_email,0.0,0.0,1.0,0.0,1.0,0.0,0.0,0.0
+2026-11-09,P16,Paid Ads,Bing Ads,7.0,6.0,1.0,1.0,1.0,0.4,0.0,0.0
+2026-11-09,P16,Paid Ads,Facebook Ads,228.0,147.0,18.0,15.0,15.896,11.669,2.0,5199.98
+2026-11-09,P16,Paid Ads,Google Ads,106.5,79.0,8.0,5.0,6.766,4.5,1.0,2899.99
+2026-11-09,P18,Affiliate,Impact,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-09,P18,Direct,Direct,18.0,13.0,2.0,1.0,2.0,1.0,0.0,0.0
+2026-11-09,P18,Email & SMS,Klaviyo,3.0,3.0,1.0,0.0,0.4,0.0,0.0,0.0
+2026-11-09,P18,Organic Search,Google Search,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-09,P18,Organic Social,Facebook Social,1.0,1.0,1.0,0.0,0.025,0.0,0.0,0.0
+2026-11-09,P18,Paid Ads,Bing Ads,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-09,P18,Paid Ads,Facebook Ads,7.0,7.0,2.0,1.0,1.575,1.0,1.0,329.99
+2026-11-09,P18,Paid Ads,Google Ads,3.0,2.0,2.0,2.0,2.0,2.0,1.0,329.99
+2026-11-09,地垫套装,Direct,Direct,8.0,6.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-09,地垫套装,Email & SMS,Klaviyo,3.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-09,地垫套装,Other Sources,gmail,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-09,地垫套装,Other Sources,linkinreach.feishu.cn,2.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-09,地垫套装,Paid Ads,Facebook Ads,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-10,P15,Affiliate,Impact,0.4,1.0,2.0,2.0,1.022,0.837,0.0,0.0
+2026-11-10,P15,Direct,Direct,19.0,11.0,1.0,1.0,1.0,1.0,0.0,0.0
+2026-11-10,P15,Email & SMS,Klaviyo,2.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-10,P15,Organic Search,Bing Search,0.0,0.0,1.0,0.0,0.56,0.0,0.0,0.0
+2026-11-10,P15,Organic Search,Google Search,0.68,2.0,1.0,0.0,0.4,0.0,0.0,0.0
+2026-11-10,P15,Organic Social,Facebook Social,0.0,0.0,1.0,0.0,0.4,0.0,0.0,0.0
+2026-11-10,P15,Other Sources,app.impact.com,0.0,0.0,0.0,1.0,0.0,1.0,0.0,0.0
+2026-11-10,P15,Other Sources,linkinreach.feishu.cn,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-10,P15,Paid Ads,Bing Ads,0.0,0.0,1.0,0.0,0.04,0.0,0.0,0.0
+2026-11-10,P15,Paid Ads,Facebook Ads,27.87,25.0,2.0,3.0,1.175,2.163,0.0,0.0
+2026-11-10,P15,Paid Ads,Google Ads,7.04,6.0,2.0,1.0,1.4,1.0,0.0,0.0
+2026-11-10,P16,Affiliate,Impact,10.1,6.0,2.0,2.0,1.05,0.455,0.0,0.0
+2026-11-10,P16,Direct,Direct,139.0,95.0,1.0,1.0,1.0,1.0,0.0,0.0
+2026-11-10,P16,Email & SMS,Email,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-10,P16,Email & SMS,Klaviyo,9.5,9.0,2.0,0.0,1.4,0.0,0.0,0.0
+2026-11-10,P16,Organic Search,Google Search,29.9,11.0,5.0,1.0,3.447,0.909,0.0,0.0
+2026-11-10,P16,Organic Social,Facebook Social,4.0,2.0,2.0,2.0,0.8,0.455,0.0,0.0
+2026-11-10,P16,Organic Social,Instagram Social,2.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-10,P16,Organic Social,Other Social,0.0,0.0,0.0,1.0,0.0,0.018,0.0,0.0
+2026-11-10,P16,Organic Social,Yotube Shopping,0.0,0.0,0.0,1.0,0.0,0.036,0.0,0.0
+2026-11-10,P16,Other Sources,Linktree,2.8,3.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-10,P16,Other Sources,app.impact.com,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0
+2026-11-10,P16,Other Sources,cristobalworkingdu-create.github.io,2.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-10,P16,Other Sources,kagi.com,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-10,P16,Other Sources,linkinreach.feishu.cn,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-10,P16,Other Sources,merach.feishu.cn,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-10,P16,Other Sources,social,0.0,0.0,0.0,1.0,0.0,0.036,0.0,0.0
+2026-11-10,P16,Other Sources,tenociglobal.feishu.cn,6.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-10,P16,Paid Ads,Bing Ads,3.9,4.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-10,P16,Paid Ads,Facebook Ads,121.3,81.0,17.0,9.0,14.311,7.576,0.0,0.0
+2026-11-10,P16,Paid Ads,Google Ads,67.5,38.0,7.0,7.0,4.99,3.515,0.0,0.0
+2026-11-10,P18,Affiliate,Impact,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-10,P18,Affiliate,bixgrow_affiliate,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-10,P18,Direct,Direct,9.0,6.0,1.0,1.0,1.0,1.0,0.0,0.0
+2026-11-10,P18,Email & SMS,Klaviyo,3.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-10,P18,Organic Search,Google Search,1.5,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-10,P18,Organic Social,Facebook Social,2.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-10,P18,Organic Social,Instagram Social,4.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-10,P18,Other Sources,linkinreach.feishu.cn,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-10,P18,Paid Ads,Facebook Ads,18.0,17.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-10,P18,Paid Ads,Google Ads,1.5,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-10,地垫套装,Affiliate,Impact,1.53,2.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-10,地垫套装,Direct,Direct,3.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-10,地垫套装,Email & SMS,Klaviyo,4.07,3.0,1.0,1.0,0.067,0.057,0.0,0.0
+2026-11-10,地垫套装,Organic Search,Google Search,11.5,3.0,1.0,1.0,0.533,0.543,0.0,0.0
+2026-11-10,地垫套装,Other Sources,Linktree,4.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-10,地垫套装,Other Sources,linkinreach.feishu.cn,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-10,地垫套装,Paid Ads,Facebook Ads,2.9,2.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-10,地垫套装,Paid Ads,Google Ads,5.0,2.0,1.0,1.0,0.4,0.4,0.0,0.0
+2026-11-11,P15,Affiliate,Impact,0.0,0.0,1.0,2.0,1.0,0.482,0.0,0.0
+2026-11-11,P15,Direct,Direct,20.0,15.0,3.0,4.0,3.0,4.0,0.0,0.0
+2026-11-11,P15,Email & SMS,Klaviyo,4.0,4.0,0.0,1.0,0.0,0.462,0.0,0.0
+2026-11-11,P15,Organic Search,DuckDuckGo,4.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-11,P15,Organic Search,Google Search,16.0,6.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-11,P15,Paid Ads,Facebook Ads,45.0,30.0,1.0,3.0,1.0,1.603,0.0,0.0
+2026-11-11,P15,Paid Ads,Google Ads,1.0,1.0,0.0,1.0,0.0,0.454,0.0,0.0
+2026-11-11,P16,AI Assistant,chatgpt.com,1.0,1.0,1.0,0.0,0.4,0.0,0.0,0.0
+2026-11-11,P16,Affiliate,Impact,0.5,1.0,2.0,2.0,0.06,0.482,0.0,0.0
+2026-11-11,P16,Affiliate,bixgrow_affiliate,6.0,4.0,3.0,0.0,0.493,0.0,0.0,0.0
+2026-11-11,P16,Direct,Direct,127.0,82.0,5.0,4.0,5.0,4.0,0.0,0.0
+2026-11-11,P16,Email & SMS,Klaviyo,13.0,13.0,3.0,1.0,2.011,0.462,0.0,0.0
+2026-11-11,P16,Organic Search,DuckDuckGo,0.0,0.0,1.0,0.0,0.5,0.0,0.0,0.0
+2026-11-11,P16,Organic Search,Google Search,13.0,9.0,3.0,0.0,0.433,0.0,0.0,0.0
+2026-11-11,P16,Organic Social,Facebook Social,4.5,5.0,1.0,0.0,0.4,0.0,0.0,0.0
+2026-11-11,P16,Organic Social,Other Social,2.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-11,P16,Other Sources,Linktree,3.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-11,P16,Other Sources,gmail,0.5,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-11,P16,Other Sources,merach.feishu.cn,2.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-11,P16,Other Sources,platadmin.wickfire.com,0.5,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-11,P16,Other Sources,shopify_email,0.0,0.0,1.0,0.0,1.0,0.0,0.0,0.0
+2026-11-11,P16,Paid Ads,Bing Ads,2.5,3.0,1.0,0.0,0.429,0.0,0.0,0.0
+2026-11-11,P16,Paid Ads,Facebook Ads,81.5,61.0,12.0,6.0,9.265,5.603,0.0,0.0
+2026-11-11,P16,Paid Ads,Google Ads,45.0,29.0,10.0,1.0,6.009,0.454,0.0,0.0
+2026-11-11,P18,Affiliate,Impact,0.0,0.0,1.0,1.0,0.058,0.467,0.0,0.0
+2026-11-11,P18,Direct,Direct,12.0,10.0,1.0,1.0,1.0,1.0,0.0,0.0
+2026-11-11,P18,Email & SMS,Email,1.5,2.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-11,P18,Email & SMS,Klaviyo,8.0,8.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-11,P18,Organic Search,Google Search,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-11,P18,Organic Social,Facebook Social,3.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-11,P18,Organic Social,Instagram Social,3.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-11,P18,Other Sources,merach.feishu.cn,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-11,P18,Paid Ads,Facebook Ads,15.0,15.0,3.0,1.0,2.941,0.533,0.0,0.0
+2026-11-11,P18,Paid Ads,Google Ads,1.5,2.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-11,地垫套装,Direct,Direct,9.0,8.0,1.0,1.0,1.0,1.0,0.0,0.0
+2026-11-11,地垫套装,Email & SMS,Klaviyo,7.0,7.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-11,地垫套装,Paid Ads,Facebook Ads,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-11,地垫套装,Paid Ads,Google Ads,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-12,P15,Affiliate,Impact,2.0,2.0,0.0,1.0,0.0,0.527,0.0,0.0
+2026-11-12,P15,Affiliate,bixgrow_affiliate,0.0,0.0,0.0,1.0,0.0,0.46,0.0,0.0
+2026-11-12,P15,Direct,Direct,15.0,11.0,3.0,3.0,3.0,3.0,0.0,0.0
+2026-11-12,P15,Email & SMS,Klaviyo,4.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-12,P15,Organic Search,Google Search,7.0,3.0,0.0,1.0,0.0,0.007,0.0,0.0
+2026-11-12,P15,Organic Social,Facebook Social,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-12,P15,Other Sources,www.merachfit.ca,0.0,0.0,0.0,1.0,0.0,0.007,0.0,0.0
+2026-11-12,P15,Paid Ads,Facebook Ads,47.0,26.0,2.0,2.0,1.6,1.58,0.575,0.0
+2026-11-12,P15,Paid Ads,Google Ads,2.0,2.0,1.0,4.0,0.4,3.42,0.425,0.0
+2026-11-12,P16,Affiliate,Impact,2.27,3.0,1.0,0.0,0.48,0.0,0.0,0.0
+2026-11-12,P16,Affiliate,bixgrow_affiliate,2.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-12,P16,Direct,Direct,103.0,75.0,2.0,3.0,2.0,3.0,0.0,0.0
+2026-11-12,P16,Email & SMS,Klaviyo,12.0,9.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-12,P16,Organic Search,Bing Search,3.0,3.0,1.0,0.0,1.0,0.0,0.0,0.0
+2026-11-12,P16,Organic Search,Google Search,19.1,12.0,3.0,1.0,0.746,0.5,0.0,0.0
+2026-11-12,P16,Organic Social,Facebook Social,6.0,5.0,1.0,1.0,1.0,1.0,0.0,0.0
+2026-11-12,P16,Organic Social,Instagram Social,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-12,P16,Organic Social,Other Social,3.5,4.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-12,P16,Other Sources,Linktree,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-12,P16,Other Sources,ntp.msn.com,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-12,P16,Paid Ads,Bing Ads,4.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-12,P16,Paid Ads,Facebook Ads,86.5,59.0,9.0,4.0,6.996,3.58,0.575,1667.49
+2026-11-12,P16,Paid Ads,Google Ads,38.63,31.0,6.0,4.0,3.78,2.92,0.425,1232.5
+2026-11-12,P18,Affiliate,bixgrow_affiliate,1.6,2.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-12,P18,Direct,Direct,14.0,12.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-12,P18,Email & SMS,Email,2.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-12,P18,Email & SMS,Klaviyo,3.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-12,P18,Organic Search,Google Search,1.4,2.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-12,P18,Organic Social,Facebook Social,1.5,2.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-12,P18,Paid Ads,Facebook Ads,26.5,25.0,2.0,0.0,1.998,0.0,0.0,0.0
+2026-11-12,P18,Paid Ads,Google Ads,4.0,2.0,0.0,1.0,0.0,1.0,0.0,0.0
+2026-11-12,地垫套装,Direct,Direct,5.0,5.0,2.0,0.0,2.0,0.0,0.0,0.0
+2026-11-12,地垫套装,Email & SMS,Klaviyo,1.0,1.0,2.0,2.0,0.133,0.124,0.0,0.0
+2026-11-12,地垫套装,Organic Search,Google Search,0.0,0.0,2.0,2.0,1.017,1.026,0.0,0.0
+2026-11-12,地垫套装,Paid Ads,Google Ads,7.0,4.0,2.0,3.0,0.85,1.85,0.0,0.0
+2026-11-13,P15,AI Assistant,chatgpt.com,2.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-13,P15,Affiliate,Impact,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-13,P15,Direct,Direct,25.0,13.0,2.0,1.0,2.0,1.0,0.0,0.0
+2026-11-13,P15,Email & SMS,Klaviyo,3.0,1.0,0.0,1.0,0.0,0.05,0.05,0.0
+2026-11-13,P15,Organic Search,DuckDuckGo,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-13,P15,Organic Social,Facebook Social,1.2,2.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-13,P15,Paid Ads,Facebook Ads,30.4,23.0,3.0,5.0,2.6,5.2,0.0,0.0
+2026-11-13,P15,Paid Ads,Google Ads,11.4,5.0,1.0,2.0,0.4,1.75,0.95,0.0
+2026-11-13,P16,AI Assistant,chatgpt.com,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-13,P16,Affiliate,Impact,6.0,3.0,1.0,1.0,1.0,1.0,0.0,0.0
+2026-11-13,P16,Affiliate,bixgrow_affiliate,7.4,6.0,1.0,0.0,0.022,0.0,0.0,0.0
+2026-11-13,P16,Direct,Direct,85.0,55.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-13,P16,Email & SMS,Klaviyo,5.57,6.0,2.0,2.0,1.046,0.95,0.05,145.0
+2026-11-13,P16,Organic Search,Bing Search,2.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-13,P16,Organic Search,DuckDuckGo,2.0,1.0,1.0,1.0,0.467,0.467,0.0,0.0
+2026-11-13,P16,Organic Search,Google Search,37.0,13.0,1.0,1.0,1.0,0.1,0.0,0.0
+2026-11-13,P16,Organic Social,Facebook Social,5.6,5.0,3.0,0.0,1.55,0.0,0.0,0.0
+2026-11-13,P16,Organic Social,Instagram Social,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-13,P16,Other Sources,KOL,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-13,P16,Other Sources,Linktree,2.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-13,P16,Other Sources,Shop APP,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-13,P16,Other Sources,flex_shop,0.4,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-13,P16,Other Sources,linkinreach.feishu.cn,2.43,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-13,P16,Paid Ads,Bing Ads,7.0,2.0,1.0,0.0,1.0,0.0,0.0,0.0
+2026-11-13,P16,Paid Ads,Facebook Ads,56.2,39.0,16.0,8.0,13.521,8.133,0.0,0.0
+2026-11-13,P16,Paid Ads,Google Ads,36.4,27.0,8.0,2.0,4.394,1.35,0.95,2754.99
+2026-11-13,P16,Review & Loyalty,Loox,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-13,P18,Direct,Direct,15.0,10.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-13,P18,Email & SMS,Klaviyo,0.0,0.0,1.0,1.0,0.046,0.05,0.05,16.5
+2026-11-13,P18,Organic Search,Google Search,0.8,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-13,P18,Paid Ads,Bing Ads,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-13,P18,Paid Ads,Facebook Ads,24.0,21.0,2.0,0.0,2.0,0.0,0.0,0.0
+2026-11-13,P18,Paid Ads,Google Ads,2.2,3.0,1.0,1.0,0.954,0.95,0.95,313.49
+2026-11-13,地垫套装,Direct,Direct,11.0,6.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-13,地垫套装,Email & SMS,Klaviyo,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-13,地垫套装,Organic Search,Google Search,3.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-13,地垫套装,Organic Social,Facebook Social,4.0,1.0,0.0,1.0,0.0,0.533,0.0,0.0
+2026-11-13,地垫套装,Organic Social,Instagram Social,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-13,地垫套装,Other Sources,Linktree,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-13,地垫套装,Paid Ads,Facebook Ads,0.0,0.0,0.0,1.0,0.0,0.467,0.0,0.0
+2026-11-13,地垫套装,Paid Ads,Google Ads,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-14,P15,Affiliate,Impact,6.5,3.0,1.0,1.0,0.585,0.585,0.0,0.0
+2026-11-14,P15,Affiliate,bixgrow_affiliate,0.0,0.0,2.0,1.0,1.415,0.415,0.0,0.0
+2026-11-14,P15,Direct,Direct,13.0,11.0,1.0,1.0,1.0,1.0,0.0,0.0
+2026-11-14,P15,Email & SMS,Klaviyo,0.0,0.0,0.0,1.0,0.0,0.5,0.0,0.0
+2026-11-14,P15,Organic Search,Bing Search,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-14,P15,Organic Search,Google Search,7.5,5.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-14,P15,Paid Ads,Facebook Ads,12.0,9.0,5.0,1.0,4.35,1.0,0.0,0.0
+2026-11-14,P15,Paid Ads,Google Ads,18.0,10.0,2.0,1.0,0.65,0.5,0.0,0.0
+2026-11-14,P16,AI Assistant,chatgpt.com,3.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-14,P16,Affiliate,Impact,5.2,4.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-14,P16,Affiliate,bixgrow_affiliate,14.4,15.0,1.0,1.0,0.1,0.1,0.0,0.0
+2026-11-14,P16,Direct,Direct,53.0,35.0,1.0,0.0,1.0,0.0,0.0,0.0
+2026-11-14,P16,Email & SMS,Klaviyo,7.9,6.0,1.0,2.0,1.3,2.5,0.0,0.0
+2026-11-14,P16,Organic Search,Google Search,35.52,23.0,3.0,2.0,2.44,1.44,0.0,0.0
+2026-11-14,P16,Organic Search,Yahoo Search,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-14,P16,Organic Social,Facebook Social,7.8,7.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-14,P16,Organic Social,Instagram Social,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-14,P16,Organic Social,Other Social,0.9,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-14,P16,Organic Social,Yotube Shopping,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-14,P16,Other Sources,kagi.com,3.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-14,P16,Paid Ads,Bing Ads,4.0,4.0,1.0,0.0,1.0,0.0,0.0,0.0
+2026-11-14,P16,Paid Ads,Facebook Ads,73.8,41.0,8.0,9.0,6.522,10.02,1.0,2899.99
+2026-11-14,P16,Paid Ads,Google Ads,39.48,24.0,7.0,3.0,4.64,0.94,0.0,0.0
+2026-11-14,P18,Affiliate,Impact,1.0,1.0,1.0,0.0,0.058,0.0,0.0,0.0
+2026-11-14,P18,Affiliate,bixgrow_affiliate,2.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-14,P18,Direct,Direct,13.0,9.0,2.0,1.0,2.0,1.0,0.0,0.0
+2026-11-14,P18,Organic Search,Google Search,1.4,2.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-14,P18,Paid Ads,Facebook Ads,20.6,19.0,4.0,2.0,3.941,2.0,0.0,0.0
+2026-11-14,P18,Paid Ads,Google Ads,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-14,地垫套装,Affiliate,Impact,16.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-14,地垫套装,Affiliate,bixgrow_affiliate,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-14,地垫套装,Direct,Direct,6.0,6.0,2.0,1.0,4.0,2.0,2.0,149.98
+2026-11-14,地垫套装,Email & SMS,Klaviyo,0.0,0.0,1.0,1.0,0.067,0.067,1.92,172.78
+2026-11-14,地垫套装,Organic Search,Google Search,10.5,3.0,2.0,1.0,0.984,0.483,11.52,1036.68
+2026-11-14,地垫套装,Paid Ads,Bing Ads,4.0,1.0,1.0,0.0,1.0,0.0,0.0,0.0
+2026-11-14,地垫套装,Paid Ads,Google Ads,3.5,2.0,2.0,1.0,0.95,0.45,10.56,950.29
+2026-11-15,P15,Affiliate,Impact,0.0,0.0,1.0,2.0,0.4,0.833,0.833,33.33
+2026-11-15,P15,Direct,Direct,38.0,27.0,1.0,0.0,1.0,0.0,0.0,0.0
+2026-11-15,P15,Email & SMS,Klaviyo,5.0,1.0,1.0,2.0,0.127,0.233,0.233,9.33
+2026-11-15,P15,Organic Search,Google Search,5.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-15,P15,Organic Social,Facebook Social,2.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-15,P15,Other Sources,KOL,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-15,P15,Other Sources,Linktree,2.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-15,P15,Other Sources,flex_shop,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-15,P15,Other Sources,gmail,2.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-15,P15,Other Sources,linkinreach.feishu.cn,2.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-15,P15,Other Sources,ntp.msn.com,8.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-15,P15,Paid Ads,Facebook Ads,40.0,18.0,0.0,2.0,0.0,1.55,0.0,0.0
+2026-11-15,P15,Paid Ads,Google Ads,10.0,4.0,3.0,6.0,2.473,6.383,0.933,37.33
+2026-11-15,P16,AI Assistant,chatgpt.com,2.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-15,P16,Affiliate,Impact,2.5,3.0,1.0,1.0,0.5,0.417,0.417,958.33
+2026-11-15,P16,Affiliate,bixgrow_affiliate,12.4,11.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-15,P16,Direct,Direct,124.0,83.0,3.0,1.0,4.0,1.0,0.0,0.0
+2026-11-15,P16,Email & SMS,Klaviyo,8.0,7.0,2.0,1.0,0.436,0.117,0.117,268.33
+2026-11-15,P16,Organic Search,DuckDuckGo,4.0,2.0,1.0,0.0,0.109,0.0,0.0,0.0
+2026-11-15,P16,Organic Search,Google Search,10.6,10.0,1.0,0.0,0.5,0.0,0.0,0.0
+2026-11-15,P16,Organic Social,Facebook Social,2.0,1.0,1.0,0.0,0.027,0.0,0.0,0.0
+2026-11-15,P16,Organic Social,Instagram Social,7.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-15,P16,Organic Social,Other Social,6.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-15,P16,Organic Social,Yotube Shopping,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-15,P16,Other Sources,KOL,4.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-15,P16,Other Sources,Linktree,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-15,P16,Other Sources,eir1tseugu5.feishu.cn,6.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-15,P16,Other Sources,linkinreach.feishu.cn,5.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-15,P16,Other Sources,ntp.msn.com,2.0,1.0,0.0,1.0,0.0,1.0,0.0,0.0
+2026-11-15,P16,Paid Ads,Bing Ads,5.5,4.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-15,P16,Paid Ads,Facebook Ads,48.0,37.0,10.0,3.0,9.191,2.55,0.0,0.0
+2026-11-15,P16,Paid Ads,Google Ads,60.0,37.0,6.0,3.0,5.236,1.917,0.467,1073.33
+2026-11-15,P18,Affiliate,bixgrow_affiliate,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-15,P18,Direct,Direct,16.0,13.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-15,P18,Email & SMS,Klaviyo,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-15,P18,Other Sources,linkinreach.feishu.cn,2.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-15,P18,Paid Ads,Facebook Ads,17.0,16.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-15,地垫套装,Affiliate,Impact,0.0,0.0,1.0,1.0,0.32,0.4,0.0,0.0
+2026-11-15,地垫套装,Affiliate,bixgrow_affiliate,0.0,0.0,1.0,1.0,0.6,0.5,0.0,0.0
+2026-11-15,地垫套装,Direct,Direct,23.0,16.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-15,地垫套装,Email & SMS,Klaviyo,2.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-15,地垫套装,Organic Search,Google Search,1.0,1.0,1.0,0.0,1.68,0.0,0.0,0.0
+2026-11-15,地垫套装,Other Sources,Linktree,0.1,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-15,地垫套装,Other Sources,flex_shop,2.0,1.0,1.0,1.0,0.4,0.1,0.0,0.0
+2026-11-15,地垫套装,Other Sources,linkinreach.feishu.cn,2.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-15,地垫套装,Other Sources,ntp.msn.com,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-15,地垫套装,Paid Ads,Facebook Ads,2.9,3.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-15,地垫套装,Paid Ads,Google Ads,2.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-16,P15,Affiliate,Impact,0.2,1.0,1.0,5.0,1.0,3.147,0.0,0.0
+2026-11-16,P15,Affiliate,bixgrow_affiliate,0.0,0.0,1.0,1.0,0.05,0.46,0.0,0.0
+2026-11-16,P15,Direct,Direct,66.0,30.0,4.0,3.0,4.0,3.0,0.0,0.0
+2026-11-16,P15,Email & SMS,Klaviyo,7.0,6.0,1.0,1.0,0.55,0.04,0.0,0.0
+2026-11-16,P15,Organic Search,Google Search,4.8,4.0,3.0,3.0,4.0,1.407,1.0,79.99
+2026-11-16,P15,Other Sources,KOL,0.0,0.0,1.0,0.0,0.4,0.0,0.0,0.0
+2026-11-16,P15,Other Sources,Linktree,0.0,0.0,0.0,1.0,0.0,0.5,0.0,0.0
+2026-11-16,P15,Other Sources,gmail,0.0,0.0,0.0,1.0,0.0,0.4,0.0,0.0
+2026-11-16,P15,Other Sources,www.merachfit.ca,0.0,0.0,0.0,1.0,0.0,0.007,0.0,0.0
+2026-11-16,P15,Paid Ads,Facebook Ads,23.0,17.0,0.0,3.0,0.0,2.0,0.0,0.0
+2026-11-16,P15,Paid Ads,Google Ads,11.0,3.0,1.0,1.0,1.0,0.04,0.0,0.0
+2026-11-16,P16,AI Assistant,Gemini,0.0,0.0,1.0,0.0,0.01,0.0,0.0,0.0
+2026-11-16,P16,AI Assistant,chatgpt.com,1.0,1.0,2.0,1.0,0.049,0.06,0.0,0.0
+2026-11-16,P16,Affiliate,Impact,18.6,7.0,10.0,3.0,6.498,2.263,0.0,0.0
+2026-11-16,P16,Affiliate,bixgrow_affiliate,7.0,5.0,4.0,1.0,1.514,1.04,0.0,0.0
+2026-11-16,P16,Direct,Direct,133.0,87.0,8.0,3.0,9.0,3.0,0.0,0.0
+2026-11-16,P16,Email & SMS,Klaviyo,112.0,87.0,9.0,3.0,4.278,2.783,0.0,0.0
+2026-11-16,P16,Organic Search,Bing Search,0.0,0.0,1.0,0.0,0.414,0.0,0.0,0.0
+2026-11-16,P16,Organic Search,DuckDuckGo,1.0,1.0,1.0,0.0,1.0,0.0,0.0,0.0
+2026-11-16,P16,Organic Search,Google Search,15.4,14.0,9.0,1.0,3.018,0.8,0.0,0.0
+2026-11-16,P16,Organic Search,Yandex,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-16,P16,Organic Social,Facebook Social,0.5,1.0,6.0,1.0,1.715,1.865,0.0,0.0
+2026-11-16,P16,Organic Social,Instagram Social,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-16,P16,Other Sources,KOL,3.0,2.0,1.0,0.0,0.04,0.0,0.0,0.0
+2026-11-16,P16,Other Sources,Linktree,2.5,2.0,1.0,1.0,0.5,0.5,0.0,0.0
+2026-11-16,P16,Other Sources,OC260410,0.0,0.0,0.0,1.0,0.0,0.013,0.0,0.0
+2026-11-16,P16,Other Sources,PR,6.0,4.0,1.0,0.0,0.014,0.0,0.0,0.0
+2026-11-16,P16,Other Sources,cristobalworkingdu-create.github.io,0.0,0.0,1.0,0.0,0.005,0.0,0.0,0.0
+2026-11-16,P16,Other Sources,eir1tseugu5.feishu.cn,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-16,P16,Other Sources,g0u4ecbq2egszpyo-50716115119.shopifypreview.com,0.0,0.0,1.0,0.0,0.005,0.0,0.0,0.0
+2026-11-16,P16,Other Sources,gmail,9.0,9.0,1.0,1.0,1.0,1.0,0.0,0.0
+2026-11-16,P16,Other Sources,merach.feishu.cn,0.0,0.0,1.0,0.0,0.029,0.0,0.0,0.0
+2026-11-16,P16,Other Sources,merachfit.de,0.0,0.0,1.0,0.0,0.01,0.0,0.0,0.0
+2026-11-16,P16,Other Sources,merachfit.eu,0.0,0.0,1.0,0.0,0.4,0.0,0.0,0.0
+2026-11-16,P16,Other Sources,track123,0.0,0.0,1.0,0.0,1.0,0.0,0.0,0.0
+2026-11-16,P16,Other Sources,www.klaviyo.com,0.0,0.0,0.0,1.0,0.0,0.067,0.0,0.0
+2026-11-16,P16,Paid Ads,Bing Ads,2.0,1.0,1.0,0.0,1.0,0.0,0.0,0.0
+2026-11-16,P16,Paid Ads,Facebook Ads,64.0,42.0,33.0,4.0,26.904,1.609,0.0,0.0
+2026-11-16,P16,Paid Ads,Google Ads,57.0,31.0,12.0,1.0,5.6,1.0,0.0,0.0
+2026-11-16,P18,Affiliate,Impact,0.0,0.0,1.0,1.0,1.0,0.6,0.0,0.0
+2026-11-16,P18,Affiliate,bixgrow_affiliate,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-16,P18,Direct,Direct,13.0,10.0,1.0,1.0,1.0,1.0,0.0,0.0
+2026-11-16,P18,Email & SMS,Email,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-16,P18,Email & SMS,Klaviyo,15.0,13.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-16,P18,Organic Search,Google Search,1.0,1.0,0.0,1.0,0.0,0.4,0.0,0.0
+2026-11-16,P18,Other Sources,Linktree,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-16,P18,Paid Ads,Facebook Ads,16.0,14.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-16,地垫套装,Direct,Direct,4.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-16,地垫套装,Email & SMS,Klaviyo,24.0,19.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-16,地垫套装,Organic Search,Google Search,4.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-16,地垫套装,Organic Social,Facebook Social,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0
+</script>
+<script type="text/csv" id="csv-orders">
+order_id,order_name,date,spu,item,sku,quantity,net_amount,gift,refunded,survey
+7478724100271,#449695,2026-11-01,P16,P16 Elite,MR-P16B3-US-DLZ01,1,2610,0,0,
+7481680298159,#450682,2026-11-02,P15,P15 赠品,MR-P15B7-US-DLZ01-BOGOS,1,0,1,0,None of the above：Interview with the MERACH design team! 
+7481680298159,#450682,2026-11-02,P16,P16 Elite,MR-P16B3-US-DLZ01,1,2813,0,0,None of the above：Interview with the MERACH design team! 
+7481680298159,#450682,2026-11-02,P18,P18 训练凳,MR-P18B1-US-DLZ01,1,313.5,0,0,None of the above：Interview with the MERACH design team! 
+7482447986863,#450863,2026-11-03,P15,P15 赠品,MR-P15B7-US-DLZ01-BOGOS,1,0,1,0,
+7482447986863,#450863,2026-11-03,P16,P16 Elite,MR-P16B3-US-DLZ01,1,2699.99,0,0,
+7483973337263,#451386,2026-11-04,P18,P18 训练凳,MR-P18B1-US-DLZ01,1,329.99,0,0,
+7488266993839,#452691,2026-11-06,P15,P15 赠品,MR-P15B7-US-DLZ01-BOGOS,1,0,1,0,Facebook/Instagram Ad
+7488266993839,#452691,2026-11-06,P16,P16 Elite,MR-P16B3-US-DLZ01,1,2899.99,0,0,Facebook/Instagram Ad
+7488266993839,#452691,2026-11-06,P18,P18 训练凳,MR-P18B1-US-DLZ01,1,329.99,0,0,Facebook/Instagram Ad
+7491696099503,#453657,2026-11-08,P15,P15 杠铃片,MR-P15L5-US-DLZ01,1,248.39,0,0,Facebook/Instagram Ad
+7491696099503,#453657,2026-11-08,P15,P15 赠品,MR-P15B7-US-DLZ01-BOGOS,2,0,1,0,Facebook/Instagram Ad
+7491696099503,#453657,2026-11-08,P16,P16 Pro,MR-P16B2-US-DLZ01,1,2116,0,0,Facebook/Instagram Ad
+7493392203951,#454222,2026-11-09,P16,P16 Elite,MR-P16B3-US-DLZ01,1,2667.99,0,0,
+7493475139759,#454249,2026-11-09,P15,P15 赠品,MR-P15B7-US-DLZ01-BOGOS,1,0,1,0,
+7493475139759,#454249,2026-11-09,P16,P16 Elite,MR-P16B3-US-DLZ01,1,2668,0,0,
+7493703434415,#454326,2026-11-09,P15,P15 赠品,MR-P15B7-US-DLZ01-BOGOS,1,0,1,0,
+7493703434415,#454326,2026-11-09,P16,P16 Elite,MR-P16B3-US-DLZ01,1,2699.99,0,0,
+7493703434415,#454326,2026-11-09,P18,P18 训练凳,MR-P18B1-US-DLZ01,1,329.99,0,0,
+7494775898287,#454642,2026-11-09,P15,P15 赠品,MR-P15B7-US-DLZ01-BOGOS,1,0,1,0,
+7494775898287,#454642,2026-11-09,P15,P15 杠铃片,MR-P15C-260-US-DLZ01,1,671.59,0,0,
+7494775898287,#454642,2026-11-09,P16,P16 Pro,MR-P16B2-US-DLZ01,1,2116,0,0,
+7494775898287,#454642,2026-11-09,P18,P18 训练凳,MR-P18B1-US-DLZ01,1,303.59,0,0,
+7500273909935,#456030,2026-11-12,P15,P15 赠品,MR-P15B7-US-DLZ01-BOGOS,1,0,1,0,Friends and family
+7500273909935,#456030,2026-11-12,P16,P16 Elite,MR-P16B3-US-DLZ01,1,2668,0,0,Friends and family
+7502965866671,#456687,2026-11-13,P15,P15 赠品,MR-P15B7-US-DLZ01-BOGOS,1,0,1,0,None of the above：my own research and comparisons
+7502965866671,#456687,2026-11-13,P16,P16 Elite,MR-P16B3-US-DLZ01,1,2668,0,0,None of the above：my own research and comparisons
+7502965866671,#456687,2026-11-13,P18,P18 训练凳,MR-P18B1-US-DLZ01,1,303.59,0,0,None of the above：my own research and comparisons
+7504990535855,#456993,2026-11-14,地垫套装,收边条,MR-2604-US-DLZ01,1,59.99,0,0,
+7504990535855,#456993,2026-11-14,地垫套装,地垫,MR-2603-US-DLZ01,1,89.99,0,0,
+7505271947439,#457057,2026-11-14,P16,P16 Elite,MR-P16B3-US-DLZ01,1,2668,0,0,
+7505324114095,#457069,2026-11-14,地垫套装,地垫,MR-2603-US-DLZ01,24,1986.98,0,0,
+7506921455791,#457472,2026-11-15,P15,P15 赠品,MR-P15B7-US-DLZ01-BOGOS,1,0,1,0,
+7506921455791,#457472,2026-11-15,P15,P15 杠铃片,MR-P15YGJ12-US-DLZ01,1,73.59,0,0,
+7506921455791,#457472,2026-11-15,P16,P16 Pro,MR-P16B2-US-DLZ01,1,2116,0,0,
+7508683227311,#457933,2026-11-16,P15,P15 杠铃片,MR-P15YGJ12-US-DLZ01,1,73.6,0,0,
+</script>
+<script type="text/csv" id="csv-paths">
+order_id,step,steps,time,channel,channel_group,campaign_name,ad_name,landing_page,clicks
+7478724100271,1,30,2026-10-05 18:19,Facebook Ads,Paid Ads,Danni_US_260724_2510_MOF_Pur,Video_TK_2510_crazy.good.deals_260719_7663932973900762382,/products/merach-ab-trainer-dual-track-core-machine,1
+7478724100271,2,30,2026-10-14 11:07,Facebook Ads,Paid Ads,Winnie_US_260616_R11B4_MOF_Pur_PD Sale,Image_R11B4_PD Sale,/products/novarow-r50-air-resistance-rower,1
+7478724100271,3,30,2026-10-16 14:59,Facebook Ads,Paid Ads,Remi_US_20260827_T27_MOF_ASC,Video_T27_tk_dailyrepsguy_260703_7658114038664105229,/pages/ultrawalk-w60-explore,1
+7478724100271,4,30,2026-10-16 15:56,Facebook Ads,Paid Ads,Remi_US_20260905_T27_MOF_ASC,Video_T27_tk_mrrob3.0_260614_7651240871920258318,/pages/ultrawalk-w60-explore,1
+7478724100271,5,30,2026-10-18 07:56,Facebook Ads,Paid Ads,Danni_US_251122_W50_PUR_TKvideo,W50_TK_effymichell_250926,/products/novawalk-w50-trekpad,1
+7478724100271,6,30,2026-10-21 21:41,Facebook Ads,Paid Ads,Remi_US_20261021_P16_TOF_Lead,IMG_P16_Product_IG_1,/pages/p16-early-access,1
+7478724100271,7,30,2026-10-21 21:44,Google Search,Organic Search,,,/pages/p16-early-access,1
+7478724100271,8,30,2026-10-21 21:49,Google Ads,Paid Ads,Search-Brand-FullSite-MultiAngle-20261012(20251118)-YJ,,/,1
+7478724100271,9,30,2026-10-21 21:51,Google Ads,Paid Ads,Pmax-Sales页面-US-251017,,/pages/sale,1
+7478724100271,10,30,2026-10-21 21:55,Facebook Ads,Paid Ads,Remi_US_20261021_P16_TOF_Lead,IMG_P16_Product_IG_1,/pages/p16-early-access,1
+7478724100271,11,30,2026-10-21 22:01,Google Ads,Paid Ads,Search-Brand-FullSite-MultiAngle-20261012(20251118)-YJ,,/,1
+7478724100271,12,30,2026-10-21 22:01,Google Search,Organic Search,,,/collections/vendors,2
+7478724100271,13,30,2026-10-21 22:03,Klaviyo,Email & SMS,"P16 | welcome flow Email #1 Test #1 October 09, 2026 Variation A",,/pages/p16-early-access,3
+7478724100271,14,30,2026-10-22 14:05,Google Ads,Paid Ads,Search-Brand-FullSite-MultiAngle-20261012(20251118)-YJ,,/,2
+7478724100271,15,30,2026-10-22 14:06,Google Search,Organic Search,,,/pages/p16-early-access,2
+7478724100271,16,30,2026-10-22 16:41,Facebook Ads,Paid Ads,Remi_US_20261021_P16_TOF_Lead,IMG_P16_Product_IG_1,/pages/p16-early-access,1
+7478724100271,17,30,2026-10-22 17:15,Klaviyo,Email & SMS,"P16 | welcome flow Email #1 Test #1 October 09, 2026 Variation A",,/pages/p16-early-access,2
+7478724100271,18,30,2026-10-23 18:25,Klaviyo,Email & SMS,LR | 2026.10.23 | Favorable & Beneficial | CV55 | Q&A Pain Point Solutions,,/pages/p16-early-access,2
+7478724100271,19,30,2026-10-24 20:53,Google Search,Organic Search,,,/pages/p16-early-access,1
+7478724100271,20,30,2026-10-25 08:29,Facebook Ads,Paid Ads,Remi_US_20261023_P16_TOF_Lead_SiteEngagers_90D,IMG_P16_Product_早鸟海报_var_v1,/pages/p16-early-access,1
+7478724100271,21,30,2026-10-25 20:18,Facebook Ads,Paid Ads,Remi_US_20261021_P16_TOF_Lead,IMG_P16_Product_IG_1,/pages/p16-early-access,1
+7478724100271,22,30,2026-10-27 20:55,Google Search,Organic Search,,,/pages/p16-early-access,2
+7478724100271,23,30,2026-10-28 18:31,Klaviyo,Email & SMS,LR | 2026.10.28 | P16 | Engaging + Emotional + High Value | Brand Storytelling & Warm-up Seeding,,/pages/p16-early-access,4
+7478724100271,24,30,2026-10-28 18:46,Google Ads,Paid Ads,DSA-Vibration-20260814-YJ,,/products/merach-440-lbs-vibration-plate-fat-loss-lymphatic-drainage-machine,1
+7478724100271,25,30,2026-10-28 19:23,Facebook Ads,Paid Ads,Winnie_US_260902_2440_MOF_Pur,Video_2440_TK_mearchreviews1_260826_7677872010445278478,/products/merach-440-lbs-vibration-plate-fat-loss-lymphatic-drainage-machine,2
+7478724100271,26,30,2026-10-30 19:53,Google Ads,Paid Ads,Search-Bikes-Brand-US-20250514,,/pages/exercise-bike-buyers-guide,1
+7478724100271,27,30,2026-10-30 19:56,Impact,Affiliate,"Affvia, LLC",,/,2
+7478724100271,28,30,2026-10-30 19:58,Klaviyo,Email & SMS,Browse Abandonment:Email Email #3,,/pages/p16-early-access,5
+7478724100271,29,30,2026-10-31 21:56,Facebook Ads,Paid Ads,Remi_US_251118_TK_ASC+ACA_BF_Sale_Pur_Essential,ACA-Essential-Carousel-Add Frame,/products/all-in-one-angled-smith-machine-p16,1
+7478724100271,30,30,2026-11-01 00:01,Klaviyo,Email & SMS,Browse Abandonment:Email Email #3,,/pages/p16-early-access,2
+7481680298159,1,3,2026-10-18 07:10,Facebook Ads,Paid Ads,Winnie_US_260615_R26_MOF_Pur_PD Sale,IMG_R26_PD,/products/novarow-rs3-magnetic-rowing-machine,1
+7481680298159,2,3,2026-10-21 17:11,Klaviyo,Email & SMS,LR | 2026.10.21 | W60 | Fun | Lifestyle & Fun Movement,,/pages/p16-early-access,1
+7481680298159,3,3,2026-11-02 16:31,Klaviyo,Email & SMS,LR | 2026.10.28 | P16 | Engaging + Emotional + High Value | Brand Storytelling & Warm-up Seeding,,/pages/p16-early-access,1
+7482447986863,1,1,2026-11-03 05:54,Bing Ads,Paid Ads,Search-Brand-FullSite-MultiAngle-20261020-YJ_bing,merachfit.com,/,1
+7483973337263,1,2,2026-10-20 08:47,Google Ads,Paid Ads,Search-Brand-FullSite-MultiAngle-20261012(20251118)-YJ,,/,1
+7483973337263,2,2,2026-10-20 08:49,Google Search,Organic Search,,,/pages/p16-early-access,2
+7488266993839,1,5,2026-11-03 05:09,Facebook Ads,Paid Ads,Remi_US_20261102_P16_BOF_Retargeting_Pur,IMG_P16_AIO-001_SixStations,/pages/p16-all-in-one-angled-smith-machine,1
+7488266993839,2,5,2026-11-06 10:56,Impact,Affiliate,IBRA Digital Branding Services Pte. Ltd.,,/,1
+7488266993839,3,5,2026-11-06 10:57,Yahoo Search,Organic Search,,,/collections/home-gym,1
+7488266993839,4,5,2026-11-06 10:58,Bing Ads,Paid Ads,Brand Search-High Conversion-20251119-YJ_bing,merachfit.com,/,1
+7488266993839,5,5,2026-11-06 11:01,Bing Ads,Paid Ads,Search-Brand-FullSite-MultiAngle-20261020-YJ_bing,merachfit.com,/,1
+7491696099503,1,1,2026-11-08 07:24,Facebook Ads,Paid Ads,,,,1
+7493392203951,1,6,2026-11-02 05:17,Facebook Ads,Paid Ads,Winnie_US_251212_2510_PUR_TKvideo_CBO,2510_TK_iam.thats.a.bad.idea_1210,/products/merach-ab-trainer-dual-track-core-machine,1
+7493392203951,2,6,2026-11-02 13:08,Facebook Ads,Paid Ads,Lyfi_US_260708_2510_CreativeTest,2510_TK_drizzledfinds_260630_7657423238355635487,/products/merach-ab-trainer-dual-track-core-machine,1
+7493392203951,3,6,2026-11-02 16:32,Facebook Ads,Paid Ads,Lyfi_US_260605_2510_pur,2510_TK_260115_lisareviews0,/products/merach-ab-trainer-dual-track-core-machine,1
+7493392203951,4,6,2026-11-04 04:54,Facebook Ads,Paid Ads,Danni_US_260724_2510_MOF_Pur,Video_TK_2510_crazy.good.deals_260719_7663932973900762382,/products/merach-ab-trainer-dual-track-core-machine,6
+7493392203951,5,6,2026-11-04 05:02,Facebook Ads,Paid Ads,Lyfi_US_260812_2510_CreativeTest,2510_TK_crazy.good.deals_260810_7672070332102085901,/products/merach-ab-trainer-dual-track-core-machine,3
+7493392203951,6,6,2026-11-09 05:30,Facebook Ads,Paid Ads,Lyfi_US_260605_2510_pur,2510_TK_260115_lisareviews0,/products/merach-ab-trainer-dual-track-core-machine,3
+7493475139759,1,4,2026-11-08 18:05,Klaviyo,Email & SMS,Verz Abandoned Cart Email #2 - 8% Off,,/products/all-in-one-angled-smith-machine-p16,1
+7493475139759,2,4,2026-11-08 20:06,chatgpt.com,AI Assistant,,,/pages/p16-all-in-one-angled-smith-machine,2
+7493475139759,3,4,2026-11-09 02:21,Klaviyo,Email & SMS,Verz Abandoned Checkout Email #1 - 8% Off,,/products/all-in-one-angled-smith-machine-p16,1
+7493475139759,4,4,2026-11-09 02:24,Klaviyo,Email & SMS,Verz Abandoned Checkout Email #2 - 8% Off,,/,1
+7493703434415,1,1,2026-11-09 08:22,Google Ads,Paid Ads,Products Type Search(Brand+Product&Product)-20260203-YJ,,/collections/vibration,1
+7494775898287,1,2,2026-11-07 14:02,Facebook Ads,Paid Ads,Remi_US_20261102_P16_BOF_Retargeting_Pur,IMG_P16_AIO-001_SixStations,/pages/p16-all-in-one-angled-smith-machine,4
+7494775898287,2,2,2026-11-09 20:22,Facebook Ads,Paid Ads,Remi_US_20261106_P16_ABO_自制_AudienceTest,Video_P16_自制_TwoPaths_Broad_20261106,/pages/p16-all-in-one-angled-smith-machine,1
+7500273909935,1,13,2026-10-24 00:27,Facebook Ads,Paid Ads,Remi_US_20261021_P16_TOF_Lead,IMG_P16_Product_IG_1,/pages/p16-early-access,2
+7500273909935,2,13,2026-10-30 21:09,Facebook Ads,Paid Ads,Remi_US_251118_TK_ASC+ACA_BF_Sale_Pur_Essential,ACA-Essential-Carousel-Add Frame,/products/all-in-one-angled-smith-machine-p16,1
+7500273909935,3,13,2026-10-31 17:33,Facebook Ads,Paid Ads,Remi_US_261001_2515_Pur_TK_自制,2515瘦脂机（日更号9）-0714-皮卡丘-SX-2_自制,/products/surgevib-v55-4d-vibrating-workout-plate-with-triple-motor-system,1
+7500273909935,4,13,2026-10-31 22:42,Facebook Ads,Paid Ads,Remi_US_20261026_P16_TOF_Lead_PageEngaged_180D,IMG_P16_实拍_承重,/pages/p16-early-access,1
+7500273909935,5,13,2026-11-01 19:39,Facebook Ads,Paid Ads,Remi_US_20261101_P16_MOF_Purchase_B_Formats,IMG_P16_Product_Carousel_IG,/products/all-in-one-angled-smith-machine-p16,1
+7500273909935,6,13,2026-11-01 19:39,Facebook Ads,Paid Ads,p16_mof_purchase_b_formats,,/products/merach-color-bumper-plates,1
+7500273909935,7,13,2026-11-01 22:48,Facebook Ads,Paid Ads,Remi_US_251121_BFCM_ASC+ACA-CreativeTest_PUR_R50_Guide,R50_INS_dylhughes99_1120_Procut,/products/corerow-r300-rubberwood-water-rower,1
+7500273909935,8,13,2026-11-02 14:56,Facebook Ads,Paid Ads,Remi_US_20261102_P16_BOF_Retargeting_Pur,IMG_P16_AIO-001_SixStations,/pages/p16-all-in-one-angled-smith-machine,2
+7500273909935,9,13,2026-11-06 13:47,Facebook Ads,Paid Ads,Remi_US_260409_2440_Pur_TK,2398&2440-tk-paulasshopreviews-0311,/products/merach-440-lbs-vibration-plate-fat-loss-lymphatic-drainage-machine,1
+7500273909935,10,13,2026-11-06 17:50,Facebook Ads,Paid Ads,Remi_US_20261101_P16_MOF_Purchase_A_Stills,IMG_P16_Info-001_QuickTilt_HSA,/pages/p16-all-in-one-angled-smith-machine,3
+7500273909935,11,13,2026-11-11 14:05,Facebook Ads,Paid Ads,Remi_US_20261111_P16_MOF_Pro_unboxedtts_TK1_Pur,Video_P16_tk_unboxedtts_261109_7705873830002150686_CrossFit_Offer,/pages/p16-all-in-one-angled-smith-machine,1
+7500273909935,12,13,2026-11-12 11:30,Google Ads,Paid Ads,Search-Brand-US-24.10.10,,/,2
+7500273909935,13,13,2026-11-12 12:07,Google Ads,Paid Ads,PMax_Exercise Bikes_MOF_US_20261029_Jiayi,,/collections/exercise-bikes,1
+7502965866671,1,8,2026-11-05 18:36,Google Ads,Paid Ads,PMax_P16_MOF_US_20261102_Jiayi,,/products/all-in-one-angled-smith-machine-p16,2
+7502965866671,2,8,2026-11-05 19:29,Google Ads,Paid Ads,Search_P16_BOF_Brand_US_20261102_Jiayi,RSA_Brand_P16,/products/all-in-one-angled-smith-machine-p16,3
+7502965866671,3,8,2026-11-05 19:37,Google Ads,Paid Ads,PMax_P16_MOF_US_20261102_Jiayi,,/products/all-in-one-angled-smith-machine-p16,1
+7502965866671,4,8,2026-11-05 19:41,Google Ads,Paid Ads,Search_P16_BOF_Brand_US_20261102_Jiayi,RSA_Brand_P16,/products/all-in-one-angled-smith-machine-p16,3
+7502965866671,5,8,2026-11-06 15:51,Klaviyo,Email & SMS,LR | Welcome Flow Email #1,,/collections/strength,1
+7502965866671,6,8,2026-11-06 18:02,Google Ads,Paid Ads,PMax_P16_MOF_US_20261102_Jiayi,,/products/all-in-one-angled-smith-machine-p16,1
+7502965866671,7,8,2026-11-07 04:23,Klaviyo,Email & SMS,"welcome 无氧 Email #2.5 Test #1 September 15, 2026 Variation B",,/products/merach-color-bumper-plates,2
+7502965866671,8,8,2026-11-07 14:47,Google Ads,Paid Ads,Search_P16_BOF_Brand_US_20261102_Jiayi,RSA_Brand_P16,/products/all-in-one-angled-smith-machine-p16,1
+7505271947439,1,22,2026-11-03 17:40,Facebook Ads,Paid Ads,Remi_US_20261102_P16_BOF_Retargeting_Pur,IMG_P16_AIO-001_SixStations,/pages/p16-all-in-one-angled-smith-machine,1
+7505271947439,2,22,2026-11-03 17:41,Facebook Ads,Paid Ads,p16_mof_purchase_newcreatives,,/products/all-in-one-angled-smith-machine-p16,1
+7505271947439,3,22,2026-11-03 17:44,Facebook Ads,Paid Ads,Remi_US_20261102_P16_BOF_Retargeting_Pur,IMG_P16_AIO-001_SixStations,/pages/p16-all-in-one-angled-smith-machine,1
+7505271947439,4,22,2026-11-04 01:58,Facebook Ads,Paid Ads,p16_mof_purchase_newcreatives,,/products/all-in-one-angled-smith-machine-p16,3
+7505271947439,5,22,2026-11-04 01:59,Facebook Ads,Paid Ads,Remi_US_20261102_P16_BOF_Retargeting_Pur,IMG_P16_AIO-001_SixStations,/pages/p16-all-in-one-angled-smith-machine,1
+7505271947439,6,22,2026-11-04 02:34,Facebook Ads,Paid Ads,Remi_US_20261101_P16_MOF_Purchase_A_Stills,IMG_P16_Info-001_QuickTilt_HSA,/pages/p16-all-in-one-angled-smith-machine,1
+7505271947439,7,22,2026-11-04 02:34,Facebook Ads,Paid Ads,p16_mof_purchase_a_stills,,/products/all-in-one-angled-smith-machine-p16,1
+7505271947439,8,22,2026-11-04 02:34,Facebook Ads,Paid Ads,Remi_US_20261101_P16_MOF_Purchase_A_Stills,IMG_P16_Info-001_QuickTilt_HSA,/pages/p16-all-in-one-angled-smith-machine,1
+7505271947439,9,22,2026-11-04 17:28,Facebook Ads,Paid Ads,Remi_US_20261102_P16_BOF_Retargeting_Pur,IMG_P16_AIO-001_SixStations,/pages/p16-all-in-one-angled-smith-machine,1
+7505271947439,10,22,2026-11-04 17:28,Facebook Ads,Paid Ads,p16_mof_purchase_newcreatives,,/products/all-in-one-angled-smith-machine-p16,1
+7505271947439,11,22,2026-11-04 17:28,Facebook Ads,Paid Ads,Remi_US_20261102_P16_BOF_Retargeting_Pur,IMG_P16_AIO-001_SixStations,/pages/p16-all-in-one-angled-smith-machine,1
+7505271947439,12,22,2026-11-06 03:34,Facebook Ads,Paid Ads,Remi_US_20261101_P16_MOF_Purchase_A_Stills,IMG_P16_Info-001_QuickTilt_HSA,/pages/p16-all-in-one-angled-smith-machine,4
+7505271947439,13,22,2026-11-06 07:37,Facebook Ads,Paid Ads,Remi_US_20261102_P16_MOF_Purchase_E_SpaceTime,VID_P16_FeelTheMuscle_Split,/pages/p16-all-in-one-angled-smith-machine,1
+7505271947439,14,22,2026-11-06 07:44,Facebook Ads,Paid Ads,Remi_US_20261102_P16_BOF_Retargeting_Pur,IMG_P16_AIO-001_SixStations,/pages/p16-all-in-one-angled-smith-machine,4
+7505271947439,15,22,2026-11-06 13:18,Facebook Ads,Paid Ads,Remi_US_20261101_P16_MOF_Purchase_A_Stills,IMG_P16_Info-001_QuickTilt_HSA,/pages/p16-all-in-one-angled-smith-machine,1
+7505271947439,16,22,2026-11-06 16:14,Facebook Ads,Paid Ads,Remi_US_20261102_P16_MOF_Purchase_E_SpaceTime,VID_P16_30Min_Workout,/pages/p16-all-in-one-angled-smith-machine,3
+7505271947439,17,22,2026-11-07 15:24,Facebook Ads,Paid Ads,Remi_US_261002_2515_Pur_TK_2_自制,2515瘦脂机（日更号9）-0717-皮卡丘-SX-1_自制,/products/surgevib-v55-4d-vibrating-workout-plate-with-triple-motor-system,1
+7505271947439,18,22,2026-11-07 16:23,Facebook Ads,Paid Ads,Remi_US_20261106_P16_MOF_Purchase_F_AllVideo_Broad,VID_P16_30Min_Workout,/pages/p16-all-in-one-angled-smith-machine,2
+7505271947439,19,22,2026-11-10 03:04,Facebook Ads,Paid Ads,Remi_US_20261106_P16_ABO_自制_AudienceTest,Video_P16_自制_TwoPaths_CrossFit_20261106,/pages/p16-all-in-one-angled-smith-machine,2
+7505271947439,20,22,2026-11-11 02:48,Facebook Ads,Paid Ads,Remi_US_20261102_P16_BOF_Retargeting_Pur,IMG_P16_Info-001_QuickTilt,/pages/p16-all-in-one-angled-smith-machine,4
+7505271947439,21,22,2026-11-11 16:17,Facebook Ads,Paid Ads,Remi_US_20261106_P16_MOF_Purchase_F_AllVideo_Broad,VID_P16_FeelTheMuscle_Split,/pages/p16-all-in-one-angled-smith-machine,1
+7505271947439,22,22,2026-11-11 16:57,Facebook Ads,Paid Ads,Remi_US_20261106_P16_ABO_自制_AudienceTest,Video_P16_自制_TwoPaths_GymBrands_20261106,/pages/p16-all-in-one-angled-smith-machine,7
+7505324114095,1,4,2026-11-10 15:03,Google Search,Organic Search,,,/products/merach-interlocking-rubber-gym-floor-tiles,3
+7505324114095,2,4,2026-11-10 16:17,Klaviyo,Email & SMS,Verz Abandoned Cart Email #1 - 8% OFF,,/products/merach-interlocking-rubber-gym-floor-tiles,2
+7505324114095,3,4,2026-11-11 14:17,Google Ads,Paid Ads,Search-DSA-US-20251125,,/products/merach-interlocking-rubber-gym-floor-tiles,1
+7505324114095,4,4,2026-11-12 19:00,Google Ads,Paid Ads,Search-Brand-US-24.10.10,,/,1
+7506921455791,1,3,2026-11-06 14:06,Google Ads,Paid Ads,DemandGen_P16_Image_TOF_US_20261102_Jiayi,DG_Image_Affinity,/pages/p16-all-in-one-angled-smith-machine,5
+7506921455791,2,3,2026-11-15 07:06,Klaviyo,Email & SMS,LR | Welcome Flow Email #1,,/collections/strength,7
+7506921455791,3,3,2026-11-15 11:36,Impact,Affiliate,Sovrn Commerce,,/,2
+7508683227311,1,1,2026-11-16 09:08,Google Search,Organic Search,,,/products/merach-change-weight-plates,1
+</script>
+<script>
+["sales", "funnel", "orders", "paths"].forEach((id) => dash.load(id, document.getElementById('csv-' + id).textContent));
+</script>
+<style>
+.dy { display: grid; gap: var(--cds-gap-xl); font-variant-numeric: tabular-nums; }
+.dy-head { display: grid; gap: var(--cds-gap-md); }
+.dy-title { font-family: var(--font-anthropic-serif); font-weight: 400; font-size: var(--cds-font-size-title); margin: 0; text-wrap: balance; }
+.dy-lede { margin: 0; color: var(--color-fg); max-width: 70ch; line-height: 1.7; }
+.dy-lede b { font-weight: var(--cds-font-weight-medium); }
+.dy-meta { color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); margin: 0; }
+.dy-bar { display: flex; flex-wrap: wrap; gap: var(--cds-gap-md); align-items: center; }
+.dy-tabs { display: flex; flex-wrap: wrap; gap: 4px; padding: 3px; border: 1px solid var(--color-border-line); border-radius: 999px; background: var(--color-panel); }
+.dy-tab { font: inherit; font-size: 13px; border: 0; background: transparent; color: var(--color-fg-muted); padding: 5px 12px; border-radius: 999px; cursor: pointer; }
+.dy-tab:hover { color: var(--color-fg); }
+.dy-tab.is-on { background: var(--color-fg); color: var(--color-bg); }
+.dy-tab:focus-visible, .dy-seg button:focus-visible { outline: 2px solid var(--c1, currentColor); outline-offset: 2px; }
+.dy-field { display: inline-flex; align-items: center; gap: var(--cds-gap-sm); font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+.dy-seg { display: inline-flex; border: 1px solid var(--color-border-line); border-radius: 8px; overflow: hidden; }
+.dy-seg button { font: inherit; font-size: 12px; border: 0; background: var(--color-panel); color: var(--color-fg-muted); padding: 5px 10px; cursor: pointer; }
+.dy-seg button.is-on { background: var(--color-fg); color: var(--color-bg); }
+.dy-section { display: grid; gap: var(--cds-gap-md); min-width: 0; }
+.dy-section > h2 { font-size: var(--cds-font-size-heading); font-weight: var(--cds-font-weight-medium); margin: 0; }
+.dy-sub { margin: 0; color: var(--color-fg-muted); font-size: 13px; max-width: 80ch; }
+.dy-kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: var(--cds-gap-md); }
+.dy-kpi { background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-md) var(--cds-pad-lg); display: grid; gap: 4px; min-width: 0; }
+.dy-kpi-label { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+.dy-kpi-value { font-family: var(--font-anthropic-serif); font-size: 26px; line-height: 1.2; }
+.dy-kpi-cmp { font-size: 12px; color: var(--color-fg-muted); display: grid; gap: 2px; }
+.dy-up { color: var(--color-ok); }
+.dy-down { color: var(--color-bad); }
+.dy-flat { color: var(--color-fg-muted); }
+.dy-card { background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-lg); min-width: 0; }
+.dy-scroll { overflow-x: auto; }
+.dy-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.dy-table th { text-align: right; font-weight: 500; color: var(--color-fg-muted); font-size: 12px; padding: 6px 8px; border-bottom: 1px solid var(--color-border-line); white-space: nowrap; }
+.dy-table td { text-align: right; padding: 7px 8px; border-bottom: 1px solid var(--color-border-line); white-space: nowrap; }
+.dy-table th:first-child, .dy-table td:first-child { text-align: left; }
+.dy-table tr.is-sel td { background: color-mix(in srgb, var(--color-fg) 5%, transparent); }
+.dy-table td.dy-name { font-weight: 500; }
+.dy-rate { color: var(--color-fg-muted); font-size: 11px; margin-left: 4px; }
+.dy-spark { display: block; }
+.dy-muted { color: var(--color-fg-muted); }
+.dy-two { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: var(--cds-gap-lg); }
+.dy-chart { position: relative; min-height: 240px; }
+.dy-chart svg text { fill: var(--cds-text-secondary); font-size: 11px; }
+.dy-chart .domain { stroke: var(--cds-chart-axis); }
+.dy-chart .tick line { stroke: var(--cds-chart-grid); }
+.dy-tip { position: absolute; pointer-events: none; background: var(--cds-surface-popover); border: 1px solid var(--cds-border); box-shadow: var(--cds-shadow-popover); border-radius: 8px; padding: 8px 10px; font-size: 12px; line-height: 1.5; z-index: 5; min-width: 160px; }
+.dy-tip b { font-weight: 600; }
+.dy-tip .row { display: flex; justify-content: space-between; gap: 12px; }
+.dy-legend { display: flex; flex-wrap: wrap; gap: var(--cds-gap-md); font-size: 12px; color: var(--color-fg-muted); }
+.dy-legend span { display: inline-flex; align-items: center; gap: 6px; }
+.dy-legend i { width: 10px; height: 10px; border-radius: 2px; display: inline-block; }
+.dy-orders { display: grid; gap: var(--cds-gap-md); }
+.dy-order { background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-md) var(--cds-pad-lg); display: grid; gap: var(--cds-gap-sm); min-width: 0; }
+.dy-order-top { display: flex; flex-wrap: wrap; gap: var(--cds-gap-sm) var(--cds-gap-md); align-items: baseline; }
+.dy-order-name { font-weight: 600; }
+.dy-order-amt { font-family: var(--font-anthropic-serif); font-size: 18px; margin-left: auto; }
+.dy-chip { display: inline-block; font-size: 12px; padding: 2px 8px; border-radius: 999px; border: 1px solid var(--color-border-line); color: var(--color-fg); }
+.dy-chip.is-gift { color: var(--color-fg-muted); border-style: dashed; }
+.dy-chip.is-bundle { border-color: var(--color-ok); color: var(--color-ok); }
+.dy-path { display: flex; flex-wrap: wrap; gap: 4px; align-items: center; font-size: 12px; }
+.dy-step { display: inline-flex; align-items: center; gap: 5px; padding: 3px 8px; border-radius: 6px; background: color-mix(in srgb, var(--color-fg) 5%, transparent); max-width: 100%; }
+.dy-step i { width: 8px; height: 8px; border-radius: 50%; flex: none; }
+.dy-step span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 260px; }
+.dy-step.is-end { outline: 1px solid var(--color-fg-muted); }
+.dy-arrow { color: var(--color-fg-muted); }
+.dy-note { font-size: 12px; color: var(--color-fg-muted); }
+.dy-summary { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: var(--cds-gap-lg); }
+.dy-hbar { display: grid; grid-template-columns: minmax(90px, 140px) 1fr auto; gap: 6px 10px; align-items: center; font-size: 12px; }
+.dy-hbar .bar { height: 10px; border-radius: 3px; }
+.dy-hbar h4 { grid-column: 1 / -1; margin: 0 0 2px; font-size: 13px; font-weight: 500; }
+.dy-empty { color: var(--color-fg-muted); font-size: 13px; padding: var(--cds-pad-md) 0; }
+.dy-notes summary { cursor: pointer; color: var(--color-fg-muted); font-size: 13px; }
+.dy-notes ul { margin: var(--cds-gap-sm) 0 0; padding-left: 1.2em; color: var(--color-fg-muted); font-size: 13px; line-height: 1.7; max-width: 90ch; }
+.dy-foot { color: var(--color-fg-muted); font-size: 12px; border-top: 1px solid var(--color-border-line); padding-top: var(--cds-pad-md); }
+</style>
+
+<div class="dy">
+  <header class="dy-head" id="top">
+    <h1 class="dy-title">无氧系列日报</h1>
+    <p class="dy-lede" id="lede"><b data-draw="lede-date">—</b>（美西时间），<b data-draw="lede-name">—</b>成交 <b data-draw="lede-orders">—</b> 单、销售额 <b data-draw="lede-sales">—</b>；商品浏览 <b data-draw="lede-views">—</b> 次，加购 <b data-draw="lede-atc">—</b> 次，发起结账 <b data-draw="lede-ic">—</b> 次。<span data-draw="lede-cmp"></span></p>
+    <div class="dy-bar">
+      <div class="dy-tabs" role="tablist" aria-label="商品">
+        <button class="dy-tab is-on" role="tab" aria-selected="true" data-spu="全部">合计</button>
+        <button class="dy-tab" role="tab" aria-selected="false" data-spu="P15">P15 杠铃片</button>
+        <button class="dy-tab" role="tab" aria-selected="false" data-spu="P16">P16 史密斯机</button>
+        <button class="dy-tab" role="tab" aria-selected="false" data-spu="P17">P17</button>
+        <button class="dy-tab" role="tab" aria-selected="false" data-spu="P18">P18 训练凳</button>
+        <button class="dy-tab" role="tab" aria-selected="false" data-spu="地垫套装">地垫套装</button>
+      </div>
+      <label class="dy-field" for="dy-date">截至 <select class="dash-select" id="dy-date" data-draw="date-select" aria-label="截至日期"></select></label>
+      <div class="dy-seg" role="group" aria-label="统计区间">
+        <button type="button" class="is-on" data-win="1" id="win-1">当日</button>
+        <button type="button" data-win="7" id="win-7">近 7 天</button>
+        <button type="button" data-win="all" id="win-all">全周期</button>
+      </div>
+    </div>
+    <p class="dy-meta">“合计”包含 P15–P18 与地垫套装（地垫 + 收边条）。数据只含已结束的美西完整日，截至 <span data-draw="asof">—</span>。</p>
+  </header>
+
+  <section class="dy-section" id="kpis">
+    <h2>核心数字</h2>
+    <p class="dy-sub">数值为所选区间的合计。当日与前 7 日日均、上周同日对比；近 7 天与再往前 7 天对比；全周期显示日均。订单与销售额来自 Shopify；浏览、加购、发起结账来自 Convbox，按事件计。</p>
+    <div class="dy-kpis" data-source="daily_spu">
+      <div class="dy-kpi" id="k-orders"><span class="dy-kpi-label">订单</span><span class="dy-kpi-value" data-draw="kv" data-k="orders">—</span><span class="dy-kpi-cmp" data-draw="kc" data-k="orders"></span></div>
+      <div class="dy-kpi" id="k-units"><span class="dy-kpi-label">销量（件）</span><span class="dy-kpi-value" data-draw="kv" data-k="units">—</span><span class="dy-kpi-cmp" data-draw="kc" data-k="units"></span></div>
+      <div class="dy-kpi" id="k-sales"><span class="dy-kpi-label">销售额</span><span class="dy-kpi-value" data-draw="kv" data-k="net_sales">—</span><span class="dy-kpi-cmp" data-draw="kc" data-k="net_sales"></span></div>
+      <div class="dy-kpi" id="k-aov"><span class="dy-kpi-label">客单价</span><span class="dy-kpi-value" data-draw="kv" data-k="aov">—</span><span class="dy-kpi-cmp" data-draw="kc" data-k="aov"></span></div>
+      <div class="dy-kpi" id="k-views"><span class="dy-kpi-label">商品浏览</span><span class="dy-kpi-value" data-draw="kv" data-k="views">—</span><span class="dy-kpi-cmp" data-draw="kc" data-k="views"></span></div>
+      <div class="dy-kpi" id="k-atc"><span class="dy-kpi-label">加购（事件）</span><span class="dy-kpi-value" data-draw="kv" data-k="atc_events">—</span><span class="dy-kpi-cmp" data-draw="kc" data-k="atc_events"></span></div>
+      <div class="dy-kpi" id="k-ic"><span class="dy-kpi-label">发起结账（事件）</span><span class="dy-kpi-value" data-draw="kv" data-k="ic_events">—</span><span class="dy-kpi-cmp" data-draw="kc" data-k="ic_events"></span></div>
+    </div>
+  </section>
+
+  <section class="dy-section" id="funnel">
+    <h2>按商品拆分的流量漏斗</h2>
+    <p class="dy-sub">所选区间内，商品浏览 → 加购 → 发起结账 → 订单。括注为相对上一步的转化率；小图为截至所选日期近 14 天的每日商品浏览（灰）与加购（色）。</p>
+    <div class="dy-card dy-scroll">
+      <table class="dy-table" id="funnel-table" data-source="daily_spu">
+        <thead><tr><th>商品</th><th>商品浏览</th><th>加购（事件）</th><th>发起结账（事件）</th><th>订单</th><th>销量</th><th>销售额</th><th>近 14 天</th></tr></thead>
+        <tbody data-draw="funnel-body"></tbody>
+      </table>
+    </div>
+    <div class="dy-card" id="channels">
+      <div class="dy-summary" data-source="funnel" data-draw="channel-bars"></div>
+    </div>
+  </section>
+
+  <section class="dy-section" id="orders">
+    <h2>系列订单与归因路径</h2>
+    <p class="dy-sub">所选区间内含无氧系列或地垫套装的订单（已排除取消单），按时间倒序，与上方的区间切换联动。路径为 Convbox 记录的下单前触点，连续落在同一渠道、同一 Campaign 的点击合并为一步；方框标出首次与最后一次触点。</p>
+    <div class="dy-card">
+      <div class="dy-summary" data-source="orders paths" data-draw="touch-summary"></div>
+    </div>
+    <div class="dy-orders" data-source="orders paths" data-draw="order-list"></div>
+  </section>
+
+  <section class="dy-section" id="trend">
+    <h2>近 30 天销量与销售额</h2>
+    <div class="dy-legend" data-draw="trend-legend"></div>
+    <div class="dy-two">
+      <div class="dy-card"><p class="dy-sub" style="margin-bottom:8px">每日销售额（按商品堆叠，折线为 7 日移动平均）</p><div class="dy-chart" data-source="daily_spu" data-draw="trend-sales"></div></div>
+      <div class="dy-card"><p class="dy-sub" style="margin-bottom:8px">每日销量（件，按商品堆叠）</p><div class="dy-chart" data-source="daily_spu" data-draw="trend-units"></div></div>
+    </div>
+  </section>
+
+  <details class="dy-notes" id="notes">
+    <summary>口径说明</summary>
+    <ul>
+      <li>日期按美西时间（America/Los_Angeles），只统计已经结束的完整日；当天尚未结束的数据不纳入。</li>
+      <li>订单、销量、销售额来自 Shopify 汇总（不含测试 SKU 与取消单，销售额为折后净额）。“合计”的订单数按订单去重，一单含多个商品只算一次；各商品的订单数为含该商品的订单数。</li>
+      <li>P15 赠品（随 P16 赠送的杠铃片）售价为 0，不计入销量与销售额，在订单明细中以虚线标签显示。</li>
+      <li>商品浏览、加购、发起结账来自 Convbox，按事件计（与 Convbox 后台按事件显示的数字一致）；订单一栏为 Shopify 实际订单。</li>
+      <li>渠道分布按 Convbox U 型归因（Position-based）汇总，浏览与加购按触发时的来源计。</li>
+      <li>归因路径来自 Convbox 订单触点记录（order_adclicks），只包含能识别来源的访问；没有记录的订单视为直接访问。问卷答案为下单后问卷“Which of the following led you to purchase today?”。</li>
+      <li>地垫套装 = MERACH Interlocking Rubber Gym Floor Tiles 商品下的地垫（MR-2603）与收边条（MR-2604）。</li>
+    </ul>
+  </details>
+
+  <p class="dy-foot">© Cristobal Du Peiming (杜沛明) — All Rights Reserved / 知识产权所有</p>
+</div>
+
+<script>
+const SPUS = ['全部', 'P15', 'P16', 'P17', 'P18', '地垫套装'];
+const n = (v) => (v == null || v === '' ? 0 : Number(v));
+window.dySPUS = SPUS;
+window.dyN = n;
+
+dash.calc('days', {
+  title: '日期列表',
+  description: '销售与漏斗数据覆盖的全部日期（美西时间），从最早一天连续排到最新一天。',
+  inputs: ['sales', 'funnel'],
+  fn: (sales, funnel) => {
+    const ds = [...sales, ...funnel].map((r) => r.date).filter(Boolean).sort();
+    if (!ds.length) return [];
+    const out = [];
+    const d = new Date(ds[0] + 'T00:00:00Z');
+    const end = new Date(ds[ds.length - 1] + 'T00:00:00Z');
+    while (d <= end) { out.push({ date: d.toISOString().slice(0, 10) }); d.setUTCDate(d.getUTCDate() + 1); }
+    return out;
+  },
+});
+
+dash.calc('daily_spu', {
+  title: '每日商品指标',
+  description: '每个商品（及合计）每天的订单、销量、销售额（Shopify）与商品浏览、加购、发起结账（Convbox 按事件）。合计订单按订单去重，赠品不计。',
+  inputs: ['days', 'sales', 'funnel', 'orders'],
+  fn: (days, sales, funnel, orders) => {
+    const rows = new Map();
+    const blank = (spu, date) => ({ key: spu + '|' + date, spu, date, orders: 0, units: 0, net_sales: 0, elite: 0, pro: 0, views: 0, sessions: 0, atc_events: 0, ic_events: 0, atc_sessions: 0, ic_sessions: 0 });
+    for (const d of days) for (const s of SPUS) rows.set(s + '|' + d.date, blank(s, d.date));
+    const add = (spu, date, f, v) => { const r = rows.get(spu + '|' + date); if (r) r[f] += v; };
+    for (const r of sales) {
+      for (const s of [r.spu, '全部']) { add(s, r.date, 'units', n(r.units)); add(s, r.date, 'net_sales', n(r.net_sales)); }
+      if (r.item === 'P16 Elite') add('P16', r.date, 'elite', n(r.units));
+      if (r.item === 'P16 Pro') add('P16', r.date, 'pro', n(r.units));
+    }
+    for (const r of funnel) {
+      for (const s of [r.spu, '全部']) {
+        add(s, r.date, 'views', n(r.product_views)); add(s, r.date, 'sessions', n(r.sessions));
+        add(s, r.date, 'atc_events', n(r.atc_events)); add(s, r.date, 'ic_events', n(r.ic_events));
+        add(s, r.date, 'atc_sessions', n(r.atc_sessions)); add(s, r.date, 'ic_sessions', n(r.ic_sessions));
+      }
+    }
+    const seen = new Set();
+    for (const r of orders) {
+      if (r.gift === '1') continue;
+      for (const s of [r.spu, '全部']) {
+        const k = s + '|' + r.order_id;
+        if (seen.has(k)) continue;
+        seen.add(k); add(s, r.date, 'orders', 1);
+      }
+    }
+    return [...rows.values()].map((r) => ({ ...r, net_sales: Math.round(r.net_sales * 100) / 100, views: Math.round(r.views), sessions: Math.round(r.sessions),
+      atc_events: Math.round(r.atc_events * 10) / 10, ic_events: Math.round(r.ic_events * 10) / 10, atc_sessions: Math.round(r.atc_sessions), ic_sessions: Math.round(r.ic_sessions),
+      aov: r.orders ? Math.round(r.net_sales / r.orders * 100) / 100 : null }));
+  },
+});
+</script>
+
+<script>
+window.dyState = { spu: '全部', date: null, win: 1 };
+window.dyFmt = {
+  usd: d3.format('$,.0f'),
+  int: d3.format(',.0f'),
+  num: (v) => (v == null ? '—' : Math.abs(v - Math.round(v)) < 0.05 ? d3.format(',.0f')(v) : d3.format(',.1f')(v)),
+  pct: (v) => (v == null || !isFinite(v) ? '—' : d3.format('.1%')(v)),
+};
+window.dyNames = { '全部': '无氧系列与地垫套装合计', P15: 'P15 杠铃片', P16: 'P16 史密斯机', P17: 'P17', P18: 'P18 训练凳', '地垫套装': '地垫套装' };
+window.dySpuColor = (s) => ({ P15: dash.colors[1], P16: dash.colors[0], P17: dash.colors[3], P18: dash.colors[2], '地垫套装': dash.colors[4] }[s] || 'var(--cds-chart-muted)');
+window.dyGroupColor = (g) => ({ 'Paid Ads': dash.colors[0], 'Email & SMS': dash.colors[1], 'Organic Search': dash.colors[2], 'Direct': 'var(--cds-chart-muted)', 'Affiliate': dash.colors[3], 'Organic Social': dash.colors[4] }[g] || 'var(--cds-chart-reference)');
+window.dyShift = (date, k) => { const d = new Date(date + 'T00:00:00Z'); d.setUTCDate(d.getUTCDate() + k); return d.toISOString().slice(0, 10); };
+window.dyDate = () => {
+  const d = dash.data('days');
+  const list = d.status === 'ok' && Array.isArray(d.data) ? d.data.map((r) => r.date) : [];
+  if (!list.length) return null;
+  return window.dyState.date && list.includes(window.dyState.date) ? window.dyState.date : list[list.length - 1];
+};
+window.dyRange = () => {
+  const d = dash.data('days');
+  const list = d.status === 'ok' && Array.isArray(d.data) ? d.data.map((r) => r.date) : [];
+  const to = window.dyDate();
+  if (!to) return null;
+  const w = window.dyState.win;
+  const from = w === 'all' ? list[0] : window.dyShift(to, -(w - 1));
+  const days = list.filter((x) => x >= from && x <= to).length;
+  return { from, to, days, win: w, label: from === to ? to : from + ' 至 ' + to };
+};
+window.dyRows = () => { const d = dash.data('daily_spu'); return d.status === 'ok' && Array.isArray(d.data) ? d.data : null; };
+window.dyAll = ['lede-date', 'lede-name', 'lede-orders', 'lede-sales', 'lede-views', 'lede-atc', 'lede-ic', 'lede-cmp', 'kv', 'kc', 'funnel-body', 'channel-bars', 'touch-summary', 'order-list', 'trend-sales', 'trend-units', 'trend-legend', 'date-select'];
+window.dyRedraw = () => { for (const name of window.dyAll) dash.draw(name); };
+
+document.querySelectorAll('.dy-tab').forEach((btn) => btn.addEventListener('click', () => {
+  window.dyState.spu = btn.dataset.spu;
+  document.querySelectorAll('.dy-tab').forEach((b) => { const on = b === btn; b.classList.toggle('is-on', on); b.setAttribute('aria-selected', on ? 'true' : 'false'); });
+  window.dyRedraw();
+}));
+document.querySelectorAll('.dy-seg button').forEach((btn) => btn.addEventListener('click', () => {
+  window.dyState.win = btn.dataset.win === 'all' ? 'all' : Number(btn.dataset.win);
+  document.querySelectorAll('.dy-seg button').forEach((b) => b.classList.toggle('is-on', b === btn));
+  window.dyRedraw();
+}));
+</script>
+
+<script>
+(function () {
+  const F = window.dyFmt;
+  dash.draw('date-select', (sel) => {
+    const d = dash.data('days');
+    const list = d.status === 'ok' && Array.isArray(d.data) ? d.data.map((r) => r.date).reverse() : [];
+    sel.replaceChildren(...list.map((v) => new Option(v, v)));
+    const cur = window.dyDate();
+    if (cur) sel.value = cur;
+    sel.onchange = () => { window.dyState.date = sel.value; window.dyRedraw(); };
+  });
+  dash.draw('asof', (el) => { const d = dash.data('days'); el.textContent = d.status === 'ok' && d.data.length ? d.data[d.data.length - 1].date : '—'; });
+
+  const n = window.dyN;
+  const pick = (spu, date) => { const rows = window.dyRows(); return rows ? rows.find((r) => r.spu === spu && r.date === date) : null; };
+  const KS = ['orders', 'units', 'net_sales', 'views', 'atc_events', 'ic_events'];
+  const agg = (spu, from, to) => {
+    const rows = window.dyRows(); if (!rows) return null;
+    const rs = rows.filter((r) => r.spu === spu && r.date >= from && r.date <= to);
+    if (!rs.length) return null;
+    const o = { n: rs.length };
+    for (const k of KS) o[k] = d3.sum(rs, (r) => r[k] || 0);
+    o.aov = o.orders ? o.net_sales / o.orders : null;
+    return o;
+  };
+  const fmtK = (k, v) => (v == null ? '—' : (k === 'net_sales' || k === 'aov') ? F.usd(v) : F.num(v));
+  const cur = () => { const R = window.dyRange(); return R ? { R, v: agg(window.dyState.spu, R.from, R.to) } : null; };
+
+  dash.draw('lede-date', (el) => { const R = window.dyRange(); el.textContent = R ? R.label : '—'; });
+  dash.draw('lede-name', (el) => { el.textContent = window.dyNames[window.dyState.spu]; });
+  const ledeCell = (name, k, fmt) => dash.draw(name, (el) => { const c = cur(); el.textContent = c && c.v ? fmt(c.v[k]) : '—'; });
+  ledeCell('lede-orders', 'orders', F.int);
+  ledeCell('lede-sales', 'net_sales', F.usd);
+  ledeCell('lede-views', 'views', F.int);
+  ledeCell('lede-atc', 'atc_events', F.num);
+  ledeCell('lede-ic', 'ic_events', F.num);
+  dash.draw('lede-cmp', (el) => {
+    const c = cur(); el.textContent = '';
+    if (!c || !c.v) return;
+    const { R, v } = c; const spu = window.dyState.spu;
+    if (R.win === 'all') { el.textContent = '共 ' + R.days + ' 天，日均销售额 ' + F.usd(v.net_sales / R.days) + '、日均商品浏览 ' + F.int(v.views / R.days) + ' 次。'; return; }
+    const base = R.win === 1 ? agg(spu, window.dyShift(R.to, -7), window.dyShift(R.to, -1)) : agg(spu, window.dyShift(R.from, -7), window.dyShift(R.from, -1));
+    if (!base || base.n < 7 || !base.views) return;
+    const b = R.win === 1 ? base.views / 7 : base.views;
+    const ch = v.views / b - 1;
+    el.textContent = '商品浏览较' + (R.win === 1 ? '前 7 日日均' : '再往前 7 天') + (ch >= 0 ? '高 ' : '低 ') + d3.format('.0%')(Math.abs(ch)) + '。';
+  });
+
+  dash.draw('kv', (el) => {
+    const k = el.dataset.k; const c = cur();
+    el.classList.toggle('dash-skeleton', !(c && c.v) && dash.data('daily_spu').status === 'loading');
+    el.dataset.source = 'daily_spu';
+    el.dataset.field = k;
+    const one = c && c.R.from === c.R.to ? pick(window.dyState.spu, c.R.to) : null;
+    if (one) el.dataset.where = 'key=' + one.key; else el.removeAttribute('data-where');
+    el.textContent = c && c.v ? fmtK(k, c.v[k]) : '—';
+  });
+  dash.draw('kc', (el) => {
+    const k = el.dataset.k; const c = cur(); const spu = window.dyState.spu;
+    el.replaceChildren();
+    if (!c || !c.v) return;
+    const { R, v } = c;
+    const line = (label, base) => {
+      const s = document.createElement('span');
+      if (base == null || v[k] == null) { s.textContent = label + ' —'; s.className = 'dy-flat'; return s; }
+      const diff = v[k] - base; const pct = base ? diff / base : null;
+      s.className = Math.abs(diff) < 1e-9 ? 'dy-flat' : diff > 0 ? 'dy-up' : 'dy-down';
+      s.textContent = label + ' ' + fmtK(k, base) + (pct == null ? '' : '（' + (pct >= 0 ? '+' : '') + d3.format('.0%')(pct) + '）');
+      return s;
+    };
+    const plain = (txt) => { const s = document.createElement('span'); s.className = 'dy-flat'; s.textContent = txt; return s; };
+    if (R.win === 1) {
+      const p7 = agg(spu, window.dyShift(R.to, -7), window.dyShift(R.to, -1));
+      const avg = p7 && p7.n === 7 ? (k === 'aov' ? p7.aov : p7[k] / 7) : null;
+      const lw = pick(spu, window.dyShift(R.to, -7));
+      el.append(line('前 7 日日均', avg), line('上周同日', lw ? lw[k] : null));
+    } else if (R.win === 7) {
+      const p = agg(spu, window.dyShift(R.from, -7), window.dyShift(R.from, -1));
+      el.append(line('再往前 7 天', p && p.n === 7 ? p[k] : null));
+    } else {
+      el.append(plain(k === 'aov' ? '全周期 ' + R.days + ' 天' : '日均 ' + fmtK(k, v[k] / R.days)));
+    }
+  });
+})();
+</script>
+
+<script>
+(function () {
+  const F = window.dyFmt;
+  const SPUS = window.dySPUS, n = window.dyN;
+  const winRows = (spu) => {
+    const rows = window.dyRows(); const R = window.dyRange(); if (!rows || !R) return [];
+    return rows.filter((r) => r.spu === spu && r.date >= R.from && r.date <= R.to);
+  };
+  const sum = (rs, k) => d3.sum(rs, (r) => r[k] || 0);
+
+  dash.draw('funnel-body', (tbody) => {
+    const date = window.dyDate(); const rows = window.dyRows();
+    tbody.replaceChildren();
+    if (!date || !rows) { const tr = tbody.insertRow(); const c = tr.insertCell(); c.colSpan = 8; c.className = 'dy-empty'; c.textContent = dash.data('daily_spu').status === 'loading' ? '加载中…' : '暂无数据'; return; }
+    for (const spu of SPUS) {
+      const rs = winRows(spu);
+      const v = { views: sum(rs, 'views'), atc: sum(rs, 'atc_events'), ic: sum(rs, 'ic_events'), orders: sum(rs, 'orders'), units: sum(rs, 'units'), sales: sum(rs, 'net_sales') };
+      const tr = tbody.insertRow(); tr.dataset.key = spu;
+      if (spu === window.dyState.spu) tr.className = 'is-sel';
+      const cell = (txt, rate, cls) => { const c = tr.insertCell(); if (cls) c.className = cls; c.append(txt); if (rate !== undefined) { const s = document.createElement('span'); s.className = 'dy-rate'; s.textContent = rate; c.append(s); } return c; };
+      cell(spu === '全部' ? '合计' : window.dyNames[spu], undefined, 'dy-name');
+      cell(F.int(v.views));
+      cell(F.num(v.atc), v.views ? F.pct(v.atc / v.views) : '—');
+      cell(F.num(v.ic), v.atc ? F.pct(v.ic / v.atc) : '—');
+      cell(F.int(v.orders), v.ic ? F.pct(v.orders / v.ic) : '—');
+      cell(F.int(v.units));
+      cell(F.usd(v.sales));
+      const sc = tr.insertCell();
+      const hist = rows.filter((r) => r.spu === spu && r.date <= date && r.date > window.dyShift(date, -14)).sort((a, b) => d3.ascending(a.date, b.date));
+      const W = 110, H = 26;
+      const svg = d3.select(sc).append('svg').attr('class', 'dy-spark').attr('width', W).attr('height', H).attr('role', 'img').attr('aria-label', '近 14 天商品浏览与加购');
+      if (hist.length > 1) {
+        const x = d3.scaleLinear().domain([0, hist.length - 1]).range([2, W - 2]);
+        const yv = d3.scaleLinear().domain([0, d3.max(hist, (r) => r.views) || 1]).range([H - 2, 2]);
+        const ya = d3.scaleLinear().domain([0, d3.max(hist, (r) => r.atc_events) || 1]).range([H - 2, 2]);
+        svg.append('path').attr('d', d3.line().x((d, i) => x(i)).y((d) => yv(d.views))(hist)).attr('fill', 'none').style('stroke', 'var(--cds-chart-muted)').attr('stroke-width', 1.2);
+        svg.append('path').attr('d', d3.line().x((d, i) => x(i)).y((d) => ya(d.atc_events))(hist)).attr('fill', 'none').style('stroke', window.dySpuColor(spu === '全部' ? 'P16' : spu)).attr('stroke-width', 1.5);
+      }
+    }
+  });
+
+  dash.draw('channel-bars', (el) => {
+    const f = dash.data('funnel'); const date = window.dyDate();
+    el.replaceChildren();
+    if (f.status !== 'ok' || !date) { el.textContent = f.status === 'loading' ? '加载中…' : '—'; return; }
+    const spu = window.dyState.spu; const R = window.dyRange();
+    const rs = f.data.filter((r) => r.date >= R.from && r.date <= R.to && (spu === '全部' || r.spu === spu));
+    const block = (title, field, fmt) => {
+      const by = d3.rollups(rs, (v) => d3.sum(v, (r) => n(r[field])), (r) => r.channel_group).filter((d) => d[1] > 0.0001).sort((a, b) => b[1] - a[1]);
+      const box = document.createElement('div'); box.className = 'dy-hbar';
+      const h = document.createElement('h4'); h.textContent = title; box.append(h);
+      if (!by.length) { const p = document.createElement('span'); p.className = 'dy-muted'; p.style.gridColumn = '1 / -1'; p.textContent = '该区间无记录'; box.append(p); return box; }
+      const max = d3.max(by, (d) => d[1]); const tot = d3.sum(by, (d) => d[1]);
+      for (const [g, v] of by.slice(0, 7)) {
+        const a = document.createElement('span'); a.textContent = g;
+        const b = document.createElement('div'); const bar = document.createElement('div'); bar.className = 'bar'; bar.style.width = Math.max(2, v / max * 100) + '%'; bar.style.background = window.dyGroupColor(g); b.append(bar);
+        const c = document.createElement('span'); c.className = 'dy-muted'; c.textContent = fmt(v) + ' · ' + d3.format('.0%')(v / tot);
+        box.append(a, b, c);
+      }
+      return box;
+    };
+    const label = R.label + '，' + (spu === '全部' ? '合计' : window.dyNames[spu]);
+    const cap = document.createElement('p'); cap.className = 'dy-sub'; cap.style.gridColumn = '1 / -1'; cap.textContent = '流量与归因来源（' + label + '）';
+    el.append(cap, block('商品浏览', 'product_views', F.int), block('加购（事件）', 'atc_events', F.num), block('归因销售额（U 型）', 'sales_attr', F.usd));
+  });
+})();
+</script>
+
+<script>
+(function () {
+  const F = window.dyFmt;
+  const n = window.dyN;
+  const orderWindow = () => {
+    const o = dash.data('orders'); const R = window.dyRange();
+    if (o.status !== 'ok' || !R) return null;
+    const spu = window.dyState.spu;
+    const by = d3.groups(o.data.filter((r) => r.date >= R.from && r.date <= R.to), (r) => r.order_id)
+      .filter(([, lines]) => spu === '全部' || lines.some((l) => l.spu === spu && l.gift !== '1'));
+    return by.map(([id, lines]) => ({ id, lines, date: lines[0].date, name: lines[0].order_name, survey: lines.find((l) => l.survey)?.survey || '',
+      amount: d3.sum(lines, (l) => n(l.net_amount)), spus: [...new Set(lines.filter((l) => l.gift !== '1').map((l) => l.spu))] }))
+      .sort((a, b) => d3.descending(a.date, b.date) || d3.descending(a.name, b.name));
+  };
+  const pathsOf = (id) => { const p = dash.data('paths'); return p.status === 'ok' ? p.data.filter((r) => r.order_id === id).sort((a, b) => n(a.step) - n(b.step)) : []; };
+  const short = (s) => (s || '').replace(/_US_/, '_').replace(/_\d{8}_Jiayi$/, '').replace(/^(Remi|Danni|Winnie|Lyfi)_/, '');
+
+  dash.draw('touch-summary', (el) => {
+    el.replaceChildren();
+    const list = orderWindow();
+    if (!list) { el.textContent = '—'; return; }
+    const R = window.dyRange();
+    const cap = document.createElement('p'); cap.className = 'dy-sub'; cap.style.gridColumn = '1 / -1';
+    cap.textContent = R.label + '：' + list.length + ' 单，销售额 ' + F.usd(d3.sum(list, (o) => o.amount)) + '，其中 ' + list.filter((o) => o.spus.length > 1).length + ' 单为多商品组合。';
+    el.append(cap);
+    if (!list.length) return;
+    const tally = (which) => {
+      const m = new Map();
+      for (const o of list) {
+        const p = pathsOf(o.id);
+        const t = p.length ? (which === 'first' ? p[0] : p[p.length - 1]) : null;
+        const k = t ? t.channel_group : 'Direct（无触点记录）';
+        m.set(k, (m.get(k) || 0) + 1);
+      }
+      return [...m].sort((a, b) => b[1] - a[1]);
+    };
+    for (const [title, which] of [['首次触点（谁带来的）', 'first'], ['最后触点（谁促成的）', 'last']]) {
+      const box = document.createElement('div'); box.className = 'dy-hbar';
+      const h = document.createElement('h4'); h.textContent = title; box.append(h);
+      const t = tally(which); const max = d3.max(t, (d) => d[1]);
+      for (const [g, v] of t) {
+        const a = document.createElement('span'); a.textContent = g;
+        const b = document.createElement('div'); const bar = document.createElement('div'); bar.className = 'bar'; bar.style.width = (v / max * 100) + '%'; bar.style.background = window.dyGroupColor(g); b.append(bar);
+        const c = document.createElement('span'); c.className = 'dy-muted'; c.textContent = v + ' 单';
+        box.append(a, b, c);
+      }
+      el.append(box);
+    }
+  });
+
+  dash.draw('order-list', (el) => {
+    el.replaceChildren();
+    const list = orderWindow();
+    if (!list) { const p = document.createElement('p'); p.className = 'dy-empty'; p.textContent = dash.data('orders').status === 'loading' ? '加载中…' : '—'; el.append(p); return; }
+    if (!list.length) { const p = document.createElement('p'); p.className = 'dy-empty'; p.textContent = window.dyRange().win === 1 ? '当天没有相关订单。可切换到“近 7 天”或“全周期”查看。' : '该区间内没有相关订单。'; el.append(p); return; }
+    for (const o of list) {
+      const card = document.createElement('article'); card.className = 'dy-order';
+      const top = document.createElement('div'); top.className = 'dy-order-top';
+      const nm = document.createElement('span'); nm.className = 'dy-order-name'; nm.textContent = o.name;
+      const dt = document.createElement('span'); dt.className = 'dy-muted'; dt.textContent = o.date;
+      top.append(nm, dt);
+      for (const l of o.lines) {
+        const c = document.createElement('span'); c.className = 'dy-chip' + (l.gift === '1' ? ' is-gift' : '');
+        c.textContent = l.item + (n(l.quantity) > 1 ? ' ×' + l.quantity : '') + (l.gift === '1' ? '（赠品）' : '') + (l.refunded === '1' ? '（已退款）' : '');
+        top.append(c);
+      }
+      if (o.spus.length > 1) { const c = document.createElement('span'); c.className = 'dy-chip is-bundle'; c.textContent = '组合'; top.append(c); }
+      const amt = document.createElement('span'); amt.className = 'dy-order-amt'; amt.textContent = F.usd(o.amount); top.append(amt);
+      card.append(top);
+      const p = pathsOf(o.id);
+      const path = document.createElement('div'); path.className = 'dy-path';
+      if (!p.length) { const s = document.createElement('span'); s.className = 'dy-muted'; s.textContent = '无触点记录（直接访问或未被追踪）'; path.append(s); }
+      const shown = p.length > 9 ? [...p.slice(0, 4), null, ...p.slice(-4)] : p;
+      shown.forEach((t, i) => {
+        if (i) { const a = document.createElement('span'); a.className = 'dy-arrow'; a.textContent = '›'; path.append(a); }
+        if (!t) { const s = document.createElement('span'); s.className = 'dy-muted'; s.textContent = '中间另有 ' + (p.length - 8) + ' 步'; path.append(s); return; }
+        const s = document.createElement('span'); s.className = 'dy-step' + (n(t.step) === 1 || n(t.step) === p.length ? ' is-end' : '');
+        const dot = document.createElement('i'); dot.style.background = window.dyGroupColor(t.channel_group);
+        const lab = document.createElement('span');
+        lab.textContent = t.channel + (t.campaign_name ? ' · ' + short(t.campaign_name) : '') + (n(t.clicks) > 1 ? ' ×' + t.clicks : '');
+        s.title = t.time + '｜' + t.channel + (t.campaign_name ? '｜' + t.campaign_name : '') + (t.ad_name ? '｜' + t.ad_name : '') + (t.landing_page ? '｜' + t.landing_page : '');
+        s.append(dot, lab); path.append(s);
+      });
+      card.append(path);
+      const meta = [];
+      if (p.length) meta.push('首次触点 ' + p[0].time.slice(0, 10) + '，共 ' + p.length + ' 步');
+      if (o.survey) meta.push('下单问卷：' + o.survey);
+      if (meta.length) { const m = document.createElement('div'); m.className = 'dy-note'; m.textContent = meta.join('；'); card.append(m); }
+      el.append(card);
+    }
+  });
+})();
+</script>
+
+<script>
+(function () {
+  const F = window.dyFmt;
+  const ITEMS = ['P16', 'P15', 'P17', 'P18', '地垫套装'];
+  dash.draw('trend-legend', (el) => {
+    el.replaceChildren();
+    for (const s of ITEMS) { const sp = document.createElement('span'); const i = document.createElement('i'); i.style.background = window.dySpuColor(s); sp.append(i, document.createTextNode(window.dyNames[s])); el.append(sp); }
+  });
+  const stackChart = (field, fmt, ma) => (el) => {
+    const rows = window.dyRows(); const end = window.dyDate();
+    el.replaceChildren();
+    if (!rows || !end) { el.textContent = dash.data('daily_spu').status === 'error' ? '加载失败' : '—'; return; }
+    const sel = window.dyState.spu;
+    const show = sel === '全部' ? ITEMS : [sel];
+    const dates = []; for (let i = 29; i >= 0; i--) dates.push(window.dyShift(end, -i));
+    const idx = new Map(rows.map((r) => [r.spu + '|' + r.date, r]));
+    const data = dates.map((d) => { const o = { date: d }; for (const s of show) o[s] = idx.get(s + '|' + d)?.[field] || 0; o.total = d3.sum(show, (s) => o[s]); return o; });
+    const stack = d3.stack().keys(show)(data);
+    const W = el.clientWidth || 480, H = 240, m = { t: 10, r: 10, b: 24, l: 10 };
+    const yMax = d3.max(data, (d) => d.total) || 1;
+    const y = d3.scaleLinear().domain([0, yMax]).nice().range([H - m.b, m.t]);
+    const svg = d3.select(el).append('svg').attr('width', '100%').attr('height', H).attr('viewBox', `0 0 ${W} ${H}`).attr('role', 'img').attr('aria-label', '近 30 天每日' + (field === 'net_sales' ? '销售额' : '销量'));
+    const gy = svg.append('g').call(d3.axisLeft(y).ticks(4).tickSize(0).tickFormat(fmt));
+    const wy = d3.max(gy.selectAll('text').nodes(), (t) => t.getComputedTextLength()) || 0;
+    m.l = wy + 10; gy.attr('transform', `translate(${m.l - 4},0)`); gy.select('.domain').remove();
+    const x = d3.scaleBand().domain(dates).range([m.l, W - m.r]).padding(0.2);
+    svg.insert('g', ':first-child').selectAll('line').data(y.ticks(4)).join('line').attr('x1', m.l).attr('x2', W - m.r).attr('y1', (d) => y(d)).attr('y2', (d) => y(d)).style('stroke', 'var(--cds-chart-grid)');
+    const step = Math.ceil(dates.length / Math.max(2, Math.floor((W - m.l) / 56)));
+    svg.append('g').attr('transform', `translate(0,${H - m.b})`).call(d3.axisBottom(x).tickValues(dates.filter((d, i) => (dates.length - 1 - i) % step === 0)).tickSize(0).tickPadding(6).tickFormat((d) => d.slice(5))).select('.domain').style('stroke', 'var(--cds-chart-axis)');
+    svg.append('g').selectAll('g').data(stack).join('g').style('fill', (s) => window.dySpuColor(s.key))
+      .selectAll('rect').data((s) => s).join('rect').attr('x', (d) => x(d.data.date)).attr('width', x.bandwidth()).attr('y', (d) => y(d[1])).attr('height', (d) => Math.max(0, y(d[0]) - y(d[1])));
+    svg.append('rect').attr('x', x(end) - 2).attr('width', x.bandwidth() + 4).attr('y', m.t).attr('height', H - m.b - m.t).attr('fill', 'none').style('stroke', 'var(--cds-chart-reference)').attr('stroke-dasharray', '3 3');
+    if (ma) {
+      const all = dates.map((d) => { const o = { date: d }; const vals = []; for (let i = 0; i < 7; i++) { const dd = window.dyShift(d, -i); vals.push(d3.sum(show, (s) => idx.get(s + '|' + dd)?.[field] || 0)); } o.ma = d3.mean(vals); return o; });
+      svg.append('path').attr('d', d3.line().x((d) => x(d.date) + x.bandwidth() / 2).y((d) => y(d.ma))(all)).attr('fill', 'none').style('stroke', 'var(--color-fg)').attr('stroke-width', 1.5);
+    }
+    const tip = d3.select(el).append('div').attr('class', 'dy-tip').attr('hidden', '');
+    svg.append('g').selectAll('rect').data(data).join('rect').attr('x', (d) => x(d.date)).attr('width', x.bandwidth()).attr('y', m.t).attr('height', H - m.b - m.t).attr('fill', 'transparent')
+      .on('pointerenter pointermove', (ev, d) => {
+        tip.attr('hidden', null).html('');
+        tip.append('div').append('b').text(d.date + '　' + fmt(d.total));
+        for (const s of show) if (d[s]) { const r = tip.append('div').attr('class', 'row'); r.append('span').text(window.dyNames[s]); r.append('span').text(fmt(d[s])); }
+        const [px, py] = d3.pointer(ev, el); const tw = tip.node().offsetWidth;
+        tip.style('left', Math.min(px + 12, el.clientWidth - tw - 4) + 'px').style('top', Math.max(0, py - 40) + 'px');
+      })
+      .on('pointerleave', () => tip.attr('hidden', ''));
+  };
+  dash.draw('trend-sales', stackChart('net_sales', (v) => (v >= 1000 ? d3.format('$,.2~s')(v).replace('k', 'K') : d3.format('$,.0f')(v)), true));
+  dash.draw('trend-units', stackChart('units', d3.format(',.0f'), false));
+})();
+</script>
+
+</div>
+<script>dash.boot();</script>
+</body>
+</html>

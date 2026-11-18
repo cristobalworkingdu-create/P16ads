@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>无氧系列日报</title>
+<meta name="description" content="MERACH 美国站无氧系列（P15–P18）与地垫套装日报：当日销售、按商品事件漏斗、订单归因路径与 30 天走势。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Serif+SC:wght@400;600&display=swap">
+<style>
+:root {
+  color-scheme: light;
+  --color-bg: #f6f7f9;
+  --color-panel: #ffffff;
+  --color-fg: #16191f;
+  --color-fg-muted: #5d6573;
+  --color-border-line: #e1e4ea;
+  --color-ok: #1f8a5b;
+  --color-warn: #b7791f;
+  --color-bad: #c0392b;
+  --c1: #2f5bea; --c2: #e0802b; --c3: #1f9e89; --c4: #9b59b6; --c5: #8a94a6;
+  --font-anthropic-sans: "Inter", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", system-ui, sans-serif;
+  --font-anthropic-serif: "Noto Serif SC", "Songti SC", Georgia, serif;
+  --cds-font-size-caption: 12px; --cds-font-size-body: 14px; --cds-font-size-heading: 18px; --cds-font-size-title: 28px;
+  --cds-font-weight-medium: 600;
+  --cds-gap-xs: 4px; --cds-gap-sm: 8px; --cds-gap-md: 12px; --cds-gap-lg: 20px; --cds-gap-xl: 36px;
+  --cds-pad-xs: 4px; --cds-pad-sm: 8px; --cds-pad-md: 12px; --cds-pad-lg: 18px; --cds-pad-xl: 28px;
+  --cds-radius: 10px;
+  --cds-chart-grid: #eceef2; --cds-chart-axis: #c7ccd5; --cds-chart-muted: #b8bfcb; --cds-chart-reference: #8a94a6;
+  --cds-text-secondary: #5d6573;
+  --cds-surface-popover: #ffffff; --cds-border: #dfe3ea; --cds-shadow-popover: 0 8px 24px rgba(20, 25, 35, .14);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --color-bg: #111318; --color-panel: #1a1d24; --color-fg: #eceff4; --color-fg-muted: #a3abb9; --color-border-line: #2c313b;
+    --color-ok: #4cc38a; --color-warn: #e0a84a; --color-bad: #ef6b5b;
+    --c1: #6e8ffb; --c2: #f0a057; --c3: #45c4ad; --c4: #bb86d6; --c5: #8f99ab;
+    --cds-chart-grid: #262a33; --cds-chart-axis: #3a404c; --cds-chart-muted: #5a6272; --cds-chart-reference: #8f99ab;
+    --cds-text-secondary: #a3abb9; --cds-surface-popover: #222630; --cds-border: #353b47; --cds-shadow-popover: 0 8px 24px rgba(0, 0, 0, .45);
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --color-bg: #111318; --color-panel: #1a1d24; --color-fg: #eceff4; --color-fg-muted: #a3abb9; --color-border-line: #2c313b;
+  --color-ok: #4cc38a; --color-warn: #e0a84a; --color-bad: #ef6b5b;
+  --c1: #6e8ffb; --c2: #f0a057; --c3: #45c4ad; --c4: #bb86d6; --c5: #8f99ab;
+  --cds-chart-grid: #262a33; --cds-chart-axis: #3a404c; --cds-chart-muted: #5a6272; --cds-chart-reference: #8f99ab;
+  --cds-text-secondary: #a3abb9; --cds-surface-popover: #222630; --cds-border: #353b47; --cds-shadow-popover: 0 8px 24px rgba(0, 0, 0, .45);
+}
+html, body { margin: 0; background: var(--color-bg); color: var(--color-fg); }
+body { font: 14px/1.5 var(--font-anthropic-sans); -webkit-font-smoothing: antialiased; }
+#dash-root { max-width: 1240px; margin: 0 auto; padding-block: 32px 48px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.dash-select { font: inherit; font-size: 12px; color: var(--color-fg); background-color: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: 8px; padding: 5px 26px 5px 10px; appearance: none;
+  background-image: linear-gradient(45deg, transparent 50%, var(--color-fg-muted) 50%), linear-gradient(135deg, var(--color-fg-muted) 50%, transparent 50%);
+  background-position: calc(100% - 14px) 52%, calc(100% - 9px) 52%; background-size: 5px 5px; background-repeat: no-repeat; }
+.dash-select:focus-visible { outline: 2px solid var(--c1); outline-offset: 1px; }
+.dash-skeleton { color: transparent !important; position: relative; }
+.dash-skeleton::after { content: ""; position: absolute; inset: 20% 0; border-radius: 4px; background: var(--cds-chart-grid); }
+@media (prefers-reduced-motion: no-preference) { .wy-seg, .p16-bar, .p16-step-bar { transition: width .4s ease-out; } }
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+<script>
+/* 独立网页运行层：提供看板页面所需的 dash 接口，数据来自页面内嵌的快照 */
+window.dash = (function () {
+  const sources = {};
+  const calcs = {};
+  const draws = new Map();
+  let booted = false;
+  const colors = ['var(--c1)', 'var(--c2)', 'var(--c3)', 'var(--c4)', 'var(--c5)'];
+  function data(id) {
+    if (Object.prototype.hasOwnProperty.call(sources, id)) return { status: 'ok', data: sources[id], columns: sources[id].columns || [], refreshing: false, meta: [] };
+    if (Object.prototype.hasOwnProperty.call(calcs, id)) {
+      const c = calcs[id];
+      if (!('value' in c)) { try { c.value = c.fn(...c.inputs.map((i) => data(i).data)); } catch (e) { console.error('calc ' + id, e); c.value = []; } }
+      return { status: 'ok', data: c.value, refreshing: false, meta: [] };
+    }
+    return { status: 'missing', data: [], refreshing: false, meta: [] };
+  }
+  function runDraw(name) {
+    const fn = draws.get(name);
+    if (!fn) return;
+    document.querySelectorAll('[data-draw="' + CSS.escape(name) + '"]').forEach((el) => {
+      try { fn(el); } catch (e) { console.error('draw ' + name, e); }
+    });
+  }
+  function draw(name, fn) {
+    if (fn) {
+      draws.set(name, typeof fn === 'function' ? fn : (el) => (fn.update || fn.mount)(el));
+      if (booted) runDraw(name);
+    } else runDraw(name);
+  }
+  function load(id, text) {
+    const rows = d3.csvParse(text.trim(), (r) => { for (const k in r) if (r[k] === '') r[k] = null; return r; });
+    sources[id] = rows;
+  }
+  function boot() {
+    booted = true;
+    for (const name of draws.keys()) runDraw(name);
+    let t = null, w = window.innerWidth;
+    window.addEventListener('resize', () => {
+      if (Math.abs(window.innerWidth - w) < 2) return;
+      w = window.innerWidth;
+      clearTimeout(t);
+      t = setTimeout(() => { for (const name of draws.keys()) runDraw(name); }, 150);
+    });
+  }
+  return {
+    data, draw, colors, load, boot,
+    calc: (id, o) => { calcs[id] = o; },
+    loader: () => {}, onData: (fn) => fn(), refresh: () => {},
+    params: () => ({}), setParams: () => {}, resetParams: () => {}, setLink: () => {},
+  };
+})();
+</script>
+</head>
+<body>
