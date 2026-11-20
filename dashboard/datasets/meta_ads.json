@@ -1,20 +1,20 @@
 {
     "title": "Meta P16 专投广告明细（含人群）",
-    "description": "Campaign 名称带 P16 的 Meta 广告，按 Campaign × Ad Set × 广告：花费、展示、点击来自 facebook_ad_insights；进站、加购、结账与 P16 归因来自 Convbox 广告层级（U 型）；另附带动的其他无氧件数与营收、人群类型与兴趣标签，2026-10-20 至 2026-11-16。含按会话（sessions / atc / checkout）与按事件（atc_events / ic_events）两种加购、结账口径。",
+    "description": "Campaign 名称带 P16 的 Meta 广告，按 Campaign × Ad Set × 广告：花费、展示、点击来自 facebook_ad_insights；进站、加购、结账与 P16 归因来自 Convbox 广告层级（U 型）；另附带动的其他无氧件数与营收、人群类型与兴趣标签，2026-10-20 至 2026-11-16。含按会话（sessions / atc / checkout）与按事件（atc_events / ic_events）两种加购、结账口径。另附广告 ID、广告账户 ID 与广告帖子链接（facebook_ads.facebook_ads、facebook_ad_creatives），用于预览素材。",
     "source": {
         "kind": "file",
-        "url": "/_blob/b967c3e28ae3a152c0da5aa9a87f8c3a",
+        "url": "/_blob/cf54733a79ff8742f17f55fd7ec918ef",
         "name": "meta_ads.csv",
         "format": "csv"
     },
     "updated": {
-        "at": "2026-11-17T10:00:00Z",
-        "by": "Claude（BigQuery 查询快照，2026-10-20 至 2026-11-16）"
+        "at": "2026-11-20T04:20:00Z",
+        "by": "Claude（BigQuery 查询快照，2026-10-20 至 2026-11-16；11-20 补充预览链接）"
     },
     "fixed": true,
     "schedule": "按需更新：Cristobal 让 Claude 运行一次查询时，重新导出并替换本文件。查询语句保存在 MKT - Function/Marketing Dashboard/queries。",
     "edit": {
         "via": "claude",
-        "at": "2026-11-17T10:00:00Z"
+        "at": "2026-11-20T04:20:00Z"
     }
 }
