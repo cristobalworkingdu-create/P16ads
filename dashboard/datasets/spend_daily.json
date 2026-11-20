@@ -1,20 +1,20 @@
 {
-    "title": "无氧专投每日花费",
-    "description": "名称含 P15–P18 的 Meta、Google Campaign 每日花费、展示、点击（Meta 来自 facebook_ad_insights，Google 来自 google_campaign），2026-10-20 至 2026-11-16。",
-    "source": {
-        "kind": "file",
-        "url": "/_blob/5d49585f9b016233eacbe8c18938389b",
-        "name": "spend_daily.csv",
-        "format": "csv"
-    },
-    "updated": {
-        "at": "2026-11-17T10:00:00Z",
-        "by": "Claude（BigQuery 查询快照，2026-10-20 至 2026-11-16）"
+    "description": "名称含 P15–P18 的 Meta、Google Campaign 每日花费、展示、点击（Meta 来自 facebook_ad_insights，Google 来自 google_campaign），2026-10-20 至 2026-11-18。",
+    "edit": {
+        "via": "claude",
+        "at": "2026-11-20T07:50:00Z"
     },
     "fixed": true,
     "schedule": "按需更新：Cristobal 让 Claude 运行一次查询时，重新导出并替换本文件。查询语句保存在 MKT - Function/Marketing Dashboard/queries。",
-    "edit": {
-        "via": "claude",
-        "at": "2026-11-17T10:00:00Z"
+    "source": {
+        "format": "csv",
+        "kind": "file",
+        "name": "spend_daily.csv",
+        "url": "/_blob/89235116925c95a4a187b70591e98550"
+    },
+    "title": "无氧专投每日花费",
+    "updated": {
+        "at": "2026-11-20T07:50:00Z",
+        "by": "Claude（BigQuery 查询快照，2026-10-20 至 2026-11-18，美西完整日）"
     }
 }

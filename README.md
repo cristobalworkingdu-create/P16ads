@@ -4,7 +4,7 @@
 
 - 独立网页：https://cristobalworkingdu-create.github.io/P16ads/ （仓库根目录 `index.html`，数据已内嵌，直接打开即可）
 - Claude 看板：https://claude.ai/artifact/25qHmdwquaqfwF6Gp5YdAn
-- 数据范围：2026-10-20 至 2026-11-16（美西时间）
+- 数据范围：2026-10-20 至 2026-11-18（美西时间）
 - 产品范围：P15–P18 与地垫套装（MR-2603 地垫、MR-2604 收边条）；订单数按订单去重
 - 无氧系列日报（每日更新）：`daily/` 目录，独立网页 https://cristobalworkingdu-create.github.io/P16ads/daily/ ，Claude 看板 https://claude.ai/artifact/FFb8QoJFUsoWFZxrCLYBhn
 - 数据来源：公司 BigQuery 项目 `merach-452802`（Convbox、Meta、Google、Shopify 汇总表）

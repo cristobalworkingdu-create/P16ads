@@ -1,8 +1,8 @@
 {
-    "description": "Convbox 渠道报表（U 型）：P15–P18 与地垫套装（MR-2603 地垫、MR-2604 收边条） 按渠道组 × 渠道的商品浏览、进站、加购、结账、归因件数与营收，含非付费来源，2026-10-20 至 2026-11-16。含按会话（sessions / atc / checkout）与按事件（atc_events / ic_events）两种加购、结账口径。",
+    "description": "Convbox 渠道报表（U 型）：P15–P18 与地垫套装（MR-2603 地垫、MR-2604 收边条） 按渠道组 × 渠道的商品浏览、进站、加购、结账、归因件数与营收，含非付费来源，2026-10-20 至 2026-11-18。含按会话（sessions / atc / checkout）与按事件（atc_events / ic_events）两种加购、结账口径。",
     "edit": {
         "via": "claude",
-        "at": "2026-11-20T04:40:00Z"
+        "at": "2026-11-20T07:50:00Z"
     },
     "fixed": true,
     "schedule": "按需更新：Cristobal 让 Claude 运行一次查询时，重新导出并替换本文件。查询语句保存在 MKT - Function/Marketing Dashboard/queries。",
@@ -10,11 +10,11 @@
         "format": "csv",
         "kind": "file",
         "name": "attr_sources.csv",
-        "url": "/_blob/a2d053cf7372169b9df21b32dbb17dc9"
+        "url": "/_blob/886e47aafcff00af8abefeee8e919102"
     },
     "title": "全部流量来源归因",
     "updated": {
-        "at": "2026-11-20T04:40:00Z",
-        "by": "Claude（BigQuery 查询快照，2026-10-20 至 2026-11-16；11-20 加入地垫套装）"
+        "at": "2026-11-20T07:50:00Z",
+        "by": "Claude（BigQuery 查询快照，2026-10-20 至 2026-11-18，美西完整日）"
     }
 }

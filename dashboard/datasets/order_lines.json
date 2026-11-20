@@ -1,20 +1,20 @@
 {
-    "title": "Shopify 订单明细（用于订单去重）",
-    "description": "含无氧系列或地垫套装的美国站订单行（merach_shopify.dwd_shopify_order_item_a，已排除取消单），2026-10-20 至 2026-11-16。用来按订单去重计算订单数：一单含多个产品只算一次，赠品不计。",
-    "source": {
-        "kind": "file",
-        "url": "/_blob/546bf999a524685e96861864bfb70477",
-        "name": "order_lines.csv",
-        "format": "csv"
-    },
-    "updated": {
-        "at": "2026-11-20T04:40:00Z",
-        "by": "Claude（BigQuery 查询快照，2026-10-20 至 2026-11-16；11-20 加入地垫套装）"
+    "description": "含无氧系列或地垫套装的美国站订单行（merach_shopify.dwd_shopify_order_item_a，已排除取消单），2026-10-20 至 2026-11-18。用来按订单去重计算订单数：一单含多个产品只算一次，赠品不计。",
+    "edit": {
+        "via": "claude",
+        "at": "2026-11-20T07:50:00Z"
     },
     "fixed": true,
     "schedule": "按需更新：Cristobal 让 Claude 运行一次查询时，重新导出并替换本文件。",
-    "edit": {
-        "via": "claude",
-        "at": "2026-11-20T04:40:00Z"
+    "source": {
+        "format": "csv",
+        "kind": "file",
+        "name": "order_lines.csv",
+        "url": "/_blob/b13826ebe4018382a560f34492edbfd3"
+    },
+    "title": "Shopify 订单明细（用于订单去重）",
+    "updated": {
+        "at": "2026-11-20T07:50:00Z",
+        "by": "Claude（BigQuery 查询快照，2026-10-20 至 2026-11-18，美西完整日）"
     }
 }
