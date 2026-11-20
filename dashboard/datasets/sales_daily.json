@@ -1,20 +1,20 @@
 {
-    "title": "无氧系列每日销售",
-    "description": "Shopify 订单汇总（miaoda）：P15–P18 按日期 × SKU 的订单、销量、净销售与产品成本，2026-10-20 至 2026-11-16，已排除测试 SKU。",
-    "source": {
-        "kind": "file",
-        "url": "/_blob/2326ff07e8375da7df1236191cd6a68e",
-        "name": "sales_daily.csv",
-        "format": "csv"
-    },
-    "updated": {
-        "at": "2026-11-17T10:00:00Z",
-        "by": "Claude（BigQuery 查询快照，2026-10-20 至 2026-11-16）"
+    "description": "Shopify 订单汇总（miaoda）：P15–P18 与地垫套装（MR-2603 地垫、MR-2604 收边条） 按日期 × SKU 的订单、销量、净销售与产品成本，2026-10-20 至 2026-11-16，已排除测试 SKU。",
+    "edit": {
+        "via": "claude",
+        "at": "2026-11-20T04:40:00Z"
     },
     "fixed": true,
     "schedule": "按需更新：Cristobal 让 Claude 运行一次查询时，重新导出并替换本文件。查询语句保存在 MKT - Function/Marketing Dashboard/queries。",
-    "edit": {
-        "via": "claude",
-        "at": "2026-11-17T10:00:00Z"
+    "source": {
+        "format": "csv",
+        "kind": "file",
+        "name": "sales_daily.csv",
+        "url": "/_blob/3802f729e5469088af6ccb9901ad80bf"
+    },
+    "title": "无氧系列每日销售",
+    "updated": {
+        "at": "2026-11-20T04:40:00Z",
+        "by": "Claude（BigQuery 查询快照，2026-10-20 至 2026-11-16；11-20 加入地垫套装）"
     }
 }

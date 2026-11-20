@@ -99,11 +99,17 @@
 .p16-links a { color: var(--color-fg); font-size: 12px; text-decoration: none; border: 1px solid var(--color-border-line); border-radius: 6px; padding: 1px 6px; margin-right: 4px; }
 .p16-links a:hover { border-color: var(--color-fg-muted); }
 .p16-links a:focus-visible { outline: 2px solid var(--color-fg-muted); outline-offset: 1px; }
+.p16-rowlinks { display: inline-flex; gap: 4px; margin-left: 6px; vertical-align: middle; }
+.p16-rowlinks a { margin-right: 0; padding: 0 5px; font-size: 11px; }
+a.p16-celllink { color: inherit; text-decoration: none; display: block; }
+a.p16-celllink:hover { text-decoration: underline; }
+a.p16-celllink:focus-visible { outline: 2px solid var(--color-fg); outline-offset: 1px; }
+.p16-tip-hint { margin-top: 4px; color: var(--cds-text-secondary); font-size: 11px; }
 </style>
 
 <div class="p16" lang="zh-CN">
   <header class="p16-head" id="overview">
-    <span class="p16-window">MERACH 无氧系列 · 美国站 · 2026-10-20 至 <span data-draw="asof" data-source="sales_daily" data-field="date">—</span>（美西时间）· 数据快照</span>
+    <span class="p16-window">MERACH 无氧系列与地垫套装 · 美国站 · 2026-10-20 至 <span data-draw="asof" data-source="sales_daily" data-field="date">—</span>（美西时间）· 数据快照</span>
     <h1>无氧系列广告看板</h1>
     <div class="wy-tabs" role="tablist" aria-label="选择产品">
       <button type="button" class="wy-tab is-on" role="tab" aria-selected="true" data-spu="全部">系列合计</button>
@@ -111,6 +117,7 @@
       <button type="button" class="wy-tab" role="tab" aria-selected="false" data-spu="P16">P16 史密斯机</button>
       <button type="button" class="wy-tab" role="tab" aria-selected="false" data-spu="P17">P17</button>
       <button type="button" class="wy-tab" role="tab" aria-selected="false" data-spu="P18">P18 训练凳</button>
+      <button type="button" class="wy-tab" role="tab" aria-selected="false" data-spu="地垫套装">地垫套装</button>
     </div>
     <p class="p16-lede" data-read lang="zh-CN"><span data-draw="lede-name">—</span>：Shopify 实际成交 <b data-draw="lede-orders" data-source="kpi_spu" data-field="orders">—</b> 单、净销售 <b data-draw="lede-net" data-source="kpi_spu" data-field="net_sales">—</b>。付费广告归因营收 <b data-draw="lede-paid" data-source="kpi_spu" data-field="paid_revenue">—</b>，其中无氧专投广告 <b data-draw="lede-ded" data-source="kpi_spu" data-field="ded_revenue">—</b>，其他广告带动 <b data-draw="lede-halo" data-source="kpi_spu" data-field="halo_revenue">—</b>；非付费来源（邮件、自然搜索等）归因营收 <b data-draw="lede-nonpaid" data-source="kpi_spu" data-field="nonpaid_revenue">—</b>。</p>
   </header>
@@ -307,7 +314,7 @@
 
   <section class="p16-section" id="matrix">
     <h2>多维视图：素材 × 人群 × 投放层级</h2>
-    <p class="p16-sub">Meta P16 专投。每一格是一个素材投给一类人群的结果，颜色越深表示所选指标越好；右上角绿点表示该组合有 P16 归因订单。只列出所选范围内花费最高的 20 个素材。</p>
+    <p class="p16-sub">Meta P16 专投。每一格是一个素材投给一类人群的结果，颜色越深表示所选指标越好；右上角绿点表示该组合有 P16 归因订单。只列出所选范围内花费最高的 20 个素材。点击格子可打开这一组合花费最高那条广告的帖子，素材名后的 FB、IG 打开该素材的预览。</p>
     <div class="p16-controls">
       <label for="p16-metric">指标
         <select id="p16-metric" class="dash-select" aria-label="热力图指标">
@@ -393,7 +400,7 @@
 
   <section class="p16-section" id="creatives">
     <h2>素材表现（按广告名称汇总）</h2>
-    <p class="p16-sub">同一个广告名称在多个 Campaign 和受众里投放时合并计算。点击到进站反映素材承诺与落地页是否一致，进站到加购反映页面和价格能否接住流量。“预览”一栏：FB、IG 打开该素材花费最高那条广告的帖子；“后台”在 Ads Manager 中选中该素材的全部广告，可直接预览各版位效果（需要广告账户权限）。</p>
+    <p class="p16-sub">同一个广告名称在多个 Campaign 和受众里投放时合并计算。点击到进站反映素材承诺与落地页是否一致，进站到加购反映页面和价格能否接住流量。“预览”一栏：FB、IG 打开该素材花费最高那条广告的帖子。</p>
     <div class="p16-card" id="creative-map">
       <h3>素材象限：吸引力（CTR）× 承接力（加购率）</h3>
       <p class="p16-sub">仅显示进站 ≥ 10 且加购率不超过 100% 的素材，圆点大小代表花费，标注了花费最高的 6 条。</p>
@@ -491,6 +498,8 @@
       <li>实际订单与净销售：Shopify 订单汇总（miaoda.total_site_sku_by_date），已排除 P16 测试 SKU。</li>
       <li>归因：统一来自 Convbox 原始归因表（product_ad_report_v2 / product_report_v2），U 型归因，一单的功劳按触点拆分，所以会出现小数。</li>
       <li>归因件数：Convbox 统计的是成交件数而不是订单数。P15 有 BOGOS 买赠，一单会送出多片杠铃片，因此 P15 的归因件数偏高、营收偏低；P16 一单一台，件数与订单数一致。</li>
+      <li>地垫套装 = MERACH Interlocking Rubber Gym Floor Tiles 商品下的地垫（MR-2603）与收边条（MR-2604），没有专投广告，付费归因全部来自其他广告带动；系列合计包含地垫套装。</li>
+      <li>订单数按订单去重（数据来自 Shopify 订单明细）：一单同时含多个产品时，在系列合计里只算一次，赠品（随 P16 赠送的杠铃片）不计；销量与销售额仍按 SKU 汇总。</li>
       <li>广告类型：无氧专投 = Campaign 名称含 P15–P18；品牌词搜索 = 名称含 Brand；其他产品广告 = 名称含其他产品代号或品类；大促 / 通用 = 全站促销、Best Seller、DSA 等；未匹配到名称 = Convbox 有转化但 Campaign 信息表里查不到名称。</li>
       <li>专投花费：Meta 来自 facebook_ad_insights，Google 来自 google_campaign，只统计名称含 P15–P18 的 Campaign。其他广告带动的转化没有分摊花费。</li>
       <li>全部流量来源来自 Convbox 渠道报表，付费广告一项与广告报表（Campaign 层级）的统计层级不同，数字略有差异。</li>
@@ -505,20 +514,20 @@
 </div>
 
 <script>
-const WY_SPUS = ['全部', 'P15', 'P16', 'P17', 'P18'];
+const WY_SPUS = ['全部', 'P15', 'P16', 'P17', 'P18', '地垫套装'];
 
 dash.calc('kpi_spu', {
   title: '各产品核心指标',
-  description: '按产品（含系列合计）汇总 Shopify 实际订单与销售、专投花费，以及 Convbox 付费广告与非付费来源的归因营收。',
-  inputs: ['sales_daily', 'spend_daily', 'attr_campaigns', 'attr_sources'],
-  fn: (sales, spend, campaigns, sources) => {
+  description: '按产品（含系列合计）汇总 Shopify 实际订单与销售、专投花费，以及 Convbox 付费广告与非付费来源的归因营收。订单数按订单去重：一单含多个产品只算一次，赠品不计。',
+  inputs: ['sales_daily', 'spend_daily', 'attr_campaigns', 'attr_sources', 'order_lines'],
+  fn: (sales, spend, campaigns, sources, orderLines) => {
     const n = (v) => (v == null || v === '' ? 0 : Number(v));
     const rd = (v, d) => (v == null ? null : Math.round(v * 10 ** d) / 10 ** d);
     const pick = (rows, s) => (s === '全部' ? rows : rows.filter((r) => r.spu === s));
     const sum = (rows, k) => rows.reduce((a, r) => a + n(r[k]), 0);
-    return ['全部', 'P15', 'P16', 'P17', 'P18'].map((s) => {
+    return ['全部', 'P15', 'P16', 'P17', 'P18', '地垫套装'].map((s) => {
       const sa = pick(sales, s), sp = pick(spend, s), ca = pick(campaigns, s), so = pick(sources, s);
-      const orders = sum(sa, 'orders'), net = sum(sa, 'net_sales'), sp_total = sum(sp, 'spend');
+      const orders = new Set(orderLines.filter((r) => r.gift !== '1' && (s === '全部' || r.spu === s)).map((r) => r.order_id)).size, net = sum(sa, 'net_sales'), sp_total = sum(sp, 'spend');
       const paid = sum(ca, 'revenue_attr'), ded = sum(ca.filter((r) => r.scope === '无氧专投'), 'revenue_attr');
       const nonpaid = so.filter((r) => r.channel_group !== 'Paid Ads');
       return {
@@ -617,8 +626,8 @@ dash.calc('sources_spu', {
 dash.calc('trend', {
   title: '每日专投花费与实际订单',
   description: '按日期和产品（含系列合计）汇总 Meta / Google 专投花费与 Shopify 实际订单、净销售。',
-  inputs: ['sales_daily', 'spend_daily'],
-  fn: (sales, spend) => {
+  inputs: ['sales_daily', 'spend_daily', 'order_lines'],
+  fn: (sales, spend, orderLines) => {
     const n = (v) => (v == null || v === '' ? 0 : Number(v));
     const dates = [...new Set([...sales.map((r) => r.date), ...spend.map((r) => r.date)])].sort();
     if (!dates.length) return [];
@@ -626,7 +635,7 @@ dash.calc('trend', {
     const start = new Date(dates[0] + 'T00:00:00Z'), end = new Date(dates[dates.length - 1] + 'T00:00:00Z');
     for (let t = start; t <= end; t = new Date(t.getTime() + 86400000)) all.push(t.toISOString().slice(0, 10));
     const out = [];
-    for (const s of ['全部', 'P15', 'P16', 'P17', 'P18']) {
+    for (const s of ['全部', 'P15', 'P16', 'P17', 'P18', '地垫套装']) {
       for (const d of all) {
         const sa = sales.filter((r) => r.date === d && (s === '全部' || r.spu === s));
         const sp = spend.filter((r) => r.date === d && (s === '全部' || r.spu === s));
@@ -634,7 +643,7 @@ dash.calc('trend', {
           key: s + '|' + d, spu: s, date: d,
           meta_spend: Math.round(sp.filter((r) => r.channel === 'Meta Ads').reduce((a, r) => a + n(r.spend), 0) * 100) / 100,
           google_spend: Math.round(sp.filter((r) => r.channel === 'Google Ads').reduce((a, r) => a + n(r.spend), 0) * 100) / 100,
-          orders: sa.reduce((a, r) => a + n(r.orders), 0),
+          orders: new Set(orderLines.filter((r) => r.date === d && r.gift !== '1' && (s === '全部' || r.spu === s)).map((r) => r.order_id)).size,
           net_sales: Math.round(sa.reduce((a, r) => a + n(r.net_sales), 0) * 100) / 100,
         });
       }
@@ -759,7 +768,7 @@ dash.calc('creatives', {
       if (!o.ig_url && r.ig_url) o.ig_url = r.ig_url;
     }
     return [...by.values()].map(({ _top, ad_ids, ...o }) => ({
-      ...o, ads_manager_url: o.account_id && ad_ids.length ? 'https://adsmanager.facebook.com/adsmanager/manage/ads?act=' + o.account_id + '&selected_ad_ids=' + ad_ids.join(',') : '', spend: rd(o.spend, 2), sessions: rd(o.sessions, 1), atc: rd(o.atc, 1), checkout: rd(o.checkout, 1), atc_events: rd(o.atc_events, 1), ic_events: rd(o.ic_events, 1), orders_attr: rd(o.orders_attr, 2), revenue_attr: rd(o.revenue_attr, 2), other_revenue: rd(o.other_revenue, 2),
+      ...o, spend: rd(o.spend, 2), sessions: rd(o.sessions, 1), atc: rd(o.atc, 1), checkout: rd(o.checkout, 1), atc_events: rd(o.atc_events, 1), ic_events: rd(o.ic_events, 1), orders_attr: rd(o.orders_attr, 2), revenue_attr: rd(o.revenue_attr, 2), other_revenue: rd(o.other_revenue, 2),
       ctr: o.impressions ? rd(o.clicks / o.impressions, 4) : null, cpc: o.clicks ? rd(o.spend / o.clicks, 2) : null,
       visit_rate: o.clicks ? rd(o.sessions / o.clicks, 4) : null, atc_rate: o.sessions ? rd(o.atc / o.sessions, 4) : null,
     })).sort((a, b) => b.spend - a.spend);
@@ -789,7 +798,7 @@ dash.calc('formats', {
 
 dash.calc('matrix', {
   title: '素材 × 人群矩阵',
-  description: '按投放层级（含“全部”）、人群类型和素材汇总 Meta P16 专投广告，并算出 CTR、加购率、单次加购成本。进站不足 5 时不计算比率。',
+  description: '按投放层级（含“全部”）、人群类型和素材汇总 Meta P16 专投广告，并算出 CTR、加购率、单次加购成本。进站不足 5 时不计算比率。每格附该组合花费最高那条广告的帖子链接。',
   inputs: ['meta_ads'],
   fn: (metaAds) => {
     const n = (v) => (v == null || v === '' ? 0 : Number(v));
@@ -798,12 +807,13 @@ dash.calc('matrix', {
     for (const r of metaAds) {
       for (const scope of ['全部', r.funnel]) {
         const key = scope + '|' + r.audience + '|' + r.ad_name;
-        if (!by.has(key)) by.set(key, { key, scope, audience: r.audience, ad_name: r.ad_name, format: r.format, spend: 0, impressions: 0, clicks: 0, sessions: 0, atc: 0, orders_attr: 0, revenue_attr: 0 });
+        if (!by.has(key)) by.set(key, { key, scope, audience: r.audience, ad_name: r.ad_name, format: r.format, spend: 0, impressions: 0, clicks: 0, sessions: 0, atc: 0, orders_attr: 0, revenue_attr: 0, fb_post_url: '', ig_url: '', _top: -1 });
         const o = by.get(key);
         for (const f of ['spend', 'impressions', 'clicks', 'sessions', 'atc', 'orders_attr', 'revenue_attr']) o[f] += n(r[f]);
+        if (n(r.spend) > o._top && (r.fb_post_url || r.ig_url)) { o._top = n(r.spend); o.fb_post_url = r.fb_post_url || ''; o.ig_url = r.ig_url || ''; }
       }
     }
-    return [...by.values()].map((o) => ({
+    return [...by.values()].map(({ _top, ...o }) => ({
       ...o, spend: rd(o.spend, 2), sessions: rd(o.sessions, 1), atc: rd(o.atc, 1), orders_attr: rd(o.orders_attr, 3), revenue_attr: rd(o.revenue_attr, 2),
       ctr: o.impressions ? rd(o.clicks / o.impressions, 4) : null,
       atc_rate: o.sessions >= 5 ? rd(o.atc / o.sessions, 4) : null,
@@ -913,7 +923,7 @@ document.querySelectorAll('#wy-driver-metric').forEach((sel) => sel.addEventList
 
 (function () {
   const F = window.p16fmt;
-  const names = { '全部': '无氧系列合计', P15: 'P15 杠铃片', P16: 'P16 史密斯机', P17: 'P17', P18: 'P18 训练凳' };
+  const names = { '全部': '无氧系列合计（含地垫套装）', P15: 'P15 杠铃片', P16: 'P16 史密斯机', P17: 'P17', P18: 'P18 训练凳', '地垫套装': '地垫套装（地垫 + 收边条）' };
   dash.draw('lede-name', (el) => { el.textContent = names[window.wySpu] || window.wySpu; });
 
   const kpiCell = (name, field, fmt) => dash.draw(name, (el) => {
@@ -1276,10 +1286,10 @@ document.querySelectorAll('#wy-driver-metric').forEach((sel) => sel.addEventList
     const d = dash.data('creatives');
     tbody.replaceChildren();
     if (d.status !== 'ok' || !Array.isArray(d.data)) { fail(tbody, d.status, 13); return; }
-    const safe = (u) => (typeof u === 'string' && /^https:\/\/(www\.facebook\.com|www\.instagram\.com|adsmanager\.facebook\.com)\//.test(u) ? u : '');
+    const safe = (u) => (typeof u === 'string' && /^https:\/\/(www\.facebook\.com|www\.instagram\.com)\//.test(u) ? u : '');
     const links = (r) => {
       const c = document.createElement('td'); c.className = 'p16-text p16-links';
-      for (const [label, url, tip] of [['FB', r.fb_post_url, '在 Facebook 打开广告帖子（花费最高的那条）'], ['IG', r.ig_url, '在 Instagram 打开广告帖子'], ['后台', r.ads_manager_url, '在 Ads Manager 中打开并预览（需要广告账户权限）']]) {
+      for (const [label, url, tip] of [['FB', r.fb_post_url, '在 Facebook 打开广告帖子（花费最高的那条）'], ['IG', r.ig_url, '在 Instagram 打开广告帖子']]) {
         const u = safe(url); if (!u) continue;
         const a = document.createElement('a'); a.href = u; a.target = '_blank'; a.rel = 'noopener noreferrer'; a.textContent = label; a.setAttribute('aria-label', tip + '：' + r.ad_name); a.title = tip;
         c.append(a);
@@ -1393,6 +1403,7 @@ document.querySelectorAll('#wy-driver-metric').forEach((sel) => sel.addEventList
     sessions: { label: '进站', fmt: (v) => F.num1(v), better: 'high' },
     spend: { label: '花费', fmt: (v) => F.usd(v), better: 'high' },
   };
+  const safeUrl = (u) => (typeof u === 'string' && /^https:\/\/(www\.facebook\.com|www\.instagram\.com)\//.test(u) ? u : '');
   const audOrder = ['宽泛', '健身内容兴趣', '力量训练兴趣', '健身房品牌兴趣', 'CrossFit 兴趣', '再营销'];
 
   for (const id of ['p16-metric', 'p16-scope', 'p16-format']) {
@@ -1427,7 +1438,19 @@ document.querySelectorAll('#wy-driver-metric').forEach((sel) => sel.addEventList
     const line = (label, value) => { const p = document.createElement('div'); p.append(label + '：'); const b = document.createElement('b'); b.textContent = value; p.append(b); return p; };
     for (const ad of ads) {
       const tr = document.createElement('tr');
-      const th = document.createElement('th'); th.className = 'p16-rowhead'; th.textContent = ad; tr.append(th);
+      const th = document.createElement('th'); th.className = 'p16-rowhead';
+      const nm = document.createElement('span'); nm.textContent = ad; th.append(nm);
+      const cr = (dash.data('creatives').data || []).find((x) => x.ad_name === ad);
+      if (cr) {
+        const box = document.createElement('span'); box.className = 'p16-links p16-rowlinks';
+        for (const [label, url] of [['FB', cr.fb_post_url], ['IG', cr.ig_url]]) {
+          const u = safeUrl(url); if (!u) continue;
+          const a = document.createElement('a'); a.href = u; a.target = '_blank'; a.rel = 'noopener noreferrer'; a.textContent = label; a.title = '预览素材（' + label + '）'; a.setAttribute('aria-label', '预览素材 ' + ad + '（' + label + '）');
+          box.append(a);
+        }
+        if (box.childNodes.length) th.append(box);
+      }
+      tr.append(th);
       for (const a of auds) {
         const r = rows.find((x) => x.ad_name === ad && x.audience === a);
         const c = document.createElement('td');
@@ -1441,6 +1464,11 @@ document.querySelectorAll('#wy-driver-metric').forEach((sel) => sel.addEventList
           c.style.color = k > 0.6 ? 'var(--color-bg)' : 'var(--color-fg)';
           c.textContent = info.fmt(v);
         }
+        const cellUrl = safeUrl(r.fb_post_url) || safeUrl(r.ig_url);
+        if (cellUrl && v != null) {
+          const a = document.createElement('a'); a.className = 'p16-celllink'; a.href = cellUrl; a.target = '_blank'; a.rel = 'noopener noreferrer';
+          a.textContent = c.textContent; a.setAttribute('aria-label', '打开 ' + ad + ' × ' + r.audience + ' 的广告帖子'); c.textContent = ''; c.append(a);
+        }
         if (r.orders_attr > 0) { const dot = document.createElement('span'); dot.className = 'p16-order'; c.append(dot); }
         c.addEventListener('pointerenter', (ev) => {
           tip.replaceChildren();
@@ -1448,6 +1476,7 @@ document.querySelectorAll('#wy-driver-metric').forEach((sel) => sel.addEventList
           tip.append(line('花费', F.usd2(r.spend)), line('CTR', F.pct(r.ctr)), line('进站', F.num1(r.sessions)), line('加购', F.num1(r.atc)),
             line('加购率', r.atc_rate == null ? '样本少' : F.pct(r.atc_rate)), line('单次加购成本', r.cost_per_atc == null ? '—' : F.usd2(r.cost_per_atc)),
             line('归因订单', F.num2(r.orders_attr)));
+          if (cellUrl) { const p = document.createElement('div'); p.className = 'p16-tip-hint'; p.textContent = '点击格子打开这条广告的帖子预览'; tip.append(p); }
           tip.hidden = false;
           const br = box.getBoundingClientRect(), cr = c.getBoundingClientRect();
           tip.style.left = Math.max(0, Math.min(br.width - 280, cr.left - br.left + box.scrollLeft)) + 'px';
