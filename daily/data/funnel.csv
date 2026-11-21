@@ -424,7 +424,7 @@ date,spu,channel_group,channel,product_views,sessions,atc_sessions,ic_sessions,a
 2026-11-07,P15,Paid Ads,Facebook Ads,52.95,28.0,6.0,7.0,6.207,4.963,0.0,0.0
 2026-11-07,P15,Paid Ads,Google Ads,26.0,10.0,2.0,3.0,2.654,3.468,0.0,0.0
 2026-11-07,P16,Affiliate,Impact,3.54,5.0,3.0,2.0,1.264,0.437,0.0,0.0
-2026-11-07,P16,Affiliate,bixgrow_affiliate,2.04,3.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-07,P16,Affiliate,bixgrow_affiliate,2.04,3.0,1.0,0.0,0.4,0.0,0.0,0.0
 2026-11-07,P16,Direct,Direct,170.0,140.0,3.0,2.0,3.0,2.0,0.0,0.0
 2026-11-07,P16,Email & SMS,Email,3.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0
 2026-11-07,P16,Email & SMS,Klaviyo,141.68,99.0,5.0,4.0,5.2,5.0,0.0,0.0
@@ -439,7 +439,7 @@ date,spu,channel_group,channel,product_views,sessions,atc_sessions,ic_sessions,a
 2026-11-07,P16,Other Sources,merachfit.de,0.0,0.0,1.0,0.0,1.0,0.0,0.0,0.0
 2026-11-07,P16,Paid Ads,Bing Ads,5.0,2.0,1.0,0.0,1.0,0.0,0.0,0.0
 2026-11-07,P16,Paid Ads,Facebook Ads,374.0,271.0,17.0,10.0,14.959,10.521,0.0,0.0
-2026-11-07,P16,Paid Ads,Google Ads,402.14,290.0,15.0,9.0,13.111,8.023,0.0,0.0
+2026-11-07,P16,Paid Ads,Google Ads,402.14,290.0,15.0,9.0,12.711,8.023,0.0,0.0
 2026-11-07,P18,Affiliate,Impact,1.0,1.0,1.0,0.0,1.0,0.0,0.0,0.0
 2026-11-07,P18,Direct,Direct,5.0,4.0,1.0,1.0,1.0,1.0,0.0,0.0
 2026-11-07,P18,Email & SMS,Klaviyo,12.0,11.0,1.0,0.0,0.4,0.0,0.0,0.0
@@ -461,14 +461,14 @@ date,spu,channel_group,channel,product_views,sessions,atc_sessions,ic_sessions,a
 2026-11-08,P15,Paid Ads,Facebook Ads,44.0,27.0,5.0,7.0,3.407,4.803,3.0,269.99
 2026-11-08,P15,Paid Ads,Google Ads,13.0,3.0,2.0,2.0,2.654,1.454,0.0,0.0
 2026-11-08,P16,AI Assistant,chatgpt.com,5.0,1.0,1.0,1.0,1.0,0.5,0.0,0.0
-2026-11-08,P16,Affiliate,Impact,3.5,3.0,4.0,5.0,0.548,0.565,0.0,0.0
-2026-11-08,P16,Affiliate,bixgrow_affiliate,11.8,6.0,1.0,1.0,2.0,0.487,0.0,0.0
+2026-11-08,P16,Affiliate,Impact,3.5,3.0,4.0,5.0,0.548,0.571,0.0,0.0
+2026-11-08,P16,Affiliate,bixgrow_affiliate,11.8,6.0,1.0,1.0,2.0,0.476,0.0,0.0
 2026-11-08,P16,Direct,Direct,189.0,138.0,5.0,4.0,5.0,5.0,0.0,0.0
 2026-11-08,P16,Email & SMS,Email,4.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
-2026-11-08,P16,Email & SMS,Klaviyo,85.5,59.0,2.0,4.0,1.046,1.972,0.0,0.0
+2026-11-08,P16,Email & SMS,Klaviyo,85.5,59.0,2.0,4.0,1.046,1.981,0.0,0.0
 2026-11-08,P16,Organic Search,Bing Search,1.0,1.0,0.0,1.0,0.0,0.01,0.0,0.0
 2026-11-08,P16,Organic Search,DuckDuckGo,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
-2026-11-08,P16,Organic Search,Google Search,15.5,10.0,3.0,2.0,0.922,0.512,0.0,0.0
+2026-11-08,P16,Organic Search,Google Search,15.5,10.0,3.0,2.0,0.922,0.515,0.0,0.0
 2026-11-08,P16,Organic Search,Yahoo Search,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
 2026-11-08,P16,Organic Social,Facebook Social,8.0,8.0,1.0,3.0,0.55,1.95,0.0,0.0
 2026-11-08,P16,Organic Social,Instagram Social,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -479,7 +479,7 @@ date,spu,channel_group,channel,product_views,sessions,atc_sessions,ic_sessions,a
 2026-11-08,P16,Other Sources,gmail,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
 2026-11-08,P16,Other Sources,social,4.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
 2026-11-08,P16,Paid Ads,Bing Ads,10.0,3.0,1.0,0.0,1.0,0.0,0.0,0.0
-2026-11-08,P16,Paid Ads,Facebook Ads,423.0,310.0,25.0,15.0,20.04,11.227,1.0,2299.99
+2026-11-08,P16,Paid Ads,Facebook Ads,423.0,310.0,25.0,15.0,20.04,11.221,1.0,2299.99
 2026-11-08,P16,Paid Ads,Google Ads,380.7,253.0,16.0,8.0,11.894,5.776,0.0,0.0
 2026-11-08,P18,Affiliate,bixgrow_affiliate,0.0,0.0,1.0,0.0,1.0,0.0,0.0,0.0
 2026-11-08,P18,Direct,Direct,10.0,9.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -526,8 +526,8 @@ date,spu,channel_group,channel,product_views,sessions,atc_sessions,ic_sessions,a
 2026-11-09,P16,Other Sources,merachfit.de,0.0,0.0,1.0,1.0,0.008,0.407,0.0,0.0
 2026-11-09,P16,Other Sources,merachfit.eu,0.0,0.0,2.0,1.0,1.016,0.015,0.0,0.0
 2026-11-09,P16,Other Sources,shopify_email,0.0,0.0,1.0,0.0,1.0,0.0,0.0,0.0
-2026-11-09,P16,Paid Ads,Bing Ads,7.0,6.0,1.0,1.0,1.0,0.4,0.0,0.0
-2026-11-09,P16,Paid Ads,Facebook Ads,228.0,147.0,18.0,15.0,15.895,11.669,2.0,5199.98
+2026-11-09,P16,Paid Ads,Bing Ads,7.0,6.0,1.0,0.0,1.0,0.0,0.0,0.0
+2026-11-09,P16,Paid Ads,Facebook Ads,228.0,147.0,18.0,15.0,15.895,12.069,2.0,5199.98
 2026-11-09,P16,Paid Ads,Google Ads,106.5,79.0,8.0,5.0,6.363,4.5,1.0,2899.99
 2026-11-09,P18,Affiliate,Impact,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
 2026-11-09,P18,Direct,Direct,18.0,13.0,2.0,1.0,2.0,1.0,0.0,0.0
@@ -629,36 +629,36 @@ date,spu,channel_group,channel,product_views,sessions,atc_sessions,ic_sessions,a
 2026-11-11,地垫套装,Email & SMS,Klaviyo,7.0,7.0,0.0,0.0,0.0,0.0,0.0,0.0
 2026-11-11,地垫套装,Paid Ads,Facebook Ads,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
 2026-11-11,地垫套装,Paid Ads,Google Ads,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
-2026-11-12,P15,Affiliate,Impact,2.0,2.0,0.0,1.0,0.0,0.527,0.0,0.0
-2026-11-12,P15,Affiliate,bixgrow_affiliate,0.0,0.0,0.0,1.0,0.0,0.46,0.0,0.0
+2026-11-12,P15,Affiliate,Impact,2.0,2.0,0.0,1.0,0.0,0.524,0.0,0.0
+2026-11-12,P15,Affiliate,bixgrow_affiliate,0.0,0.0,0.0,1.0,0.0,0.466,0.0,0.0
 2026-11-12,P15,Direct,Direct,15.0,11.0,3.0,3.0,3.0,3.0,0.0,0.0
 2026-11-12,P15,Email & SMS,Klaviyo,4.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0
-2026-11-12,P15,Organic Search,Google Search,7.0,3.0,0.0,1.0,0.0,0.007,0.0,0.0
+2026-11-12,P15,Organic Search,Google Search,7.0,3.0,0.0,1.0,0.0,0.005,0.0,0.0
 2026-11-12,P15,Organic Social,Facebook Social,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
-2026-11-12,P15,Other Sources,www.merachfit.ca,0.0,0.0,0.0,1.0,0.0,0.007,0.0,0.0
+2026-11-12,P15,Other Sources,www.merachfit.ca,0.0,0.0,0.0,1.0,0.0,0.005,0.0,0.0
 2026-11-12,P15,Paid Ads,Facebook Ads,47.0,26.0,2.0,2.0,1.6,1.58,0.575,0.0
 2026-11-12,P15,Paid Ads,Google Ads,2.0,2.0,1.0,4.0,0.4,3.42,0.425,0.0
-2026-11-12,P16,Affiliate,Impact,2.27,3.0,1.0,0.0,0.48,0.0,0.0,0.0
+2026-11-12,P16,Affiliate,Impact,2.27,3.0,1.0,0.0,0.057,0.0,0.0,0.0
 2026-11-12,P16,Affiliate,bixgrow_affiliate,2.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0
 2026-11-12,P16,Direct,Direct,103.0,75.0,2.0,3.0,2.0,3.0,0.0,0.0
-2026-11-12,P16,Email & SMS,Klaviyo,12.0,9.0,1.0,0.0,0.022,0.0,0.0,0.0
+2026-11-12,P16,Email & SMS,Klaviyo,12.0,9.0,2.0,0.0,0.041,0.0,0.0,0.0
 2026-11-12,P16,Organic Search,Bing Search,3.0,3.0,1.0,0.0,1.0,0.0,0.0,0.0
-2026-11-12,P16,Organic Search,Google Search,19.1,12.0,4.0,1.0,0.791,0.5,0.0,0.0
+2026-11-12,P16,Organic Search,Google Search,19.1,12.0,4.0,1.0,0.768,0.5,0.0,0.0
 2026-11-12,P16,Organic Social,Facebook Social,6.0,5.0,1.0,1.0,1.0,1.0,0.0,0.0
 2026-11-12,P16,Organic Social,Instagram Social,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
 2026-11-12,P16,Organic Social,Other Social,3.5,4.0,0.0,0.0,0.0,0.0,0.0,0.0
 2026-11-12,P16,Other Sources,Linktree,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
 2026-11-12,P16,Other Sources,ntp.msn.com,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
 2026-11-12,P16,Paid Ads,Bing Ads,4.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0
-2026-11-12,P16,Paid Ads,Facebook Ads,86.5,59.0,9.0,4.0,6.907,3.58,0.575,1667.49
-2026-11-12,P16,Paid Ads,Google Ads,38.63,31.0,7.0,4.0,3.802,2.92,0.425,1232.5
+2026-11-12,P16,Paid Ads,Facebook Ads,86.5,59.0,9.0,4.0,6.955,3.58,0.575,1667.49
+2026-11-12,P16,Paid Ads,Google Ads,38.63,31.0,7.0,4.0,4.181,2.92,0.425,1232.5
 2026-11-12,P18,Affiliate,bixgrow_affiliate,1.6,2.0,0.0,0.0,0.0,0.0,0.0,0.0
 2026-11-12,P18,Direct,Direct,14.0,12.0,0.0,0.0,0.0,0.0,0.0,0.0
 2026-11-12,P18,Email & SMS,Email,2.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0
 2026-11-12,P18,Email & SMS,Klaviyo,3.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0
 2026-11-12,P18,Organic Search,Google Search,1.4,2.0,0.0,0.0,0.0,0.0,0.0,0.0
 2026-11-12,P18,Organic Social,Facebook Social,1.5,2.0,0.0,0.0,0.0,0.0,0.0,0.0
-2026-11-12,P18,Paid Ads,Facebook Ads,26.5,25.0,2.0,0.0,1.998,0.0,0.0,0.0
+2026-11-12,P18,Paid Ads,Facebook Ads,26.5,25.0,2.0,0.0,2.0,0.0,0.0,0.0
 2026-11-12,P18,Paid Ads,Google Ads,4.0,2.0,0.0,1.0,0.0,1.0,0.0,0.0
 2026-11-12,地垫套装,Direct,Direct,5.0,5.0,2.0,0.0,2.0,0.0,0.0,0.0
 2026-11-12,地垫套装,Email & SMS,Klaviyo,1.0,1.0,2.0,2.0,0.133,0.124,0.0,0.0
@@ -711,8 +711,8 @@ date,spu,channel_group,channel,product_views,sessions,atc_sessions,ic_sessions,a
 2026-11-14,P15,Email & SMS,Klaviyo,0.0,0.0,0.0,1.0,0.0,0.5,0.0,0.0
 2026-11-14,P15,Organic Search,Bing Search,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
 2026-11-14,P15,Organic Search,Google Search,7.5,5.0,0.0,0.0,0.0,0.0,0.0,0.0
-2026-11-14,P15,Paid Ads,Facebook Ads,12.0,9.0,5.0,1.0,4.35,1.0,0.0,0.0
-2026-11-14,P15,Paid Ads,Google Ads,18.0,10.0,2.0,1.0,0.65,0.5,0.0,0.0
+2026-11-14,P15,Paid Ads,Facebook Ads,12.0,9.0,5.0,1.0,4.38,1.0,0.0,0.0
+2026-11-14,P15,Paid Ads,Google Ads,18.0,10.0,2.0,1.0,0.62,0.5,0.0,0.0
 2026-11-14,P16,AI Assistant,chatgpt.com,3.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
 2026-11-14,P16,Affiliate,Impact,5.2,4.0,1.0,0.0,1.0,0.0,0.0,0.0
 2026-11-14,P16,Affiliate,bixgrow_affiliate,14.4,15.0,1.0,1.0,0.1,0.1,0.0,0.0
@@ -771,8 +771,8 @@ date,spu,channel_group,channel,product_views,sessions,atc_sessions,ic_sessions,a
 2026-11-15,P16,Other Sources,linkinreach.feishu.cn,5.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
 2026-11-15,P16,Other Sources,ntp.msn.com,2.0,1.0,0.0,1.0,0.0,1.0,0.0,0.0
 2026-11-15,P16,Paid Ads,Bing Ads,5.5,4.0,0.0,0.0,0.0,0.0,0.0,0.0
-2026-11-15,P16,Paid Ads,Facebook Ads,48.0,37.0,10.0,3.0,9.092,2.55,0.0,0.0
-2026-11-15,P16,Paid Ads,Google Ads,60.0,37.0,6.0,3.0,5.336,1.917,0.467,1073.33
+2026-11-15,P16,Paid Ads,Facebook Ads,48.0,37.0,10.0,3.0,9.125,2.55,0.0,0.0
+2026-11-15,P16,Paid Ads,Google Ads,60.0,37.0,6.0,3.0,5.303,1.917,0.467,1073.33
 2026-11-15,P18,Affiliate,bixgrow_affiliate,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
 2026-11-15,P18,Direct,Direct,16.0,13.0,0.0,0.0,0.0,0.0,0.0,0.0
 2026-11-15,P18,Email & SMS,Klaviyo,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -789,45 +789,44 @@ date,spu,channel_group,channel,product_views,sessions,atc_sessions,ic_sessions,a
 2026-11-15,地垫套装,Other Sources,ntp.msn.com,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
 2026-11-15,地垫套装,Paid Ads,Facebook Ads,2.9,3.0,0.0,0.0,0.0,0.0,0.0,0.0
 2026-11-15,地垫套装,Paid Ads,Google Ads,2.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
-2026-11-16,P15,Affiliate,Impact,0.2,1.0,1.0,4.0,1.0,2.547,0.0,0.0
-2026-11-16,P15,Affiliate,bixgrow_affiliate,0.0,0.0,1.0,1.0,0.05,0.46,0.0,0.0
-2026-11-16,P15,Direct,Direct,66.0,30.0,4.0,4.0,4.0,4.0,0.0,0.0
-2026-11-16,P15,Email & SMS,Klaviyo,7.0,6.0,2.0,1.0,1.05,0.04,0.0,0.0
-2026-11-16,P15,Organic Search,Google Search,4.8,4.0,3.0,2.0,3.5,1.007,1.0,79.99
+2026-11-16,P15,Affiliate,Impact,0.2,1.0,1.0,3.0,1.0,2.524,0.0,0.0
+2026-11-16,P15,Affiliate,bixgrow_affiliate,0.0,0.0,1.0,1.0,0.05,0.466,0.0,0.0
+2026-11-16,P15,Direct,Direct,66.0,30.0,4.0,5.0,4.0,5.0,0.0,0.0
+2026-11-16,P15,Email & SMS,Klaviyo,7.0,6.0,2.0,0.0,1.05,0.0,0.0,0.0
+2026-11-16,P15,Organic Search,Google Search,4.8,4.0,3.0,2.0,3.5,1.005,1.0,79.99
 2026-11-16,P15,Other Sources,KOL,0.0,0.0,1.0,0.0,0.4,0.0,0.0,0.0
 2026-11-16,P15,Other Sources,Linktree,0.0,0.0,0.0,1.0,0.0,0.5,0.0,0.0
-2026-11-16,P15,Other Sources,gmail,0.0,0.0,0.0,1.0,0.0,0.4,0.0,0.0
-2026-11-16,P15,Other Sources,www.merachfit.ca,0.0,0.0,0.0,1.0,0.0,0.007,0.0,0.0
-2026-11-16,P15,Paid Ads,Facebook Ads,23.0,17.0,0.0,3.0,0.0,2.0,0.0,0.0
-2026-11-16,P15,Paid Ads,Google Ads,11.0,3.0,1.0,1.0,1.0,0.04,0.0,0.0
-2026-11-16,P16,AI Assistant,Gemini,0.0,0.0,1.0,0.0,0.008,0.0,0.0,0.0
-2026-11-16,P16,AI Assistant,chatgpt.com,1.0,1.0,2.0,1.0,0.043,0.06,0.0,0.0
-2026-11-16,P16,Affiliate,Impact,18.6,7.0,10.0,2.0,6.135,1.063,0.0,0.0
-2026-11-16,P16,Affiliate,bixgrow_affiliate,7.0,5.0,4.0,1.0,1.857,1.04,0.0,0.0
+2026-11-16,P15,Other Sources,www.merachfit.ca,0.0,0.0,0.0,1.0,0.0,0.005,0.0,0.0
+2026-11-16,P15,Paid Ads,Facebook Ads,23.0,17.0,0.0,2.0,0.0,1.5,0.0,0.0
+2026-11-16,P15,Paid Ads,Google Ads,11.0,3.0,1.0,0.0,1.0,0.0,0.0,0.0
+2026-11-16,P16,AI Assistant,Gemini,0.0,0.0,1.0,0.0,0.012,0.0,0.0,0.0
+2026-11-16,P16,AI Assistant,chatgpt.com,1.0,1.0,2.0,1.0,0.044,0.06,0.0,0.0
+2026-11-16,P16,Affiliate,Impact,18.6,7.0,10.0,2.0,6.078,1.063,0.0,0.0
+2026-11-16,P16,Affiliate,bixgrow_affiliate,7.0,5.0,4.0,1.0,1.905,1.04,0.0,0.0
 2026-11-16,P16,Direct,Direct,133.0,87.0,8.0,4.0,9.0,5.0,0.0,0.0
-2026-11-16,P16,Email & SMS,Klaviyo,112.0,87.0,9.0,3.0,4.296,2.783,0.0,0.0
-2026-11-16,P16,Organic Search,Bing Search,0.0,0.0,1.0,0.0,0.412,0.0,0.0,0.0
+2026-11-16,P16,Email & SMS,Klaviyo,112.0,87.0,10.0,3.0,4.143,2.783,0.0,0.0
+2026-11-16,P16,Organic Search,Bing Search,0.0,0.0,1.0,0.0,0.409,0.0,0.0,0.0
 2026-11-16,P16,Organic Search,DuckDuckGo,1.0,1.0,1.0,0.0,1.0,0.0,0.0,0.0
-2026-11-16,P16,Organic Search,Google Search,15.4,14.0,9.0,0.0,3.028,0.0,0.0,0.0
+2026-11-16,P16,Organic Search,Google Search,15.4,14.0,9.0,0.0,3.025,0.0,0.0,0.0
 2026-11-16,P16,Organic Search,Yandex,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
-2026-11-16,P16,Organic Social,Facebook Social,0.5,1.0,6.0,1.0,1.715,1.865,0.0,0.0
+2026-11-16,P16,Organic Social,Facebook Social,0.5,1.0,6.0,1.0,1.375,1.865,0.0,0.0
 2026-11-16,P16,Organic Social,Instagram Social,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
 2026-11-16,P16,Other Sources,KOL,3.0,2.0,1.0,0.0,0.04,0.0,0.0,0.0
 2026-11-16,P16,Other Sources,Linktree,2.5,2.0,1.0,1.0,0.5,0.5,0.0,0.0
 2026-11-16,P16,Other Sources,OC260410,0.0,0.0,0.0,1.0,0.0,0.013,0.0,0.0
-2026-11-16,P16,Other Sources,PR,6.0,4.0,1.0,0.0,0.012,0.0,0.0,0.0
-2026-11-16,P16,Other Sources,cristobalworkingdu-create.github.io,0.0,0.0,1.0,0.0,0.004,0.0,0.0,0.0
+2026-11-16,P16,Other Sources,PR,6.0,4.0,1.0,0.0,0.014,0.0,0.0,0.0
+2026-11-16,P16,Other Sources,cristobalworkingdu-create.github.io,0.0,0.0,1.0,0.0,0.003,0.0,0.0,0.0
 2026-11-16,P16,Other Sources,eir1tseugu5.feishu.cn,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
-2026-11-16,P16,Other Sources,g0u4ecbq2egszpyo-50716115119.shopifypreview.com,0.0,0.0,1.0,0.0,0.004,0.0,0.0,0.0
+2026-11-16,P16,Other Sources,g0u4ecbq2egszpyo-50716115119.shopifypreview.com,0.0,0.0,1.0,0.0,0.006,0.0,0.0,0.0
 2026-11-16,P16,Other Sources,gmail,9.0,9.0,1.0,1.0,1.0,1.0,0.0,0.0
 2026-11-16,P16,Other Sources,merach.feishu.cn,0.0,0.0,1.0,0.0,0.444,0.0,0.0,0.0
-2026-11-16,P16,Other Sources,merachfit.de,0.0,0.0,1.0,0.0,0.008,0.0,0.0,0.0
-2026-11-16,P16,Other Sources,merachfit.eu,0.0,0.0,1.0,0.0,0.004,0.0,0.0,0.0
+2026-11-16,P16,Other Sources,merachfit.de,0.0,0.0,1.0,0.0,0.012,0.0,0.0,0.0
+2026-11-16,P16,Other Sources,merachfit.eu,0.0,0.0,1.0,0.0,0.003,0.0,0.0,0.0
 2026-11-16,P16,Other Sources,track123,0.0,0.0,1.0,0.0,1.0,0.0,0.0,0.0
 2026-11-16,P16,Other Sources,www.klaviyo.com,0.0,0.0,0.0,1.0,0.0,0.067,0.0,0.0
 2026-11-16,P16,Paid Ads,Bing Ads,2.0,1.0,1.0,0.0,1.0,0.0,0.0,0.0
-2026-11-16,P16,Paid Ads,Facebook Ads,64.0,42.0,33.0,4.0,26.514,1.609,0.0,0.0
-2026-11-16,P16,Paid Ads,Google Ads,57.0,31.0,12.0,1.0,5.979,1.0,0.0,0.0
+2026-11-16,P16,Paid Ads,Facebook Ads,64.0,42.0,34.0,4.0,27.008,1.609,0.0,0.0
+2026-11-16,P16,Paid Ads,Google Ads,57.0,31.0,12.0,1.0,5.981,1.0,0.0,0.0
 2026-11-16,P18,Affiliate,Impact,0.0,0.0,1.0,0.0,1.0,0.0,0.0,0.0
 2026-11-16,P18,Affiliate,bixgrow_affiliate,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
 2026-11-16,P18,Direct,Direct,13.0,10.0,1.0,2.0,1.0,2.0,0.0,0.0
@@ -852,11 +851,11 @@ date,spu,channel_group,channel,product_views,sessions,atc_sessions,ic_sessions,a
 2026-11-17,P16,Affiliate,Impact,3.0,3.0,7.0,1.0,2.708,0.4,0.0,0.0
 2026-11-17,P16,Affiliate,bixgrow_affiliate,5.9,6.0,3.0,2.0,1.871,1.067,0.0,0.0
 2026-11-17,P16,Direct,Direct,124.0,89.0,4.0,2.0,4.0,2.0,0.0,0.0
-2026-11-17,P16,Email & SMS,Email,0.0,0.0,2.0,1.0,0.036,0.015,0.0,0.0
-2026-11-17,P16,Email & SMS,Klaviyo,47.0,41.0,11.0,5.0,4.555,2.36,0.0,0.0
+2026-11-17,P16,Email & SMS,Email,0.0,0.0,2.0,1.0,0.036,0.009,0.0,0.0
+2026-11-17,P16,Email & SMS,Klaviyo,47.0,41.0,11.0,5.0,4.555,2.354,0.0,0.0
 2026-11-17,P16,Organic Search,Bing Search,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
 2026-11-17,P16,Organic Search,Google Search,22.6,14.0,12.0,0.0,5.545,0.0,0.0,0.0
-2026-11-17,P16,Organic Social,Facebook Social,0.0,0.0,7.0,3.0,0.772,0.156,0.0,0.0
+2026-11-17,P16,Organic Social,Facebook Social,0.0,0.0,7.0,3.0,0.772,0.152,0.0,0.0
 2026-11-17,P16,Organic Social,Other Social,4.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0
 2026-11-17,P16,Organic Social,YouTube Social,0.0,0.0,1.0,0.0,0.008,0.0,0.0,0.0
 2026-11-17,P16,Other Sources,AMZN_US_ShopDirect,0.0,0.0,1.0,0.0,0.05,0.0,0.0,0.0
@@ -865,8 +864,8 @@ date,spu,channel_group,channel,product_views,sessions,atc_sessions,ic_sessions,a
 2026-11-17,P16,Other Sources,gmail,10.0,10.0,1.0,1.0,0.4,0.4,0.0,0.0
 2026-11-17,P16,Other Sources,www.garagegymreviews.com,0.0,0.0,1.0,0.0,1.0,0.0,0.0,0.0
 2026-11-17,P16,Paid Ads,Bing Ads,3.0,2.0,1.0,0.0,0.021,0.0,0.0,0.0
-2026-11-17,P16,Paid Ads,Facebook Ads,82.5,59.0,33.0,8.0,24.113,6.081,0.0,0.0
-2026-11-17,P16,Paid Ads,Google Ads,58.4,37.0,22.0,5.0,13.92,3.521,0.0,0.0
+2026-11-17,P16,Paid Ads,Facebook Ads,82.5,59.0,33.0,8.0,24.146,6.074,0.0,0.0
+2026-11-17,P16,Paid Ads,Google Ads,58.4,37.0,22.0,5.0,13.887,3.544,0.0,0.0
 2026-11-17,P16,Paid Ads,Other Ads,0.0,0.0,1.0,0.0,1.0,0.0,0.0,0.0
 2026-11-17,P18,Affiliate,Impact,1.0,1.0,0.0,1.0,0.0,0.4,0.0,0.0
 2026-11-17,P18,Affiliate,bixgrow_affiliate,2.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -889,12 +888,12 @@ date,spu,channel_group,channel,product_views,sessions,atc_sessions,ic_sessions,a
 2026-11-18,P15,Paid Ads,Google Ads,10.0,5.0,0.0,0.0,0.0,0.0,0.0,0.0
 2026-11-18,P16,AI Assistant,Gemini,0.0,0.0,0.0,1.0,0.0,0.015,0.0,0.0
 2026-11-18,P16,AI Assistant,chatgpt.com,1.0,1.0,2.0,1.0,1.035,0.007,0.0,0.0
-2026-11-18,P16,Affiliate,Impact,18.5,11.0,12.0,1.0,4.517,1.0,0.0,0.0
-2026-11-18,P16,Affiliate,bixgrow_affiliate,10.0,8.0,6.0,2.0,4.851,1.022,0.0,0.0
+2026-11-18,P16,Affiliate,Impact,18.5,11.0,13.0,1.0,4.235,1.0,0.0,0.0
+2026-11-18,P16,Affiliate,bixgrow_affiliate,10.0,8.0,7.0,2.0,5.277,1.022,0.0,0.0
 2026-11-18,P16,Direct,Direct,165.0,95.0,30.0,10.0,30.0,12.0,0.0,0.0
-2026-11-18,P16,Email & SMS,Klaviyo,9.5,7.0,12.0,1.0,6.654,0.4,0.0,0.0
+2026-11-18,P16,Email & SMS,Klaviyo,9.5,7.0,13.0,1.0,6.921,0.4,0.0,0.0
 2026-11-18,P16,Organic Search,DuckDuckGo,0.0,0.0,1.0,0.0,1.0,0.0,0.0,0.0
-2026-11-18,P16,Organic Search,Google Search,16.6,12.0,8.0,1.0,3.402,0.037,0.0,0.0
+2026-11-18,P16,Organic Search,Google Search,16.6,12.0,8.0,1.0,3.406,0.037,0.0,0.0
 2026-11-18,P16,Organic Social,Facebook Social,9.0,5.0,3.0,1.0,1.813,1.0,0.0,0.0
 2026-11-18,P16,Organic Social,Other Social,2.4,3.0,0.0,0.0,0.0,0.0,0.0,0.0
 2026-11-18,P16,Other Sources,AMZN_US_ShopDirect,0.0,0.0,1.0,0.0,0.52,0.0,0.0,0.0
@@ -908,8 +907,8 @@ date,spu,channel_group,channel,product_views,sessions,atc_sessions,ic_sessions,a
 2026-11-18,P16,Other Sources,merachfit.de,0.0,0.0,0.0,1.0,0.0,0.015,0.0,0.0
 2026-11-18,P16,Other Sources,merachfit.eu,3.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
 2026-11-18,P16,Paid Ads,Bing Ads,3.0,3.0,1.0,0.0,0.406,0.0,0.0,0.0
-2026-11-18,P16,Paid Ads,Facebook Ads,61.8,40.0,33.0,3.0,21.436,2.6,0.0,0.0
-2026-11-18,P16,Paid Ads,Google Ads,23.4,19.0,20.0,2.0,12.293,1.4,0.0,0.0
+2026-11-18,P16,Paid Ads,Facebook Ads,61.8,40.0,33.0,3.0,21.036,2.6,0.0,0.0
+2026-11-18,P16,Paid Ads,Google Ads,23.4,19.0,20.0,2.0,12.279,1.4,0.0,0.0
 2026-11-18,P16,Paid Ads,Other Ads,0.8,1.0,1.0,0.0,0.029,0.0,0.0,0.0
 2026-11-18,P18,Affiliate,Impact,1.0,1.0,1.0,1.0,0.955,0.956,0.0,0.0
 2026-11-18,P18,Affiliate,bixgrow_affiliate,1.0,1.0,1.0,1.0,0.044,0.044,0.0,0.0
@@ -920,58 +919,112 @@ date,spu,channel_group,channel,product_views,sessions,atc_sessions,ic_sessions,a
 2026-11-18,P18,Paid Ads,Google Ads,2.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
 2026-11-18,地垫套装,Affiliate,Impact,0.0,0.0,1.0,0.0,0.8,0.0,0.0,0.0
 2026-11-18,地垫套装,Direct,Direct,6.0,6.0,2.0,1.0,2.0,1.0,0.0,0.0
-2026-11-18,地垫套装,Email & SMS,Klaviyo,5.0,4.0,1.0,0.0,1.0,0.0,0.0,0.0
-2026-11-18,地垫套装,Other Sources,flex_shop,0.0,0.0,1.0,0.0,0.2,0.0,0.0,0.0
+2026-11-18,地垫套装,Email & SMS,Klaviyo,5.0,4.0,1.0,0.0,1.06,0.0,0.0,0.0
+2026-11-18,地垫套装,Other Sources,flex_shop,0.0,0.0,1.0,0.0,0.14,0.0,0.0,0.0
 2026-11-18,地垫套装,Paid Ads,Facebook Ads,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
 2026-11-18,地垫套装,Paid Ads,Google Ads,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
 2026-11-19,P15,Affiliate,Impact,3.6,2.0,1.0,2.0,0.5,2.0,0.0,0.0
 2026-11-19,P15,Affiliate,bixgrow_affiliate,0.4,1.0,1.0,1.0,0.467,0.05,0.0,0.0
-2026-11-19,P15,Direct,Direct,28.0,20.0,7.0,3.0,7.0,3.0,1.0,59.99
-2026-11-19,P15,Email & SMS,Klaviyo,2.0,2.0,1.0,2.0,0.6,1.5,0.0,0.0
-2026-11-19,P15,Organic Search,Google Search,8.93,4.0,5.0,1.0,4.433,0.933,0.55,43.99
-2026-11-19,P15,Organic Social,Facebook Social,0.0,0.0,0.0,1.0,0.0,0.4,0.0,0.0
+2026-11-19,P15,Direct,Direct,26.0,19.0,6.0,3.0,6.0,3.0,1.0,59.99
+2026-11-19,P15,Email & SMS,Klaviyo,2.0,2.0,1.0,2.0,0.5,1.5,0.0,0.0
+2026-11-19,P15,Organic Search,Google Search,8.93,4.0,5.0,1.0,4.533,0.933,0.047,3.76
+2026-11-19,P15,Organic Social,Facebook Social,1.0,1.0,0.0,1.0,0.0,0.4,0.0,0.0
+2026-11-19,P15,Organic Social,Instagram Social,0.0,0.0,0.0,0.0,0.0,0.0,0.024,1.88
 2026-11-19,P15,Other Sources,KOL,0.0,0.0,0.0,1.0,0.0,0.05,0.0,0.0
 2026-11-19,P15,Other Sources,preciso,1.97,1.0,0.0,0.0,0.0,0.0,0.0,0.0
-2026-11-19,P15,Paid Ads,Facebook Ads,28.0,12.0,3.0,1.0,3.0,1.0,0.0,0.0
-2026-11-19,P15,Paid Ads,Google Ads,5.07,3.0,0.0,2.0,0.0,1.067,0.45,36.0
+2026-11-19,P15,Paid Ads,Facebook Ads,31.0,15.0,4.0,1.0,3.88,1.0,0.906,72.46
+2026-11-19,P15,Paid Ads,Google Ads,5.07,3.0,1.0,2.0,0.12,1.067,0.024,1.88
 2026-11-19,P15,Paid Ads,Preciso,0.03,1.0,0.0,0.0,0.0,0.0,0.0,0.0
-2026-11-19,P16,AI Assistant,chatgpt.com,0.0,0.0,1.0,0.0,0.4,0.0,0.0,0.0
-2026-11-19,P16,Affiliate,Impact,11.2,8.0,8.0,2.0,3.249,2.6,0.0,0.0
-2026-11-19,P16,Affiliate,bixgrow_affiliate,3.0,3.0,8.0,1.0,4.166,0.05,0.0,0.0
-2026-11-19,P16,Direct,Direct,154.0,104.0,11.0,3.0,11.0,5.0,0.0,0.0
-2026-11-19,P16,Email & SMS,Klaviyo,5.0,5.0,15.0,2.0,6.561,1.5,0.0,0.0
-2026-11-19,P16,Organic Search,Bing Search,0.0,0.0,1.0,0.0,0.008,0.0,0.0,0.0
+2026-11-19,P16,AI Assistant,Gemini,0.0,0.0,1.0,0.0,0.012,0.0,0.0,0.0
+2026-11-19,P16,AI Assistant,chatgpt.com,0.0,0.0,2.0,0.0,0.409,0.0,0.0,0.0
+2026-11-19,P16,Affiliate,Impact,12.2,9.0,11.0,2.0,4.34,2.6,0.0,0.0
+2026-11-19,P16,Affiliate,bixgrow_affiliate,3.0,3.0,9.0,1.0,3.341,0.05,0.0,0.0
+2026-11-19,P16,Direct,Direct,125.0,87.0,6.0,3.0,6.0,5.0,0.0,0.0
+2026-11-19,P16,Email & SMS,Klaviyo,5.0,5.0,18.0,2.0,6.486,1.5,0.0,0.0
+2026-11-19,P16,Organic Search,Bing Search,0.0,0.0,2.0,0.0,0.417,0.0,0.0,0.0
 2026-11-19,P16,Organic Search,DuckDuckGo,0.0,0.0,1.0,0.0,0.089,0.0,0.0,0.0
-2026-11-19,P16,Organic Search,Google Search,8.6,8.0,9.0,1.0,3.599,1.0,0.0,0.0
+2026-11-19,P16,Organic Search,Google Search,11.6,10.0,11.0,1.0,4.154,1.0,0.0,0.0
 2026-11-19,P16,Organic Search,Yahoo Search,0.0,0.0,1.0,0.0,0.025,0.0,0.0,0.0
-2026-11-19,P16,Organic Social,Facebook Social,5.0,5.0,4.0,1.0,1.857,0.4,0.0,0.0
+2026-11-19,P16,Organic Social,Facebook Social,5.5,6.0,6.0,1.0,2.304,0.4,0.0,0.0
 2026-11-19,P16,Organic Social,Other Social,2.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0
-2026-11-19,P16,Other Sources,KOL,1.0,1.0,1.0,1.0,0.05,0.05,0.0,0.0
-2026-11-19,P16,Other Sources,PR,3.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
-2026-11-19,P16,Other Sources,Shop APP,3.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-19,P16,Organic Social,Reddit Social,0.0,0.0,1.0,0.0,0.04,0.0,0.0,0.0
+2026-11-19,P16,Other Sources,KOL,10.0,3.0,1.0,1.0,0.05,0.05,0.0,0.0
+2026-11-19,P16,Other Sources,PR,3.0,1.0,1.0,0.0,0.014,0.0,0.0,0.0
+2026-11-19,P16,Other Sources,Shop APP,4.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0
 2026-11-19,P16,Other Sources,ces,0.0,0.0,0.0,1.0,0.0,2.0,0.0,0.0
+2026-11-19,P16,Other Sources,cristobalworkingdu-create.github.io,0.0,0.0,1.0,0.0,0.003,0.0,0.0,0.0
 2026-11-19,P16,Other Sources,eir1tseugu5.feishu.cn,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
-2026-11-19,P16,Other Sources,flex_shop,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
-2026-11-19,P16,Other Sources,merach.feishu.cn,0.0,0.0,1.0,0.0,0.933,0.0,0.0,0.0
+2026-11-19,P16,Other Sources,flex_shop,2.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-19,P16,Other Sources,g0u4ecbq2egszpyo-50716115119.shopifypreview.com,0.0,0.0,1.0,0.0,0.006,0.0,0.0,0.0
+2026-11-19,P16,Other Sources,merach.feishu.cn,0.0,0.0,2.0,0.0,0.844,0.0,0.0,0.0
+2026-11-19,P16,Other Sources,merachfit.de,0.0,0.0,1.0,0.0,0.012,0.0,0.0,0.0
+2026-11-19,P16,Other Sources,merachfit.eu,0.0,0.0,2.0,0.0,0.043,0.0,0.0,0.0
+2026-11-19,P16,Other Sources,ntp.msn.cn,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
 2026-11-19,P16,Other Sources,ntp.msn.com,0.0,0.0,0.0,1.0,0.0,1.0,0.0,0.0
 2026-11-19,P16,Other Sources,rankite.com,0.0,0.0,0.0,1.0,0.0,1.0,0.0,0.0
 2026-11-19,P16,Other Sources,www.kayipro.com,0.0,0.0,0.0,1.0,0.0,0.4,0.0,0.0
 2026-11-19,P16,Paid Ads,Bing Ads,4.0,3.0,2.0,0.0,1.041,0.0,0.0,0.0
-2026-11-19,P16,Paid Ads,Facebook Ads,98.0,77.0,21.0,2.0,17.029,2.0,0.0,0.0
-2026-11-19,P16,Paid Ads,Google Ads,379.2,279.0,27.0,7.0,24.991,7.0,0.0,0.0
+2026-11-19,P16,Paid Ads,Facebook Ads,109.5,85.0,24.0,2.0,17.856,2.0,0.0,0.0
+2026-11-19,P16,Paid Ads,Google Ads,380.2,280.0,33.0,7.0,27.515,7.0,0.0,0.0
 2026-11-19,P16,Paid Ads,Other Ads,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
 2026-11-19,P18,Affiliate,Impact,0.0,0.0,1.0,1.0,1.0,1.0,0.0,0.0
-2026-11-19,P18,Direct,Direct,10.0,10.0,1.0,1.0,1.0,1.0,0.0,0.0
+2026-11-19,P18,Direct,Direct,7.0,7.0,1.0,1.0,1.0,1.0,0.0,0.0
 2026-11-19,P18,Email & SMS,Klaviyo,3.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0
-2026-11-19,P18,Organic Search,Google Search,0.1,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-19,P18,Organic Search,Google Search,1.1,2.0,0.0,0.0,0.0,0.0,0.0,0.0
 2026-11-19,P18,Organic Social,Instagram Social,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
-2026-11-19,P18,Paid Ads,Facebook Ads,5.45,6.0,1.0,0.0,1.0,0.0,0.0,0.0
+2026-11-19,P18,Paid Ads,Facebook Ads,7.45,8.0,1.0,0.0,1.0,0.0,0.0,0.0
 2026-11-19,P18,Paid Ads,Google Ads,1.45,2.0,0.0,0.0,0.0,0.0,0.0,0.0
 2026-11-19,地垫套装,Affiliate,Impact,1.2,1.0,1.0,0.0,0.6,0.0,0.0,0.0
-2026-11-19,地垫套装,Direct,Direct,30.0,12.0,1.0,1.0,1.0,1.0,0.0,0.0
+2026-11-19,地垫套装,Direct,Direct,25.0,9.0,1.0,1.0,1.0,1.0,0.0,0.0
 2026-11-19,地垫套装,Email & SMS,Klaviyo,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
 2026-11-19,地垫套装,Organic Search,Google Search,0.8,1.0,1.0,0.0,0.4,0.0,0.0,0.0
 2026-11-19,地垫套装,Organic Social,Facebook Social,3.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-19,地垫套装,Other Sources,KOL,2.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0
 2026-11-19,地垫套装,Other Sources,Shop APP,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
 2026-11-19,地垫套装,Paid Ads,Facebook Ads,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
-2026-11-19,地垫套装,Paid Ads,Google Ads,0.0,0.0,1.0,0.0,1.0,0.0,0.0,0.0
+2026-11-19,地垫套装,Paid Ads,Google Ads,3.0,1.0,1.0,0.0,1.0,0.0,0.0,0.0
+2026-11-20,P15,AI Assistant,chatgpt.com,0.0,0.0,0.0,1.0,0.0,0.057,0.0,0.0
+2026-11-20,P15,Affiliate,Impact,1.0,1.0,1.0,4.0,1.0,2.506,0.0,0.0
+2026-11-20,P15,Affiliate,bixgrow_affiliate,0.0,0.0,0.0,1.0,0.0,0.094,0.0,0.0
+2026-11-20,P15,Direct,Direct,23.0,14.0,3.0,1.0,3.0,1.0,0.0,0.0
+2026-11-20,P15,Email & SMS,Klaviyo,0.0,0.0,1.0,1.0,1.0,0.4,0.0,0.0
+2026-11-20,P15,Organic Search,Bing Search,5.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-20,P15,Organic Search,DuckDuckGo,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-20,P15,Organic Search,Google Search,4.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-20,P15,Other Sources,PR,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-20,P15,Paid Ads,Facebook Ads,9.0,9.0,4.0,4.0,5.0,3.4,0.0,0.0
+2026-11-20,P15,Paid Ads,Google Ads,11.0,6.0,2.0,2.0,2.0,1.543,0.0,0.0
+2026-11-20,P16,AI Assistant,chatgpt.com,1.0,1.0,1.0,1.0,0.067,0.057,0.0,0.0
+2026-11-20,P16,Affiliate,Impact,1.0,1.0,1.0,2.0,0.133,0.45,0.0,0.0
+2026-11-20,P16,Affiliate,bixgrow_affiliate,3.0,3.0,3.0,0.0,2.2,0.0,0.0,0.0
+2026-11-20,P16,Direct,Direct,101.0,74.0,5.0,3.0,5.0,3.0,0.0,0.0
+2026-11-20,P16,Email & SMS,Klaviyo,0.96,2.0,7.0,2.0,3.982,0.8,0.0,0.0
+2026-11-20,P16,Organic Search,DuckDuckGo,0.0,0.0,2.0,0.0,1.4,0.0,0.0,0.0
+2026-11-20,P16,Organic Search,Google Search,31.0,21.0,4.0,1.0,0.96,2.0,0.0,0.0
+2026-11-20,P16,Organic Social,Facebook Social,11.5,12.0,2.0,0.0,0.12,0.0,0.0,0.0
+2026-11-20,P16,Organic Social,Other Social,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-20,P16,Organic Social,Yotube Shopping,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-20,P16,Other Sources,KOL,12.0,8.0,2.0,0.0,1.32,0.0,0.0,0.0
+2026-11-20,P16,Other Sources,PR,11.0,5.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-20,P16,Other Sources,Shop APP,0.8,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-20,P16,Other Sources,flex_shop,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-20,P16,Other Sources,gmail,0.0,0.0,2.0,0.0,1.013,0.0,0.0,0.0
+2026-11-20,P16,Other Sources,linkinreach.feishu.cn,0.44,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-20,P16,Other Sources,merach.feishu.cn,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-20,P16,Other Sources,verifypass.com,0.0,0.0,1.0,0.0,0.4,0.0,0.0,0.0
+2026-11-20,P16,Paid Ads,Bing Ads,4.0,4.0,1.0,0.0,1.0,0.0,0.0,0.0
+2026-11-20,P16,Paid Ads,Facebook Ads,195.1,158.0,16.0,5.0,12.41,3.75,0.0,0.0
+2026-11-20,P16,Paid Ads,Google Ads,175.2,117.0,15.0,4.0,12.995,2.943,0.0,0.0
+2026-11-20,P18,Affiliate,Impact,1.0,1.0,1.0,1.0,1.0,0.4,0.0,0.0
+2026-11-20,P18,Affiliate,bixgrow_affiliate,0.0,0.0,1.0,0.0,1.0,0.0,0.0,0.0
+2026-11-20,P18,Direct,Direct,10.0,10.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-20,P18,Email & SMS,Klaviyo,0.0,0.0,0.0,0.0,0.0,0.0,0.027,7.92
+2026-11-20,P18,Organic Search,Google Search,1.0,1.0,0.0,0.0,0.0,0.0,0.4,118.8
+2026-11-20,P18,Paid Ads,Facebook Ads,16.0,16.0,6.0,4.0,6.0,3.6,0.533,158.4
+2026-11-20,P18,Paid Ads,Google Ads,2.0,2.0,0.0,0.0,0.0,0.0,0.04,11.88
+2026-11-20,地垫套装,Direct,Direct,8.0,8.0,4.0,1.0,4.0,1.0,0.0,0.0
+2026-11-20,地垫套装,Email & SMS,Klaviyo,1.0,1.0,1.0,0.0,1.0,0.0,0.0,0.0
+2026-11-20,地垫套装,Organic Search,DuckDuckGo,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-20,地垫套装,Organic Search,Google Search,0.5,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-20,地垫套装,Organic Social,Reddit Social,0.5,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-20,地垫套装,Paid Ads,Google Ads,3.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0

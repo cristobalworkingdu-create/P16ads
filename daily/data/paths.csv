@@ -105,8 +105,32 @@ order_id,step,steps,time,channel,channel_group,campaign_name,ad_name,landing_pag
 7506921455791,2,3,2026-11-15 07:06,Klaviyo,Email & SMS,LR | Welcome Flow Email #1,,/collections/strength,7
 7506921455791,3,3,2026-11-15 11:36,Impact,Affiliate,Sovrn Commerce,,/,2
 7508683227311,1,1,2026-11-16 09:08,Google Search,Organic Search,,,/products/merach-change-weight-plates,1
-7516020539567,1,5,2026-11-19 09:42,Google Search,Organic Search,,,/products/merach-color-bumper-plates,2
-7516020539567,2,5,2026-11-19 09:59,Google Ads,Paid Ads,Search-Brand-FullSite-MultiAngle-20261012(20251118)-YJ,,/,1
-7516020539567,3,5,2026-11-19 09:59,Google Search,Organic Search,,,/pages/exclusive-discounts,2
-7516020539567,4,5,2026-11-19 10:15,Google Ads,Paid Ads,Search-DSA-US-20251125,,/collections/barbell-weights,1
-7516020539567,5,5,2026-11-19 12:40,Facebook Ads,Paid Ads,Winnie_US_260520_TKvideo_PUR_R26_CBO,R26_TKvideo_kbhealth100_260514,/products/novarow-rs3-magnetic-rowing-machine,1
+7516020539567,1,14,2026-10-20 19:19,Facebook Ads,Paid Ads,Danni_US_260703_R26_MOF_Pur,Video_TK_R26_100proofflowfitness_260303_7612841727627398413,/products/novarow-rs3-magnetic-rowing-machine,3
+7516020539567,2,14,2026-10-21 12:49,Facebook Ads,Paid Ads,Winnie_US_260616_R11B4_MOF_Pur_PD Sale,Image_R11B4_PD Sale,/products/novarow-r50-air-resistance-rower,1
+7516020539567,3,14,2026-10-21 16:46,Facebook Ads,Paid Ads,Winnie_US_260804_R11B4_MOF_Pur_Pic Test,Image_R11B4_升级显示屏,/products/novarow-r50-air-resistance-rower,1
+7516020539567,4,14,2026-10-26 21:40,Facebook Ads,Paid Ads,Remi_US_251121_BFCM_ASC+ACA-CreativeTest_PUR_R50_Guide,R50_INS_dylhughes99_1120_Procut,/pages/r50-rower-machine-guide,1
+7516020539567,5,14,2026-10-26 21:42,Instagram Social,Organic Social,,,/checkouts/cn/hWNI6Xyulg4odIpb96jR4W2M/en-us,2
+7516020539567,6,14,2026-10-26 21:45,Facebook Ads,Paid Ads,Remi_US_251121_BFCM_ASC+ACA-CreativeTest_PUR_R50_Guide,R50_INS_dylhughes99_1120_Procut,/pages/r50-rower-machine-guide,1
+7516020539567,7,14,2026-10-26 22:01,Facebook Ads,Paid Ads,Winnie_US_260616_R11B4_MOF_Pur_PD Sale,Image_R11B4_PD Sale,/products/novarow-r50-air-resistance-rower,1
+7516020539567,8,14,2026-10-27 15:56,Facebook Ads,Paid Ads,Winnie_US_251031_TKvideo_ASC_PUR_R26,R26_TKvideo_100proofflowfitness_0916,/products/novarow-rs3-magnetic-rowing-machine,1
+7516020539567,9,14,2026-10-27 19:20,Facebook Ads,Paid Ads,Winnie_US_261027_R11B4_MOF_Pur_INSpost,Post_R11B4_INS_alisherrow_261022_EC260802-02-01,/products/novarow-r50-air-resistance-rower,1
+7516020539567,10,14,2026-11-19 09:42,Google Search,Organic Search,,,/products/merach-color-bumper-plates,2
+7516020539567,11,14,2026-11-19 09:59,Google Ads,Paid Ads,Search-Brand-FullSite-MultiAngle-20261012(20251118)-YJ,,/,1
+7516020539567,12,14,2026-11-19 09:59,Google Search,Organic Search,,,/pages/exclusive-discounts,2
+7516020539567,13,14,2026-11-19 10:15,Google Ads,Paid Ads,Search-DSA-US-20251125,,/collections/barbell-weights,1
+7516020539567,14,14,2026-11-19 12:40,Facebook Ads,Paid Ads,Winnie_US_260520_TKvideo_PUR_R26_CBO,R26_TKvideo_kbhealth100_260514,/products/novarow-rs3-magnetic-rowing-machine,1
+7517204021423,1,15,2026-10-24 05:05,Facebook Ads,Paid Ads,Lyfi_US_260710_P14_creativetest,P14_TK_cuteclassycart_260617_7652498680792042765,/products/p14-adjustable-foldable-weight-bench,1
+7517204021423,2,15,2026-10-30 03:31,Facebook Ads,Paid Ads,Winnie_US_260616_R11B4_MOF_Pur_PD Sale,Image_R11B4_PD Sale,/products/novarow-r50-air-resistance-rower,1
+7517204021423,3,15,2026-10-30 04:26,Google Ads,Paid Ads,PLA-Best Seller-R11B4&R26&R30-Custom Audience-20260902(20251118)-YJ,,/products/novarow-r50-air-resistance-rower,1
+7517204021423,4,15,2026-11-01 05:25,Facebook Ads,Paid Ads,Winnie_US_260804_R11B4_MOF_Pur_Pic Test,Image_R11B4_升级显示屏,/products/novarow-r50-air-resistance-rower,1
+7517204021423,5,15,2026-11-06 07:55,Facebook Ads,Paid Ads,Danni_US_261106_R11B4_MOF_Pur_Carousel,Image_R11B4_Backlitx2_Carousel,/products/novarow-r50-air-resistance-rower,1
+7517204021423,6,15,2026-11-06 20:22,Facebook Ads,Paid Ads,Winnie_US_261106_R11B4_MOF_Pur_BF-Deposit_1,IMG_R11B4_BF Coupon_1106_2,/pages/sale,1
+7517204021423,7,15,2026-11-07 05:42,Facebook Ads,Paid Ads,Danni_US_261106_R11B4_MOF_Pur_Carousel,Image_R11B4_Backlitx2_Carousel,/products/novarow-r50-air-resistance-rower,1
+7517204021423,8,15,2026-11-10 02:37,Facebook Ads,Paid Ads,Winnie_US_260616_R11B4_MOF_Pur_PD Sale,Image_R11B4_PD Sale,/products/novarow-r50-air-resistance-rower,1
+7517204021423,9,15,2026-11-10 03:56,Facebook Ads,Paid Ads,Winnie_US_261102_R11B4_MOF_Pur_BF-Deposit_1,IMG_R11B4_BF Coupon_1,/pages/sale,1
+7517204021423,10,15,2026-11-16 13:44,Facebook Ads,Paid Ads,Remi_US_251121_BFCM_ASC+ACA-CreativeTest_PUR_R50_Guide,R50_INS_dylhughes99_1120_Procut,/products/novarow-r50-air-resistance-rower,1
+7517204021423,11,15,2026-11-19 03:42,Facebook Ads,Paid Ads,Winnie_US_261119_R11B4_MOF+BOF_Pur_BFCM_Sale_IMG_1,IMG_R11B4_V1,/products/novarow-r50-air-resistance-rower,2
+7517204021423,12,15,2026-11-19 09:10,Google Ads,Paid Ads,Search-FitnessGoal-Pages-20261010-YJ,,/pages/cardio,1
+7517204021423,13,15,2026-11-19 09:13,Google Ads,Paid Ads,Search-DSA-US-20251125,,/products/merach-adjustable-weight-bench-p18,1
+7517204021423,14,15,2026-11-19 10:35,Klaviyo,Email & SMS,LR | Welcome Flow Email #1,,/,2
+7517204021423,15,15,2026-11-19 12:50,Google Search,Organic Search,,,/collections/benches,1
