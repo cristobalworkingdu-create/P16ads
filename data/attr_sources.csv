@@ -1,164 +1,171 @@
 spu,channel_group,channel,product_views,sessions,atc,checkout,atc_events,ic_events,orders_attr,revenue_attr
-P15,AI Assistant,chatgpt.com,3.0,3.0,1.0,4.0,1.0,1.47,0.133,0.0
-P15,Affiliate,Impact,53.7,31.0,27.0,44.0,13.46,17.12,0.9,33.33
-P15,Affiliate,bixgrow_affiliate,16.4,9.0,13.0,11.0,6.57,2.59,0.121,0.0
-P15,Direct,Direct,712.0,369.0,50.0,49.0,51.0,51.0,1.0,59.99
-P15,Email & SMS,Klaviyo,116.9,80.0,21.0,37.0,8.04,15.1,1.875,9.33
-P15,Organic Search,Google Search,110.8,53.0,31.0,15.0,11.49,5.47,2.78,83.75
+P15,AI Assistant,chatgpt.com,5.0,5.0,1.0,4.0,1.0,1.47,0.133,0.0
+P15,Affiliate,Impact,58.7,32.0,29.0,47.0,14.22,18.29,0.9,33.33
+P15,Affiliate,bixgrow_affiliate,23.8,12.0,14.0,12.0,7.44,2.79,0.121,0.0
+P15,Direct,Direct,763.0,398.0,50.0,53.0,51.0,55.0,1.0,59.99
+P15,Email & SMS,Klaviyo,116.9,80.0,23.0,43.0,9.05,16.49,1.875,9.33
+P15,Organic Search,Google Search,132.4,65.0,34.0,16.0,13.85,7.27,2.78,83.75
+P15,Organic Search,Bing Search,7.0,3.0,6.0,2.0,0.61,0.21,0.0,0.0
+P15,Organic Search,DuckDuckGo,6.0,4.0,1.0,1.0,0.02,0.02,0.0,0.0
 P15,Organic Search,Brave Search,0.0,0.0,1.0,1.0,2.0,1.0,0.0,0.0
 P15,Organic Search,Yahoo Search,0.0,0.0,0.0,0.0,0.0,0.0,0.067,0.0
-P15,Organic Search,Bing Search,6.0,2.0,6.0,2.0,0.61,0.21,0.0,0.0
-P15,Organic Search,DuckDuckGo,6.0,4.0,1.0,1.0,0.02,0.02,0.0,0.0
-P15,Organic Social,Facebook Social,14.6,13.0,9.0,10.0,4.31,5.21,1.079,21.32
+P15,Organic Social,Facebook Social,15.1,14.0,9.0,11.0,4.31,5.23,1.079,21.32
 P15,Organic Social,Instagram Social,0.0,0.0,1.0,0.0,0.4,0.0,0.024,1.88
 P15,Organic Social,Other Social,0.0,0.0,5.0,1.0,1.61,0.4,0.0,0.0
 P15,Organic Social,YouTube Social,0.0,0.0,1.0,0.0,0.56,0.0,0.0,0.0
 P15,Other Sources,track123,1.0,1.0,3.0,2.0,1.2,0.82,0.8,15.99
-P15,Other Sources,gmail,14.0,3.0,1.0,1.0,0.8,0.8,0.0,0.0
-P15,Other Sources,ntp.msn.com,8.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0
-P15,Other Sources,PR,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
-P15,Other Sources,HP250602-02,0.0,0.0,5.0,1.0,0.05,0.01,0.0,0.0
-P15,Other Sources,tenociglobal.feishu.cn,0.0,0.0,0.0,1.0,0.0,0.04,0.0,0.0
-P15,Other Sources,flex_shop,6.0,4.0,1.0,0.0,1.0,0.0,0.0,0.0
-P15,Other Sources,preciso,2.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
-P15,Other Sources,KOL,4.0,2.0,6.0,5.0,0.66,1.3,0.0,0.0
-P15,Other Sources,www.merachfit.ca,0.0,0.0,0.0,4.0,0.0,0.02,0.0,0.0
-P15,Other Sources,linkinreach.feishu.cn,6.6,6.0,0.0,0.0,0.0,0.0,0.0,0.0
-P15,Other Sources,Linktree,7.0,2.0,0.0,1.0,0.0,0.5,0.0,0.0
-P15,Other Sources,merachfit.eu,0.0,0.0,5.0,2.0,0.1,0.54,0.0,0.0
-P15,Other Sources,social,0.0,0.0,1.0,0.0,0.03,0.0,0.0,0.0
 P15,Other Sources,app.impact.com,0.0,0.0,0.0,1.0,0.0,1.0,0.0,0.0
+P15,Other Sources,social,0.0,0.0,1.0,0.0,0.03,0.0,0.0,0.0
+P15,Other Sources,merachfit.eu,0.0,0.0,5.0,3.0,0.1,1.13,0.0,0.0
+P15,Other Sources,ntp.msn.com,8.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0
 P15,Other Sources,DC261002-01,0.0,0.0,5.0,1.0,0.1,0.02,0.0,0.0
+P15,Other Sources,HP250602-02,0.0,0.0,5.0,1.0,0.05,0.01,0.0,0.0
 P15,Other Sources,app.freegifts.io,0.0,0.0,5.0,1.0,0.05,0.01,0.0,0.0
 P15,Other Sources,merachfit.de,0.0,0.0,5.0,1.0,0.05,0.01,0.0,0.0
-P15,Paid Ads,Facebook Ads,647.8,385.0,70.0,80.0,59.82,70.75,14.228,1072.44
-P15,Paid Ads,Google Ads,195.2,91.0,47.0,54.0,28.73,32.11,5.459,40.54
+P15,Other Sources,tenociglobal.feishu.cn,0.0,0.0,0.0,1.0,0.0,0.04,0.0,0.0
+P15,Other Sources,flex_shop,10.0,5.0,1.0,0.0,1.0,0.0,0.0,0.0
+P15,Other Sources,Linktree,7.0,2.0,0.0,1.0,0.0,0.5,0.0,0.0
+P15,Other Sources,gmail,14.0,3.0,1.0,1.0,0.8,0.8,0.0,0.0
+P15,Other Sources,linkinreach.feishu.cn,6.6,6.0,0.0,0.0,0.0,0.0,0.0,0.0
+P15,Other Sources,PR,3.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0
+P15,Other Sources,KOL,4.0,2.0,6.0,5.0,0.66,1.3,0.0,0.0
+P15,Other Sources,www.merachfit.ca,0.0,0.0,0.0,4.0,0.0,0.02,0.0,0.0
+P15,Other Sources,preciso,2.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+P15,Paid Ads,Facebook Ads,723.3,423.0,72.0,90.0,61.4,79.22,14.228,1072.44
+P15,Paid Ads,Google Ads,217.2,102.0,50.0,60.0,30.17,34.48,7.459,670.53
 P15,Paid Ads,Bing Ads,5.0,1.0,5.0,4.0,1.31,1.47,1.533,1.33
 P15,Paid Ads,Preciso,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
-P16,AI Assistant,chatgpt.com,33.8,23.0,18.0,10.0,8.51,2.6,0.133,386.67
+P16,AI Assistant,chatgpt.com,36.2,26.0,20.0,10.0,8.96,2.6,0.133,386.67
 P16,AI Assistant,Gemini,0.0,0.0,2.0,1.0,0.02,0.01,0.0,0.0
-P16,Affiliate,Impact,133.3,90.0,91.0,45.0,34.94,12.54,0.492,1176.88
-P16,Affiliate,bixgrow_affiliate,158.9,113.0,49.0,20.0,23.03,8.78,0.0,0.0
-P16,Direct,Direct,3268.0,2024.0,102.0,59.0,105.0,65.0,0.0,0.0
-P16,Email & SMS,Klaviyo,824.4,585.0,131.0,57.0,63.92,34.63,3.107,8888.79
-P16,Email & SMS,Email,10.4,6.0,3.0,1.0,0.06,0.01,0.0,0.0
-P16,Organic Search,Google Search,573.5,333.0,119.0,39.0,45.54,16.29,0.901,2237.2
+P16,Affiliate,Impact,157.1,104.0,103.0,48.0,40.45,13.12,0.532,1292.88
+P16,Affiliate,bixgrow_affiliate,339.9,266.0,59.0,22.0,30.94,10.94,0.04,116.0
+P16,Direct,Direct,3480.0,2167.0,107.0,63.0,112.0,69.0,0.0,0.0
+P16,Email & SMS,Klaviyo,841.4,599.0,154.0,62.0,73.79,35.55,3.107,8888.79
+P16,Email & SMS,Email,12.4,7.0,4.0,1.0,0.07,0.01,0.0,0.0
+P16,Organic Search,Google Search,610.4,363.0,134.0,41.0,54.46,17.77,0.901,2237.2
 P16,Organic Search,Yahoo Search,3.6,4.0,1.0,0.0,0.02,0.0,0.067,193.33
 P16,Organic Search,Yandex,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
 P16,Organic Search,Bing Search,17.5,14.0,12.0,7.0,2.78,0.31,0.0,0.0
-P16,Organic Search,DuckDuckGo,15.0,11.0,9.0,1.0,4.59,0.47,0.0,0.0
-P16,Organic Social,Other Social,44.7,34.0,7.0,5.0,3.52,1.83,0.0,0.0
-P16,Organic Social,Yotube Shopping,8.0,5.0,0.0,1.0,0.0,0.04,0.0,0.0
+P16,Organic Search,DuckDuckGo,16.0,12.0,9.0,1.0,4.59,0.47,0.0,0.0
+P16,Organic Social,Instagram Social,29.0,19.0,1.0,0.0,0.4,0.0,0.0,0.0
+P16,Organic Social,Twitter Social,0.0,0.0,1.0,0.0,1.0,0.0,0.0,0.0
 P16,Organic Social,Reddit Social,10.0,1.0,1.0,0.0,0.04,0.0,0.0,0.0
+P16,Organic Social,Facebook Social,239.8,187.0,58.0,25.0,21.45,13.69,0.0,0.0
+P16,Organic Social,Yotube Shopping,17.0,11.0,0.0,1.0,0.0,0.04,0.0,0.0
+P16,Organic Social,Other Social,56.4,45.0,7.0,5.0,3.52,1.83,0.0,0.0
 P16,Organic Social,YouTube Social,4.0,3.0,2.0,1.0,0.57,0.03,0.0,0.0
-P16,Organic Social,Facebook Social,220.8,168.0,55.0,25.0,20.96,13.69,0.0,0.0
-P16,Organic Social,Instagram Social,26.0,16.0,1.0,0.0,0.4,0.0,0.0,0.0
-P16,Other Sources,flex_shop,7.9,8.0,0.0,0.0,0.0,0.0,0.0,0.0
-P16,Other Sources,cristobalworkingdu-create.github.io,12.0,7.0,4.0,1.0,1.01,0.01,0.0,0.0
-P16,Other Sources,www.klaviyo.com,0.0,0.0,0.0,1.0,0.0,0.07,0.0,0.0
-P16,Other Sources,klarna,2.0,1.0,0.0,1.0,0.0,0.4,0.0,0.0
-P16,Other Sources,IP250104,0.0,0.0,1.0,0.0,0.4,0.0,0.0,0.0
-P16,Other Sources,ces,0.0,0.0,0.0,1.0,0.0,2.0,0.0,0.0
-P16,Other Sources,kagi.com,4.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0
+P16,Other Sources,BP250101,0.0,0.0,0.0,1.0,0.0,0.01,0.0,0.0
+P16,Other Sources,CC241006,0.0,0.0,0.0,1.0,0.0,0.01,0.0,0.0
+P16,Other Sources,Linktree,28.8,22.0,2.0,1.0,0.7,0.5,0.0,0.0
 P16,Other Sources,eir1tseugu5.feishu.cn,22.0,13.0,1.0,0.0,1.0,0.0,0.0,0.0
-P16,Other Sources,safe.menlosecurity.com,3.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
-P16,Other Sources,Linktree,27.8,21.0,2.0,1.0,0.7,0.5,0.0,0.0
-P16,Other Sources,merachfit.de,0.0,0.0,9.0,4.0,1.12,0.44,0.0,0.0
-P16,Other Sources,merachfit.eu,3.0,1.0,10.0,3.0,1.62,0.06,0.0,0.0
-P16,Other Sources,track123,3.0,2.0,4.0,1.0,1.48,1.0,0.0,0.0
-P16,Other Sources,GG241202,0.8,1.0,0.0,1.0,0.0,0.03,0.0,0.0
-P16,Other Sources,social,4.5,2.0,0.0,1.0,0.0,0.04,0.0,0.0
+P16,Other Sources,flex_shop,7.9,8.0,1.0,0.0,0.07,0.0,0.0,0.0
+P16,Other Sources,gmail,51.9,49.0,6.0,3.0,2.26,1.8,0.0,0.0
+P16,Other Sources,PR,32.5,17.0,3.0,2.0,0.43,0.03,0.0,0.0
+P16,Other Sources,linkinreach.feishu.cn,15.7,10.0,0.0,0.0,0.0,0.0,0.0,0.0
+P16,Other Sources,Shop APP,6.8,5.0,1.0,0.0,0.42,0.0,0.0,0.0
 P16,Other Sources,checkmate,0.0,0.0,1.0,0.0,0.03,0.0,0.0,0.0
-P16,Other Sources,DC261002-01,0.0,0.0,5.0,2.0,0.17,0.04,0.0,0.0
-P16,Other Sources,app.freegifts.io,2.0,2.0,6.0,3.0,0.48,0.42,0.0,0.0
-P16,Other Sources,www.garagegymreviews.com,0.0,0.0,1.0,0.0,1.0,0.0,0.0,0.0
+P16,Other Sources,CP250907-05,2.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0
+P16,Other Sources,Influncer-YouTube,0.4,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+P16,Other Sources,kagi.com,4.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0
+P16,Other Sources,KOL,60.5,33.0,12.0,7.0,2.29,1.53,0.0,0.0
+P16,Other Sources,www.merachfit.ca,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+P16,Other Sources,OC260410,2.0,1.0,3.0,2.0,2.9,0.05,0.0,0.0
+P16,Other Sources,www.klaviyo.com,0.0,0.0,0.0,1.0,0.0,0.07,0.0,0.0
+P16,Other Sources,safe.menlosecurity.com,3.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
 P16,Other Sources,t.yesware.com,4.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
 P16,Other Sources,ntp.msn.cn,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
-P16,Other Sources,app.impact.com,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0
-P16,Other Sources,PR,31.5,16.0,3.0,2.0,0.43,0.03,0.0,0.0
-P16,Other Sources,gmail,50.9,48.0,6.0,3.0,2.26,1.8,0.0,0.0
-P16,Other Sources,OC260410,2.0,1.0,2.0,2.0,2.0,0.05,0.0,0.0
-P16,Other Sources,g0u4ecbq2egszpyo-50716115119.shopifypreview.com,0.0,0.0,2.0,1.0,0.01,0.01,0.0,0.0
-P16,Other Sources,merach.feishu.cn,16.1,10.0,4.0,2.0,1.33,0.51,0.0,0.0
-P16,Other Sources,BP250101,0.0,0.0,0.0,1.0,0.0,0.01,0.0,0.0
-P16,Other Sources,shared.outlook.inky.com,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
-P16,Other Sources,tenociglobal.feishu.cn,7.0,5.0,0.0,1.0,0.0,0.04,0.0,0.0
-P16,Other Sources,AMZN_US_ShopDirect,0.0,0.0,2.0,0.0,0.57,0.0,0.0,0.0
-P16,Other Sources,platadmin.wickfire.com,0.5,1.0,0.0,0.0,0.0,0.0,0.0,0.0
-P16,Other Sources,shopify_email,0.0,0.0,2.0,0.0,2.0,0.0,0.0,0.0
-P16,Other Sources,HP250602-02,0.0,0.0,5.0,2.0,0.08,0.02,0.0,0.0
-P16,Other Sources,ntp.msn.com,3.0,2.0,0.0,2.0,0.0,2.0,0.0,0.0
-P16,Other Sources,verifypass.com,0.0,0.0,1.0,0.0,0.4,0.0,0.0,0.0
 P16,Other Sources,rankite.com,0.0,0.0,0.0,1.0,0.0,1.0,0.0,0.0
-P16,Other Sources,linkinreach.feishu.cn,15.7,10.0,0.0,0.0,0.0,0.0,0.0,0.0
-P16,Other Sources,KOL,44.0,24.0,11.0,7.0,2.23,1.53,0.0,0.0
-P16,Other Sources,CC241006,0.0,0.0,0.0,1.0,0.0,0.01,0.0,0.0
-P16,Other Sources,www.merachfit.ca,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
-P16,Other Sources,Shop APP,6.8,5.0,1.0,0.0,0.42,0.0,0.0,0.0
 P16,Other Sources,www.kayipro.com,0.0,0.0,0.0,1.0,0.0,0.4,0.0,0.0
-P16,Paid Ads,Facebook Ads,4711.4,3257.0,442.0,198.0,361.75,174.38,5.961,15992.62
-P16,Paid Ads,Google Ads,3431.8,2395.0,301.0,121.0,209.38,83.06,2.872,8049.07
-P16,Paid Ads,Bing Ads,119.5,78.0,20.0,5.0,11.41,1.93,1.467,4253.32
+P16,Other Sources,cristobalworkingdu-create.github.io,12.0,7.0,4.0,1.0,1.01,0.01,0.0,0.0
+P16,Other Sources,shared.outlook.inky.com,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+P16,Other Sources,merach.feishu.cn,17.1,11.0,4.0,3.0,1.33,2.51,0.0,0.0
+P16,Other Sources,klarna,2.0,1.0,0.0,1.0,0.0,0.4,0.0,0.0
+P16,Other Sources,shopify_email,0.0,0.0,2.0,0.0,2.0,0.0,0.0,0.0
+P16,Other Sources,ces,0.0,0.0,0.0,1.0,0.0,2.0,0.0,0.0
+P16,Other Sources,app.impact.com,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0
+P16,Other Sources,GG241202,0.8,1.0,0.0,1.0,0.0,0.03,0.0,0.0
+P16,Other Sources,tenociglobal.feishu.cn,7.0,5.0,0.0,1.0,0.0,0.04,0.0,0.0
+P16,Other Sources,g0u4ecbq2egszpyo-50716115119.shopifypreview.com,0.0,0.0,2.0,1.0,0.01,0.01,0.0,0.0
+P16,Other Sources,merachfit.de,0.0,0.0,9.0,4.0,1.12,0.44,0.0,0.0
+P16,Other Sources,merachfit.eu,7.0,2.0,11.0,4.0,3.62,0.65,0.0,0.0
+P16,Other Sources,track123,3.0,2.0,4.0,1.0,1.48,1.0,0.0,0.0
+P16,Other Sources,AMZN_US_ShopDirect,0.0,0.0,2.0,0.0,0.57,0.0,0.0,0.0
+P16,Other Sources,social,4.5,2.0,1.0,1.0,0.4,0.04,0.0,0.0
+P16,Other Sources,IP250104,0.0,0.0,1.0,0.0,0.4,0.0,0.0,0.0
+P16,Other Sources,platadmin.wickfire.com,0.5,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+P16,Other Sources,DC261002-01,0.0,0.0,5.0,2.0,0.17,0.04,0.0,0.0
+P16,Other Sources,HP250602-02,0.0,0.0,5.0,2.0,0.08,0.02,0.0,0.0
+P16,Other Sources,app.freegifts.io,2.0,2.0,6.0,3.0,0.48,0.42,0.0,0.0
+P16,Other Sources,ntp.msn.com,3.0,2.0,0.0,2.0,0.0,2.0,0.0,0.0
+P16,Other Sources,www.garagegymreviews.com,0.0,0.0,1.0,0.0,1.0,0.0,0.0,0.0
+P16,Other Sources,verifypass.com,0.0,0.0,1.0,0.0,0.4,0.0,0.0,0.0
+P16,Paid Ads,Facebook Ads,5178.6,3605.0,489.0,215.0,401.33,190.42,5.961,15992.62
+P16,Paid Ads,Google Ads,3619.5,2519.0,330.0,128.0,228.82,86.3,4.792,13617.05
+P16,Paid Ads,Bing Ads,122.5,81.0,23.0,5.0,13.82,1.93,1.467,4253.32
 P16,Paid Ads,Other Ads,5.8,3.0,3.0,0.0,1.43,0.0,0.0,0.0
-P16,Review & Loyalty,Loox,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+P16,Review & Loyalty,Loox,3.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0
+P16,Review & Loyalty,Trustpilot,0.4,1.0,0.0,0.0,0.0,0.0,0.0,0.0
 P16,Review & Loyalty,Judgeme,1.0,1.0,1.0,0.0,0.4,0.0,0.0,0.0
-P17,Direct,Direct,9.0,8.0,0.0,0.0,0.0,0.0,0.0,0.0
-P17,Organic Search,Google Search,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
-P17,Organic Social,Facebook Social,0.5,1.0,0.0,0.0,0.0,0.0,0.0,0.0
-P17,Paid Ads,Facebook Ads,2.0,2.0,1.0,0.0,1.0,0.0,0.0,0.0
-P17,Paid Ads,Google Ads,0.5,1.0,0.0,0.0,0.0,0.0,0.0,0.0
-P18,Affiliate,Impact,11.4,12.0,10.0,8.0,6.2,3.31,0.067,22.0
-P18,Affiliate,bixgrow_affiliate,13.1,14.0,6.0,1.0,3.86,0.04,0.0,0.0
-P18,Direct,Direct,295.0,249.0,25.0,20.0,25.0,20.0,0.0,0.0
-P18,Email & SMS,Klaviyo,98.4,94.0,8.0,7.0,2.09,2.22,0.677,222.41
+P17,Affiliate,bixgrow_affiliate,2.0,2.0,1.0,0.0,1.0,0.0,0.0,0.0
+P17,Affiliate,Impact,0.0,0.0,1.0,0.0,0.4,0.0,0.0,0.0
+P17,Direct,Direct,24.0,20.0,2.0,2.0,2.0,2.0,0.0,0.0
+P17,Organic Search,Google Search,1.0,1.0,1.0,0.0,0.43,0.0,0.0,0.0
+P17,Organic Social,Facebook Social,2.5,3.0,1.0,0.0,0.43,0.0,0.0,0.0
+P17,Other Sources,flex_shop,0.0,0.0,1.0,0.0,0.02,0.0,0.0,0.0
+P17,Paid Ads,Google Ads,3.5,3.0,2.0,0.0,1.03,0.0,0.0,0.0
+P17,Paid Ads,Facebook Ads,16.0,14.0,3.0,0.0,1.69,0.0,0.0,0.0
+P18,Affiliate,Impact,12.4,13.0,11.0,9.0,6.61,3.7,0.067,22.0
+P18,Affiliate,bixgrow_affiliate,16.1,17.0,6.0,1.0,3.86,0.04,0.0,0.0
+P18,Direct,Direct,317.0,268.0,26.0,22.0,26.0,22.0,0.0,0.0
+P18,Email & SMS,Klaviyo,99.4,95.0,12.0,9.0,2.98,2.24,0.677,222.41
 P18,Email & SMS,Email,12.5,10.0,0.0,0.0,0.0,0.0,0.0,0.0
-P18,Organic Search,Google Search,32.1,32.0,4.0,1.0,0.9,1.0,1.0,316.79
+P18,Organic Search,Google Search,35.1,35.0,4.0,1.0,0.9,1.0,1.0,316.79
 P18,Organic Search,Yahoo Search,0.2,1.0,1.0,0.0,0.1,0.0,0.067,22.0
 P18,Organic Search,Bing Search,0.0,0.0,2.0,1.0,0.02,0.2,0.0,0.0
-P18,Organic Search,DuckDuckGo,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+P18,Organic Search,DuckDuckGo,2.1,3.0,0.0,0.0,0.0,0.0,0.0,0.0
+P18,Organic Social,Facebook Social,13.7,16.0,5.0,2.0,1.94,1.43,0.0,0.0
 P18,Organic Social,Other Social,0.0,0.0,2.0,0.0,0.41,0.0,0.0,0.0
-P18,Organic Social,Facebook Social,12.7,15.0,5.0,2.0,1.94,1.43,0.0,0.0
-P18,Organic Social,Instagram Social,9.0,10.0,0.0,0.0,0.0,0.0,0.0,0.0
-P18,Other Sources,Linktree,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+P18,Organic Social,Instagram Social,10.0,11.0,0.0,0.0,0.0,0.0,0.0,0.0
+P18,Other Sources,merach.feishu.cn,6.0,5.0,0.0,0.0,0.0,0.0,0.0,0.0
 P18,Other Sources,DC261002-01,0.0,0.0,2.0,0.0,0.04,0.0,0.0,0.0
+P18,Other Sources,HP250602-02,0.0,0.0,2.0,0.0,0.02,0.0,0.0,0.0
 P18,Other Sources,app.freegifts.io,0.0,0.0,2.0,0.0,0.02,0.0,0.0,0.0
 P18,Other Sources,merachfit.de,0.0,0.0,2.0,0.0,0.02,0.0,0.0,0.0
 P18,Other Sources,merachfit.eu,0.0,0.0,2.0,0.0,0.04,0.0,0.0,0.0
+P18,Other Sources,Linktree,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+P18,Other Sources,flex_shop,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
 P18,Other Sources,linkinreach.feishu.cn,5.6,6.0,0.0,0.0,0.0,0.0,0.0,0.0
 P18,Other Sources,KOL,0.0,0.0,2.0,0.0,0.1,0.0,0.0,0.0
-P18,Other Sources,flex_shop,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
-P18,Other Sources,merach.feishu.cn,6.0,5.0,0.0,0.0,0.0,0.0,0.0,0.0
-P18,Other Sources,HP250602-02,0.0,0.0,2.0,0.0,0.02,0.0,0.0,0.0
-P18,Paid Ads,Google Ads,35.2,34.0,18.0,12.0,13.09,7.64,2.39,787.36
-P18,Paid Ads,Facebook Ads,268.3,253.0,47.0,16.0,41.73,13.76,2.333,752.38
-P18,Paid Ads,Bing Ads,2.4,3.0,1.0,1.0,0.4,0.4,0.467,154.0
+P18,Paid Ads,Google Ads,37.3,36.0,19.0,13.0,13.11,7.63,3.39,1084.36
+P18,Paid Ads,Facebook Ads,294.3,276.0,54.0,19.0,47.41,16.36,2.333,752.38
+P18,Paid Ads,Bing Ads,3.3,4.0,1.0,1.0,0.4,0.4,0.467,154.0
 地垫套装,AI Assistant,chatgpt.com,4.0,2.0,1.0,1.0,1.0,1.0,0.0,0.0
-地垫套装,Affiliate,bixgrow_affiliate,6.0,6.0,5.0,3.0,2.43,1.91,0.0,0.0
-地垫套装,Affiliate,Impact,28.2,9.0,4.0,1.0,2.15,0.4,0.0,0.0
-地垫套装,Direct,Direct,276.0,163.0,14.0,6.0,16.0,7.0,2.0,149.98
-地垫套装,Email & SMS,Klaviyo,111.9,87.0,8.0,4.0,2.65,0.25,1.953,175.78
+地垫套装,Affiliate,Impact,28.2,9.0,5.0,1.0,3.18,0.4,0.0,0.0
+地垫套装,Affiliate,bixgrow_affiliate,8.0,8.0,6.0,3.0,2.83,1.91,0.0,0.0
+地垫套装,Direct,Direct,299.0,181.0,14.0,6.0,16.0,7.0,2.0,149.98
+地垫套装,Email & SMS,Klaviyo,112.9,88.0,9.0,4.0,3.21,0.25,2.02,181.18
 地垫套装,Email & SMS,Email,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
-地垫套装,Organic Search,Google Search,53.8,32.0,14.0,8.0,8.44,4.44,12.87,1146.48
+地垫套装,Organic Search,Google Search,63.8,38.0,15.0,9.0,8.54,4.54,13.837,1224.78
 地垫套装,Organic Search,Bing Search,0.0,0.0,2.0,1.0,0.02,0.01,0.0,0.0
 地垫套装,Organic Search,DuckDuckGo,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
-地垫套装,Organic Social,Facebook Social,9.0,4.0,1.0,2.0,1.0,1.53,0.0,0.0
-地垫套装,Organic Social,Instagram Social,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
 地垫套装,Organic Social,Other Social,0.0,0.0,2.0,1.0,0.41,0.01,0.0,0.0
+地垫套装,Organic Social,Instagram Social,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
 地垫套装,Organic Social,Reddit Social,0.5,1.0,0.0,0.0,0.0,0.0,0.0,0.0
-地垫套装,Other Sources,HP250602-02,0.0,0.0,2.0,1.0,0.02,0.01,0.0,0.0
-地垫套装,Other Sources,merach.feishu.cn,5.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
-地垫套装,Other Sources,ntp.msn.com,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
-地垫套装,Other Sources,gmail,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
-地垫套装,Other Sources,flex_shop,2.0,1.0,3.0,1.0,0.6,0.1,0.0,0.0
-地垫套装,Other Sources,KOL,2.0,2.0,2.0,1.0,0.1,0.05,0.0,0.0
-地垫套装,Other Sources,linkinreach.feishu.cn,9.6,7.0,0.0,0.0,0.0,0.0,0.0,0.0
-地垫套装,Other Sources,Shop APP,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+地垫套装,Organic Social,Facebook Social,10.0,5.0,1.0,2.0,1.0,1.53,0.0,0.0
 地垫套装,Other Sources,DC261002-01,0.0,0.0,2.0,1.0,0.04,0.02,0.0,0.0
+地垫套装,Other Sources,HP250602-02,0.0,0.0,2.0,1.0,0.02,0.01,0.0,0.0
 地垫套装,Other Sources,app.freegifts.io,0.0,0.0,2.0,1.0,0.02,0.01,0.0,0.0
 地垫套装,Other Sources,merachfit.de,0.0,0.0,2.0,1.0,0.02,0.01,0.0,0.0
 地垫套装,Other Sources,merachfit.eu,0.0,0.0,2.0,1.0,0.04,0.02,0.0,0.0
+地垫套装,Other Sources,ntp.msn.com,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+地垫套装,Other Sources,flex_shop,2.0,1.0,3.0,1.0,0.61,0.1,0.0,0.0
 地垫套装,Other Sources,Linktree,5.1,4.0,0.0,0.0,0.0,0.0,0.0,0.0
+地垫套装,Other Sources,linkinreach.feishu.cn,9.6,7.0,0.0,0.0,0.0,0.0,0.0,0.0
+地垫套装,Other Sources,Shop APP,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+地垫套装,Other Sources,gmail,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+地垫套装,Other Sources,KOL,2.0,2.0,2.0,1.0,0.1,0.05,0.0,0.0
 地垫套装,Other Sources,facebook-FeaturedOfferings,0.1,1.0,0.0,0.0,0.0,0.0,0.0,0.0
-地垫套装,Paid Ads,Google Ads,62.4,34.0,12.0,7.0,5.7,3.6,11.027,992.29
-地垫套装,Paid Ads,Facebook Ads,70.2,51.0,7.0,4.0,5.35,1.63,0.15,11.7
-地垫套装,Paid Ads,Bing Ads,4.0,1.0,1.0,0.0,1.0,0.0,0.0,0.0
+地垫套装,Other Sources,merach.feishu.cn,5.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+地垫套装,Paid Ads,Google Ads,65.4,35.0,16.0,8.0,9.57,4.46,11.96,1067.89
+地垫套装,Paid Ads,Facebook Ads,76.2,56.0,10.0,5.0,8.38,1.66,0.183,14.4
+地垫套装,Paid Ads,Bing Ads,8.0,2.0,1.0,0.0,1.0,0.0,0.0,0.0
